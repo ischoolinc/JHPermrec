@@ -1,0 +1,10 @@
+D:\TFS2010\ischoolteam\ischool_Junior with FISCA\Modules\Student_JSBT\Student_JSBT\obj\Debug\ResolveAssemblyReference.cache
+D:\TFS2010\ischoolteam\ischool_Junior with FISCA\Modules\Student_JSBT\Student_JSBT\obj\Debug\Student_JSBT.MainForm.resources
+D:\TFS2010\ischoolteam\ischool_Junior with FISCA\Modules\Student_JSBT\Student_JSBT\obj\Debug\Student_JSBT.Properties.Resources.resources
+D:\TFS2010\ischoolteam\ischool_Junior with FISCA\Modules\Student_JSBT\Student_JSBT\obj\Debug\Student_JSBT.SetStudTagComparisonForm.resources
+D:\TFS2010\ischoolteam\ischool_Junior with FISCA\Modules\Student_JSBT\Student_JSBT\obj\Debug\GenerateResource.read.1.tlog
+D:\TFS2010\ischoolteam\ischool_Junior with FISCA\Modules\Student_JSBT\Student_JSBT\obj\Debug\GenerateResource.write.1.tlog
+D:\Documents and Settings\ChenCT\桌面\FiscaAEAlpha\FiscaAE Alpha\addmodules\KaoHsiungJHPermrec_Beta\Student_JSBT.dll
+D:\Documents and Settings\ChenCT\桌面\FiscaAEAlpha\FiscaAE Alpha\addmodules\KaoHsiungJHPermrec_Beta\Student_JSBT.pdb
+D:\TFS2010\ischoolteam\ischool_Junior with FISCA\Modules\Student_JSBT\Student_JSBT\obj\Debug\Student_JSBT.dll
+D:\TFS2010\ischoolteam\ischool_Junior with FISCA\Modules\Student_JSBT\Student_JSBT\obj\Debug\Student_JSBT.pdb

@@ -1,0 +1,11 @@
+D:\FiscaAEAlpha\addmodules\TaiChungStudentRecordReport\TaiChung.StudentRecordReport.dll
+D:\FiscaAEAlpha\addmodules\TaiChungStudentRecordReport\TaiChung.StudentRecordReport.pdb
+D:\TFS2010\ischoolteam\ischool_Junior with FISCA\Modules\TaiChung.StudentRecordReport\TaiChung.StudentRecordReport\obj\Debug\ResolveAssemblyReference.cache
+D:\TFS2010\ischoolteam\ischool_Junior with FISCA\Modules\TaiChung.StudentRecordReport\TaiChung.StudentRecordReport\obj\Debug\TaiChung.StudentRecordReport.ConfigForm.PrintConfigForm.resources
+D:\TFS2010\ischoolteam\ischool_Junior with FISCA\Modules\TaiChung.StudentRecordReport\TaiChung.StudentRecordReport\obj\Debug\TaiChung.StudentRecordReport.ConfigForm.SelectTypeForm.resources
+D:\TFS2010\ischoolteam\ischool_Junior with FISCA\Modules\TaiChung.StudentRecordReport\TaiChung.StudentRecordReport\obj\Debug\TaiChung.StudentRecordReport.PrintForm.resources
+D:\TFS2010\ischoolteam\ischool_Junior with FISCA\Modules\TaiChung.StudentRecordReport\TaiChung.StudentRecordReport\obj\Debug\TaiChung.StudentRecordReport.Properties.Resources.resources
+D:\TFS2010\ischoolteam\ischool_Junior with FISCA\Modules\TaiChung.StudentRecordReport\TaiChung.StudentRecordReport\obj\Debug\GenerateResource.read.1.tlog
+D:\TFS2010\ischoolteam\ischool_Junior with FISCA\Modules\TaiChung.StudentRecordReport\TaiChung.StudentRecordReport\obj\Debug\GenerateResource.write.1.tlog
+D:\TFS2010\ischoolteam\ischool_Junior with FISCA\Modules\TaiChung.StudentRecordReport\TaiChung.StudentRecordReport\obj\Debug\TaiChung.StudentRecordReport.dll
+D:\TFS2010\ischoolteam\ischool_Junior with FISCA\Modules\TaiChung.StudentRecordReport\TaiChung.StudentRecordReport\obj\Debug\TaiChung.StudentRecordReport.pdb

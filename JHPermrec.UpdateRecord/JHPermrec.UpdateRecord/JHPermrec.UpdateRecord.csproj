@@ -1,0 +1,736 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>9.0.30729</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{B8F1D303-53E4-425A-8DC8-EE5672324790}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>JHPermrec.UpdateRecord</RootNamespace>
+    <AssemblyName>JHPermrec.UpdateRecord</AssemblyName>
+    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <SccProjectName>SAK</SccProjectName>
+    <SccLocalPath>SAK</SccLocalPath>
+    <SccAuxPath>SAK</SccAuxPath>
+    <SccProvider>SAK</SccProvider>
+    <FileUpgradeFlags>
+    </FileUpgradeFlags>
+    <UpgradeBackupLocation>
+    </UpgradeBackupLocation>
+    <OldToolsVersion>3.5</OldToolsVersion>
+    <TargetFrameworkProfile />
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <CodeAnalysisRuleSet>AllRules.ruleset</CodeAnalysisRuleSet>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <CodeAnalysisRuleSet>AllRules.ruleset</CodeAnalysisRuleSet>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Aspose.Cells, Version=4.3.0.0, Culture=neutral, PublicKeyToken=9a40d5a4b59e5256, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>Library\Aspose.Cells.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="Aspose.Words, Version=4.4.0.0, Culture=neutral, PublicKeyToken=716fcc553a201e56, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>Library\Aspose.Words.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="DevComponents.DotNetBar2, Version=9.5.0.1, Culture=neutral, PublicKeyToken=7eb7c3a35b91de04, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>Library\DevComponents.DotNetBar2.dll</HintPath>
+    </Reference>
+    <Reference Include="FISCA, Version=2.1.4.5, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>Library\FISCA.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="FISCA.Authentication, Version=1.9.0.16, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>Library\FISCA.Authentication.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="FISCA.Data, Version=1.0.0.3, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>Library\FISCA.Data.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="FISCA.DSAClient, Version=1.0.1.14, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>Library\FISCA.DSAClient.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="FISCA.DSAUtil, Version=3.9.0.10, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>Library\FISCA.DSAUtil.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="FISCA.LogAgent, Version=1.0.0.6, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>Library\FISCA.LogAgent.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="FISCA.Presentation, Version=1.1.0.18, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>Library\FISCA.Presentation.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="Framework, Version=1.0.0.10, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>Library\Framework.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="IntelliSchool.DSA.ClientFramework, Version=1.2.2.1, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>Library\IntelliSchool.DSA.ClientFramework.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="JHSchool, Version=1.0.3.4, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>Library\JHSchool.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="JHSchool.Affair, Version=1.0.0.5, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>Library\JHSchool.Affair.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="JHSchool.Data, Version=2.0.0.2, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>Library\JHSchool.Data.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="JHSchool.Evaluation, Version=1.0.0.38, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>Library\JHSchool.Evaluation.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="JHSchool.Permrec, Version=1.0.2.4, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>Library\JHSchool.Permrec.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="JHSchool.SF, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>Library\JHSchool.SF.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="K12.Data, Version=2.0.0.2, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>Library\K12.Data.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="K12.Presentation, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>Library\K12.Presentation.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="SmartSchool.API.PlugIn, Version=0.0.0.3, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>Library\SmartSchool.API.PlugIn.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="SmartSchool.Common, Version=1.0.0.6, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>Library\SmartSchool.Common.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="SmartSchool.Common.DotNetBar, Version=1.0.0.6, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>Library\SmartSchool.Common.DotNetBar.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="SmartSchool.Customization.PlugIn, Version=1.1.4.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>Library\SmartSchool.Customization.PlugIn.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Core">
+      <RequiredTargetFramework>3.5</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="System.Data.DataSetExtensions">
+      <RequiredTargetFramework>3.5</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="System.Data" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Batch\BatchAddNewStudUpdateRecord.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Batch\BatchAddNewStudUpdateRecord.designer.cs">
+      <DependentUpon>BatchAddNewStudUpdateRecord.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Batch\BatchAddNewStudUpdateRecord_Warning.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Batch\BatchAddNewStudUpdateRecord_Warning.designer.cs">
+      <DependentUpon>BatchAddNewStudUpdateRecord_Warning.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Batch\BatchStudGraduateUpdateRec.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Batch\BatchStudGraduateUpdateRec.designer.cs">
+      <DependentUpon>BatchStudGraduateUpdateRec.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Batch\BatchStudGraduateUpdateRec_Warning.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Batch\BatchStudGraduateUpdateRec_Warning.designer.cs">
+      <DependentUpon>BatchStudGraduateUpdateRec_Warning.cs</DependentUpon>
+    </Compile>
+    <Compile Include="DAL\AttendCourseEntity.cs" />
+    <Compile Include="DAL\DALTransfer.cs" />
+    <Compile Include="DAL\ExamScoreEntity.cs" />
+    <Compile Include="DAL\HsinChuJHAEIncludeRecord.cs" />
+    <Compile Include="DAL\HsinChuJHSCETakeRecord.cs" />
+    <Compile Include="DAL\KaoHsiungJHAEIncludeRecord.cs" />
+    <Compile Include="DAL\KaoHsiungJHSCETakeRecord.cs" />
+    <Compile Include="DAL\StudBatchUpdateRecContentEntity.cs" />
+    <Compile Include="DAL\StudBatchUpdateRecEntity.cs" />
+    <Compile Include="DAL\StudDiplomaInfoJuniorDiplomaNumber.cs" />
+    <Compile Include="DAL\StudUpdateRecordEntity.cs" />
+    <Compile Include="GovernmentalDocument\DAL\DALTransfer.cs" />
+    <Compile Include="GovernmentalDocument\ReportBuilder\GDResources.Designer.cs" />
+    <Compile Include="GovernmentalDocument\NameList\BuildWizard.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GovernmentalDocument\NameList\BuildWizard.designer.cs">
+      <DependentUpon>BuildWizard.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GovernmentalDocument\NameList\Entries\EnrollEntryFormat.cs" />
+    <Compile Include="GovernmentalDocument\NameList\Entries\GraduateEntryFormat.cs" />
+    <Compile Include="GovernmentalDocument\NameList\Entries\IEntryFormat.cs" />
+    <Compile Include="GovernmentalDocument\NameList\Entries\PermrecEntryFormat.cs" />
+    <Compile Include="GovernmentalDocument\NameList\Entries\TransferEntryFormat.cs" />
+    <Compile Include="GovernmentalDocument\NameList\Entries\YianXiouGraduateEntryFormat.cs" />
+    <Compile Include="GovernmentalDocument\NameList\Entries\YianXiouNameListEntryFormat.cs" />
+    <Compile Include="GovernmentalDocument\NameList\Entries\YianXiouUpdateRecordEntryFormat.cs" />
+    <Compile Include="GovernmentalDocument\NameList\ISummaryProvider.cs" />
+    <Compile Include="GovernmentalDocument\NameList\ListForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GovernmentalDocument\NameList\ListForm.designer.cs">
+      <DependentUpon>ListForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GovernmentalDocument\NameList\ListProvider\ContinueStudentUpdateRecordListProvider.cs" />
+    <Compile Include="GovernmentalDocument\NameList\ListProvider\EnrollmentListProvider.cs" />
+    <Compile Include="GovernmentalDocument\NameList\ListProvider\ExtendingStudentListProvider.cs" />
+    <Compile Include="GovernmentalDocument\NameList\ListProvider\GraduatingStudentListProvider.cs" />
+    <Compile Include="GovernmentalDocument\NameList\ListProvider\INameListProvider.cs" />
+    <Compile Include="GovernmentalDocument\NameList\ListProvider\ResumeStudentUpdateRecordListProvider.cs" />
+    <Compile Include="GovernmentalDocument\NameList\ListProvider\SuspensionStudentUpdateRecordListProvider.cs" />
+    <Compile Include="GovernmentalDocument\NameList\ListProvider\Transferring01StudentUpdateRecordListProvider.cs" />
+    <Compile Include="GovernmentalDocument\NameList\ListProvider\TransferringStudentUpdateRecordListProvider.cs" />
+    <Compile Include="GovernmentalDocument\NameList\ListProvider\UpdateStudentPermrecListProvider.cs" />
+    <Compile Include="GovernmentalDocument\NameList\Lists\ContinueStudentUpdateRecordList.cs" />
+    <Compile Include="GovernmentalDocument\NameList\Lists\EnrollmentList.cs" />
+    <Compile Include="GovernmentalDocument\NameList\Lists\ExtendingStudentList.cs" />
+    <Compile Include="GovernmentalDocument\NameList\Lists\GraduatingStudentList.cs" />
+    <Compile Include="GovernmentalDocument\NameList\Lists\ResumeStudentUpdateRecordList.cs" />
+    <Compile Include="GovernmentalDocument\NameList\Lists\SuspensionStudentUpdateRecordList.cs" />
+    <Compile Include="GovernmentalDocument\NameList\Lists\Transferring01StudentUpdateRecordList.cs" />
+    <Compile Include="GovernmentalDocument\NameList\Lists\TransferringStudentUpdateRecordList.cs" />
+    <Compile Include="GovernmentalDocument\NameList\Lists\UpdateStudentPermrecList.cs" />
+    <Compile Include="GovernmentalDocument\NameList\UpdateRecordADN.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GovernmentalDocument\NameList\UpdateRecordADN.Designer.cs">
+      <DependentUpon>UpdateRecordADN.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GovernmentalDocument\NameList\UpdateRecordUtil.cs" />
+    <Compile Include="GovernmentalDocument\Process\BatchGraduateUI\ErrorViewer.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GovernmentalDocument\Process\BatchGraduateUI\ErrorViewer.Designer.cs">
+      <DependentUpon>ErrorViewer.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GovernmentalDocument\Process\BatchGraduateUI\InitialForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GovernmentalDocument\Process\BatchGraduateUI\InitialForm.Designer.cs">
+      <DependentUpon>InitialForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GovernmentalDocument\Process\BatchUpdateRecord.cs" />
+    <Compile Include="GovernmentalDocument\Process\BatchUpdateRecord.designer.cs">
+      <DependentUpon>BatchUpdateRecord.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GovernmentalDocument\Process\NameList.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="GovernmentalDocument\Process\NameList.Designer.cs">
+      <DependentUpon>NameList.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GovernmentalDocument\Process\ProcessWizards\ChangeDeptProcess.cs" />
+    <Compile Include="GovernmentalDocument\Process\ProcessWizards\ChangeDeptProcess.designer.cs">
+      <DependentUpon>ChangeDeptProcess.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GovernmentalDocument\Process\ProcessWizards\ChangeInfoProcess.cs" />
+    <Compile Include="GovernmentalDocument\Process\ProcessWizards\ChangeInfoProcess.Designer.cs">
+      <DependentUpon>ChangeInfoProcess.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GovernmentalDocument\ReportBuilder\IReportBuilder.cs" />
+    <Compile Include="GovernmentalDocument\ReportBuilder\ReportBuilder.cs" />
+    <Compile Include="GovernmentalDocument\ReportBuilder\ReportBuilderManager.cs" />
+    <Compile Include="ImportExport\ExportStudentV2.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ImportExport\ExportStudentV2.designer.cs">
+      <DependentUpon>ExportStudentV2.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ImportExport\ExportUpdateRecCode01.cs" />
+    <Compile Include="ImportExport\ExportUpdateRecCode02.cs" />
+    <Compile Include="ImportExport\ExportUpdateRecCode03.cs" />
+    <Compile Include="ImportExport\ExportUpdateRecCode04.cs" />
+    <Compile Include="ImportExport\ExportUpdateRecCode05.cs" />
+    <Compile Include="ImportExport\ExportUpdateRecCode06.cs" />
+    <Compile Include="ImportExport\ExportUpdateRecCode07.cs" />
+    <Compile Include="ImportExport\ExportUpdateRecCode08.cs" />
+    <Compile Include="ImportExport\ExportUpdateRecCode09.cs" />
+    <Compile Include="ImportExport\ExportUpdateRecCode100.cs" />
+    <Compile Include="ImportExport\ImportStudentV2.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ImportExport\ImportStudentV2.designer.cs">
+      <DependentUpon>ImportStudentV2.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ImportExport\ImportUpdateRecCode01.cs" />
+    <Compile Include="ImportExport\ImportUpdateRecCode02.cs" />
+    <Compile Include="ImportExport\ImportUpdateRecCode03.cs" />
+    <Compile Include="ImportExport\ImportUpdateRecCode04.cs" />
+    <Compile Include="ImportExport\ImportUpdateRecCode05.cs" />
+    <Compile Include="ImportExport\ImportUpdateRecCode06.cs" />
+    <Compile Include="ImportExport\ImportUpdateRecCode07.cs" />
+    <Compile Include="ImportExport\ImportUpdateRecCode08.cs" />
+    <Compile Include="ImportExport\ImportUpdateRecCode09.cs" />
+    <Compile Include="ImportExport\ImportUpdateRecCode100.cs" />
+    <Compile Include="ImportExport\ImportUtil.cs" />
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <Compile Include="StudCheckTool.cs" />
+    <Compile Include="Tools\CheckLastUpdateDataForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Tools\CheckLastUpdateDataForm.Designer.cs">
+      <DependentUpon>CheckLastUpdateDataForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Transfer\AddTransBackgroundManager.cs" />
+    <Compile Include="Transfer\AddTransManagerForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Transfer\AddTransManagerForm.designer.cs">
+      <DependentUpon>AddTransManagerForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Transfer\AddTransStud.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Transfer\AddTransStud.designer.cs">
+      <DependentUpon>AddTransStud.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Transfer\AddTransStudBase.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Transfer\AddTransStudBase.designer.cs">
+      <DependentUpon>AddTransStudBase.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Transfer\AddTransStudBaseData.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Transfer\AddTransStudBaseData.designer.cs">
+      <DependentUpon>AddTransStudBaseData.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Transfer\AddTransStudCourse.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Transfer\AddTransStudCourse.designer.cs">
+      <DependentUpon>AddTransStudCourse.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Transfer\AddTransStudCourseScore.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Transfer\AddTransStudCourseScore.designer.cs">
+      <DependentUpon>AddTransStudCourseScore.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Transfer\AddTransStudSemesterHistory.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Transfer\AddTransStudSemesterHistory.designer.cs">
+      <DependentUpon>AddTransStudSemesterHistory.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Transfer\AddTransStudSemsSubjScore.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Transfer\AddTransStudSemsSubjScore.designer.cs">
+      <DependentUpon>AddTransStudSemsSubjScore.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Transfer\AddTransStudUpdateRecord.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Transfer\AddTransStudUpdateRecord.designer.cs">
+      <DependentUpon>AddTransStudUpdateRecord.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Transfer\DALTransfer.cs" />
+    <Compile Include="Transfer\DGValueManager.cs" />
+    <Compile Include="UpdateRecordItem.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UpdateRecordItem.designer.cs">
+      <DependentUpon>UpdateRecordItem.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UpdateRecordItemControls\GetJHSchoolNames.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UpdateRecordItemControls\GetJHSchoolNames.Designer.cs">
+      <DependentUpon>GetJHSchoolNames.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UpdateRecordItemControls\IUpdateRecordInfo.cs" />
+    <Compile Include="UpdateRecordItemControls\UpdateRecordInfo01.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UpdateRecordItemControls\UpdateRecordInfo01.Designer.cs">
+      <DependentUpon>UpdateRecordInfo01.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UpdateRecordItemControls\UpdateRecordInfo02.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UpdateRecordItemControls\UpdateRecordInfo02.Designer.cs">
+      <DependentUpon>UpdateRecordInfo02.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UpdateRecordItemControls\UpdateRecordInfo03.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UpdateRecordItemControls\UpdateRecordInfo03.Designer.cs">
+      <DependentUpon>UpdateRecordInfo03.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UpdateRecordItemControls\UpdateRecordInfo04.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UpdateRecordItemControls\UpdateRecordInfo04.Designer.cs">
+      <DependentUpon>UpdateRecordInfo04.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UpdateRecordItemControls\UpdateRecordInfo05.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UpdateRecordItemControls\UpdateRecordInfo05.Designer.cs">
+      <DependentUpon>UpdateRecordInfo05.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UpdateRecordItemControls\UpdateRecordInfo06.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UpdateRecordItemControls\UpdateRecordInfo06.Designer.cs">
+      <DependentUpon>UpdateRecordInfo06.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UpdateRecordItemControls\UpdateRecordInfo07.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UpdateRecordItemControls\UpdateRecordInfo07.Designer.cs">
+      <DependentUpon>UpdateRecordInfo07.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UpdateRecordItemControls\UpdateRecordInfo08.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UpdateRecordItemControls\UpdateRecordInfo08.Designer.cs">
+      <DependentUpon>UpdateRecordInfo08.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UpdateRecordItemControls\UpdateRecordInfo09.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UpdateRecordItemControls\UpdateRecordInfo09.Designer.cs">
+      <DependentUpon>UpdateRecordInfo09.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UpdateRecordItemForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UpdateRecordItemForm.designer.cs">
+      <DependentUpon>UpdateRecordItemForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UpdateRecordUtil.cs" />
+    <Compile Include="UpdateRecordViewForm\CompleteForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UpdateRecordViewForm\CompleteForm.designer.cs">
+      <DependentUpon>CompleteForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UpdateRecordViewForm\DataGridViewExport.cs" />
+    <Compile Include="UpdateRecordViewForm\UpdateRecordViewForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UpdateRecordViewForm\UpdateRecordViewForm.designer.cs">
+      <DependentUpon>UpdateRecordViewForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UpdateRecordViewForm\UpdateTypeForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UpdateRecordViewForm\UpdateTypeForm.designer.cs">
+      <DependentUpon>UpdateTypeForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Wizard\Wizard_UpdateCode09Form_1.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Wizard\Wizard_UpdateCode09Form_1.Designer.cs">
+      <DependentUpon>Wizard_UpdateCode09Form_1.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Wizard\Wizard_UpdateCode09Form_2.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Wizard\Wizard_UpdateCode09Form_2.Designer.cs">
+      <DependentUpon>Wizard_UpdateCode09Form_2.cs</DependentUpon>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Batch\BatchAddNewStudUpdateRecord.resx">
+      <DependentUpon>BatchAddNewStudUpdateRecord.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Batch\BatchAddNewStudUpdateRecord_Warning.resx">
+      <DependentUpon>BatchAddNewStudUpdateRecord_Warning.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Batch\BatchStudGraduateUpdateRec.resx">
+      <DependentUpon>BatchStudGraduateUpdateRec.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Batch\BatchStudGraduateUpdateRec_Warning.resx">
+      <DependentUpon>BatchStudGraduateUpdateRec_Warning.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GovernmentalDocument\GDResources.resx" />
+    <EmbeddedResource Include="GovernmentalDocument\NameList\BuildWizard.resx">
+      <DependentUpon>BuildWizard.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GovernmentalDocument\NameList\ListForm.resx">
+      <DependentUpon>ListForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GovernmentalDocument\NameList\UpdateRecordADN.resx">
+      <DependentUpon>UpdateRecordADN.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GovernmentalDocument\Process\BatchGraduateUI\ErrorViewer.resx">
+      <DependentUpon>ErrorViewer.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GovernmentalDocument\Process\BatchGraduateUI\InitialForm.resx">
+      <DependentUpon>InitialForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GovernmentalDocument\Process\BatchUpdateRecord.resx">
+      <DependentUpon>BatchUpdateRecord.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GovernmentalDocument\Process\NameList.resx">
+      <DependentUpon>NameList.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GovernmentalDocument\Process\ProcessWizards\ChangeDeptProcess.resx">
+      <DependentUpon>ChangeDeptProcess.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GovernmentalDocument\Process\ProcessWizards\ChangeInfoProcess.resx">
+      <DependentUpon>ChangeInfoProcess.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ImportExport\ExportStudentV2.resx">
+      <DependentUpon>ExportStudentV2.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ImportExport\ImportStudentV2.resx">
+      <DependentUpon>ImportStudentV2.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Tools\CheckLastUpdateDataForm.resx">
+      <DependentUpon>CheckLastUpdateDataForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Transfer\AddTransManagerForm.resx">
+      <DependentUpon>AddTransManagerForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Transfer\AddTransStud.resx">
+      <DependentUpon>AddTransStud.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Transfer\AddTransStudBase.resx">
+      <DependentUpon>AddTransStudBase.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Transfer\AddTransStudBaseData.resx">
+      <DependentUpon>AddTransStudBaseData.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Transfer\AddTransStudCourse.resx">
+      <DependentUpon>AddTransStudCourse.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Transfer\AddTransStudCourseScore.resx">
+      <DependentUpon>AddTransStudCourseScore.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Transfer\AddTransStudSemesterHistory.resx">
+      <DependentUpon>AddTransStudSemesterHistory.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Transfer\AddTransStudSemsSubjScore.resx">
+      <DependentUpon>AddTransStudSemsSubjScore.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Transfer\AddTransStudUpdateRecord.resx">
+      <DependentUpon>AddTransStudUpdateRecord.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UpdateRecordItem.resx">
+      <DependentUpon>UpdateRecordItem.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UpdateRecordItemControls\GetJHSchoolNames.resx">
+      <DependentUpon>GetJHSchoolNames.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UpdateRecordItemControls\UpdateRecordInfo01.resx">
+      <DependentUpon>UpdateRecordInfo01.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UpdateRecordItemControls\UpdateRecordInfo02.resx">
+      <DependentUpon>UpdateRecordInfo02.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UpdateRecordItemControls\UpdateRecordInfo03.resx">
+      <DependentUpon>UpdateRecordInfo03.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UpdateRecordItemControls\UpdateRecordInfo04.resx">
+      <DependentUpon>UpdateRecordInfo04.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UpdateRecordItemControls\UpdateRecordInfo05.resx">
+      <DependentUpon>UpdateRecordInfo05.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UpdateRecordItemControls\UpdateRecordInfo06.resx">
+      <DependentUpon>UpdateRecordInfo06.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UpdateRecordItemControls\UpdateRecordInfo07.resx">
+      <DependentUpon>UpdateRecordInfo07.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UpdateRecordItemControls\UpdateRecordInfo08.resx">
+      <DependentUpon>UpdateRecordInfo08.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UpdateRecordItemControls\UpdateRecordInfo09.resx">
+      <DependentUpon>UpdateRecordInfo09.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UpdateRecordItemForm.resx">
+      <DependentUpon>UpdateRecordItemForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UpdateRecordViewForm\CompleteForm.resx">
+      <DependentUpon>CompleteForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UpdateRecordViewForm\UpdateRecordViewForm.resx">
+      <DependentUpon>UpdateRecordViewForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UpdateRecordViewForm\UpdateTypeForm.resx">
+      <DependentUpon>UpdateTypeForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Wizard\Wizard_UpdateCode09Form_1.resx">
+      <DependentUpon>Wizard_UpdateCode09Form_1.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Wizard\Wizard_UpdateCode09Form_2.resx">
+      <DependentUpon>Wizard_UpdateCode09Form_2.cs</DependentUpon>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="GovernmentalDocument\GDResources\HsinChu\JEnrollmentListTemplate_HsinChu.xls" />
+    <None Include="GovernmentalDocument\GDResources\HsinChu\JGraduateListTemplate_HsinChu.xls" />
+    <None Include="GovernmentalDocument\GDResources\HsinChu\JTransfer01ListTemplate_HsinChu.xls" />
+    <None Include="GovernmentalDocument\GDResources\HsinChu\JTransferStudentUpdateRecordTemplate_HsinChu.xls" />
+    <None Include="GovernmentalDocument\GDResources\JContinueStudentUpdateRecordListTemplate.xls" />
+    <None Include="GovernmentalDocument\GDResources\JEnrollmentListTemplate.xls" />
+    <None Include="GovernmentalDocument\GDResources\JExtendingStudentListTemplate.xls" />
+    <None Include="GovernmentalDocument\GDResources\JGraduatingStudentListTemplate.xls" />
+    <None Include="GovernmentalDocument\GDResources\JResumeStudentUpdateRecordListTemplate.xls" />
+    <None Include="GovernmentalDocument\GDResources\JSuspensionStudentUpdateRecordListTemplate.xls" />
+    <None Include="GovernmentalDocument\GDResources\JTransferring01StudentUpdateRecordListTemplate.xls" />
+    <None Include="GovernmentalDocument\GDResources\JTransferringStudentUpdateRecordListTemplate.xls" />
+    <None Include="GovernmentalDocument\GDResources\JUpdateStudentPermrecTemplate.xls" />
+    <None Include="GovernmentalDocument\GDResources\JUpdateStudentPermrecTemplate_KH.xls" />
+    <None Include="GovernmentalDocument\GDResources\TaiChung\JEnrollmentListTemplate_TaiChung.xls" />
+    <None Include="GovernmentalDocument\GDResources\TaiChung\JGraduateListTemplate_TaiChung.xls" />
+    <None Include="GovernmentalDocument\GDResources\TaiChung\JTransferListTemplate_TaiChung.xls" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="GovernmentalDocument\GDResources\btnItemNameList.Image.png" />
+    <Content Include="Library\Aspose.Cells.dll" />
+    <Content Include="Library\Aspose.Cells.xml" />
+    <Content Include="Library\Aspose.Words.dll" />
+    <Content Include="Library\Aspose.Words.xml" />
+    <Content Include="Library\DevComponents.DotNetBar2.dll" />
+    <Content Include="Library\DevComponents.DotNetBar2.xml" />
+    <Content Include="Library\FISCA.Authentication.dll" />
+    <Content Include="Library\FISCA.Authentication.pdb" />
+    <Content Include="Library\FISCA.Authentication.xml" />
+    <Content Include="Library\FISCA.Data.dll" />
+    <Content Include="Library\FISCA.Data.pdb" />
+    <Content Include="Library\FISCA.Data.xml" />
+    <Content Include="Library\FISCA.dll" />
+    <Content Include="Library\FISCA.DSAClient.dll" />
+    <Content Include="Library\FISCA.DSAClient.pdb" />
+    <Content Include="Library\FISCA.DSAClient.xml" />
+    <Content Include="Library\FISCA.DSAUtil.dll" />
+    <Content Include="Library\FISCA.DSAUtil.pdb" />
+    <Content Include="Library\FISCA.DSAUtil.xml" />
+    <Content Include="Library\FISCA.LogAgent.dll" />
+    <Content Include="Library\FISCA.LogAgent.pdb" />
+    <Content Include="Library\FISCA.LogAgent.xml" />
+    <Content Include="Library\FISCA.pdb" />
+    <Content Include="Library\FISCA.Presentation.dll" />
+    <Content Include="Library\FISCA.Presentation.pdb" />
+    <Content Include="Library\FISCA.Presentation.xml" />
+    <Content Include="Library\Framework.dll" />
+    <Content Include="Library\Framework.pdb" />
+    <Content Include="Library\IntelliSchool.DSA.ClientFramework.dll" />
+    <Content Include="Library\IntelliSchool.DSA.ClientFramework.xml" />
+    <Content Include="Library\JHSchool.Affair.dll" />
+    <Content Include="Library\JHSchool.Affair.pdb" />
+    <Content Include="Library\JHSchool.Data.dll" />
+    <Content Include="Library\JHSchool.Data.pdb" />
+    <Content Include="Library\JHSchool.Data.xml" />
+    <Content Include="Library\JHSchool.dll" />
+    <Content Include="Library\JHSchool.Evaluation.dll" />
+    <Content Include="Library\JHSchool.Evaluation.pdb" />
+    <Content Include="Library\JHSchool.pdb" />
+    <Content Include="Library\JHSchool.Permrec.dll" />
+    <Content Include="Library\JHSchool.Permrec.pdb" />
+    <Content Include="Library\JHSchool.SF.dll" />
+    <Content Include="Library\JHSchool.SF.pdb" />
+    <Content Include="Library\K12.Data.dll" />
+    <Content Include="Library\K12.Data.pdb" />
+    <Content Include="Library\K12.Data.xml" />
+    <Content Include="Library\K12.Presentation.dll" />
+    <Content Include="Library\K12.Presentation.pdb" />
+    <Content Include="Library\SmartSchool.API.PlugIn.dll" />
+    <Content Include="Library\SmartSchool.API.PlugIn.pdb" />
+    <Content Include="Library\SmartSchool.Common.dll" />
+    <Content Include="Library\SmartSchool.Common.DotNetBar.dll" />
+    <Content Include="Library\SmartSchool.Common.DotNetBar.pdb" />
+    <Content Include="Library\SmartSchool.Common.DotNetBar.xml" />
+    <Content Include="Library\SmartSchool.Common.pdb" />
+    <Content Include="Library\SmartSchool.Common.xml" />
+    <Content Include="Library\SmartSchool.Customization.PlugIn.dll" />
+    <Content Include="Library\SmartSchool.Customization.PlugIn.xml" />
+    <Content Include="Resources\eh.xml" />
+    <Content Include="Resources\jh.xml" />
+    <None Include="Resources\user_write_64.png" />
+    <None Include="Resources\history_save_64.png" />
+    <None Include="Resources\graduated_write_64.png" />
+    <None Include="Resources\demographic_reload_64.png" />
+    <None Include="Resources\contract_zoom_128.png" />
+    <None Include="Resources\warning.ico" />
+    <None Include="Resources\loading5.gif" />
+  </ItemGroup>
+  <ItemGroup />
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

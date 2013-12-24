@@ -1,0 +1,55 @@
+D:\Documents and Settings\ChenCT\桌面\FiscaAEAlpha\FiscaAE Alpha\addmodules\JHPermrec.UpdateRecord\JHPermrec.UpdateRecord.dll
+D:\Documents and Settings\ChenCT\桌面\FiscaAEAlpha\FiscaAE Alpha\addmodules\JHPermrec.UpdateRecord\JHPermrec.UpdateRecord.pdb
+D:\bin\debug\JHPermrec.UpdateRecord.dll
+D:\bin\debug\JHPermrec.UpdateRecord.pdb
+D:\TFS2010\ischoolteam\ischool_Junior with FISCA\Modules\JHPermrec.UpdateRecord\JHPermrec.UpdateRecord\bin\Debug\JHPermrec.UpdateRecord.dll
+D:\TFS2010\ischoolteam\ischool_Junior with FISCA\Modules\JHPermrec.UpdateRecord\JHPermrec.UpdateRecord\bin\Debug\JHPermrec.UpdateRecord.pdb
+D:\TFS2010\ischoolteam\ischool_Junior with FISCA\Modules\JHPermrec.UpdateRecord\JHPermrec.UpdateRecord\obj\Debug\ResolveAssemblyReference.cache
+D:\TFS2010\ischoolteam\ischool_Junior with FISCA\Modules\JHPermrec.UpdateRecord\JHPermrec.UpdateRecord\obj\Debug\JHPermrec.UpdateRecord.Batch.BatchAddNewStudUpdateRecord.resources
+D:\TFS2010\ischoolteam\ischool_Junior with FISCA\Modules\JHPermrec.UpdateRecord\JHPermrec.UpdateRecord\obj\Debug\JHPermrec.UpdateRecord.Batch.BatchAddNewStudUpdateRecord_Warning.resources
+D:\TFS2010\ischoolteam\ischool_Junior with FISCA\Modules\JHPermrec.UpdateRecord\JHPermrec.UpdateRecord\obj\Debug\JHPermrec.UpdateRecord.Batch.BatchStudGraduateUpdateRec.resources
+D:\TFS2010\ischoolteam\ischool_Junior with FISCA\Modules\JHPermrec.UpdateRecord\JHPermrec.UpdateRecord\obj\Debug\JHPermrec.UpdateRecord.Batch.BatchStudGraduateUpdateRec_Warning.resources
+D:\TFS2010\ischoolteam\ischool_Junior with FISCA\Modules\JHPermrec.UpdateRecord\JHPermrec.UpdateRecord\obj\Debug\JHPermrec.UpdateRecord.GovernmentalDocument.GDResources.resources
+D:\TFS2010\ischoolteam\ischool_Junior with FISCA\Modules\JHPermrec.UpdateRecord\JHPermrec.UpdateRecord\obj\Debug\JHPermrec.UpdateRecord.GovernmentalDocument.NameList.BuildWizard.resources
+D:\TFS2010\ischoolteam\ischool_Junior with FISCA\Modules\JHPermrec.UpdateRecord\JHPermrec.UpdateRecord\obj\Debug\JHPermrec.UpdateRecord.GovernmentalDocument.NameList.ListForm.resources
+D:\TFS2010\ischoolteam\ischool_Junior with FISCA\Modules\JHPermrec.UpdateRecord\JHPermrec.UpdateRecord\obj\Debug\JHPermrec.UpdateRecord.GovernmentalDocument.NameList.UpdateRecordADN.resources
+D:\TFS2010\ischoolteam\ischool_Junior with FISCA\Modules\JHPermrec.UpdateRecord\JHPermrec.UpdateRecord\obj\Debug\JHPermrec.UpdateRecord.GovernmentalDocument.Process.ErrorViewer.resources
+D:\TFS2010\ischoolteam\ischool_Junior with FISCA\Modules\JHPermrec.UpdateRecord\JHPermrec.UpdateRecord\obj\Debug\JHPermrec.UpdateRecord.GovernmentalDocument.Process.InitialForm.resources
+D:\TFS2010\ischoolteam\ischool_Junior with FISCA\Modules\JHPermrec.UpdateRecord\JHPermrec.UpdateRecord\obj\Debug\JHPermrec.UpdateRecord.GovernmentalDocument.Process.BatchUpdateRecord.resources
+D:\TFS2010\ischoolteam\ischool_Junior with FISCA\Modules\JHPermrec.UpdateRecord\JHPermrec.UpdateRecord\obj\Debug\JHPermrec.UpdateRecord.GovernmentalDocument.Process.NameList.resources
+D:\TFS2010\ischoolteam\ischool_Junior with FISCA\Modules\JHPermrec.UpdateRecord\JHPermrec.UpdateRecord\obj\Debug\JHPermrec.UpdateRecord.GovernmentalDocument.Process.ProcessWizards.ChangeDeptProcess.resources
+D:\TFS2010\ischoolteam\ischool_Junior with FISCA\Modules\JHPermrec.UpdateRecord\JHPermrec.UpdateRecord\obj\Debug\JHPermrec.UpdateRecord.GovernmentalDocument.Process.ProcessWizards.ChangeInfoProcess.resources
+D:\TFS2010\ischoolteam\ischool_Junior with FISCA\Modules\JHPermrec.UpdateRecord\JHPermrec.UpdateRecord\obj\Debug\JHPermrec.UpdateRecord.ImportExport.ExportStudentV2.resources
+D:\TFS2010\ischoolteam\ischool_Junior with FISCA\Modules\JHPermrec.UpdateRecord\JHPermrec.UpdateRecord\obj\Debug\JHPermrec.UpdateRecord.ImportExport.ImportStudentV2.resources
+D:\TFS2010\ischoolteam\ischool_Junior with FISCA\Modules\JHPermrec.UpdateRecord\JHPermrec.UpdateRecord\obj\Debug\JHPermrec.UpdateRecord.Properties.Resources.resources
+D:\TFS2010\ischoolteam\ischool_Junior with FISCA\Modules\JHPermrec.UpdateRecord\JHPermrec.UpdateRecord\obj\Debug\JHPermrec.UpdateRecord.Tools.CheckLastUpdateDataForm.resources
+D:\TFS2010\ischoolteam\ischool_Junior with FISCA\Modules\JHPermrec.UpdateRecord\JHPermrec.UpdateRecord\obj\Debug\JHPermrec.UpdateRecord.Transfer.AddTransManagerForm.resources
+D:\TFS2010\ischoolteam\ischool_Junior with FISCA\Modules\JHPermrec.UpdateRecord\JHPermrec.UpdateRecord\obj\Debug\JHPermrec.UpdateRecord.Transfer.AddTransStud.resources
+D:\TFS2010\ischoolteam\ischool_Junior with FISCA\Modules\JHPermrec.UpdateRecord\JHPermrec.UpdateRecord\obj\Debug\JHPermrec.UpdateRecord.Transfer.AddTransStudBase.resources
+D:\TFS2010\ischoolteam\ischool_Junior with FISCA\Modules\JHPermrec.UpdateRecord\JHPermrec.UpdateRecord\obj\Debug\JHPermrec.UpdateRecord.Transfer.AddTransStudBaseData.resources
+D:\TFS2010\ischoolteam\ischool_Junior with FISCA\Modules\JHPermrec.UpdateRecord\JHPermrec.UpdateRecord\obj\Debug\JHPermrec.UpdateRecord.Transfer.AddTransStudCourse.resources
+D:\TFS2010\ischoolteam\ischool_Junior with FISCA\Modules\JHPermrec.UpdateRecord\JHPermrec.UpdateRecord\obj\Debug\JHPermrec.UpdateRecord.Transfer.AddTransStudCourseScore.resources
+D:\TFS2010\ischoolteam\ischool_Junior with FISCA\Modules\JHPermrec.UpdateRecord\JHPermrec.UpdateRecord\obj\Debug\JHPermrec.UpdateRecord.Transfer.AddTransStudSemesterHistory.resources
+D:\TFS2010\ischoolteam\ischool_Junior with FISCA\Modules\JHPermrec.UpdateRecord\JHPermrec.UpdateRecord\obj\Debug\JHPermrec.UpdateRecord.Transfer.AddTransStudSemsSubjScore.resources
+D:\TFS2010\ischoolteam\ischool_Junior with FISCA\Modules\JHPermrec.UpdateRecord\JHPermrec.UpdateRecord\obj\Debug\JHPermrec.UpdateRecord.Transfer.AddTransStudUpdateRecord.resources
+D:\TFS2010\ischoolteam\ischool_Junior with FISCA\Modules\JHPermrec.UpdateRecord\JHPermrec.UpdateRecord\obj\Debug\JHPermrec.UpdateRecord.UpdateRecordItem.resources
+D:\TFS2010\ischoolteam\ischool_Junior with FISCA\Modules\JHPermrec.UpdateRecord\JHPermrec.UpdateRecord\obj\Debug\JHPermrec.UpdateRecord.UpdateRecordItemControls.GetJHSchoolNames.resources
+D:\TFS2010\ischoolteam\ischool_Junior with FISCA\Modules\JHPermrec.UpdateRecord\JHPermrec.UpdateRecord\obj\Debug\JHPermrec.UpdateRecord.UpdateRecordItemControls.UpdateRecordInfo01.resources
+D:\TFS2010\ischoolteam\ischool_Junior with FISCA\Modules\JHPermrec.UpdateRecord\JHPermrec.UpdateRecord\obj\Debug\JHPermrec.UpdateRecord.UpdateRecordItemControls.UpdateRecordInfo02.resources
+D:\TFS2010\ischoolteam\ischool_Junior with FISCA\Modules\JHPermrec.UpdateRecord\JHPermrec.UpdateRecord\obj\Debug\JHPermrec.UpdateRecord.UpdateRecordItemControls.UpdateRecordInfo03.resources
+D:\TFS2010\ischoolteam\ischool_Junior with FISCA\Modules\JHPermrec.UpdateRecord\JHPermrec.UpdateRecord\obj\Debug\JHPermrec.UpdateRecord.UpdateRecordItemControls.UpdateRecordInfo04.resources
+D:\TFS2010\ischoolteam\ischool_Junior with FISCA\Modules\JHPermrec.UpdateRecord\JHPermrec.UpdateRecord\obj\Debug\JHPermrec.UpdateRecord.UpdateRecordItemControls.UpdateRecordInfo05.resources
+D:\TFS2010\ischoolteam\ischool_Junior with FISCA\Modules\JHPermrec.UpdateRecord\JHPermrec.UpdateRecord\obj\Debug\JHPermrec.UpdateRecord.UpdateRecordItemControls.UpdateRecordInfo06.resources
+D:\TFS2010\ischoolteam\ischool_Junior with FISCA\Modules\JHPermrec.UpdateRecord\JHPermrec.UpdateRecord\obj\Debug\JHPermrec.UpdateRecord.UpdateRecordItemControls.UpdateRecordInfo07.resources
+D:\TFS2010\ischoolteam\ischool_Junior with FISCA\Modules\JHPermrec.UpdateRecord\JHPermrec.UpdateRecord\obj\Debug\JHPermrec.UpdateRecord.UpdateRecordItemControls.UpdateRecordInfo08.resources
+D:\TFS2010\ischoolteam\ischool_Junior with FISCA\Modules\JHPermrec.UpdateRecord\JHPermrec.UpdateRecord\obj\Debug\JHPermrec.UpdateRecord.UpdateRecordItemControls.UpdateRecordInfo09.resources
+D:\TFS2010\ischoolteam\ischool_Junior with FISCA\Modules\JHPermrec.UpdateRecord\JHPermrec.UpdateRecord\obj\Debug\JHPermrec.UpdateRecord.UpdateRecordItemForm.resources
+D:\TFS2010\ischoolteam\ischool_Junior with FISCA\Modules\JHPermrec.UpdateRecord\JHPermrec.UpdateRecord\obj\Debug\JHPermrec.UpdateRecord.UpdateRecordViewForm.CompleteForm.resources
+D:\TFS2010\ischoolteam\ischool_Junior with FISCA\Modules\JHPermrec.UpdateRecord\JHPermrec.UpdateRecord\obj\Debug\JHPermrec.UpdateRecord.UpdateRecordViewForm.UpdateRecordViewForm.resources
+D:\TFS2010\ischoolteam\ischool_Junior with FISCA\Modules\JHPermrec.UpdateRecord\JHPermrec.UpdateRecord\obj\Debug\JHPermrec.UpdateRecord.UpdateRecordViewForm.UpdateTypeForm.resources
+D:\TFS2010\ischoolteam\ischool_Junior with FISCA\Modules\JHPermrec.UpdateRecord\JHPermrec.UpdateRecord\obj\Debug\JHPermrec.UpdateRecord.Wizard.Wizard_UpdateCode09Form_1.resources
+D:\TFS2010\ischoolteam\ischool_Junior with FISCA\Modules\JHPermrec.UpdateRecord\JHPermrec.UpdateRecord\obj\Debug\JHPermrec.UpdateRecord.Wizard.Wizard_UpdateCode09Form_2.resources
+D:\TFS2010\ischoolteam\ischool_Junior with FISCA\Modules\JHPermrec.UpdateRecord\JHPermrec.UpdateRecord\obj\Debug\GenerateResource.read.1.tlog
+D:\TFS2010\ischoolteam\ischool_Junior with FISCA\Modules\JHPermrec.UpdateRecord\JHPermrec.UpdateRecord\obj\Debug\GenerateResource.write.1.tlog
+D:\TFS2010\ischoolteam\ischool_Junior with FISCA\Modules\JHPermrec.UpdateRecord\JHPermrec.UpdateRecord\obj\Debug\JHPermrec.UpdateRecord.dll
+D:\TFS2010\ischoolteam\ischool_Junior with FISCA\Modules\JHPermrec.UpdateRecord\JHPermrec.UpdateRecord\obj\Debug\JHPermrec.UpdateRecord.pdb

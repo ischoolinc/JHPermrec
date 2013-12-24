@@ -1,0 +1,29 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 11.00
+# Visual Studio 2010
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "JHPermrec.UpdateRecord", "JHPermrec.UpdateRecord\JHPermrec.UpdateRecord.csproj", "{B8F1D303-53E4-425A-8DC8-EE5672324790}"
+EndProject
+Global
+	GlobalSection(TeamFoundationVersionControl) = preSolution
+		SccNumberOfProjects = 2
+		SccEnterpriseProvider = {4CA58AB2-18FA-4F8D-95D4-32DDF27D184C}
+		SccTeamFoundationServer = http://tfserver.ischool.com.tw:8080/tfs/tfs2008
+		SccLocalPath0 = .
+		SccProjectUniqueName1 = JHPermrec.UpdateRecord\\JHPermrec.UpdateRecord.csproj
+		SccProjectName1 = JHPermrec.UpdateRecord
+		SccLocalPath1 = JHPermrec.UpdateRecord
+	EndGlobalSection
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{B8F1D303-53E4-425A-8DC8-EE5672324790}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{B8F1D303-53E4-425A-8DC8-EE5672324790}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{B8F1D303-53E4-425A-8DC8-EE5672324790}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{B8F1D303-53E4-425A-8DC8-EE5672324790}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal

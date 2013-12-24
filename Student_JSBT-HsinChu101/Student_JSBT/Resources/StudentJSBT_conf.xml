@@ -1,0 +1,23 @@
+<Data>
+  <Data FieldName="學生身分" StudTag="" ItemName="原住民" ItemValue="1" />
+  <Data FieldName="學生身分" StudTag="" ItemName="派外人員子女" ItemValue="2" />
+  <Data FieldName="學生身分" StudTag="" ItemName="蒙藏生" ItemValue="3" />
+  <Data FieldName="學生身分" StudTag="" ItemName="回國僑生" ItemValue="4" />
+  <Data FieldName="學生身分" StudTag="" ItemName="港澳生" ItemValue="5" />
+  <Data FieldName="學生身分" StudTag="" ItemName="退伍軍人" ItemValue="6" />
+  <Data FieldName="學生身分" StudTag="" ItemName="境外優秀科學技術人才子女" ItemValue="7" />
+  <Data FieldName="身心障礙" StudTag="" ItemName="智能障礙" ItemValue="1" />
+  <Data FieldName="身心障礙" StudTag="" ItemName="視覺障礙" ItemValue="2" />
+  <Data FieldName="身心障礙" StudTag="" ItemName="聽覺障礙" ItemValue="3" />
+  <Data FieldName="身心障礙" StudTag="" ItemName="語言障礙" ItemValue="4" />
+  <Data FieldName="身心障礙" StudTag="" ItemName="肢體障礙" ItemValue="5" />
+  <Data FieldName="身心障礙" StudTag="" ItemName="身體病弱" ItemValue="6" />
+  <Data FieldName="身心障礙" StudTag="" ItemName="嚴重情緒障礙" ItemValue="7" />
+  <Data FieldName="身心障礙" StudTag="" ItemName="學習障礙" ItemValue="8" />
+  <Data FieldName="身心障礙" StudTag="" ItemName="多重障礙" ItemValue="9" />
+  <Data FieldName="身心障礙" StudTag="" ItemName="自閉症" ItemValue="A" />
+  <Data FieldName="身心障礙" StudTag="" ItemName="其他障礙" ItemValue="B" />
+  <Data FieldName="低收入戶" StudTag="" ItemName="是" ItemValue="1" />
+  <Data FieldName="失業勞工子女" StudTag="" ItemName="是" ItemValue="1" />
+  <Data FieldName="中低收入戶" StudTag="" ItemName="是" ItemValue="1" />
+</Data>

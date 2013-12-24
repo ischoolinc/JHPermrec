@@ -1,0 +1,29 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 11.00
+# Visual Studio 2010
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "StudentToolsJH1", "StudentTools1\StudentToolsJH1.csproj", "{45069229-3BB2-4228-84D8-BC89835FAB7F}"
+EndProject
+Global
+	GlobalSection(TeamFoundationVersionControl) = preSolution
+		SccNumberOfProjects = 2
+		SccEnterpriseProvider = {4CA58AB2-18FA-4F8D-95D4-32DDF27D184C}
+		SccTeamFoundationServer = http://tfserver.ischool.com.tw:8080/tfs/tfs2008
+		SccLocalPath0 = .
+		SccProjectUniqueName1 = StudentTools1\\StudentToolsJH1.csproj
+		SccProjectName1 = StudentTools1
+		SccLocalPath1 = StudentTools1
+	EndGlobalSection
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{45069229-3BB2-4228-84D8-BC89835FAB7F}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{45069229-3BB2-4228-84D8-BC89835FAB7F}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{45069229-3BB2-4228-84D8-BC89835FAB7F}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{45069229-3BB2-4228-84D8-BC89835FAB7F}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal
