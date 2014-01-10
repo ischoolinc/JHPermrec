@@ -14,7 +14,7 @@ namespace JHPermrec.UpdateRecord.DAL
         /// <summary>
         /// 異動狀態
         /// </summary>
-        public enum UpdateType { 新生, 畢業, 轉入, 轉出, 休學, 復學, 中輟, 續讀, 更正學籍,Empty};
+        public enum UpdateType { 新生, 畢業, 轉入, 轉出, 休學, 復學, 中輟, 續讀, 更正學籍, 延長修業年限,死亡, Empty };
         /// <summary>
         /// 可輸入異動類別
         /// </summary>
@@ -1827,7 +1827,9 @@ namespace JHPermrec.UpdateRecord.DAL
                 case "6":retValue ="復學";break;
                 case "7":retValue ="中輟";break ;
                 case "8":retValue ="續讀";break ;
-                case "9": retValue = "更正學籍"; break;    
+                case "9": retValue = "更正學籍"; break;
+                case "10": retValue = "延長修業年限"; break;
+                case "11": retValue = "死亡"; break;  
             }
             return retValue;
         }
@@ -1874,6 +1876,8 @@ namespace JHPermrec.UpdateRecord.DAL
                 case "中輟": retValue = "7"; break;
                 case "續讀": retValue = "8"; break;
                 case "更正學籍": retValue = "9"; break;
+                case "延長修業年限": retValue = "10"; break;
+                case "死亡": retValue = "11"; break;
             }
             return retValue;
         }

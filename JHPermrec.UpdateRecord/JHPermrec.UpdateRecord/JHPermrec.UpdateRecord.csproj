@@ -445,6 +445,18 @@
     <Compile Include="UpdateRecordItemControls\UpdateRecordInfo06.Designer.cs">
       <DependentUpon>UpdateRecordInfo06.cs</DependentUpon>
     </Compile>
+    <Compile Include="UpdateRecordItemControls\UpdateRecordInfo11.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UpdateRecordItemControls\UpdateRecordInfo11.Designer.cs">
+      <DependentUpon>UpdateRecordInfo11.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UpdateRecordItemControls\UpdateRecordInfo10.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UpdateRecordItemControls\UpdateRecordInfo10.Designer.cs">
+      <DependentUpon>UpdateRecordInfo10.cs</DependentUpon>
+    </Compile>
     <Compile Include="UpdateRecordItemControls\UpdateRecordInfo07.cs">
       <SubType>UserControl</SubType>
     </Compile>
@@ -606,6 +618,12 @@
     </EmbeddedResource>
     <EmbeddedResource Include="UpdateRecordItemControls\UpdateRecordInfo06.resx">
       <DependentUpon>UpdateRecordInfo06.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UpdateRecordItemControls\UpdateRecordInfo11.resx">
+      <DependentUpon>UpdateRecordInfo11.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UpdateRecordItemControls\UpdateRecordInfo10.resx">
+      <DependentUpon>UpdateRecordInfo10.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="UpdateRecordItemControls\UpdateRecordInfo07.resx">
       <DependentUpon>UpdateRecordInfo07.cs</DependentUpon>

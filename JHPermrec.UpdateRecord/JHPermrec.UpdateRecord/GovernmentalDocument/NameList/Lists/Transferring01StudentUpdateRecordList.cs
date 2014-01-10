@@ -87,7 +87,7 @@ namespace JHPermrec.UpdateRecord.GovernmentalDocument.NameList
                         wb.Worksheets[0].Cells[rowj, 4].PutValue((dt.Year - 1911) + "");
                         wb.Worksheets[0].Cells[rowj, 5].PutValue((dt.Month + ""));
                     }
-                    wb.Worksheets[0].Cells[rowj, 6].PutValue("轉出");
+                    wb.Worksheets[0].Cells[rowj, 6].PutValue(sburce.GetUpdateCodeType());
                     wb.Worksheets[0].Cells[rowj, 7].PutValue(sburce.GetUpdateDescription());
                     wb.Worksheets[0].Cells[rowj, 8].PutValue(sburce.GetImportExportSchool());
                     rowj++;

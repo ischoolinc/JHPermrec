@@ -11,8 +11,8 @@ using Framework.Legacy;
 
 namespace JHPermrec.UpdateRecord.GovernmentalDocument.NameList
 {
-    class Transferring01StudentUpdateRecordListProvider:INameListProvider 
-    {    
+    class Transferring01StudentUpdateRecordListProvider : INameListProvider
+    {
         //比對大小
         private static int CompareUpdateRecord(XmlElement x, XmlElement y)
         {
@@ -56,7 +56,7 @@ namespace JHPermrec.UpdateRecord.GovernmentalDocument.NameList
 
         //允許代號列表
         //private string[] _CodeList = new string[] { "001", "002", "003", "004", "005", "006", "007", "008" };
-        private string[] _CodeList = new string[] { "4" };
+        private string[] _CodeList = new string[] { "4", "10", "11" };
 
         //明國年轉換
         private string CDATE(string p)
@@ -73,13 +73,14 @@ namespace JHPermrec.UpdateRecord.GovernmentalDocument.NameList
 
         public string Title
         {
-            get { 
-                 //因為新竹市名冊選單與有異：
+            get
+            {
+                //因為新竹市名冊選單與有異：
                 if (JHSchool.Permrec.Program.ModuleType == JHSchool.Permrec.Program.ModuleFlag.HsinChu)
                     return "其它學生名冊";
                 else
                     return "轉出學生名冊";
-            
+
             }
         }
 
@@ -133,7 +134,7 @@ namespace JHPermrec.UpdateRecord.GovernmentalDocument.NameList
                     deptgradeNode = doc.CreateElement("清單");
                     deptgradeNode.SetAttribute("科別", dept);
                     deptgradeNode.SetAttribute("年級", gradeyear);
-//                    deptgradeNode.SetAttribute("科別代號", (deptCode.ContainsKey(dept) ? deptCode[dept] : ""));
+                    //                    deptgradeNode.SetAttribute("科別代號", (deptCode.ContainsKey(dept) ? deptCode[dept] : ""));
                     gradeyear_dept_map[gradeyear].Add(dept, deptgradeNode);
                     doc.DocumentElement.AppendChild(deptgradeNode);
                 }
@@ -146,6 +147,20 @@ namespace JHPermrec.UpdateRecord.GovernmentalDocument.NameList
                 XmlElement dataElement = doc.CreateElement("異動紀錄");
                 dataElement.SetAttribute("編號", helper.GetText("@ID"));
                 dataElement.SetAttribute("異動代號", helper.GetText("UpdateCode"));
+                //Cloud 2014/1/10
+                if (helper.GetText("UpdateCode") == "4")
+                {
+                    dataElement.SetAttribute("異動類別", "轉出");
+                }
+                if (helper.GetText("UpdateCode") == "10")
+                {
+                    dataElement.SetAttribute("異動類別", "延長修業年限");
+                }
+                if (helper.GetText("UpdateCode") == "11")
+                {
+                    dataElement.SetAttribute("異動類別", "死亡");
+                }
+
                 dataElement.SetAttribute("異動日期", CDATE(helper.GetText("UpdateDate")));
                 dataElement.SetAttribute("異動日期1", helper.GetText("UpdateDate"));
                 dataElement.SetAttribute("學號", helper.GetText("StudentNumber"));
@@ -168,8 +183,8 @@ namespace JHPermrec.UpdateRecord.GovernmentalDocument.NameList
 
                 if (ClassGradeYear.ContainsKey(StudentID))
                     dataElement.SetAttribute("班級年級", ClassGradeYear[StudentID]);
-                
-                
+
+
                 string schoolName = helper.GetText("ContextInfo/ContextInfo/GraduateSchool");
                 /*
                 if (schoolName != "")

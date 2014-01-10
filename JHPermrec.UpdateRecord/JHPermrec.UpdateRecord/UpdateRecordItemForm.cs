@@ -129,6 +129,10 @@ namespace JHPermrec.UpdateRecord
                 return new UpdateRecordInfo08(_StudUpdateRecordEntity );
             else if (UpdateType == "更正學籍")
                 return new UpdateRecordInfo09(_StudUpdateRecordEntity );
+            else if (UpdateType == "延長修業年限")
+                return new UpdateRecordInfo10(_StudUpdateRecordEntity);
+            else if (UpdateType == "死亡")
+                return new UpdateRecordInfo11(_StudUpdateRecordEntity);
             else
                 return null;
         }
@@ -181,6 +185,16 @@ namespace JHPermrec.UpdateRecord
             {
                 cbxSel.Text = "更正學籍";
                 return new UpdateRecordInfo09(_StudUpdateRecordEntity);
+            }
+            else if (_StudUpdateRecordEntity.GetUpdateCode() == "10")
+            {
+                cbxSel.Text = "延長修業年限";
+                return new UpdateRecordInfo10(_StudUpdateRecordEntity);
+            }
+            else if (_StudUpdateRecordEntity.GetUpdateCode() == "11")
+            {
+                cbxSel.Text = "死亡";
+                return new UpdateRecordInfo11(_StudUpdateRecordEntity);
             }
             else
                 return null;
@@ -271,6 +285,10 @@ namespace JHPermrec.UpdateRecord
                 strItemName += "續讀異動";
             if (_StudUpdateRecordEntity.checkSameUpdateCode("9"))
                 strItemName += "更正學籍異動";
+            if (_StudUpdateRecordEntity.checkSameUpdateCode("10"))
+                strItemName += "延長修業年限";
+            if (_StudUpdateRecordEntity.checkSameUpdateCode("11"))
+                strItemName += "死亡";
 
             prlp.SetActionBy("學生", strItemName);
             prlp.SaveLog("", ":", "student", RunningID);
@@ -293,7 +311,7 @@ namespace JHPermrec.UpdateRecord
                 if (stud.Status == K12.Data.StudentRecord.StudentStatus.休學)
                     tmpList2.Add(stud.IDNumber);
                 if (stud.Status == K12.Data.StudentRecord.StudentStatus.輟學)
-                    tmpList3.Add(stud.IDNumber);                
+                    tmpList3.Add(stud.IDNumber);           
             }
 
             // 轉出
@@ -313,7 +331,7 @@ namespace JHPermrec.UpdateRecord
             }
 
             // 休學
-            if (_StudUpdateRecordEntity.checkSameUpdateCode("5"))
+            if (_StudUpdateRecordEntity.checkSameUpdateCode("5") || _StudUpdateRecordEntity.checkSameUpdateCode("10"))
             {
                 if (MessageBox.Show("請問是否更改學生狀態成 休學？", "", MessageBoxButtons.YesNo, MessageBoxIcon.Question, MessageBoxDefaultButton.Button2) == DialogResult.Yes)
                 {
@@ -331,7 +349,7 @@ namespace JHPermrec.UpdateRecord
 
             // 中輟
 
-            if (_StudUpdateRecordEntity.checkSameUpdateCode("7"))
+            if (_StudUpdateRecordEntity.checkSameUpdateCode("7") || _StudUpdateRecordEntity.checkSameUpdateCode("11"))
             {
                 if (MessageBox.Show("請問是否更改學生狀態成 輟學？", "", MessageBoxButtons.YesNo, MessageBoxIcon.Question, MessageBoxDefaultButton.Button2) == DialogResult.Yes)
                 {

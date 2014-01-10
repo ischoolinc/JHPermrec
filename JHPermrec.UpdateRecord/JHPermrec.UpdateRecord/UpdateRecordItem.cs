@@ -180,6 +180,12 @@ namespace JHPermrec.UpdateRecord
                 if (node.UpdateCode == "9")
                     updateDesc = "更正學籍";
 
+                if (node.UpdateCode == "10")
+                    updateDesc = "延長修業年限";
+
+                if (node.UpdateCode == "11")
+                    updateDesc = "死亡";
+
                 if (node.UpdateDescription.Length > 0)
                     updateDesc += ":" + node.UpdateDescription;
                 // Add Data
