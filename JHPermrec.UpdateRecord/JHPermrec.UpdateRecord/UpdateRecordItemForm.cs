@@ -315,7 +315,7 @@ namespace JHPermrec.UpdateRecord
             }
 
             // 轉出
-            if (_StudUpdateRecordEntity.checkSameUpdateCode("4"))
+            if (_StudUpdateRecordEntity.checkSameUpdateCode("4") || _StudUpdateRecordEntity.checkSameUpdateCode("11"))
             {
                 if (MessageBox.Show("請問是否更改學生狀態成 離校？", "", MessageBoxButtons.YesNo, MessageBoxIcon.Question, MessageBoxDefaultButton.Button2) == DialogResult.Yes)
                 {
@@ -331,7 +331,7 @@ namespace JHPermrec.UpdateRecord
             }
 
             // 休學
-            if (_StudUpdateRecordEntity.checkSameUpdateCode("5") || _StudUpdateRecordEntity.checkSameUpdateCode("10"))
+            if (_StudUpdateRecordEntity.checkSameUpdateCode("5"))
             {
                 if (MessageBox.Show("請問是否更改學生狀態成 休學？", "", MessageBoxButtons.YesNo, MessageBoxIcon.Question, MessageBoxDefaultButton.Button2) == DialogResult.Yes)
                 {
@@ -349,7 +349,7 @@ namespace JHPermrec.UpdateRecord
 
             // 中輟
 
-            if (_StudUpdateRecordEntity.checkSameUpdateCode("7") || _StudUpdateRecordEntity.checkSameUpdateCode("11"))
+            if (_StudUpdateRecordEntity.checkSameUpdateCode("7"))
             {
                 if (MessageBox.Show("請問是否更改學生狀態成 輟學？", "", MessageBoxButtons.YesNo, MessageBoxIcon.Question, MessageBoxDefaultButton.Button2) == DialogResult.Yes)
                 {
