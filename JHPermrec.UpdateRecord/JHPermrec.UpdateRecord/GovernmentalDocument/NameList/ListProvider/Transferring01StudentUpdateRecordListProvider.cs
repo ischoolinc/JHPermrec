@@ -56,7 +56,7 @@ namespace JHPermrec.UpdateRecord.GovernmentalDocument.NameList
 
         //允許代號列表
         //private string[] _CodeList = new string[] { "001", "002", "003", "004", "005", "006", "007", "008" };
-        private string[] _CodeList = new string[] { "4", "10", "11" };
+        private string[] _CodeList;
 
         //明國年轉換
         private string CDATE(string p)
@@ -77,10 +77,15 @@ namespace JHPermrec.UpdateRecord.GovernmentalDocument.NameList
             {
                 //因為新竹市名冊選單與有異：
                 if (JHSchool.Permrec.Program.ModuleType == JHSchool.Permrec.Program.ModuleFlag.HsinChu)
+                {
+                    _CodeList = new string[] { "4", "7", "10", "11" };
                     return "其它學生名冊";
+                }
                 else
+                {
+                    _CodeList = new string[] { "4", "10", "11" };
                     return "轉出學生名冊";
-
+                }
             }
         }
 
