@@ -157,6 +157,10 @@ namespace JHPermrec.UpdateRecord.GovernmentalDocument.NameList
                 {
                     dataElement.SetAttribute("異動類別", "轉出");
                 }
+                if (helper.GetText("UpdateCode") == "7")
+                {
+                    dataElement.SetAttribute("異動類別", "中輟");
+                }
                 if (helper.GetText("UpdateCode") == "10")
                 {
                     dataElement.SetAttribute("異動類別", "延長修業年限");

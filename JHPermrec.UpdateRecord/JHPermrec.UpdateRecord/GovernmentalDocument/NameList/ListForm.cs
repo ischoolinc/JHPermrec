@@ -313,7 +313,7 @@ namespace JHPermrec.UpdateRecord.GovernmentalDocument.NameList
             path = Path.Combine(Application.StartupPath, "Reports");
             if (!Directory.Exists(path))
                 Directory.CreateDirectory(path);
-            path = Path.Combine(path, provider.Type + ".xlt");
+            path = Path.Combine(path, provider.Title + ".xlt");
 
             if (File.Exists(path))
             {
