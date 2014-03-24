@@ -58,17 +58,17 @@
   </PropertyGroup>
   <ItemGroup>
     <Reference Include="Aspose.BarCode">
-      <HintPath>..\LibraryProject\CampusLibrary\Aspose.BarCode.dll</HintPath>
+      <HintPath>Library\Aspose.BarCode.dll</HintPath>
       <Private>False</Private>
     </Reference>
     <Reference Include="Aspose.Cells, Version=4.3.0.0, Culture=neutral, PublicKeyToken=9a40d5a4b59e5256, processorArchitecture=MSIL">
       <SpecificVersion>False</SpecificVersion>
-      <HintPath>..\LibraryProject\CampusLibrary\Aspose.Cells.dll</HintPath>
+      <HintPath>Library\Aspose.Cells.dll</HintPath>
       <Private>False</Private>
     </Reference>
     <Reference Include="Aspose.Words, Version=9.0.0.0, Culture=neutral, PublicKeyToken=716fcc553a201e56">
       <SpecificVersion>False</SpecificVersion>
-      <HintPath>..\LibraryProject\CampusLibrary\Aspose.Words.dll</HintPath>
+      <HintPath>Library\Aspose.Words.dll</HintPath>
       <Private>False</Private>
     </Reference>
     <Reference Include="DevComponents.DotNetBar2, Version=7.9.0.5, Culture=neutral, PublicKeyToken=7eb7c3a35b91de04, processorArchitecture=MSIL">
@@ -77,67 +77,75 @@
     </Reference>
     <Reference Include="FISCA, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
       <SpecificVersion>False</SpecificVersion>
-      <HintPath>..\LibraryProject\FISCA.dll</HintPath>
+      <HintPath>Library\FISCA.dll</HintPath>
       <Private>False</Private>
     </Reference>
     <Reference Include="FISCA.Authentication, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
       <SpecificVersion>False</SpecificVersion>
-      <HintPath>..\LibraryProject\FISCA.Authentication.dll</HintPath>
+      <HintPath>Library\FISCA.Authentication.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="FISCA.DSAClient">
+      <HintPath>Library\FISCA.DSAClient.dll</HintPath>
       <Private>False</Private>
     </Reference>
     <Reference Include="FISCA.DSAUtil, Version=3.2.21.0, Culture=neutral, processorArchitecture=MSIL">
       <SpecificVersion>False</SpecificVersion>
-      <HintPath>..\LibraryProject\FISCA.DSAUtil.dll</HintPath>
+      <HintPath>Library\FISCA.DSAUtil.dll</HintPath>
       <Private>False</Private>
     </Reference>
     <Reference Include="FISCA.LogAgent, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
       <SpecificVersion>False</SpecificVersion>
-      <HintPath>..\LibraryProject\FISCA.LogAgent.dll</HintPath>
+      <HintPath>Library\FISCA.LogAgent.dll</HintPath>
       <Private>False</Private>
     </Reference>
     <Reference Include="FISCA.Presentation, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
       <SpecificVersion>False</SpecificVersion>
-      <HintPath>..\LibraryProject\FISCA.Presentation.dll</HintPath>
+      <HintPath>Library\FISCA.Presentation.dll</HintPath>
       <Private>False</Private>
     </Reference>
     <Reference Include="Framework">
-      <HintPath>..\LibraryProject\Framework.dll</HintPath>
+      <HintPath>Library\Framework.dll</HintPath>
       <Private>False</Private>
     </Reference>
     <Reference Include="IntelliSchool.DSA.ClientFramework, Version=1.2.2.1, Culture=neutral, processorArchitecture=MSIL">
       <Private>False</Private>
-      <HintPath>..\LibraryProject\IntelliSchool.DSA.ClientFramework.dll</HintPath>
+      <HintPath>Library\IntelliSchool.DSA.ClientFramework.dll</HintPath>
+    </Reference>
+    <Reference Include="JHSchool">
+      <HintPath>Library\JHSchool.dll</HintPath>
+      <Private>False</Private>
     </Reference>
     <Reference Include="JHSchool.Affair">
-      <HintPath>..\LibraryProject\JHSchool.Affair.dll</HintPath>
+      <HintPath>Library\JHSchool.Affair.dll</HintPath>
       <Private>False</Private>
     </Reference>
     <Reference Include="JHSchool.Data, Version=1.0.0.5, Culture=neutral, processorArchitecture=MSIL">
       <SpecificVersion>False</SpecificVersion>
-      <HintPath>..\LibraryProject\JHSchool.Data.dll</HintPath>
+      <HintPath>Library\JHSchool.Data.dll</HintPath>
       <Private>False</Private>
     </Reference>
     <Reference Include="K12.Data, Version=1.0.0.4, Culture=neutral, processorArchitecture=MSIL">
       <SpecificVersion>False</SpecificVersion>
-      <HintPath>..\LibraryProject\K12.Data.dll</HintPath>
+      <HintPath>Library\K12.Data.dll</HintPath>
       <Private>False</Private>
     </Reference>
     <Reference Include="K12.Presentation">
-      <HintPath>..\LibraryProject\K12.Presentation.dll</HintPath>
+      <HintPath>Library\K12.Presentation.dll</HintPath>
       <Private>False</Private>
     </Reference>
     <Reference Include="SmartSchool.API.PlugIn, Version=0.0.0.3, Culture=neutral, processorArchitecture=MSIL">
       <Private>False</Private>
-      <HintPath>..\LibraryProject\SmartSchool.API.PlugIn.dll</HintPath>
+      <HintPath>Library\SmartSchool.API.PlugIn.dll</HintPath>
     </Reference>
     <Reference Include="SmartSchool.Common.DotNetBar, Version=1.0.0.4, Culture=neutral, processorArchitecture=MSIL">
       <SpecificVersion>False</SpecificVersion>
-      <HintPath>..\LibraryProject\SmartSchool.Common.DotNetBar.dll</HintPath>
+      <HintPath>Library\SmartSchool.Common.DotNetBar.dll</HintPath>
       <Private>False</Private>
     </Reference>
     <Reference Include="SmartSchool.Customization.PlugIn, Version=1.1.4.0, Culture=neutral, processorArchitecture=MSIL">
       <Private>False</Private>
-      <HintPath>..\LibraryProject\SmartSchool.Customization.PlugIn.dll</HintPath>
+      <HintPath>Library\SmartSchool.Customization.PlugIn.dll</HintPath>
     </Reference>
     <Reference Include="System" />
     <Reference Include="System.Core">
@@ -704,13 +712,6 @@
       <ProductName>Windows Installer 3.1</ProductName>
       <Install>true</Install>
     </BootstrapperPackage>
-  </ItemGroup>
-  <ItemGroup>
-    <ProjectReference Include="..\JHSchool\JHSchool.csproj">
-      <Project>{6029FAB1-A62F-4FC0-A206-CE73AB9344DD}</Project>
-      <Name>JHSchool</Name>
-      <Private>False</Private>
-    </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

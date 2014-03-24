@@ -51,7 +51,6 @@
             this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.txtParentPhone = new DevComponents.DotNetBar.Controls.TextBoxX();
-            //((System.ComponentModel.ISupportInitialize)(this.picWaiting)).BeginInit();
             this.SuspendLayout();
             // 
             // label6
@@ -116,13 +115,13 @@
             // 
             // 
             this.txtParentName.Border.Class = "TextBoxBorder";
+            this.txtParentName.Border.CornerType = DevComponents.DotNetBar.eCornerType.Square;
             this.txtParentName.Font = new System.Drawing.Font("微軟正黑體", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
             this.txtParentName.Location = new System.Drawing.Point(109, 45);
             this.txtParentName.Margin = new System.Windows.Forms.Padding(4);
             this.txtParentName.Name = "txtParentName";
             this.txtParentName.Size = new System.Drawing.Size(156, 25);
             this.txtParentName.TabIndex = 1;
-            //this.txtParentName.TextChanged += new System.EventHandler(this.txtParentName_TextChanged);
             // 
             // label27
             // 
@@ -156,6 +155,7 @@
             // 
             this.btnParentType.AccessibleRole = System.Windows.Forms.AccessibleRole.PushButton;
             this.btnParentType.AutoExpandOnClick = true;
+            this.btnParentType.ColorTable = DevComponents.DotNetBar.eButtonColor.OrangeWithBackground;
             this.btnParentType.Font = new System.Drawing.Font("微軟正黑體", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
             this.btnParentType.Location = new System.Drawing.Point(109, 16);
             this.btnParentType.Margin = new System.Windows.Forms.Padding(4);
@@ -165,32 +165,31 @@
             this.btnGuardian,
             this.btnFather,
             this.btnMother});
-            this.btnParentType.TabIndex = 1;
-            this.btnParentType.ColorTable = DevComponents.DotNetBar.eButtonColor.OrangeWithBackground;
+            this.btnParentType.TabIndex = 0;
             // 
             // btnGuardian
             // 
+            this.btnGuardian.ColorTable = DevComponents.DotNetBar.eButtonColor.OrangeWithBackground;
             this.btnGuardian.GlobalItem = false;
             this.btnGuardian.Name = "btnGuardian";
             this.btnGuardian.Text = "監護人";
             this.btnGuardian.Click += new System.EventHandler(this.btnGuardian_Click);
-            this.btnGuardian.ColorTable = DevComponents.DotNetBar.eButtonColor.OrangeWithBackground;
             // 
             // btnFather
             // 
+            this.btnFather.ColorTable = DevComponents.DotNetBar.eButtonColor.OrangeWithBackground;
             this.btnFather.GlobalItem = false;
             this.btnFather.Name = "btnFather";
             this.btnFather.Text = "父親";
             this.btnFather.Click += new System.EventHandler(this.btnFather_Click);
-            this.btnFather.ColorTable = DevComponents.DotNetBar.eButtonColor.OrangeWithBackground;
             // 
             // btnMother
             // 
+            this.btnMother.ColorTable = DevComponents.DotNetBar.eButtonColor.OrangeWithBackground;
             this.btnMother.GlobalItem = false;
             this.btnMother.Name = "btnMother";
             this.btnMother.Text = "母親";
             this.btnMother.Click += new System.EventHandler(this.btnMother_Click);
-            this.btnMother.ColorTable = DevComponents.DotNetBar.eButtonColor.OrangeWithBackground;
             // 
             // lnkCopyGuardian
             // 
@@ -200,7 +199,7 @@
             this.lnkCopyGuardian.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lnkCopyGuardian.Name = "lnkCopyGuardian";
             this.lnkCopyGuardian.Size = new System.Drawing.Size(92, 16);
-            this.lnkCopyGuardian.TabIndex = 3;
+            this.lnkCopyGuardian.TabIndex = 10;
             this.lnkCopyGuardian.TabStop = true;
             this.lnkCopyGuardian.Text = "複製監護人資料";
             this.lnkCopyGuardian.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.lnkCopyGuardian_LinkClicked);
@@ -213,7 +212,7 @@
             this.lnkCopyFather.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lnkCopyFather.Name = "lnkCopyFather";
             this.lnkCopyFather.Size = new System.Drawing.Size(80, 16);
-            this.lnkCopyFather.TabIndex = 2;
+            this.lnkCopyFather.TabIndex = 8;
             this.lnkCopyFather.TabStop = true;
             this.lnkCopyFather.Text = "複製父親資料";
             this.lnkCopyFather.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.lnkCopyFather_LinkClicked);
@@ -226,7 +225,7 @@
             this.lnkCopyMother.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lnkCopyMother.Name = "lnkCopyMother";
             this.lnkCopyMother.Size = new System.Drawing.Size(80, 16);
-            this.lnkCopyMother.TabIndex = 3;
+            this.lnkCopyMother.TabIndex = 9;
             this.lnkCopyMother.TabStop = true;
             this.lnkCopyMother.Text = "複製母親資料";
             this.lnkCopyMother.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.lnkCopyMother_LinkClicked);
@@ -244,8 +243,7 @@
             this.cboNationality.Margin = new System.Windows.Forms.Padding(4);
             this.cboNationality.Name = "cboNationality";
             this.cboNationality.Size = new System.Drawing.Size(156, 24);
-            this.cboNationality.TabIndex = 5;
-            //this.cboNationality.SelectedIndexChanged += new System.EventHandler(this.cboNationality_SelectedIndexChanged_1);
+            this.cboNationality.TabIndex = 3;
             // 
             // cboRelationship
             // 
@@ -260,8 +258,7 @@
             this.cboRelationship.Margin = new System.Windows.Forms.Padding(4);
             this.cboRelationship.Name = "cboRelationship";
             this.cboRelationship.Size = new System.Drawing.Size(156, 24);
-            this.cboRelationship.TabIndex = 4;
-            //this.cboRelationship.SelectedIndexChanged += new System.EventHandler(this.cboRelationship_SelectedIndexChanged_1);
+            this.cboRelationship.TabIndex = 6;
             // 
             // cboAlive
             // 
@@ -276,7 +273,6 @@
             this.cboAlive.Name = "cboAlive";
             this.cboAlive.Size = new System.Drawing.Size(156, 24);
             this.cboAlive.TabIndex = 5;
-            //this.cboAlive.SelectedIndexChanged += new System.EventHandler(this.cboAlive_SelectedIndexChanged_1);
             // 
             // cboEduDegree
             // 
@@ -291,8 +287,7 @@
             this.cboEduDegree.Margin = new System.Windows.Forms.Padding(4);
             this.cboEduDegree.Name = "cboEduDegree";
             this.cboEduDegree.Size = new System.Drawing.Size(156, 24);
-            this.cboEduDegree.TabIndex = 7;
-            //this.cboEduDegree.SelectedIndexChanged += new System.EventHandler(this.cboEduDegree_SelectedIndexChanged_1);
+            this.cboEduDegree.TabIndex = 4;
             // 
             // cboJob
             // 
@@ -307,8 +302,7 @@
             this.cboJob.Margin = new System.Windows.Forms.Padding(4);
             this.cboJob.Name = "cboJob";
             this.cboJob.Size = new System.Drawing.Size(156, 24);
-            this.cboJob.TabIndex = 6;
-            //this.cboJob.SelectedIndexChanged += new System.EventHandler(this.cboJob_SelectedIndexChanged_1);
+            this.cboJob.TabIndex = 7;
             // 
             // txtIDNumber
             // 
@@ -316,14 +310,14 @@
             // 
             // 
             this.txtIDNumber.Border.Class = "TextBoxBorder";
+            this.txtIDNumber.Border.CornerType = DevComponents.DotNetBar.eCornerType.Square;
             this.txtIDNumber.Font = new System.Drawing.Font("微軟正黑體", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
             this.txtIDNumber.Location = new System.Drawing.Point(372, 45);
             this.txtIDNumber.Margin = new System.Windows.Forms.Padding(4);
             this.txtIDNumber.MaxLength = 20;
             this.txtIDNumber.Name = "txtIDNumber";
             this.txtIDNumber.Size = new System.Drawing.Size(156, 25);
-            this.txtIDNumber.TabIndex = 2;
-            //this.txtIDNumber.TextChanged += new System.EventHandler(this.txtIDNumber_TextChanged);
+            this.txtIDNumber.TabIndex = 5;
             // 
             // label1
             // 
@@ -359,18 +353,19 @@
             // 
             // 
             this.txtParentPhone.Border.Class = "TextBoxBorder";
+            this.txtParentPhone.Border.CornerType = DevComponents.DotNetBar.eCornerType.Square;
             this.txtParentPhone.Font = new System.Drawing.Font("微軟正黑體", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
             this.txtParentPhone.Location = new System.Drawing.Point(109, 77);
             this.txtParentPhone.Margin = new System.Windows.Forms.Padding(4);
             this.txtParentPhone.Name = "txtParentPhone";
             this.txtParentPhone.Size = new System.Drawing.Size(156, 25);
-            this.txtParentPhone.TabIndex = 3;
-            //this.txtParentPhone.TextChanged += new System.EventHandler(this.txtParentPhone_TextChanged);
+            this.txtParentPhone.TabIndex = 2;
             // 
             // ParentInfoPalmerwormItem
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 17F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.Controls.Add(this.btnParentType);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.txtParentPhone);
             this.Controls.Add(this.cboJob);
@@ -378,7 +373,6 @@
             this.Controls.Add(this.lnkCopyFather);
             this.Controls.Add(this.label6);
             this.Controls.Add(this.lblAlive);
-            this.Controls.Add(this.btnParentType);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.label8);
             this.Controls.Add(this.txtIDNumber);
@@ -393,29 +387,7 @@
             this.Controls.Add(this.cboAlive);
             this.Margin = new System.Windows.Forms.Padding(5, 6, 5, 6);
             this.Name = "ParentInfoPalmerwormItem";
-            this.Size = new System.Drawing.Size(550, 191);
-            this.Controls.SetChildIndex(this.cboAlive, 0);
-            this.Controls.SetChildIndex(this.lnkCopyMother, 0);
-            this.Controls.SetChildIndex(this.lnkCopyGuardian, 0);
-            this.Controls.SetChildIndex(this.lblRelationship, 0);
-            this.Controls.SetChildIndex(this.cboRelationship, 0);
-            this.Controls.SetChildIndex(this.cboNationality, 0);
-            this.Controls.SetChildIndex(this.label26, 0);
-            this.Controls.SetChildIndex(this.label27, 0);
-            this.Controls.SetChildIndex(this.txtParentName, 0);
-            this.Controls.SetChildIndex(this.txtIDNumber, 0);
-            this.Controls.SetChildIndex(this.label8, 0);
-            this.Controls.SetChildIndex(this.label1, 0);
-            this.Controls.SetChildIndex(this.btnParentType, 0);
-            this.Controls.SetChildIndex(this.lblAlive, 0);
-            this.Controls.SetChildIndex(this.label6, 0);
-            //this.Controls.SetChildIndex(this.picWaiting, 0);
-            this.Controls.SetChildIndex(this.lnkCopyFather, 0);
-            this.Controls.SetChildIndex(this.cboEduDegree, 0);
-            this.Controls.SetChildIndex(this.cboJob, 0);
-            this.Controls.SetChildIndex(this.txtParentPhone, 0);
-            this.Controls.SetChildIndex(this.label2, 0);
-            //((System.ComponentModel.ISupportInitialize)(this.picWaiting)).EndInit();
+            this.Size = new System.Drawing.Size(550, 190);
             this.ResumeLayout(false);
             this.PerformLayout();
 

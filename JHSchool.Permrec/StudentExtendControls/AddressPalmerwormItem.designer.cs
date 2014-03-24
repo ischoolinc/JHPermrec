@@ -62,7 +62,7 @@
             this.label2.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(60, 17);
-            this.label2.TabIndex = 1;
+            this.label2.TabIndex = 4;
             this.label2.Text = "郵遞區號";
             // 
             // label3
@@ -72,7 +72,7 @@
             this.label3.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(60, 17);
-            this.label3.TabIndex = 2;
+            this.label3.TabIndex = 14;
             this.label3.Text = "其　　它";
             // 
             // label4
@@ -82,7 +82,7 @@
             this.label4.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(34, 17);
-            this.label4.TabIndex = 3;
+            this.label4.TabIndex = 6;
             this.label4.Text = "縣市";
             // 
             // label5
@@ -92,7 +92,7 @@
             this.label5.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(60, 17);
-            this.label5.TabIndex = 4;
+            this.label5.TabIndex = 8;
             this.label5.Text = "鄉鎮市區";
             // 
             // lblFullAddress
@@ -102,7 +102,7 @@
             this.lblFullAddress.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lblFullAddress.Name = "lblFullAddress";
             this.lblFullAddress.Size = new System.Drawing.Size(138, 17);
-            this.lblFullAddress.TabIndex = 5;
+            this.lblFullAddress.TabIndex = 1;
             this.lblFullAddress.Text = "此處顯示完整地址資訊";
             // 
             // txtZipcode
@@ -116,7 +116,7 @@
             this.txtZipcode.Margin = new System.Windows.Forms.Padding(4);
             this.txtZipcode.Name = "txtZipcode";
             this.txtZipcode.Size = new System.Drawing.Size(52, 25);
-            this.txtZipcode.TabIndex = 2;
+            this.txtZipcode.TabIndex = 1;
             this.txtZipcode.TextChanged += new System.EventHandler(this.txtZipcode_TextChanged);
             this.txtZipcode.KeyDown += new System.Windows.Forms.KeyEventHandler(this.txtZipcode_KeyDown);
             this.txtZipcode.Validated += new System.EventHandler(this.txtZipcode_Validated);
@@ -132,7 +132,7 @@
             this.txtDetail.Margin = new System.Windows.Forms.Padding(4);
             this.txtDetail.Name = "txtDetail";
             this.txtDetail.Size = new System.Drawing.Size(374, 25);
-            this.txtDetail.TabIndex = 5;
+            this.txtDetail.TabIndex = 6;
             this.txtDetail.TextChanged += new System.EventHandler(this.txtAddress_TextChanged);
             // 
             // btnAddressType
@@ -148,32 +148,32 @@
             this.btnPAddress,
             this.btnFAddress,
             this.btnOAddress});
-            this.btnAddressType.TabIndex = 1;
+            this.btnAddressType.TabIndex = 0;
             this.btnAddressType.Text = "戶籍地址";
             // 
             // btnPAddress
             // 
+            this.btnPAddress.ColorTable = DevComponents.DotNetBar.eButtonColor.OrangeWithBackground;
             this.btnPAddress.GlobalItem = false;
             this.btnPAddress.Name = "btnPAddress";
             this.btnPAddress.Text = "戶籍地址";
             this.btnPAddress.Click += new System.EventHandler(this.btnPAddress_Click);
-            this.btnPAddress.ColorTable = DevComponents.DotNetBar.eButtonColor.OrangeWithBackground;
             // 
             // btnFAddress
             // 
+            this.btnFAddress.ColorTable = DevComponents.DotNetBar.eButtonColor.OrangeWithBackground;
             this.btnFAddress.GlobalItem = false;
             this.btnFAddress.Name = "btnFAddress";
             this.btnFAddress.Text = "聯絡地址";
             this.btnFAddress.Click += new System.EventHandler(this.btnFAddress_Click);
-            this.btnFAddress.ColorTable = DevComponents.DotNetBar.eButtonColor.OrangeWithBackground;
             // 
             // btnOAddress
             // 
+            this.btnOAddress.ColorTable = DevComponents.DotNetBar.eButtonColor.OrangeWithBackground;
             this.btnOAddress.GlobalItem = false;
             this.btnOAddress.Name = "btnOAddress";
             this.btnOAddress.Text = "其它地址";
             this.btnOAddress.Click += new System.EventHandler(this.btnOAddress_Click);
-            this.btnOAddress.ColorTable = DevComponents.DotNetBar.eButtonColor.OrangeWithBackground;
             // 
             // label1
             // 
@@ -182,7 +182,7 @@
             this.label1.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(60, 17);
-            this.label1.TabIndex = 11;
+            this.label1.TabIndex = 17;
             this.label1.Text = "經　　度";
             // 
             // label7
@@ -192,7 +192,7 @@
             this.label7.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label7.Name = "label7";
             this.label7.Size = new System.Drawing.Size(34, 17);
-            this.label7.TabIndex = 12;
+            this.label7.TabIndex = 19;
             this.label7.Text = "緯度";
             // 
             // txtLongtitude
@@ -206,7 +206,7 @@
             this.txtLongtitude.Margin = new System.Windows.Forms.Padding(4);
             this.txtLongtitude.Name = "txtLongtitude";
             this.txtLongtitude.Size = new System.Drawing.Size(107, 25);
-            this.txtLongtitude.TabIndex = 6;
+            this.txtLongtitude.TabIndex = 8;
             this.txtLongtitude.TextChanged += new System.EventHandler(this.txtLongtitude_TextChanged);
             // 
             // txtLatitude
@@ -220,20 +220,20 @@
             this.txtLatitude.Margin = new System.Windows.Forms.Padding(4);
             this.txtLatitude.Name = "txtLatitude";
             this.txtLatitude.Size = new System.Drawing.Size(103, 25);
-            this.txtLatitude.TabIndex = 7;
+            this.txtLatitude.TabIndex = 9;
             this.txtLatitude.TextChanged += new System.EventHandler(this.txtLatitude_TextChanged);
             // 
             // btnMap
             // 
             this.btnMap.AccessibleRole = System.Windows.Forms.AccessibleRole.PushButton;
+            this.btnMap.ColorTable = DevComponents.DotNetBar.eButtonColor.OrangeWithBackground;
             this.btnMap.Location = new System.Drawing.Point(398, 165);
             this.btnMap.Margin = new System.Windows.Forms.Padding(4);
             this.btnMap.Name = "btnMap";
             this.btnMap.Size = new System.Drawing.Size(70, 22);
-            this.btnMap.TabIndex = 8;
+            this.btnMap.TabIndex = 10;
             this.btnMap.Text = "觀看地圖";
             this.btnMap.Click += new System.EventHandler(this.btnMap_Click);
-            this.btnMap.ColorTable = DevComponents.DotNetBar.eButtonColor.OrangeWithBackground;
             // 
             // cboTown
             // 
@@ -246,8 +246,8 @@
             this.cboTown.Margin = new System.Windows.Forms.Padding(4);
             this.cboTown.Name = "cboTown";
             this.cboTown.Size = new System.Drawing.Size(89, 22);
-            this.cboTown.TabIndex = 4;
-            this.cboTown.TextChanged += new System.EventHandler(this.cboTown_TextChanged);            
+            this.cboTown.TabIndex = 3;
+            this.cboTown.TextChanged += new System.EventHandler(this.cboTown_TextChanged);
             // 
             // cboCounty
             // 
@@ -260,19 +260,19 @@
             this.cboCounty.Margin = new System.Windows.Forms.Padding(4);
             this.cboCounty.Name = "cboCounty";
             this.cboCounty.Size = new System.Drawing.Size(84, 22);
-            this.cboCounty.TabIndex = 3;
+            this.cboCounty.TabIndex = 2;
             this.cboCounty.TextChanged += new System.EventHandler(this.cboCounty_TextChanged);
             // 
             // btnQueryPoint
             // 
             this.btnQueryPoint.AccessibleRole = System.Windows.Forms.AccessibleRole.PushButton;
+            this.btnQueryPoint.ColorTable = DevComponents.DotNetBar.eButtonColor.OrangeWithBackground;
             this.btnQueryPoint.Location = new System.Drawing.Point(475, 129);
             this.btnQueryPoint.Name = "btnQueryPoint";
             this.btnQueryPoint.Size = new System.Drawing.Size(26, 23);
-            this.btnQueryPoint.TabIndex = 13;
+            this.btnQueryPoint.TabIndex = 7;
             this.btnQueryPoint.Tooltip = "查詢此地址座標";
             this.btnQueryPoint.Click += new System.EventHandler(this.btnQueryPoint_Click);
-            this.btnQueryPoint.ColorTable = DevComponents.DotNetBar.eButtonColor.OrangeWithBackground;
             // 
             // label6
             // 
@@ -281,7 +281,7 @@
             this.label6.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label6.Name = "label6";
             this.label6.Size = new System.Drawing.Size(60, 17);
-            this.label6.TabIndex = 14;
+            this.label6.TabIndex = 10;
             this.label6.Text = "村　　里";
             // 
             // txtDistrict
@@ -295,7 +295,7 @@
             this.txtDistrict.Margin = new System.Windows.Forms.Padding(4);
             this.txtDistrict.Name = "txtDistrict";
             this.txtDistrict.Size = new System.Drawing.Size(155, 25);
-            this.txtDistrict.TabIndex = 15;
+            this.txtDistrict.TabIndex = 4;
             this.txtDistrict.TextChanged += new System.EventHandler(this.txtDistrict_TextChanged);
             // 
             // txtArea
@@ -309,7 +309,7 @@
             this.txtArea.Margin = new System.Windows.Forms.Padding(4);
             this.txtArea.Name = "txtArea";
             this.txtArea.Size = new System.Drawing.Size(166, 25);
-            this.txtArea.TabIndex = 17;
+            this.txtArea.TabIndex = 5;
             this.txtArea.WatermarkText = "例如:10鄰";
             this.txtArea.TextChanged += new System.EventHandler(this.txtArea_TextChanged);
             // 
@@ -320,7 +320,7 @@
             this.label8.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label8.Name = "label8";
             this.label8.Size = new System.Drawing.Size(21, 17);
-            this.label8.TabIndex = 16;
+            this.label8.TabIndex = 12;
             this.label8.Text = "鄰";
             // 
             // lnklblAddress1
@@ -329,7 +329,7 @@
             this.lnklblAddress1.Location = new System.Drawing.Point(287, 41);
             this.lnklblAddress1.Name = "lnklblAddress1";
             this.lnklblAddress1.Size = new System.Drawing.Size(86, 17);
-            this.lnklblAddress1.TabIndex = 18;
+            this.lnklblAddress1.TabIndex = 11;
             this.lnklblAddress1.TabStop = true;
             this.lnklblAddress1.Text = "複製聯絡地址";
             this.lnklblAddress1.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.lnklblAddress1_LinkClicked);
@@ -340,10 +340,10 @@
             this.lnklblAddress2.Location = new System.Drawing.Point(385, 41);
             this.lnklblAddress2.Name = "lnklblAddress2";
             this.lnklblAddress2.Size = new System.Drawing.Size(86, 17);
-            this.lnklblAddress2.TabIndex = 19;
+            this.lnklblAddress2.TabIndex = 12;
             this.lnklblAddress2.TabStop = true;
             this.lnklblAddress2.Text = "複製其它地址";
-            this.lnklblAddress2.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.lnklblAddress2_LinkClicked);            
+            this.lnklblAddress2.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.lnklblAddress2_LinkClicked);
             // 
             // AddressPalmerwormItem
             // 
