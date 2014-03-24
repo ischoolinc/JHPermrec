@@ -258,7 +258,7 @@
             this.cboRelationship.Margin = new System.Windows.Forms.Padding(4);
             this.cboRelationship.Name = "cboRelationship";
             this.cboRelationship.Size = new System.Drawing.Size(156, 24);
-            this.cboRelationship.TabIndex = 6;
+            this.cboRelationship.TabIndex = 5;
             // 
             // cboAlive
             // 
