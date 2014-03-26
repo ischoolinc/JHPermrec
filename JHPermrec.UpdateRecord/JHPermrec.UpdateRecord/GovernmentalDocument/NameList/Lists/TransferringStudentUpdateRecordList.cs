@@ -292,11 +292,12 @@ namespace JHPermrec.UpdateRecord.GovernmentalDocument.NameList
             //從 Resources 將新生名冊template讀出來
             Workbook template = new Workbook();
             //template.Worksheets[0].PageSetup.
-            template.Open(new MemoryStream(GDResources.JEnrollmentListTemplate_TaiChung), FileFormatType.Excel2003);
-
+            //template.Open(new MemoryStream(GDResources.JEnrollmentListTemplate_TaiChung), FileFormatType.Excel2003);
+            template.Open(new MemoryStream(Properties.Resources.台中轉入Template), FileFormatType.Excel2003);
             //產生 excel
             Workbook wb = new Aspose.Cells.Workbook();
-            wb.Open(new MemoryStream(GDResources.JEnrollmentListTemplate_TaiChung), FileFormatType.Excel2003);
+            //wb.Open(new MemoryStream(GDResources.JEnrollmentListTemplate_TaiChung), FileFormatType.Excel2003);
+            wb.Open(new MemoryStream(Properties.Resources.台中轉入Template), FileFormatType.Excel2003);
             #endregion
 
             #region 複製樣式-預設樣式、欄寬
@@ -313,41 +314,57 @@ namespace JHPermrec.UpdateRecord.GovernmentalDocument.NameList
             int totalRec = data.Count;
 
             #endregion
+            wb.Worksheets[0].Cells[0, 0].PutValue(StudBatchUpdateRecEntity.GetContentSchoolName() + "  學生異動名冊");
+            wb.Worksheets[0].Cells[1, 6].PutValue(tmpRptY + "年" + tmpM + "月填報");
+            //wb.Worksheets[0].Cells[0, 0].PutValue(StudBatchUpdateRecEntity.GetContentSchoolName () + "  國民中學入學學生名冊");
+            //wb.Worksheets[0].Cells[1, 10].PutValue(tmpRptY + "年" + tmpM + "月填製");
 
-            wb.Worksheets[0].Cells[0, 0].PutValue(StudBatchUpdateRecEntity.GetContentSchoolName () + "  國民中學入學學生名冊");
-            wb.Worksheets[0].Cells[1, 10].PutValue(tmpRptY + "年" + tmpM + "月填製");
+            Range templateRow = template.Worksheets[0].Cells.CreateRange(4, 8, false);
 
-            string strGradeYear="";
+            //string strGradeYear="";
             rowj = 4;
                 //將xml資料填入至excel
                 foreach (StudBatchUpdateRecContentEntity sburce in data.Values)
                 {
-                    if (rowj == 4)
-                        strGradeYear = sburce.GetClassYear ();
+                    //填入前先複製格式
+                    wb.Worksheets[0].Cells.CreateRange(rowj, 8, false).Copy(templateRow);
+                    //if (rowj == 4)
+                        //strGradeYear = sburce.GetClassYear ();
 
                     recCount++;
                     //將學生資料填入適當的位置內
                     wb.Worksheets[0].Cells[rowj, 0].PutValue(sburce.GetStudentNumber ());
                     wb.Worksheets[0].Cells[rowj, 1].PutValue(sburce.GetName ());
-                    wb.Worksheets[0].Cells[rowj, 2].PutValue(sburce.GetGender ());
-                    wb.Worksheets[0].Cells[rowj, 3].PutValue(sburce.GetIDNumber ());
+                    //wb.Worksheets[0].Cells[rowj, 2].PutValue(sburce.GetGender ());
+                    wb.Worksheets[0].Cells[rowj, 2].PutValue(sburce.GetGradeYear());
+                    //wb.Worksheets[0].Cells[rowj, 3].PutValue(sburce.GetIDNumber ());
+                    wb.Worksheets[0].Cells[rowj, 3].PutValue(StudBatchUpdateRecEntity.GetContentSemester());
+
+                    //DateTime dt;
+                    //if (DateTime.TryParse(sburce.GetBirthday(), out dt))
+                    //{
+                    //    wb.Worksheets[0].Cells[rowj, 4].PutValue("" + (dt.Year - 1911));
+                    //    wb.Worksheets[0].Cells[rowj, 5].PutValue("" + dt.Month);
+                    //    wb.Worksheets[0].Cells[rowj, 6].PutValue("" + dt.Day);
+                    //}
+
+
+                    //if (sburce.GetEnrollmentSchoolYear() != "")
+                    //{
+                    //    wb.Worksheets[0].Cells[rowj, 7].PutValue(UpdateRecordUtil.getChineseYearStr(sburce.GetEnrollmentSchoolYear ()));
+                    //    wb.Worksheets[0].Cells[rowj, 8].PutValue(UpdateRecordUtil.getMonthStr(sburce.GetEnrollmentSchoolYear (), false));
+                    //}
 
                     DateTime dt;
-                    if (DateTime.TryParse(sburce.GetBirthday (), out dt))
+                    if (DateTime.TryParse(sburce.GetUpdateDate(), out dt))
                     {
-                        wb.Worksheets[0].Cells[rowj, 4].PutValue("" + (dt.Year - 1911));
-                        wb.Worksheets[0].Cells[rowj, 5].PutValue("" + dt.Month);
-                        wb.Worksheets[0].Cells[rowj, 6].PutValue("" + dt.Day);
+                        wb.Worksheets[0].Cells[rowj, 4].PutValue((dt.Year-1911) + "." + dt.Month);
                     }
 
-
-                    if (sburce.GetEnrollmentSchoolYear() != "")
-                    {
-                        wb.Worksheets[0].Cells[rowj, 7].PutValue(UpdateRecordUtil.getChineseYearStr(sburce.GetEnrollmentSchoolYear ()));
-                        wb.Worksheets[0].Cells[rowj, 8].PutValue(UpdateRecordUtil.getMonthStr(sburce.GetEnrollmentSchoolYear (), false));
-                    }
-                    wb.Worksheets[0].Cells[rowj, 9].PutValue(sburce.GetPrimarySchoolName());
-                    wb.Worksheets[0].Cells[rowj, 10].PutValue(sburce.GetAddress ());
+                    wb.Worksheets[0].Cells[rowj, 6].PutValue(sburce.GetImportExportSchool());
+                    wb.Worksheets[0].Cells[rowj, 7].PutValue(sburce.GetUpdateDescription());
+                    //wb.Worksheets[0].Cells[rowj, 9].PutValue(sburce.GetPrimarySchoolName());
+                    //wb.Worksheets[0].Cells[rowj, 10].PutValue(sburce.GetAddress());
 
                     rowj++;
 
@@ -357,25 +374,26 @@ namespace JHPermrec.UpdateRecord.GovernmentalDocument.NameList
 
 
             // Title
-            wb.Worksheets[0].Cells[1, 0].PutValue(StudBatchUpdateRecEntity.GetContentSchoolYear() + "學年度第" + StudBatchUpdateRecEntity.GetContentSemester () + "學期 "+strGradeYear +"年級");
+            //wb.Worksheets[0].Cells[1, 0].PutValue(StudBatchUpdateRecEntity.GetContentSchoolYear() + "學年度第" + StudBatchUpdateRecEntity.GetContentSemester () + "學期 "+strGradeYear +"年級");
+            wb.Worksheets[0].Cells[1, 0].PutValue(StudBatchUpdateRecEntity.GetContentSchoolYear() + "學年度第" + StudBatchUpdateRecEntity.GetContentSemester() + "學期 異動:轉入");
 
 
             // 畫表
-            Style st2 = wb.Styles[wb.Styles.Add()];
-            StyleFlag sf2 = new StyleFlag();
-            sf2.Borders = true;
+            //Style st2 = wb.Styles[wb.Styles.Add()];
+            //StyleFlag sf2 = new StyleFlag();
+            //sf2.Borders = true;
 
-            st2.Borders[BorderType.TopBorder].LineStyle = CellBorderType.Thin;
-            st2.Borders[BorderType.BottomBorder].LineStyle = CellBorderType.Thin;
-            st2.Borders[BorderType.RightBorder].LineStyle = CellBorderType.Thin;
-            st2.Borders[BorderType.LeftBorder].LineStyle = CellBorderType.Thin;
-            int tmpMaxRow = 0, tmpMaxCol = 0;
-            for (int wbIdx1 = 0; wbIdx1 < wb.Worksheets.Count; wbIdx1++)
-            {
-                tmpMaxRow = wb.Worksheets[wbIdx1].Cells.MaxDataRow - 3;
-                tmpMaxCol = wb.Worksheets[wbIdx1].Cells.MaxDataColumn + 1;
-                wb.Worksheets[wbIdx1].Cells.CreateRange(4, 0, tmpMaxRow, tmpMaxCol).ApplyStyle(st2, sf2);
-            }
+            //st2.Borders[BorderType.TopBorder].LineStyle = CellBorderType.Thin;
+            //st2.Borders[BorderType.BottomBorder].LineStyle = CellBorderType.Thin;
+            //st2.Borders[BorderType.RightBorder].LineStyle = CellBorderType.Thin;
+            //st2.Borders[BorderType.LeftBorder].LineStyle = CellBorderType.Thin;
+            //int tmpMaxRow = 0, tmpMaxCol = 0;
+            //for (int wbIdx1 = 0; wbIdx1 < wb.Worksheets.Count; wbIdx1++)
+            //{
+            //    tmpMaxRow = wb.Worksheets[wbIdx1].Cells.MaxDataRow - 3;
+            //    tmpMaxCol = wb.Worksheets[wbIdx1].Cells.MaxDataColumn + 1;
+            //    wb.Worksheets[wbIdx1].Cells.CreateRange(4, 0, tmpMaxRow, tmpMaxCol).ApplyStyle(st2, sf2);
+            //}
 
             //儲存 Excel
             wb.Save(location, FileFormatType.Excel2003);

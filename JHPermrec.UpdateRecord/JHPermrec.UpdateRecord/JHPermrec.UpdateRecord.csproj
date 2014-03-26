@@ -527,7 +527,9 @@
     <EmbeddedResource Include="Batch\BatchStudGraduateUpdateRec_Warning.resx">
       <DependentUpon>BatchStudGraduateUpdateRec_Warning.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="GovernmentalDocument\GDResources.resx" />
+    <EmbeddedResource Include="GovernmentalDocument\GDResources.resx">
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
     <EmbeddedResource Include="GovernmentalDocument\NameList\BuildWizard.resx">
       <DependentUpon>BuildWizard.cs</DependentUpon>
     </EmbeddedResource>
@@ -564,6 +566,7 @@
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
       <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
     </EmbeddedResource>
     <EmbeddedResource Include="Tools\CheckLastUpdateDataForm.resx">
       <DependentUpon>CheckLastUpdateDataForm.cs</DependentUpon>
@@ -671,6 +674,7 @@
     <None Include="GovernmentalDocument\GDResources\TaiChung\JEnrollmentListTemplate_TaiChung.xls" />
     <None Include="GovernmentalDocument\GDResources\TaiChung\JGraduateListTemplate_TaiChung.xls" />
     <None Include="GovernmentalDocument\GDResources\TaiChung\JTransferListTemplate_TaiChung.xls" />
+    <None Include="Resources\台中轉入Template.xls" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="GovernmentalDocument\GDResources\btnItemNameList.Image.png" />
