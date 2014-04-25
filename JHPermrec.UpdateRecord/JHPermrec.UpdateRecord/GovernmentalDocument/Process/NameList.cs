@@ -55,8 +55,8 @@ namespace JHPermrec.UpdateRecord.GovernmentalDocument.Process
                 if (ReportBuilderManager.Items["續讀學生名冊"].Count == 0)
                     ReportBuilderManager.Items["續讀學生名冊"].Add(new ContinueStudentUpdateRecordList());
 
-                if (ReportBuilderManager.Items["更正學籍學生名冊"].Count == 0)
-                    ReportBuilderManager.Items["更正學籍學生名冊"].Add(new UpdateStudentPermrecList());
+                //if (ReportBuilderManager.Items["更正學籍學生名冊"].Count == 0)
+                //    ReportBuilderManager.Items["更正學籍學生名冊"].Add(new UpdateStudentPermrecList());
 
             }
 
