@@ -4,34 +4,87 @@
         <name>UserDefineData</name>
     </assembly>
     <members>
-        <member name="F:UserDefineData.SetUserDefineDataForm.components">
+        <member name="F:UserDefineData.DAL.UserDefData.isNull">
             <summary>
-            Required designer variable.
+            檢查是否空的
             </summary>
         </member>
-        <member name="M:UserDefineData.SetUserDefineDataForm.Dispose(System.Boolean)">
+        <member name="P:UserDefineData.DAL.UserDefData.FieldName">
             <summary>
-            Clean up any resources being used.
-            </summary>
-            <param name="disposing">true if managed resources should be disposed; otherwise, false.</param>
-        </member>
-        <member name="M:UserDefineData.SetUserDefineDataForm.InitializeComponent">
-            <summary>
-            Required method for Designer support - do not modify
-            the contents of this method with the code editor.
+            欄位名稱
             </summary>
         </member>
-        <member name="M:UserDefineData.SetUserDefineDataForm.GetDataToForm">
+        <member name="P:UserDefineData.DAL.UserDefData.Type">
             <summary>
-            取得設定資料顯示到畫面
+            資料型態
+            </summary>
+        </member>
+        <member name="P:UserDefineData.DAL.UserDefData.Value">
+            <summary>
+            資料值
+            </summary>
+        </member>
+        <member name="P:UserDefineData.DAL.UserDefData.RefID">
+            <summary>
+            參照ID(ex.StudentID)
+            </summary>
+        </member>
+        <member name="T:UserDefineData.Global">
+            <summary>
+            取得公用全域資料與工具
+            </summary>
+        </member>
+        <member name="F:UserDefineData.Global._SelectItemList">
+            <summary>
+            設定畫面選項
+            </summary>
+        </member>
+        <member name="M:UserDefineData.Global.StartDefaultValue">
+            <summary>
+            啟動預設值
+            </summary>
+        </member>
+        <!-- 忽略成員 "M:UserDefineData.Global.XMLToDictP1(System.String)" 中格式錯誤的 XML 註解 -->
+        <member name="M:UserDefineData.Global.GetUserConfigData">
+            <summary>
+            取得系統內設定自訂欄位資料項目與型態
             </summary>
             <returns></returns>
         </member>
-        <member name="M:UserDefineData.SetUserDefineDataForm.SetDataFromForm">
+        <!-- 忽略成員 "M:UserDefineData.Global.DictToXMLP1(System.Collections.Generic.Dictionary{System.String,System.String})" 中格式錯誤的 XML 註解 -->
+        <member name="F:UserDefineData.ImportExport.ExportStudentV2.components">
             <summary>
-            儲存畫面上設定資料
+            設計工具所需的變數。
             </summary>
-            <param name="data"></param>
+        </member>
+        <member name="M:UserDefineData.ImportExport.ExportStudentV2.Dispose(System.Boolean)">
+            <summary>
+            清除任何使用中的資源。
+            </summary>
+            <param name="disposing">如果應該公開 Managed 資源則為 true，否則為 false。</param>
+        </member>
+        <member name="M:UserDefineData.ImportExport.ExportStudentV2.InitializeComponent">
+             <summary>
+             此為設計工具支援所需的方法 - 請勿使用程式碼編輯器修改這個方法的內容。
+            
+             </summary>
+        </member>
+        <member name="F:UserDefineData.ImportExport.ImportStudentV2.components">
+            <summary>
+            設計工具所需的變數。
+            </summary>
+        </member>
+        <member name="M:UserDefineData.ImportExport.ImportStudentV2.Dispose(System.Boolean)">
+            <summary>
+            清除任何使用中的資源。
+            </summary>
+            <param name="disposing">如果應該公開 Managed 資源則為 true，否則為 false。</param>
+        </member>
+        <member name="M:UserDefineData.ImportExport.ImportStudentV2.InitializeComponent">
+             <summary>
+             此為設計工具支援所需的方法 - 請勿使用程式碼編輯器修改這個方法的內容。
+            
+             </summary>
         </member>
         <member name="F:UserDefineData.ImportExport.ImportStudentV2SH.components">
             <summary>
@@ -50,50 +103,28 @@
             
              </summary>
         </member>
-        <member name="T:UserDefineData.Global">
+        <member name="M:UserDefineData.ImportExport.ImportUtil.GetChekcDataStr(System.Int32,Aspose.Cells.Worksheet,System.Collections.Generic.Dictionary{System.String,System.Int32})">
             <summary>
-            取得公用全域資料與工具
-            </summary>
-        </member>
-        <member name="F:UserDefineData.Global._SelectItemList">
-            <summary>
-            設定畫面選項
-            </summary>
-        </member>
-        <member name="M:UserDefineData.Global.StartDefaultValue">
-            <summary>
-            啟動預設值
-            </summary>
-        </member>
-        <!-- Badly formed XML comment ignored for member "M:UserDefineData.Global.XMLToDictP1(System.String)" -->
-        <member name="M:UserDefineData.Global.GetUserConfigData">
-            <summary>
-            取得系統內設定自訂欄位資料項目與型態
+            取得欄位驗證字串
             </summary>
             <returns></returns>
         </member>
-        <!-- Badly formed XML comment ignored for member "M:UserDefineData.Global.DictToXMLP1(System.Collections.Generic.Dictionary{System.String,System.String})" -->
-        <member name="F:UserDefineData.ImportExport.ImportStudentV2.components">
+        <member name="F:UserDefineData.ImportExport.ExportStudentV2SH.components">
             <summary>
             設計工具所需的變數。
             </summary>
         </member>
-        <member name="M:UserDefineData.ImportExport.ImportStudentV2.Dispose(System.Boolean)">
+        <member name="M:UserDefineData.ImportExport.ExportStudentV2SH.Dispose(System.Boolean)">
             <summary>
             清除任何使用中的資源。
             </summary>
             <param name="disposing">如果應該公開 Managed 資源則為 true，否則為 false。</param>
         </member>
-        <member name="M:UserDefineData.ImportExport.ImportStudentV2.InitializeComponent">
+        <member name="M:UserDefineData.ImportExport.ExportStudentV2SH.InitializeComponent">
              <summary>
              此為設計工具支援所需的方法 - 請勿使用程式碼編輯器修改這個方法的內容。
             
              </summary>
-        </member>
-        <member name="T:UserDefineData.Program">
-            <summary>
-            自訂資料欄位
-            </summary>
         </member>
         <member name="M:UserDefineData.LoadManager.GetSystemType">
             <summary>
@@ -163,6 +194,89 @@
             <param name="targetID"></param>
             <param name="Desc"></param>
         </member>
+        <member name="T:UserDefineData.Program">
+            <summary>
+            自訂資料欄位
+            </summary>
+        </member>
+        <member name="T:UserDefineData.Properties.Resources">
+            <summary>
+              用於查詢當地語系化字串等的強型別資源類別
+            </summary>
+        </member>
+        <member name="P:UserDefineData.Properties.Resources.ResourceManager">
+            <summary>
+              傳回這個類別使用的快取的 ResourceManager 執行個體。
+            </summary>
+        </member>
+        <member name="P:UserDefineData.Properties.Resources.Culture">
+            <summary>
+              覆寫目前執行緒的 CurrentUICulture 屬性，對象是所有
+              使用這個強型別資源類別的資源查閱。
+            </summary>
+        </member>
+        <member name="M:UserDefineData.SetUserDefineDataForm.GetDataToForm">
+            <summary>
+            取得設定資料顯示到畫面
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:UserDefineData.SetUserDefineDataForm.SetDataFromForm">
+            <summary>
+            儲存畫面上設定資料
+            </summary>
+            <param name="data"></param>
+        </member>
+        <member name="F:UserDefineData.SetUserDefineDataForm.components">
+            <summary>
+            Required designer variable.
+            </summary>
+        </member>
+        <member name="M:UserDefineData.SetUserDefineDataForm.Dispose(System.Boolean)">
+            <summary>
+            Clean up any resources being used.
+            </summary>
+            <param name="disposing">true if managed resources should be disposed; otherwise, false.</param>
+        </member>
+        <member name="M:UserDefineData.SetUserDefineDataForm.InitializeComponent">
+            <summary>
+            Required method for Designer support - do not modify
+            the contents of this method with the code editor.
+            </summary>
+        </member>
+        <member name="M:UserDefineData.UDTTransfer.GetDataFromUDT(System.String)">
+            <summary>
+            取得單筆學生UDT資料
+            </summary>
+            <param name="StudentID"></param>
+            <returns></returns>
+        </member>
+        <member name="M:UserDefineData.UDTTransfer.GetDataFromUDT(System.Collections.Generic.List{System.String})">
+            <summary>
+            取得多筆學生UDT資料
+            </summary>
+            <param name="StudentIDList"></param>
+            <returns></returns>
+        </member>
+        <member name="M:UserDefineData.UDTTransfer.InsertDataToUDT(System.Collections.Generic.List{UserDefineData.DAL.UserDefData})">
+            <summary>
+            新增資料到 UDT
+            </summary>
+            <param name="?"></param>
+        </member>
+        <member name="M:UserDefineData.UDTTransfer.DeleteDataToUDT(System.Collections.Generic.List{UserDefineData.DAL.UserDefData})">
+            <summary>
+            刪除 UDT 內資料
+            </summary>
+            <param name="data"></param>
+        </member>
+        <member name="M:UserDefineData.UDTTransfer.GetDataFromUDTIncludeUserConfig(System.String)">
+            <summary>
+            取得單筆學生UDT資料，包括"自定資料管理" (add by 小郭, 2013/12/16)
+            </summary>
+            <param name="StudentID"></param>
+            <returns></returns>
+        </member>
         <member name="M:UserDefineData.UserDefineDataItem.DataBindToDataGridView">
             <summary>
             將讀取資料填入DataGridView
@@ -202,120 +316,6 @@
              此為設計工具支援所需的方法 - 請勿使用程式碼編輯器修改這個方法的內容。
             
              </summary>
-        </member>
-        <member name="M:UserDefineData.UDTTransfer.GetDataFromUDT(System.String)">
-            <summary>
-            取得單筆學生UDT資料
-            </summary>
-            <param name="StudentID"></param>
-            <returns></returns>
-        </member>
-        <member name="M:UserDefineData.UDTTransfer.GetDataFromUDT(System.Collections.Generic.List{System.String})">
-            <summary>
-            取得多筆學生UDT資料
-            </summary>
-            <param name="StudentIDList"></param>
-            <returns></returns>
-        </member>
-        <member name="M:UserDefineData.UDTTransfer.InsertDataToUDT(System.Collections.Generic.List{UserDefineData.DAL.UserDefData})">
-            <summary>
-            新增資料到 UDT
-            </summary>
-            <param name="?"></param>
-        </member>
-        <member name="M:UserDefineData.UDTTransfer.DeleteDataToUDT(System.Collections.Generic.List{UserDefineData.DAL.UserDefData})">
-            <summary>
-            刪除 UDT 內資料
-            </summary>
-            <param name="data"></param>
-        </member>
-        <member name="M:UserDefineData.UDTTransfer.GetDataFromUDTIncludeUserConfig(System.String)">
-            <summary>
-            取得單筆學生UDT資料，包括"自定資料管理" (add by 小郭, 2013/12/16)
-            </summary>
-            <param name="StudentID"></param>
-            <returns></returns>
-        </member>
-        <member name="F:UserDefineData.ImportExport.ExportStudentV2SH.components">
-            <summary>
-            設計工具所需的變數。
-            </summary>
-        </member>
-        <member name="M:UserDefineData.ImportExport.ExportStudentV2SH.Dispose(System.Boolean)">
-            <summary>
-            清除任何使用中的資源。
-            </summary>
-            <param name="disposing">如果應該公開 Managed 資源則為 true，否則為 false。</param>
-        </member>
-        <member name="M:UserDefineData.ImportExport.ExportStudentV2SH.InitializeComponent">
-             <summary>
-             此為設計工具支援所需的方法 - 請勿使用程式碼編輯器修改這個方法的內容。
-            
-             </summary>
-        </member>
-        <member name="M:UserDefineData.ImportExport.ImportUtil.GetChekcDataStr(System.Int32,Aspose.Cells.Worksheet,System.Collections.Generic.Dictionary{System.String,System.Int32})">
-            <summary>
-            取得欄位驗證字串
-            </summary>
-            <returns></returns>
-        </member>
-        <member name="F:UserDefineData.ImportExport.ExportStudentV2.components">
-            <summary>
-            設計工具所需的變數。
-            </summary>
-        </member>
-        <member name="M:UserDefineData.ImportExport.ExportStudentV2.Dispose(System.Boolean)">
-            <summary>
-            清除任何使用中的資源。
-            </summary>
-            <param name="disposing">如果應該公開 Managed 資源則為 true，否則為 false。</param>
-        </member>
-        <member name="M:UserDefineData.ImportExport.ExportStudentV2.InitializeComponent">
-             <summary>
-             此為設計工具支援所需的方法 - 請勿使用程式碼編輯器修改這個方法的內容。
-            
-             </summary>
-        </member>
-        <member name="T:UserDefineData.Properties.Resources">
-            <summary>
-              用於查詢當地語系化字串等的強型別資源類別
-            </summary>
-        </member>
-        <member name="P:UserDefineData.Properties.Resources.ResourceManager">
-            <summary>
-              傳回這個類別使用的快取的 ResourceManager 執行個體。
-            </summary>
-        </member>
-        <member name="P:UserDefineData.Properties.Resources.Culture">
-            <summary>
-              覆寫目前執行緒的 CurrentUICulture 屬性，對象是所有
-              使用這個強型別資源類別的資源查閱。
-            </summary>
-        </member>
-        <member name="F:UserDefineData.DAL.UserDefData.isNull">
-            <summary>
-            檢查是否空的
-            </summary>
-        </member>
-        <member name="P:UserDefineData.DAL.UserDefData.FieldName">
-            <summary>
-            欄位名稱
-            </summary>
-        </member>
-        <member name="P:UserDefineData.DAL.UserDefData.Type">
-            <summary>
-            資料型態
-            </summary>
-        </member>
-        <member name="P:UserDefineData.DAL.UserDefData.Value">
-            <summary>
-            資料值
-            </summary>
-        </member>
-        <member name="P:UserDefineData.DAL.UserDefData.RefID">
-            <summary>
-            參照ID(ex.StudentID)
-            </summary>
         </member>
     </members>
 </doc>

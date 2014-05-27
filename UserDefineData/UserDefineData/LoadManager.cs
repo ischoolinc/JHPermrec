@@ -64,8 +64,9 @@ namespace UserDefineData
 
 
             // 設定自訂資料欄位樣版
-            
-            K12.Presentation.NLDPanels.Student.AddDetailBulider(new FISCA.Presentation.DetailBulider<UserDefineDataItem>());
+            if (FISCA.Permission.UserAcl.Current[Global.自訂資料欄位功能代碼].Editable || FISCA.Permission.UserAcl.Current[Global.自訂資料欄位功能代碼].Viewable)
+                K12.Presentation.NLDPanels.Student.AddDetailBulider(new FISCA.Presentation.DetailBulider<UserDefineDataItem>());
+
             Catalog detail = RoleAclSource.Instance["學生"]["資料項目"];
             detail.Add(new DetailItemFeature(typeof(UserDefineDataItem)));
 

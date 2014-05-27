@@ -124,6 +124,14 @@ namespace UserDefineData
         /// <param name="e"></param>
         protected override void OnSaveButtonClick(EventArgs e)
         {
+            if (!FISCA.Permission.UserAcl.Current[Global.自訂資料欄位功能代碼].Editable)
+            {
+                MessageBox.Show("此帳號無編輯權限...", "ischool");
+                this.CancelButtonVisible = false;
+                this.SaveButtonVisible = false;
+                return;
+            }
+
             try
             {
                 // 檢查資料

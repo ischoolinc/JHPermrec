@@ -11,7 +11,7 @@ namespace UserDefineData
     /// </summary>
     class Global
     {
-
+        public static string 自訂資料欄位功能代碼 = "JHSchool.Student.UserDefineData";
         /// <summary>
         /// 設定畫面選項
         /// </summary>
