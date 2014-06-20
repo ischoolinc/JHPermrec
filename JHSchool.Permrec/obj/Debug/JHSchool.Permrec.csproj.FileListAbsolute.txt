@@ -99,3 +99,5 @@ D:\GitHub2\國中學籍\JHPermrec\JHSchool.Permrec\obj\Debug\JHSchool.Permrec.dl
 D:\GitHub2\國中學籍\JHPermrec\JHSchool.Permrec\obj\Debug\JHSchool.Permrec.pdb
 D:\GitHub2\國中學籍\JHPermrec\FiscaRuntime\addmodules\JHPermrec\JHSchool.Permrec.dll
 D:\GitHub2\國中學籍\JHPermrec\FiscaRuntime\addmodules\JHPermrec\JHSchool.Permrec.pdb
+D:\GitProjModules\ischoolDesktop\JHPermrec\FiscaRuntime\addmodules\JHPermrec\JHSchool.Permrec.dll
+D:\GitProjModules\ischoolDesktop\JHPermrec\FiscaRuntime\addmodules\JHPermrec\JHSchool.Permrec.pdb

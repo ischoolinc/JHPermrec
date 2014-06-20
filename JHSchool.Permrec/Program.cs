@@ -8,6 +8,7 @@ using Framework;
 using Framework.Security;
 using JHSchool.Affair;
 using JHSchool.Legacy;
+using IRewriteAPI_JH;
 
 namespace JHSchool.Permrec
 {
@@ -43,7 +44,8 @@ namespace JHSchool.Permrec
             }
         }
 
-        [MainMethod("JHSchool.Permrec")]
+        //[MainMethod("JHSchool.Permrec")]
+        [ApplicationMain()]
         static public void Main()
         {
             //Student.Instance.AddDetailBulider(new ContentItemBulider<StudentExtendControls.UpdateRecordItem>());
@@ -54,7 +56,7 @@ namespace JHSchool.Permrec
                 JHSchool.Data.JHStudent.SelectAll();
             });
 
-            // 班級學生資訊
+          // 班級學生資訊
             Class.Instance.AddDetailBulider(new FISCA.Presentation.DetailBulider<JHSchool.Permrec.ClassExtendControls.ClassStudentItem>());
             Student.Instance.AddDetailBulider(new DetailBulider<StudentExtendControls.AddressPalmerwormItem>());
             Student.Instance.AddDetailBulider(new FISCA.Presentation.DetailBulider<JHSchool.Permrec.StudentExtendControls.PhonePalmerwormItem>());
@@ -64,7 +66,18 @@ namespace JHSchool.Permrec
             Student.Instance.AddDetailBulider(new FISCA.Presentation.DetailBulider<JHSchool.Permrec.StudentExtendControls.ParentInfoPalmerwormItem>());
             //Student.Instance.AddDetailBulider(new FISCA.Presentation.DetailBulider <JHSchool.Permrec.StudentExtendControls.ParentInfoPalmerwormItem>());
             // Test new Class Item
-            Student.Instance.AddDetailBulider(new DetailBulider<JHSchool.Permrec.StudentExtendControls.ClassItem>());
+            
+            // 學生>班級資訊覆寫
+            IStudentClassDetailItemAPI item = FISCA.InteractionService.DiscoverAPI<IStudentClassDetailItemAPI>();
+            if (item != null)
+            {
+                Student.Instance.AddDetailBulider(item.CreateBasicInfo());
+            }
+            else
+            {
+                Student.Instance.AddDetailBulider(new DetailBulider<JHSchool.Permrec.StudentExtendControls.ClassItem>());
+            }
+            
 
             Student.Instance.AddDetailBulider(new FISCA.Presentation.DetailBulider<JHSchool.Permrec.StudentExtendControls.SemesterHistoryDetail>());
             Student.Instance.AddDetailBulider(new DetailBulider<StudentExtendControls.BeforeEnrollmentItem>());
