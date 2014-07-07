@@ -76,9 +76,9 @@ namespace JHPermrec.UpdateRecord.Batch
             // 取得學生 ID 方式
             // 取得畫面上所選學生ID
             if (_FLT == FormLoadType.學生)
-                StudentIDList =DAL.DALTransfer.GetStudentTypeIDFromIDs( K12.Presentation.NLDPanels.Student.SelectedSource,K12.Data.StudentRecord.StudentStatus.一般);
+                StudentIDList =DAL.DALTransfer2.GetStudentTypeIDFromIDs( K12.Presentation.NLDPanels.Student.SelectedSource,K12.Data.StudentRecord.StudentStatus.一般);
             else
-                StudentIDList = DAL.DALTransfer.GetStudentIDListByGradeYear(cboGradeYear.Text);
+                StudentIDList = DAL.DALTransfer2.GetStudentIDListByGradeYear(cboGradeYear.Text);
 
             if (StudentIDList.Count == 0)
                 return;
@@ -139,7 +139,7 @@ namespace JHPermrec.UpdateRecord.Batch
 
             // 刪除舊資料
             if(_CheckDelOldData)
-                DAL.DALTransfer.DelStudUpdateRecordEntityList(StudOldUpdateRecList);
+                DAL.DALTransfer2.DelStudUpdateRecordEntityList(StudOldUpdateRecList);
 
             int SchoolYear, Semester;
             int.TryParse(JHSchool.School.DefaultSchoolYear, out SchoolYear);
@@ -153,14 +153,14 @@ namespace JHPermrec.UpdateRecord.Batch
                 sure.SchoolYear = SchoolYear;
                 sure.Semester = Semester;
             }
-            DAL.DALTransfer.SetStudUpdateRecordEntityList(StudUpdateRecsList);
+            DAL.DALTransfer2.SetStudUpdateRecordEntityList(StudUpdateRecsList);
             
         }
 
         void _ReadDataWork_DoWork(object sender, DoWorkEventArgs e)
         {
             // 取得學生新生異動資料
-            StudOldUpdateRecsDic = DAL.DALTransfer.GetStudListUpdateRecordEntityListByUpdateType(StudentIDList, JHPermrec.UpdateRecord.DAL.DALTransfer.UpdateType.新生);
+            StudOldUpdateRecsDic = DAL.DALTransfer2.GetStudListUpdateRecordEntityListByUpdateType(StudentIDList, JHPermrec.UpdateRecord.DAL.DALTransfer2.UpdateType.新生);
 
             StudOldUpdateRecList = new List<JHPermrec.UpdateRecord.DAL.StudUpdateRecordEntity>();
             foreach (List<DAL.StudUpdateRecordEntity> sureList in StudOldUpdateRecsDic.Values)
@@ -168,7 +168,7 @@ namespace JHPermrec.UpdateRecord.Batch
 
 
             // 產生空的新生異動資料
-            StudUpdateRecsList = DAL.DALTransfer.AddStudUpdateRecordEntityList(StudentIDList, JHPermrec.UpdateRecord.DAL.DALTransfer.UpdateType.新生,dtUpdateDate.Text);
+            StudUpdateRecsList = DAL.DALTransfer2.AddStudUpdateRecordEntityList(StudentIDList, JHPermrec.UpdateRecord.DAL.DALTransfer2.UpdateType.新生,dtUpdateDate.Text);
 
         }
 
@@ -230,7 +230,7 @@ namespace JHPermrec.UpdateRecord.Batch
                 this.Size = new System.Drawing.Size(252, 203);
 
                 cboGradeYear.Items.Clear();
-                foreach (int gr in DAL.DALTransfer.GetClassGardeYearList())
+                foreach (int gr in DAL.DALTransfer2.GetClassGardeYearList())
                     cboGradeYear.Items.Add(gr.ToString());
             }
             this.StartPosition = FormStartPosition.CenterScreen;

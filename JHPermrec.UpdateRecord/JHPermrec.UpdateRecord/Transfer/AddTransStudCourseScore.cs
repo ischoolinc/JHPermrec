@@ -29,7 +29,7 @@ namespace JHPermrec.UpdateRecord.Transfer
         private BackgroundWorker _BGWorker;
 
 
-        private DAL.DALTransfer.ScoreType _ScoreType;
+        private DAL.DALTransfer2.ScoreType _ScoreType;
 
         public AddTransStudCourseScore(JHSchool.Data.JHStudentRecord studentRec)
         {
@@ -40,10 +40,10 @@ namespace JHPermrec.UpdateRecord.Transfer
             //if (JHSchool.Permrec.Program.ModuleType == JHSchool.Permrec.Program.ModuleFlag.HsinChu)
             
             // 預設用新竹
-                _ScoreType = DAL.DALTransfer.ScoreType.HsinChu;
+                _ScoreType = DAL.DALTransfer2.ScoreType.HsinChu;
 
             if (JHSchool.Permrec.Program.ModuleType == JHSchool.Permrec.Program.ModuleFlag.KaoHsiung)
-                _ScoreType = DAL.DALTransfer.ScoreType.KaoHsiung;
+                _ScoreType = DAL.DALTransfer2.ScoreType.KaoHsiung;
 
             prlp = new JHSchool.PermRecLogProcess();
             
@@ -81,7 +81,7 @@ namespace JHPermrec.UpdateRecord.Transfer
         {
             EffortScoreDic.Clear();
             EffortScoreList.Clear();
-            EffortScoreDic = DAL.DALTransfer.getEffortScore();
+            EffortScoreDic = DAL.DALTransfer2.getEffortScore();
             foreach (decimal score in EffortScoreDic.Keys)
                 EffortScoreList.Add(score);
             EffortScoreList.Sort();
@@ -91,7 +91,7 @@ namespace JHPermrec.UpdateRecord.Transfer
         private void GetStudCourseScore()
         {
             // 檢查 SCTakeID NULL
-            _CheckExamScoreEntityList = DAL.DALTransfer.GetStudExamScore(studRec.ID, SchoolYear, Semester, _ScoreType);
+            _CheckExamScoreEntityList = DAL.DALTransfer2.GetStudExamScore(studRec.ID, SchoolYear, Semester, _ScoreType);
             List<DAL.ExamScoreEntity> nullData = new List<JHPermrec.UpdateRecord.DAL.ExamScoreEntity>();
                         
             foreach (DAL.ExamScoreEntity ese in _CheckExamScoreEntityList)
@@ -107,10 +107,10 @@ namespace JHPermrec.UpdateRecord.Transfer
             }
 
             if (nullData.Count > 0)
-                DAL.DALTransfer.AddNullSCTakeRecord(nullData);
+                DAL.DALTransfer2.AddNullSCTakeRecord(nullData);
 
 
-            ExamScoreEntityList = DAL.DALTransfer.GetStudExamScore(studRec.ID, SchoolYear, Semester,_ScoreType);
+            ExamScoreEntityList = DAL.DALTransfer2.GetStudExamScore(studRec.ID, SchoolYear, Semester,_ScoreType);
         }
 
         private void checkDGScoreErrorText()
@@ -152,7 +152,7 @@ namespace JHPermrec.UpdateRecord.Transfer
                 foreach (DAL.ExamScoreEntity ese in ExamScoreEntityList)
                 {
                     // 新竹
-                    if (_ScoreType == JHPermrec.UpdateRecord.DAL.DALTransfer.ScoreType.HsinChu)
+                    if (_ScoreType == JHPermrec.UpdateRecord.DAL.DALTransfer2.ScoreType.HsinChu)
                     {
                         if (SCTakeID == ese.HC_JHSCETakeRecord.SCTakeID)
                         {
@@ -170,7 +170,7 @@ namespace JHPermrec.UpdateRecord.Transfer
                     }
 
                     // 高雄
-                    if (_ScoreType == JHPermrec.UpdateRecord.DAL.DALTransfer.ScoreType.KaoHsiung)
+                    if (_ScoreType == JHPermrec.UpdateRecord.DAL.DALTransfer2.ScoreType.KaoHsiung)
                     {
                         if (SCTakeID == ese.KH_JHSCETakeRecord.SCTakeID)
                         {
@@ -190,7 +190,7 @@ namespace JHPermrec.UpdateRecord.Transfer
 
             // Save log
             SaveLog();
-            DAL.DALTransfer.SetStudExamScore(ExamScoreEntityList);
+            DAL.DALTransfer2.SetStudExamScore(ExamScoreEntityList);
             // 回寫 cache
             WriteDgScoreToExamScoreEntityListCache();
         }
@@ -224,7 +224,7 @@ namespace JHPermrec.UpdateRecord.Transfer
                     if (index ==ese.cacheIndex )
                     {
 
-                        if (ese.ScoreType == JHPermrec.UpdateRecord.DAL.DALTransfer.ScoreType.HsinChu)
+                        if (ese.ScoreType == JHPermrec.UpdateRecord.DAL.DALTransfer2.ScoreType.HsinChu)
                         {
                             decimal score;                            
                             if (drv.Cells[colScore.Index].Value != null)
@@ -236,7 +236,7 @@ namespace JHPermrec.UpdateRecord.Transfer
                         
                         }
 
-                        if (ese.ScoreType == JHPermrec.UpdateRecord.DAL.DALTransfer.ScoreType.KaoHsiung)
+                        if (ese.ScoreType == JHPermrec.UpdateRecord.DAL.DALTransfer2.ScoreType.KaoHsiung)
                         {
                             decimal score;
                             int Effort;
@@ -272,7 +272,7 @@ namespace JHPermrec.UpdateRecord.Transfer
                 {
                     int rowIdx = dgScore.Rows.Add();
 
-                    if (ese.ScoreType == JHPermrec.UpdateRecord.DAL.DALTransfer.ScoreType.HsinChu)
+                    if (ese.ScoreType == JHPermrec.UpdateRecord.DAL.DALTransfer2.ScoreType.HsinChu)
                     {                 
                             dgScore.Rows[rowIdx].Cells[colSCETakeID.Index].Value = ese.HC_JHSCETakeRecord.SCTakeID + "";
                         
@@ -319,7 +319,7 @@ namespace JHPermrec.UpdateRecord.Transfer
                         dgScore.Rows[rowIdx].Cells[cacheIndex.Index].Value = "" + ese.cacheIndex;
                     }
 
-                    if (ese.ScoreType == JHPermrec.UpdateRecord.DAL.DALTransfer.ScoreType.KaoHsiung)
+                    if (ese.ScoreType == JHPermrec.UpdateRecord.DAL.DALTransfer2.ScoreType.KaoHsiung)
                     {
                         dgScore.Rows[rowIdx].Cells[colSCETakeID.Index].Value = ese.KH_JHSCETakeRecord.SCTakeID + "";
                         
@@ -462,7 +462,7 @@ namespace JHPermrec.UpdateRecord.Transfer
             lblSchoolYearSemester.Text = SchoolYear + " 學年度 第 " + Semester + " 學期";
             lblMsg.Text = "";
 
-            if (_ScoreType == JHPermrec.UpdateRecord.DAL.DALTransfer.ScoreType.HsinChu)
+            if (_ScoreType == JHPermrec.UpdateRecord.DAL.DALTransfer2.ScoreType.HsinChu)
             {
                 dgScore.Columns[colEffort.Index].Visible = false;
                 dgScore.Columns[colAssignmentScore.Index].Visible = true;
@@ -487,7 +487,7 @@ namespace JHPermrec.UpdateRecord.Transfer
             foreach (DAL.ExamScoreEntity ese in ExamScoreEntityList)
             {
                 string Key = ese.ExamName + "_" + ese.CourseName + "_";
-                if(_ScoreType == JHPermrec.UpdateRecord.DAL.DALTransfer.ScoreType.HsinChu )
+                if(_ScoreType == JHPermrec.UpdateRecord.DAL.DALTransfer2.ScoreType.HsinChu )
                 {
                     if(ese.HC_JHSCETakeRecord !=null )
                     {
@@ -501,7 +501,7 @@ namespace JHPermrec.UpdateRecord.Transfer
                     }
                 }
 
-                if (_ScoreType == JHPermrec.UpdateRecord.DAL.DALTransfer.ScoreType.KaoHsiung)
+                if (_ScoreType == JHPermrec.UpdateRecord.DAL.DALTransfer2.ScoreType.KaoHsiung)
                 {
                     if (ese.KH_JHSCETakeRecord != null)
                     {
@@ -523,7 +523,7 @@ namespace JHPermrec.UpdateRecord.Transfer
             foreach (DAL.ExamScoreEntity ese in ExamScoreEntityList)
             {
                 string Key = ese.ExamName + "_" + ese.CourseName + "_";
-                if (_ScoreType == JHPermrec.UpdateRecord.DAL.DALTransfer.ScoreType.HsinChu)
+                if (_ScoreType == JHPermrec.UpdateRecord.DAL.DALTransfer2.ScoreType.HsinChu)
                 {
                     if (ese.HC_JHSCETakeRecord != null)
                     {
@@ -537,7 +537,7 @@ namespace JHPermrec.UpdateRecord.Transfer
                     }
                 }
 
-                if (_ScoreType == JHPermrec.UpdateRecord.DAL.DALTransfer.ScoreType.KaoHsiung)
+                if (_ScoreType == JHPermrec.UpdateRecord.DAL.DALTransfer2.ScoreType.KaoHsiung)
                 {
                     if (ese.KH_JHSCETakeRecord != null)
                     {

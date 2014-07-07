@@ -7,7 +7,7 @@ using FISCA.Data;
 namespace JHPermrec.UpdateRecord.Transfer
 {
     // 轉入異動使用
-    class DALTransfer
+    public class DALTransfer1
     {
         /// <summary>
         /// 透過身分證取得學生紀錄

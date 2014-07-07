@@ -210,7 +210,7 @@ namespace JHPermrec.UpdateRecord
 
         private void btnAdd_Click(object sender, EventArgs e)
         {
-            DAL.StudUpdateRecordEntity sure = DAL.DALTransfer.AddStudUpdateRecordEntity(PrimaryKey,JHPermrec.UpdateRecord.DAL.DALTransfer.UpdateType.Empty,DateTime.Now.ToShortDateString ());
+            DAL.StudUpdateRecordEntity sure = DAL.DALTransfer2.AddStudUpdateRecordEntity(PrimaryKey,JHPermrec.UpdateRecord.DAL.DALTransfer2.UpdateType.Empty,DateTime.Now.ToShortDateString ());
             if (sure == null)
                 return;
             UpdateRecordItemForm form = new UpdateRecordItemForm(UpdateRecordItemForm.actMode.·s¼W , sure, PrimaryKey);
@@ -252,7 +252,7 @@ namespace JHPermrec.UpdateRecord
         private void EditStudentUpdateRecord()
         {
             JHSchool.Data.JHUpdateRecordRecord objUpdate = lstRecord.SelectedItems[0].Tag as JHSchool.Data.JHUpdateRecordRecord;
-            DAL.StudUpdateRecordEntity sure = DAL.DALTransfer.SetStudUpdateRecordEntityTrans(objUpdate);
+            DAL.StudUpdateRecordEntity sure = DAL.DALTransfer2.SetStudUpdateRecordEntityTrans(objUpdate);
             UpdateRecordItemForm form = new UpdateRecordItemForm(UpdateRecordItemForm.actMode.­×§ï, sure, PrimaryKey);
             form.ShowDialog();
         }

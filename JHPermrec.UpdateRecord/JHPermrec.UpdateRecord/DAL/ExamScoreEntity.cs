@@ -6,7 +6,7 @@ using System.Text;
 namespace JHPermrec.UpdateRecord.DAL
 {
     // 考試成績
-    class ExamScoreEntity
+    public class ExamScoreEntity
     {
         ///// <summary>
         ///// 考試成績ID
@@ -76,7 +76,7 @@ namespace JHPermrec.UpdateRecord.DAL
         /// <summary>
         /// 成績類別
         /// </summary>
-        public DAL.DALTransfer.ScoreType ScoreType { get; set; }
+        public DAL.DALTransfer2.ScoreType ScoreType { get; set; }
 
         /// <summary>
         /// 新竹課程評量成績

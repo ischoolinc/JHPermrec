@@ -50,7 +50,7 @@ namespace JHPermrec.UpdateRecord
             {
                 cbxSel.Enabled = true;
 
-                foreach (DAL.DALTransfer.UpdateType ut in DAL.DALTransfer.CheckCanInputUpdateType)
+                foreach (DAL.DALTransfer2.UpdateType ut in DAL.DALTransfer2.CheckCanInputUpdateType)
                     cbxSel.Items.Add(ut.ToString());
 
                 cbxSel.SelectedIndex = 0;
@@ -222,7 +222,7 @@ namespace JHPermrec.UpdateRecord
                 if (cbxSel.Text == "新生")
                 {
 
-                    bool checkSameUpdateCode1 = DAL.DALTransfer.checkStudentSameUpdateCode(RunningID, _StudUpdateRecordEntity, "1");
+                    bool checkSameUpdateCode1 = DAL.DALTransfer2.checkStudentSameUpdateCode(RunningID, _StudUpdateRecordEntity, "1");
 
                     if (checkSameUpdateCode1)
                     {
@@ -233,7 +233,7 @@ namespace JHPermrec.UpdateRecord
 
                 if (cbxSel.Text == "畢業")
                 {
-                    bool checkSameUpdateCode2 = DAL.DALTransfer.checkStudentSameUpdateCode(RunningID, _StudUpdateRecordEntity, "2");
+                    bool checkSameUpdateCode2 = DAL.DALTransfer2.checkStudentSameUpdateCode(RunningID, _StudUpdateRecordEntity, "2");
 
                     if (checkSameUpdateCode2)
                     {
@@ -244,7 +244,7 @@ namespace JHPermrec.UpdateRecord
                 
                 // 檢查同一天是否有相同異動
                 bool checkSameUpdateDateAndCode = false;
-                checkSameUpdateDateAndCode = DAL.DALTransfer.checkStudentSameUpdateCode(RunningID, _StudUpdateRecordEntity);
+                checkSameUpdateDateAndCode = DAL.DALTransfer2.checkStudentSameUpdateCode(RunningID, _StudUpdateRecordEntity);
 
                 if (checkSameUpdateDateAndCode)
                 {
@@ -262,7 +262,7 @@ namespace JHPermrec.UpdateRecord
             _StudUpdateRecordEntity.SetGradeYear(intGradeYear.Text);
 
             // 儲存異動資料
-            DAL.DALTransfer.SetStudUpdateRecordEntity(_StudUpdateRecordEntity);
+            DAL.DALTransfer2.SetStudUpdateRecordEntity(_StudUpdateRecordEntity);
 
 
             // Log                

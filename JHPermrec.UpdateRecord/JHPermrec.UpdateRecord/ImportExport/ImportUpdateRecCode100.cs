@@ -93,7 +93,7 @@ namespace JHPermrec.UpdateRecord.ImportExport
 
                         case "異動類別":
                             // 對應不到時
-                            if (DAL.DALTransfer.GetUpdateRecCodeByString39(value)=="")
+                            if (DAL.DALTransfer2.GetUpdateRecCodeByString39(value)=="")
                             {
                                 InputFormatPass &= false;
                                 e.ErrorFields.Add(field, "必須填入正確異動類別");
@@ -282,7 +282,7 @@ namespace JHPermrec.UpdateRecord.ImportExport
                         // 判斷學年度+學期+異動日期+異動類別 (如果相同有當更新，不同就新增)
                         foreach (JHUpdateRecordRecord urr in UpdateRecs[id])
                         {
-                            string UpdateStr = DAL.DALTransfer.GetUpdateRecCodeString(urr.UpdateCode);
+                            string UpdateStr = DAL.DALTransfer2.GetUpdateRecCodeString(urr.UpdateCode);
                             if (urr.SchoolYear == schoolYear && urr.Semester == Semester && UpdateType==UpdateStr)
                             {
                                 DateTime dt1;
@@ -325,7 +325,7 @@ namespace JHPermrec.UpdateRecord.ImportExport
                             switch (field)
                             {
                                 case "異動類別":
-                                    string UrCode = DAL.DALTransfer.GetUpdateRecCodeByString39(value);
+                                    string UrCode = DAL.DALTransfer2.GetUpdateRecCodeByString39(value);
                                     if (UrCode != "")
                                         updateRec.UpdateCode = UrCode;
 

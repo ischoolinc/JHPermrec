@@ -43,7 +43,7 @@ namespace JHPermrec.UpdateRecord.ImportExport
             wizard.ExportableFields.AddRange(ExportItemList);
             wizard.ExportPackage += delegate(object sender, SmartSchool.API.PlugIn.Export.ExportPackageEventArgs e)
             {
-                 Dictionary<string,List<DAL.StudUpdateRecordEntity>> StudUpdateRecordEntityListDic = DAL.DALTransfer.GetStudListUpdateRecordEntityListByUpdateType(e.List ,JHPermrec.UpdateRecord.DAL.DALTransfer.UpdateType.轉入);
+                 Dictionary<string,List<DAL.StudUpdateRecordEntity>> StudUpdateRecordEntityListDic = DAL.DALTransfer2.GetStudListUpdateRecordEntityListByUpdateType(e.List ,JHPermrec.UpdateRecord.DAL.DALTransfer2.UpdateType.轉入);
                 int ExportCount = 0;
                 foreach (KeyValuePair<string,List<DAL.StudUpdateRecordEntity>> sureKey in StudUpdateRecordEntityListDic)
                     foreach (DAL.StudUpdateRecordEntity sure in sureKey.Value)

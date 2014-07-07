@@ -50,7 +50,7 @@ namespace JHPermrec.UpdateRecord.ImportExport
             wizard.ExportableFields.AddRange(ExportItemList);
             wizard.ExportPackage += delegate(object sender, SmartSchool.API.PlugIn.Export.ExportPackageEventArgs e)
             {
-                Dictionary<string, List<DAL.StudUpdateRecordEntity>> StudUpdateRecordEntityListDic = DAL.DALTransfer.GetStudListUpdateRecordEntityListByUpdate39(e.List);
+                Dictionary<string, List<DAL.StudUpdateRecordEntity>> StudUpdateRecordEntityListDic = DAL.DALTransfer2.GetStudListUpdateRecordEntityListByUpdate39(e.List);
                 int ExportCount = 0;
                 foreach (KeyValuePair<string, List<DAL.StudUpdateRecordEntity>> sureKey in StudUpdateRecordEntityListDic)
                     foreach (DAL.StudUpdateRecordEntity sure in sureKey.Value)
@@ -81,7 +81,7 @@ namespace JHPermrec.UpdateRecord.ImportExport
                                     case "異動性別": row.Add(field, sure.GetGender()); break;
                                                                                
                                     case "異動類別":
-                                            row.Add(field, DAL.DALTransfer.GetUpdateRecCodeString(sure.GetUpdateCode ()));                                        
+                                            row.Add(field, DAL.DALTransfer2.GetUpdateRecCodeString(sure.GetUpdateCode ()));                                        
                                             break;
 
                                     case "異動日期":

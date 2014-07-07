@@ -8,7 +8,7 @@ namespace JHPermrec.UpdateRecord.DAL
     /// <summary>
     /// 產生畢業證書字號使用
     /// </summary>
-    class StudDiplomaInfoJuniorDiplomaNumber
+    public class StudDiplomaInfoJuniorDiplomaNumber
     {
         /// <summary>
         /// 學生系統編號

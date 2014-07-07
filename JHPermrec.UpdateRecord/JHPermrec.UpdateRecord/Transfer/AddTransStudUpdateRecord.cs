@@ -18,7 +18,7 @@ namespace JHPermrec.UpdateRecord.Transfer
             bool checkNoTodayUrData=true;
 
             // 取得 StudUpdateRecordEntityList 
-            List<DAL.StudUpdateRecordEntity> sureList = DAL.DALTransfer.GetStudUpdateRecordEntityListByUpdateType(studEntity.ID, JHPermrec.UpdateRecord.DAL.DALTransfer.UpdateType.轉入);
+            List<DAL.StudUpdateRecordEntity> sureList = DAL.DALTransfer2.GetStudUpdateRecordEntityListByUpdateType(studEntity.ID, JHPermrec.UpdateRecord.DAL.DALTransfer2.UpdateType.轉入);
 
             foreach (DAL.StudUpdateRecordEntity sure in sureList)
             { 
@@ -32,7 +32,7 @@ namespace JHPermrec.UpdateRecord.Transfer
 
             if (checkNoTodayUrData)
             {
-                _StudUpdateRecordEntity = DAL.DALTransfer.AddStudUpdateRecordEntity(studEntity.ID, JHPermrec.UpdateRecord.DAL.DALTransfer.UpdateType.轉入, DateTime.Now.ToShortDateString());
+                _StudUpdateRecordEntity = DAL.DALTransfer2.AddStudUpdateRecordEntity(studEntity.ID, JHPermrec.UpdateRecord.DAL.DALTransfer2.UpdateType.轉入, DateTime.Now.ToShortDateString());
 
                 txtClass.Text = _StudUpdateRecordEntity.GetClassName();
                 txtName.Text = _StudUpdateRecordEntity.GetName();
@@ -137,7 +137,7 @@ namespace JHPermrec.UpdateRecord.Transfer
             }
 
             // Save
-            DAL.DALTransfer.SetStudUpdateRecordEntity(_StudUpdateRecordEntity);
+            DAL.DALTransfer2.SetStudUpdateRecordEntity(_StudUpdateRecordEntity);
             
             // log
             JHSchool.PermRecLogProcess prlp = new JHSchool.PermRecLogProcess();

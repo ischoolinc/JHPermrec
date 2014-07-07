@@ -27,16 +27,16 @@ namespace JHPermrec.UpdateRecord
             {  // 學生異動資料
                 Student.Instance.AddDetailBulider(new FISCA.Presentation.DetailBulider<JHPermrec.UpdateRecord.UpdateRecordItem>());
                 // 設定可使用的異動類別與新增時順序
-                DAL.DALTransfer.CheckCanInputUpdateType = new List<JHPermrec.UpdateRecord.DAL.DALTransfer.UpdateType>();
-                DAL.DALTransfer.CheckCanInputUpdateType.Add(JHPermrec.UpdateRecord.DAL.DALTransfer.UpdateType.轉入);
-                DAL.DALTransfer.CheckCanInputUpdateType.Add(JHPermrec.UpdateRecord.DAL.DALTransfer.UpdateType.轉出);                
-                DAL.DALTransfer.CheckCanInputUpdateType.Add(JHPermrec.UpdateRecord.DAL.DALTransfer.UpdateType.復學);
-                DAL.DALTransfer.CheckCanInputUpdateType.Add(JHPermrec.UpdateRecord.DAL.DALTransfer.UpdateType.中輟);                
-                DAL.DALTransfer.CheckCanInputUpdateType.Add(JHPermrec.UpdateRecord.DAL.DALTransfer.UpdateType.新生);
-                DAL.DALTransfer.CheckCanInputUpdateType.Add(JHPermrec.UpdateRecord.DAL.DALTransfer.UpdateType.畢業);
-                DAL.DALTransfer.CheckCanInputUpdateType.Add(JHPermrec.UpdateRecord.DAL.DALTransfer.UpdateType.更正學籍);
-                DAL.DALTransfer.CheckCanInputUpdateType.Add(JHPermrec.UpdateRecord.DAL.DALTransfer.UpdateType.延長修業年限);
-                DAL.DALTransfer.CheckCanInputUpdateType.Add(JHPermrec.UpdateRecord.DAL.DALTransfer.UpdateType.死亡);
+                DAL.DALTransfer2.CheckCanInputUpdateType = new List<JHPermrec.UpdateRecord.DAL.DALTransfer2.UpdateType>();
+                DAL.DALTransfer2.CheckCanInputUpdateType.Add(JHPermrec.UpdateRecord.DAL.DALTransfer2.UpdateType.轉入);
+                DAL.DALTransfer2.CheckCanInputUpdateType.Add(JHPermrec.UpdateRecord.DAL.DALTransfer2.UpdateType.轉出);                
+                DAL.DALTransfer2.CheckCanInputUpdateType.Add(JHPermrec.UpdateRecord.DAL.DALTransfer2.UpdateType.復學);
+                DAL.DALTransfer2.CheckCanInputUpdateType.Add(JHPermrec.UpdateRecord.DAL.DALTransfer2.UpdateType.中輟);                
+                DAL.DALTransfer2.CheckCanInputUpdateType.Add(JHPermrec.UpdateRecord.DAL.DALTransfer2.UpdateType.新生);
+                DAL.DALTransfer2.CheckCanInputUpdateType.Add(JHPermrec.UpdateRecord.DAL.DALTransfer2.UpdateType.畢業);
+                DAL.DALTransfer2.CheckCanInputUpdateType.Add(JHPermrec.UpdateRecord.DAL.DALTransfer2.UpdateType.更正學籍);
+                DAL.DALTransfer2.CheckCanInputUpdateType.Add(JHPermrec.UpdateRecord.DAL.DALTransfer2.UpdateType.延長修業年限);
+                DAL.DALTransfer2.CheckCanInputUpdateType.Add(JHPermrec.UpdateRecord.DAL.DALTransfer2.UpdateType.死亡);
 
                 // 異動匯入匯出
                 CanUseUpRecIE01 = CanUseUpRecIE02 = CanUseUpRecIE03 = CanUseUpRecIE04 = CanUseUpRecIE06 = CanUseUpRecIE07 =CanUseUpRecIE09= true;
@@ -51,16 +51,16 @@ namespace JHPermrec.UpdateRecord
                 // 學生異動資料
                 Student.Instance.AddDetailBulider(new FISCA.Presentation.DetailBulider<JHPermrec.UpdateRecord.UpdateRecordItem>());
                 // 設定可使用的異動類別與新增時順序
-                DAL.DALTransfer.CheckCanInputUpdateType = new List<JHPermrec.UpdateRecord.DAL.DALTransfer.UpdateType>();
-                DAL.DALTransfer.CheckCanInputUpdateType.Add(JHPermrec.UpdateRecord.DAL.DALTransfer.UpdateType.轉入);
-                DAL.DALTransfer.CheckCanInputUpdateType.Add(JHPermrec.UpdateRecord.DAL.DALTransfer.UpdateType.轉出);
-                DAL.DALTransfer.CheckCanInputUpdateType.Add(JHPermrec.UpdateRecord.DAL.DALTransfer.UpdateType.休學);
-                DAL.DALTransfer.CheckCanInputUpdateType.Add(JHPermrec.UpdateRecord.DAL.DALTransfer.UpdateType.復學);
-                DAL.DALTransfer.CheckCanInputUpdateType.Add(JHPermrec.UpdateRecord.DAL.DALTransfer.UpdateType.中輟);
-                DAL.DALTransfer.CheckCanInputUpdateType.Add(JHPermrec.UpdateRecord.DAL.DALTransfer.UpdateType.續讀);
-                DAL.DALTransfer.CheckCanInputUpdateType.Add(JHPermrec.UpdateRecord.DAL.DALTransfer.UpdateType.新生);
-                DAL.DALTransfer.CheckCanInputUpdateType.Add(JHPermrec.UpdateRecord.DAL.DALTransfer.UpdateType.畢業);
-                DAL.DALTransfer.CheckCanInputUpdateType.Add(JHPermrec.UpdateRecord.DAL.DALTransfer.UpdateType.更正學籍);
+                DAL.DALTransfer2.CheckCanInputUpdateType = new List<JHPermrec.UpdateRecord.DAL.DALTransfer2.UpdateType>();
+                DAL.DALTransfer2.CheckCanInputUpdateType.Add(JHPermrec.UpdateRecord.DAL.DALTransfer2.UpdateType.轉入);
+                DAL.DALTransfer2.CheckCanInputUpdateType.Add(JHPermrec.UpdateRecord.DAL.DALTransfer2.UpdateType.轉出);
+                DAL.DALTransfer2.CheckCanInputUpdateType.Add(JHPermrec.UpdateRecord.DAL.DALTransfer2.UpdateType.休學);
+                DAL.DALTransfer2.CheckCanInputUpdateType.Add(JHPermrec.UpdateRecord.DAL.DALTransfer2.UpdateType.復學);
+                DAL.DALTransfer2.CheckCanInputUpdateType.Add(JHPermrec.UpdateRecord.DAL.DALTransfer2.UpdateType.中輟);
+                DAL.DALTransfer2.CheckCanInputUpdateType.Add(JHPermrec.UpdateRecord.DAL.DALTransfer2.UpdateType.續讀);
+                DAL.DALTransfer2.CheckCanInputUpdateType.Add(JHPermrec.UpdateRecord.DAL.DALTransfer2.UpdateType.新生);
+                DAL.DALTransfer2.CheckCanInputUpdateType.Add(JHPermrec.UpdateRecord.DAL.DALTransfer2.UpdateType.畢業);
+                DAL.DALTransfer2.CheckCanInputUpdateType.Add(JHPermrec.UpdateRecord.DAL.DALTransfer2.UpdateType.更正學籍);
 
                 // 異動匯入匯出
                 CanUseUpRecIE01 = CanUseUpRecIE02 = CanUseUpRecIE03 = CanUseUpRecIE04 = CanUseUpRecIE05=CanUseUpRecIE06 = CanUseUpRecIE07 =CanUseUpRecIE08=CanUseUpRecIE09= true;
@@ -76,14 +76,14 @@ namespace JHPermrec.UpdateRecord
                 // 學生異動資料
                 Student.Instance.AddDetailBulider(new FISCA.Presentation.DetailBulider<JHPermrec.UpdateRecord.UpdateRecordItem>());
                 // 設定可使用的異動類別與新增時順序
-                DAL.DALTransfer.CheckCanInputUpdateType = new List<JHPermrec.UpdateRecord.DAL.DALTransfer.UpdateType>();
-                DAL.DALTransfer.CheckCanInputUpdateType.Add(JHPermrec.UpdateRecord.DAL.DALTransfer.UpdateType.轉入);
-                DAL.DALTransfer.CheckCanInputUpdateType.Add(JHPermrec.UpdateRecord.DAL.DALTransfer.UpdateType.轉出);                
-                DAL.DALTransfer.CheckCanInputUpdateType.Add(JHPermrec.UpdateRecord.DAL.DALTransfer.UpdateType.復學);
-                DAL.DALTransfer.CheckCanInputUpdateType.Add(JHPermrec.UpdateRecord.DAL.DALTransfer.UpdateType.中輟);
+                DAL.DALTransfer2.CheckCanInputUpdateType = new List<JHPermrec.UpdateRecord.DAL.DALTransfer2.UpdateType>();
+                DAL.DALTransfer2.CheckCanInputUpdateType.Add(JHPermrec.UpdateRecord.DAL.DALTransfer2.UpdateType.轉入);
+                DAL.DALTransfer2.CheckCanInputUpdateType.Add(JHPermrec.UpdateRecord.DAL.DALTransfer2.UpdateType.轉出);                
+                DAL.DALTransfer2.CheckCanInputUpdateType.Add(JHPermrec.UpdateRecord.DAL.DALTransfer2.UpdateType.復學);
+                DAL.DALTransfer2.CheckCanInputUpdateType.Add(JHPermrec.UpdateRecord.DAL.DALTransfer2.UpdateType.中輟);
                 
-                DAL.DALTransfer.CheckCanInputUpdateType.Add(JHPermrec.UpdateRecord.DAL.DALTransfer.UpdateType.新生);
-                DAL.DALTransfer.CheckCanInputUpdateType.Add(JHPermrec.UpdateRecord.DAL.DALTransfer.UpdateType.畢業);
+                DAL.DALTransfer2.CheckCanInputUpdateType.Add(JHPermrec.UpdateRecord.DAL.DALTransfer2.UpdateType.新生);
+                DAL.DALTransfer2.CheckCanInputUpdateType.Add(JHPermrec.UpdateRecord.DAL.DALTransfer2.UpdateType.畢業);
 
                 // 異動匯入匯出
                 CanUseUpRecIE01 = CanUseUpRecIE02 = CanUseUpRecIE03 = CanUseUpRecIE04 = CanUseUpRecIE06 = CanUseUpRecIE07 =  true;

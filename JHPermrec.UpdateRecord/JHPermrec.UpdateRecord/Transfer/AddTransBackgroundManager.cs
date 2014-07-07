@@ -6,7 +6,7 @@ using System.Text;
 namespace JHPermrec.UpdateRecord.Transfer
 {
     // 在背後管理每個轉入異動 Form
-    static class AddTransBackgroundManager
+    public static class AddTransBackgroundManager
     {
         private static JHSchool.Data.JHStudentRecord _Student=null ;
         private static bool _HasStudentData=false;
@@ -30,7 +30,7 @@ namespace JHPermrec.UpdateRecord.Transfer
         /// <returns></returns>
         public static void SetStudentBySSN(string SSN)
         {
-            _Student = DALTransfer.GetStudentRecBySSN(SSN);
+            _Student = DALTransfer1.GetStudentRecBySSN(SSN);
             if (_Student != null)
                 _HasStudentData = true;
             else

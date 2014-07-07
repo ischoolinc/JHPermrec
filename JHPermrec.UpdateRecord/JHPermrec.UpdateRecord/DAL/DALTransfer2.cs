@@ -9,7 +9,7 @@ using System.Linq;
 
 namespace JHPermrec.UpdateRecord.DAL
 {
-    class DALTransfer
+    public class DALTransfer2
     {        
         /// <summary>
         /// 異動狀態

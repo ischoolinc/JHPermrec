@@ -4,9 +4,10 @@ using System.Drawing;
 using System.Windows.Forms;
 using Framework;
 
+
 namespace JHPermrec.UpdateRecord.Transfer
 {
-    public partial class AddTransStudBase : FISCA.Presentation.Controls.BaseForm 
+    public partial class AddTransStudBase : FISCA.Presentation.Controls.BaseForm,IRewriteAPI_JH.ITransStudBase
     {
         public enum AddTransStudStatus { Added, Modify }
 
@@ -17,22 +18,18 @@ namespace JHPermrec.UpdateRecord.Transfer
         private JHSchool.Data.JHPhoneRecord _StudentPhone;
 
 
-        private EnhancedErrorProvider Errors { get; set; }
-
-        public AddTransStudBase(AddTransStudStatus status, JHSchool.Data.JHStudentRecord student)
+        public void setStudent_Status(JHSchool.Data.JHStudentRecord student, AddTransStudStatus status)
         {
-            InitializeComponent();
-
             _student = student;
             _status = status;
             Errors = new EnhancedErrorProvider();
             Errors.Icon = Properties.Resources.warning;
 
-            cboNewNationality.Items.AddRange(DALTransfer.GetNationalities().ToArray());
+            cboNewNationality.Items.AddRange(DALTransfer1.GetNationalities().ToArray());
             cboClass.Items.Add(new KeyValuePair<string, string>("", "<空白>"));
-                        
-            foreach (KeyValuePair<string, string> classItem in DALTransfer.GetClassNameList ())
-            {            
+
+            foreach (KeyValuePair<string, string> classItem in DALTransfer1.GetClassNameList())
+            {
                 cboClass.Items.Add(classItem);
             }
 
@@ -45,7 +42,7 @@ namespace JHPermrec.UpdateRecord.Transfer
 
             cboNewGender.Items.AddRange(new string[] { "男", "女" });
 
-            if (student != null)
+            if (_student != null)
             {
 
                 //把資料填入各項控制項當中
@@ -62,13 +59,13 @@ namespace JHPermrec.UpdateRecord.Transfer
                 //txtEngName.Text = txtNewEngName.Text = _student.na
                 if (_student.Class != null)
                     lblClassName.Text = cboClass.Text = _student.Class.Name;
-                if(_student.SeatNo.HasValue )
-                lblSeatNo.Text = cboSeatNo.Text =_student.SeatNo.Value.ToString ();
+                if (_student.SeatNo.HasValue)
+                    lblSeatNo.Text = cboSeatNo.Text = _student.SeatNo.Value.ToString();
                 lblStudentNum.Text = cbotStudentNumber.Text = _student.StudentNumber;
             }
 
             //依照status不同調整畫面大小
-            if (status == AddTransStudStatus.Added)
+            if (_status == AddTransStudStatus.Added)
             {
                 gpOld.Visible = false;
                 this.Size = new Size(422, 378);
@@ -85,6 +82,14 @@ namespace JHPermrec.UpdateRecord.Transfer
             reLoadStudNumItems();
 
             AddTransBackgroundManager.AddTransStudBaseObj = this;
+        }
+
+
+        private EnhancedErrorProvider Errors { get; set; }
+
+        public AddTransStudBase()
+        {
+            InitializeComponent();           
         }
 
         private void btnSave_Click(object sender, EventArgs e)
@@ -229,7 +234,7 @@ namespace JHPermrec.UpdateRecord.Transfer
         {
             cbotStudentNumber.Items.Clear();
             cbotStudentNumber.Items.Add(lblStudentNum.Text);
-            cbotStudentNumber.Items.Add(DAL.DALTransfer.GetGradeYearLastStudentNumber(cboClass.Text));
+            cbotStudentNumber.Items.Add(DAL.DALTransfer2.GetGradeYearLastStudentNumber(cboClass.Text));
             if (lblStudentNum.Text != "")
                 cbotStudentNumber.Items.Add("");
         }
@@ -238,7 +243,7 @@ namespace JHPermrec.UpdateRecord.Transfer
         private void setClassNo()
         {
             cboSeatNo.Items.Clear();
-            cboSeatNo.Items.AddRange(DAL.DALTransfer.GetClassNullNoList(cboClass.Text).ToArray());
+            cboSeatNo.Items.AddRange(DAL.DALTransfer2.GetClassNullNoList(cboClass.Text).ToArray());
         }
 
 
@@ -271,6 +276,18 @@ namespace JHPermrec.UpdateRecord.Transfer
         private void cboClass_SelectedIndexChanged(object sender, EventArgs e)
         {
 
+        }
+
+
+        public void Display()
+        {            
+            this.StartPosition = FormStartPosition.CenterParent;
+            this.ShowDialog(FISCA.Presentation.MotherForm.Form);            
+        }
+
+        public void SetData(object x, object y)
+        {
+            setStudent_Status((JHSchool.Data.JHStudentRecord)x, (AddTransStudStatus)y);
         }
     }
 }

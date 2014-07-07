@@ -98,7 +98,7 @@ namespace JHPermrec.UpdateRecord.Transfer
         {            
             studAttendCourseEntitys.Clear();
             if (studRec.Class != null)
-                studAttendCourseEntitys = DAL.DALTransfer.getStudAttendCourseBySchoolYearSemester(SchoolYear, Semester, studRec, studClassRec);
+                studAttendCourseEntitys = DAL.DALTransfer2.getStudAttendCourseBySchoolYearSemester(SchoolYear, Semester, studRec, studClassRec);
             else
                 MessageBox.Show("沒有設定班級,無法取得修課.");
         }
@@ -114,7 +114,7 @@ namespace JHPermrec.UpdateRecord.Transfer
                 // 待加入儲存            
                 if (courseRecs.Count > 0)
                 {
-                    DAL.DALTransfer.SetStudentAttendCourse(studRec.ID, courseRecs);
+                    DAL.DALTransfer2.SetStudentAttendCourse(studRec.ID, courseRecs);
 
                     string CourseName = "";
 
@@ -152,7 +152,7 @@ namespace JHPermrec.UpdateRecord.Transfer
                 // 待加入儲存            
                 if (courseRecs.Count > 0)
                 {
-                    DAL.DALTransfer.SetStudentAttendCourse(studRec.ID, courseRecs);
+                    DAL.DALTransfer2.SetStudentAttendCourse(studRec.ID, courseRecs);
 
                     string CourseName = "";
 

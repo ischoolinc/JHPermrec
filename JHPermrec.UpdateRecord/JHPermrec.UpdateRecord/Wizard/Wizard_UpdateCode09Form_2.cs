@@ -49,7 +49,7 @@ namespace JHPermrec.UpdateRecord.Wizard
                 return;
             }
             // 呼叫異動並帶入相對資料
-            DAL.StudUpdateRecordEntity sure = DAL.DALTransfer.AddStudUpdateRecordEntity(_StudentID, JHPermrec.UpdateRecord.DAL.DALTransfer.UpdateType.更正學籍, DateTime.Now.ToShortDateString());
+            DAL.StudUpdateRecordEntity sure = DAL.DALTransfer2.AddStudUpdateRecordEntity(_StudentID, JHPermrec.UpdateRecord.DAL.DALTransfer2.UpdateType.更正學籍, DateTime.Now.ToShortDateString());
             
             if (isNameEnable)
                 sure.SetNewName(txtNewName.Text);

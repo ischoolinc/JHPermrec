@@ -1,10 +1,14 @@
 ﻿using System;
 using System.Windows.Forms;
+using IRewriteAPI_JH;
+using FISCA.Presentation;
 
 namespace JHPermrec.UpdateRecord.Transfer
 {
-    public partial class AddTransStud : FISCA.Presentation.Controls.BaseForm 
+    public partial class AddTransStud : FISCA.Presentation.Controls.BaseForm
     {
+        IStudentTransStudBaseAPI item = FISCA.InteractionService.DiscoverAPI<IStudentTransStudBaseAPI>();
+
         public AddTransStud()
         {
             InitializeComponent();
@@ -30,7 +34,7 @@ namespace JHPermrec.UpdateRecord.Transfer
             // 已有學生資料
             if (AddTransBackgroundManager.GetHasStudentData())
             {
-                status = AddTransStudBase.AddTransStudStatus.Modify;
+                    status = AddTransStudBase.AddTransStudStatus.Modify;
             }
             else
             {
@@ -68,10 +72,28 @@ namespace JHPermrec.UpdateRecord.Transfer
 
         private void setTransClassAndCourse(AddTransStudBase.AddTransStudStatus status, JHSchool.Data.JHStudentRecord student)
         {
-            AddTransStudBase ats = new AddTransStudBase(status, student);
-            this.Visible = false;
-            ats.StartPosition = FormStartPosition.CenterParent;            
-            ats.ShowDialog(FISCA.Presentation.MotherForm.Form);
+            if (item != null)
+            {
+                this.Visible = false;
+                ITransStudBase tt = item.CreateForm();                
+                tt.SetData(student, status);
+                tt.Display();
+//                item.SetData(student, status);
+                
+                //ats.setStudent_Status(student, status);
+               
+
+                //item.CreateForm().StartPosition = FormStartPosition.CenterParent;
+                //item.CreateForm().ShowDialog(FISCA.Presentation.MotherForm.Form);
+            }
+            else
+            {
+                AddTransStudBase ats = new AddTransStudBase();
+                ats.setStudent_Status(student, status);
+                this.Visible = false;
+                ats.StartPosition = FormStartPosition.CenterParent;
+                ats.ShowDialog(FISCA.Presentation.MotherForm.Form);
+            }
         }
     }
 }

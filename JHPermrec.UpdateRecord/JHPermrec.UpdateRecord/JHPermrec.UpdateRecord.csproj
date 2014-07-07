@@ -102,6 +102,9 @@
       <HintPath>Library\IntelliSchool.DSA.ClientFramework.dll</HintPath>
       <Private>False</Private>
     </Reference>
+    <Reference Include="IRewriteAPI_JH">
+      <HintPath>..\..\..\JHCore\IRewriteAPI_JH\bin\Debug\IRewriteAPI_JH.dll</HintPath>
+    </Reference>
     <Reference Include="JHSchool, Version=1.0.3.4, Culture=neutral, processorArchitecture=MSIL">
       <SpecificVersion>False</SpecificVersion>
       <HintPath>Library\JHSchool.dll</HintPath>
@@ -200,7 +203,7 @@
       <DependentUpon>BatchStudGraduateUpdateRec_Warning.cs</DependentUpon>
     </Compile>
     <Compile Include="DAL\AttendCourseEntity.cs" />
-    <Compile Include="DAL\DALTransfer.cs" />
+    <Compile Include="DAL\DALTransfer2.cs" />
     <Compile Include="DAL\ExamScoreEntity.cs" />
     <Compile Include="DAL\HsinChuJHAEIncludeRecord.cs" />
     <Compile Include="DAL\HsinChuJHSCETakeRecord.cs" />
@@ -394,7 +397,7 @@
     <Compile Include="Transfer\AddTransStudUpdateRecord.designer.cs">
       <DependentUpon>AddTransStudUpdateRecord.cs</DependentUpon>
     </Compile>
-    <Compile Include="Transfer\DALTransfer.cs" />
+    <Compile Include="Transfer\DALTransfer1.cs" />
     <Compile Include="Transfer\DGValueManager.cs" />
     <Compile Include="UpdateRecordItem.cs">
       <SubType>UserControl</SubType>
