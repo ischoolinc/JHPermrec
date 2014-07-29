@@ -22,6 +22,18 @@ namespace JHSchool.Permrec.StudentExtendControls
         {
             InitializeComponent();
 
+            
+
+            if (User.Acl["JHSchool.Student.Detail0010"].Viewable == false && User.Acl["JHSchool.Student.Detail0010"].Editable == false)
+                return;
+
+            // 權限判斷，只能檢視
+            if (User.Acl["JHSchool.Student.Detail0010"].Viewable)
+                dataGridViewX1.Enabled = false;
+
+            if (User.Acl["JHSchool.Student.Detail0010"].Editable)
+                dataGridViewX1.Enabled = true;
+
             BGWorker = new BackgroundWorker();
             BGWorker.DoWork += new DoWorkEventHandler(BGWorker_DoWork);
             BGWorker.RunWorkerCompleted += new RunWorkerCompletedEventHandler(BGWorker_RunWorkerCompleted);

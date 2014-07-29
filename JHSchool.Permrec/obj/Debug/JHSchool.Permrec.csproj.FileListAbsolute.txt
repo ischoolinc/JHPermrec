@@ -1,103 +1,49 @@
-D:\TFS2010\ischoolteam\ischool_Junior with FISCA\JHSchool.Permrec\obj\Debug\ResolveAssemblyReference.cache
-D:\TFS2010\ischoolteam\ischool_Junior with FISCA\JHSchool.Permrec\obj\Debug\JHSchool.Permrec.ClassExtendControls.ClassStudentItem.resources
-D:\TFS2010\ischoolteam\ischool_Junior with FISCA\JHSchool.Permrec\obj\Debug\JHSchool.Permrec.ClassExtendControls.GenderCount.resources
-D:\TFS2010\ischoolteam\ischool_Junior with FISCA\JHSchool.Permrec\obj\Debug\JHSchool.Permrec.ClassExtendControls.PrintClassDomainSemesterScore.resources
-D:\TFS2010\ischoolteam\ischool_Junior with FISCA\JHSchool.Permrec\obj\Debug\JHSchool.Permrec.ClassExtendControls.PrintClassSubjectSemesterScore.resources
-D:\TFS2010\ischoolteam\ischool_Junior with FISCA\JHSchool.Permrec\obj\Debug\JHSchool.Permrec.ClassExtendControls.Reports.ClassAgePercentageRpt.resources
-D:\TFS2010\ischoolteam\ischool_Junior with FISCA\JHSchool.Permrec\obj\Debug\JHSchool.Permrec.ClassExtendControls.Reports.ClassParentJobPercentageRpt.resources
-D:\TFS2010\ischoolteam\ischool_Junior with FISCA\JHSchool.Permrec\obj\Debug\JHSchool.Permrec.ClassExtendControls.Reports.ClassStudentListRptForm.resources
-D:\TFS2010\ischoolteam\ischool_Junior with FISCA\JHSchool.Permrec\obj\Debug\JHSchool.Permrec.ClassExtendControls.Reports.ClassStudentTagCountRpt.resources
-D:\TFS2010\ischoolteam\ischool_Junior with FISCA\JHSchool.Permrec\obj\Debug\JHSchool.Permrec.ClassExtendControls.SelectExamPrint.resources
-D:\TFS2010\ischoolteam\ischool_Junior with FISCA\JHSchool.Permrec\obj\Debug\JHSchool.Permrec.EduAdminExtendCotnrols.ClassUpgrade.ClassUpgradeForm.resources
-D:\TFS2010\ischoolteam\ischool_Junior with FISCA\JHSchool.Permrec\obj\Debug\JHSchool.Permrec.EduAdminExtendCotnrols.EducationDataCreator.EducationCodeCreateForm.resources
-D:\TFS2010\ischoolteam\ischool_Junior with FISCA\JHSchool.Permrec\obj\Debug\JHSchool.Permrec.EduAdminExtendCotnrols.StudGraduateDocNo.BatchStudGraduateDocNo.resources
-D:\TFS2010\ischoolteam\ischool_Junior with FISCA\JHSchool.Permrec\obj\Debug\JHSchool.Permrec.ImportExport.ExportStudentV2.resources
-D:\TFS2010\ischoolteam\ischool_Junior with FISCA\JHSchool.Permrec\obj\Debug\JHSchool.Permrec.ImportExport.ImportStudentV2.resources
-D:\TFS2010\ischoolteam\ischool_Junior with FISCA\JHSchool.Permrec\obj\Debug\JHSchool.Permrec.ImportExport.ExportTeacherV2.resources
-D:\TFS2010\ischoolteam\ischool_Junior with FISCA\JHSchool.Permrec\obj\Debug\JHSchool.Permrec.Legacy.PalmerwormItem.resources
-D:\TFS2010\ischoolteam\ischool_Junior with FISCA\JHSchool.Permrec\obj\Debug\JHSchool.Permrec.Legacy.PalmerwormItemBase.resources
-D:\TFS2010\ischoolteam\ischool_Junior with FISCA\JHSchool.Permrec\obj\Debug\JHSchool.Permrec.Legacy.SMSForm.resources
-D:\TFS2010\ischoolteam\ischool_Junior with FISCA\JHSchool.Permrec\obj\Debug\JHSchool.Permrec.StudentExtendControls.BeforeEnrollmentItem.resources
-D:\TFS2010\ischoolteam\ischool_Junior with FISCA\JHSchool.Permrec\obj\Debug\JHSchool.Permrec.StudentExtendControls.ClassItem.resources
-D:\TFS2010\ischoolteam\ischool_Junior with FISCA\JHSchool.Permrec\obj\Debug\JHSchool.Permrec.StudentExtendControls.MapForm.resources
-D:\TFS2010\ischoolteam\ischool_Junior with FISCA\JHSchool.Permrec\obj\Debug\JHSchool.Permrec.StudentExtendControls.PhotosBatchImportExports.PhotoCompleteMessage.resources
-D:\TFS2010\ischoolteam\ischool_Junior with FISCA\JHSchool.Permrec\obj\Debug\JHSchool.Permrec.StudentExtendControls.PhotosBatchImportExports.PhotosBatchExportForm.resources
-D:\TFS2010\ischoolteam\ischool_Junior with FISCA\JHSchool.Permrec\obj\Debug\JHSchool.Permrec.StudentExtendControls.PhotosBatchImportExports.PhotosBatchImportForm.resources
-D:\TFS2010\ischoolteam\ischool_Junior with FISCA\JHSchool.Permrec\obj\Debug\JHSchool.Permrec.StudentExtendControls.Reports.RptResource.resources
-D:\TFS2010\ischoolteam\ischool_Junior with FISCA\JHSchool.Permrec\obj\Debug\JHSchool.Permrec.StudentExtendControls.Reports.StudentAtSchoolCertificateForm.resources
-D:\TFS2010\ischoolteam\ischool_Junior with FISCA\JHSchool.Permrec\obj\Debug\JHSchool.Permrec.StudentExtendControls.Reports.StudentBackToArticleForm.resources
-D:\TFS2010\ischoolteam\ischool_Junior with FISCA\JHSchool.Permrec\obj\Debug\JHSchool.Permrec.StudentExtendControls.Reports.StudentIDCardForm.resources
-D:\TFS2010\ischoolteam\ischool_Junior with FISCA\JHSchool.Permrec\obj\Debug\JHSchool.Permrec.StudentExtendControls.Reports.StudentIDCardFormOld.resources
-D:\TFS2010\ischoolteam\ischool_Junior with FISCA\JHSchool.Permrec\obj\Debug\JHSchool.Permrec.StudentExtendControls.Reports.StudentLeaveForm.resources
-D:\TFS2010\ischoolteam\ischool_Junior with FISCA\JHSchool.Permrec\obj\Debug\JHSchool.Permrec.StudentExtendControls.Reports.StudentTransExportForm.resources
-D:\TFS2010\ischoolteam\ischool_Junior with FISCA\JHSchool.Permrec\obj\Debug\JHSchool.Permrec.StudentExtendControls.Reports.StudGraduateCertficateForm.resources
-D:\TFS2010\ischoolteam\ischool_Junior with FISCA\JHSchool.Permrec\obj\Debug\JHSchool.Permrec.StudentExtendControls.Reports.StudGraduateCertficateFormA.resources
-D:\TFS2010\ischoolteam\ischool_Junior with FISCA\JHSchool.Permrec\obj\Debug\JHSchool.Permrec.StudentExtendControls.Ribbon.BatchAddressLatitudeForm.resources
-D:\TFS2010\ischoolteam\ischool_Junior with FISCA\JHSchool.Permrec\obj\Debug\JHSchool.Permrec.StudentExtendControls.Ribbon.TemporaStudentManager.resources
-D:\TFS2010\ischoolteam\ischool_Junior with FISCA\JHSchool.Permrec\obj\Debug\JHSchool.Permrec.StudentExtendControls.SemesterHistoryDetail.resources
-D:\TFS2010\ischoolteam\ischool_Junior with FISCA\JHSchool.Permrec\obj\Debug\JHSchool.Permrec.Properties.Resources.resources
-D:\TFS2010\ischoolteam\ischool_Junior with FISCA\JHSchool.Permrec\obj\Debug\JHSchool.Permrec.StudentExtendControls.AddressPalmerwormItem.resources
-D:\TFS2010\ischoolteam\ischool_Junior with FISCA\JHSchool.Permrec\obj\Debug\JHSchool.Permrec.StudentExtendControls.DiplomaInfoPalmerworm.resources
-D:\TFS2010\ischoolteam\ischool_Junior with FISCA\JHSchool.Permrec\obj\Debug\JHSchool.Permrec.StudentExtendControls.ExtensionValuesPalmerwormItem.resources
-D:\TFS2010\ischoolteam\ischool_Junior with FISCA\JHSchool.Permrec\obj\Debug\JHSchool.Permrec.StudentExtendControls.ParentInfoPalmerwormItem.resources
-D:\TFS2010\ischoolteam\ischool_Junior with FISCA\JHSchool.Permrec\obj\Debug\JHSchool.Permrec.StudentExtendControls.PhonePalmerwormItem.resources
-D:\TFS2010\ischoolteam\ischool_Junior with FISCA\JHSchool.Permrec\obj\Debug\JHSchool.Permrec.Legacy.UpdateRecordForm.resources
-D:\TFS2010\ischoolteam\ischool_Junior with FISCA\JHSchool.Permrec\obj\Debug\JHSchool.Permrec.Legacy.UpdateRecordInfo.resources
-D:\TFS2010\ischoolteam\ischool_Junior with FISCA\JHSchool.Permrec\obj\Debug\GenerateResource.read.1.tlog
-D:\TFS2010\ischoolteam\ischool_Junior with FISCA\JHSchool.Permrec\obj\Debug\GenerateResource.write.1.tlog
-D:\TFS2010\ischoolteam\ischool_Junior with FISCA\FiscaRuntime\addmodules\JHPermrec\JHSchool.Permrec.dll
-D:\TFS2010\ischoolteam\ischool_Junior with FISCA\FiscaRuntime\addmodules\JHPermrec\JHSchool.Permrec.pdb
-D:\TFS2010\ischoolteam\ischool_Junior with FISCA\JHSchool.Permrec\obj\Debug\JHSchool.Permrec.dll
-D:\TFS2010\ischoolteam\ischool_Junior with FISCA\JHSchool.Permrec\obj\Debug\JHSchool.Permrec.pdb
-D:\GitHub2\國中學籍\JHPermrec\JHSchool.Permrec\obj\Debug\JHSchool.Permrec.csprojResolveAssemblyReference.cache
-D:\GitHub2\國中學籍\JHPermrec\JHSchool.Permrec\obj\Debug\JHSchool.Permrec.ClassExtendControls.ClassStudentItem.resources
-D:\GitHub2\國中學籍\JHPermrec\JHSchool.Permrec\obj\Debug\JHSchool.Permrec.ClassExtendControls.GenderCount.resources
-D:\GitHub2\國中學籍\JHPermrec\JHSchool.Permrec\obj\Debug\JHSchool.Permrec.ClassExtendControls.PrintClassDomainSemesterScore.resources
-D:\GitHub2\國中學籍\JHPermrec\JHSchool.Permrec\obj\Debug\JHSchool.Permrec.ClassExtendControls.PrintClassSubjectSemesterScore.resources
-D:\GitHub2\國中學籍\JHPermrec\JHSchool.Permrec\obj\Debug\JHSchool.Permrec.ClassExtendControls.Reports.ClassAgePercentageRpt.resources
-D:\GitHub2\國中學籍\JHPermrec\JHSchool.Permrec\obj\Debug\JHSchool.Permrec.ClassExtendControls.Reports.ClassParentJobPercentageRpt.resources
-D:\GitHub2\國中學籍\JHPermrec\JHSchool.Permrec\obj\Debug\JHSchool.Permrec.ClassExtendControls.Reports.ClassStudentListRptForm.resources
-D:\GitHub2\國中學籍\JHPermrec\JHSchool.Permrec\obj\Debug\JHSchool.Permrec.ClassExtendControls.Reports.ClassStudentTagCountRpt.resources
-D:\GitHub2\國中學籍\JHPermrec\JHSchool.Permrec\obj\Debug\JHSchool.Permrec.ClassExtendControls.SelectExamPrint.resources
-D:\GitHub2\國中學籍\JHPermrec\JHSchool.Permrec\obj\Debug\JHSchool.Permrec.EduAdminExtendCotnrols.ClassUpgrade.ClassUpgradeForm.resources
-D:\GitHub2\國中學籍\JHPermrec\JHSchool.Permrec\obj\Debug\JHSchool.Permrec.EduAdminExtendCotnrols.EducationDataCreator.EducationCodeCreateForm.resources
-D:\GitHub2\國中學籍\JHPermrec\JHSchool.Permrec\obj\Debug\JHSchool.Permrec.EduAdminExtendCotnrols.StudGraduateDocNo.BatchStudGraduateDocNo.resources
-D:\GitHub2\國中學籍\JHPermrec\JHSchool.Permrec\obj\Debug\JHSchool.Permrec.ImportExport.ExportStudentV2.resources
-D:\GitHub2\國中學籍\JHPermrec\JHSchool.Permrec\obj\Debug\JHSchool.Permrec.ImportExport.ImportStudentV2.resources
-D:\GitHub2\國中學籍\JHPermrec\JHSchool.Permrec\obj\Debug\JHSchool.Permrec.ImportExport.ExportTeacherV2.resources
-D:\GitHub2\國中學籍\JHPermrec\JHSchool.Permrec\obj\Debug\JHSchool.Permrec.Legacy.PalmerwormItem.resources
-D:\GitHub2\國中學籍\JHPermrec\JHSchool.Permrec\obj\Debug\JHSchool.Permrec.Legacy.PalmerwormItemBase.resources
-D:\GitHub2\國中學籍\JHPermrec\JHSchool.Permrec\obj\Debug\JHSchool.Permrec.Legacy.SMSForm.resources
-D:\GitHub2\國中學籍\JHPermrec\JHSchool.Permrec\obj\Debug\JHSchool.Permrec.StudentExtendControls.BeforeEnrollmentItem.resources
-D:\GitHub2\國中學籍\JHPermrec\JHSchool.Permrec\obj\Debug\JHSchool.Permrec.StudentExtendControls.ClassItem.resources
-D:\GitHub2\國中學籍\JHPermrec\JHSchool.Permrec\obj\Debug\JHSchool.Permrec.StudentExtendControls.MapForm.resources
-D:\GitHub2\國中學籍\JHPermrec\JHSchool.Permrec\obj\Debug\JHSchool.Permrec.StudentExtendControls.PhotosBatchImportExports.PhotoCompleteMessage.resources
-D:\GitHub2\國中學籍\JHPermrec\JHSchool.Permrec\obj\Debug\JHSchool.Permrec.StudentExtendControls.PhotosBatchImportExports.PhotosBatchExportForm.resources
-D:\GitHub2\國中學籍\JHPermrec\JHSchool.Permrec\obj\Debug\JHSchool.Permrec.StudentExtendControls.PhotosBatchImportExports.PhotosBatchImportForm.resources
-D:\GitHub2\國中學籍\JHPermrec\JHSchool.Permrec\obj\Debug\JHSchool.Permrec.StudentExtendControls.Reports.RptResource.resources
-D:\GitHub2\國中學籍\JHPermrec\JHSchool.Permrec\obj\Debug\JHSchool.Permrec.StudentExtendControls.Reports.StudentAtSchoolCertificateForm.resources
-D:\GitHub2\國中學籍\JHPermrec\JHSchool.Permrec\obj\Debug\JHSchool.Permrec.StudentExtendControls.Reports.StudentBackToArticleForm.resources
-D:\GitHub2\國中學籍\JHPermrec\JHSchool.Permrec\obj\Debug\JHSchool.Permrec.StudentExtendControls.Reports.StudentIDCardForm.resources
-D:\GitHub2\國中學籍\JHPermrec\JHSchool.Permrec\obj\Debug\JHSchool.Permrec.StudentExtendControls.Reports.StudentIDCardFormOld.resources
-D:\GitHub2\國中學籍\JHPermrec\JHSchool.Permrec\obj\Debug\JHSchool.Permrec.StudentExtendControls.Reports.StudentLeaveForm.resources
-D:\GitHub2\國中學籍\JHPermrec\JHSchool.Permrec\obj\Debug\JHSchool.Permrec.StudentExtendControls.Reports.StudentTransExportForm.resources
-D:\GitHub2\國中學籍\JHPermrec\JHSchool.Permrec\obj\Debug\JHSchool.Permrec.StudentExtendControls.Reports.StudGraduateCertficateForm.resources
-D:\GitHub2\國中學籍\JHPermrec\JHSchool.Permrec\obj\Debug\JHSchool.Permrec.StudentExtendControls.Reports.StudGraduateCertficateFormA.resources
-D:\GitHub2\國中學籍\JHPermrec\JHSchool.Permrec\obj\Debug\JHSchool.Permrec.StudentExtendControls.Ribbon.BatchAddressLatitudeForm.resources
-D:\GitHub2\國中學籍\JHPermrec\JHSchool.Permrec\obj\Debug\JHSchool.Permrec.StudentExtendControls.Ribbon.TemporaStudentManager.resources
-D:\GitHub2\國中學籍\JHPermrec\JHSchool.Permrec\obj\Debug\JHSchool.Permrec.StudentExtendControls.SemesterHistoryDetail.resources
-D:\GitHub2\國中學籍\JHPermrec\JHSchool.Permrec\obj\Debug\JHSchool.Permrec.Properties.Resources.resources
-D:\GitHub2\國中學籍\JHPermrec\JHSchool.Permrec\obj\Debug\JHSchool.Permrec.StudentExtendControls.AddressPalmerwormItem.resources
-D:\GitHub2\國中學籍\JHPermrec\JHSchool.Permrec\obj\Debug\JHSchool.Permrec.StudentExtendControls.DiplomaInfoPalmerworm.resources
-D:\GitHub2\國中學籍\JHPermrec\JHSchool.Permrec\obj\Debug\JHSchool.Permrec.StudentExtendControls.ExtensionValuesPalmerwormItem.resources
-D:\GitHub2\國中學籍\JHPermrec\JHSchool.Permrec\obj\Debug\JHSchool.Permrec.StudentExtendControls.ParentInfoPalmerwormItem.resources
-D:\GitHub2\國中學籍\JHPermrec\JHSchool.Permrec\obj\Debug\JHSchool.Permrec.StudentExtendControls.PhonePalmerwormItem.resources
-D:\GitHub2\國中學籍\JHPermrec\JHSchool.Permrec\obj\Debug\JHSchool.Permrec.Legacy.UpdateRecordForm.resources
-D:\GitHub2\國中學籍\JHPermrec\JHSchool.Permrec\obj\Debug\JHSchool.Permrec.Legacy.UpdateRecordInfo.resources
-D:\GitHub2\國中學籍\JHPermrec\JHSchool.Permrec\obj\Debug\JHSchool.Permrec.csproj.GenerateResource.Cache
-D:\GitHub2\國中學籍\JHPermrec\JHSchool.Permrec\obj\Debug\JHSchool.Permrec.dll
-D:\GitHub2\國中學籍\JHPermrec\JHSchool.Permrec\obj\Debug\JHSchool.Permrec.pdb
-D:\GitHub2\國中學籍\JHPermrec\FiscaRuntime\addmodules\JHPermrec\JHSchool.Permrec.dll
-D:\GitHub2\國中學籍\JHPermrec\FiscaRuntime\addmodules\JHPermrec\JHSchool.Permrec.pdb
-D:\GitProjModules\ischoolDesktop\JHPermrec\FiscaRuntime\addmodules\JHPermrec\JHSchool.Permrec.dll
-D:\GitProjModules\ischoolDesktop\JHPermrec\FiscaRuntime\addmodules\JHPermrec\JHSchool.Permrec.pdb
+D:\GitProjModules\ischoolDesktop\JHPermrec\JHSchool.Permrec\bin\Debug\JHSchool.Permrec.dll
+D:\GitProjModules\ischoolDesktop\JHPermrec\JHSchool.Permrec\bin\Debug\JHSchool.Permrec.pdb
+D:\GitProjModules\ischoolDesktop\JHPermrec\JHSchool.Permrec\obj\Debug\JHSchool.Permrec.ClassExtendControls.ClassStudentItem.resources
+D:\GitProjModules\ischoolDesktop\JHPermrec\JHSchool.Permrec\obj\Debug\JHSchool.Permrec.ClassExtendControls.GenderCount.resources
+D:\GitProjModules\ischoolDesktop\JHPermrec\JHSchool.Permrec\obj\Debug\JHSchool.Permrec.ClassExtendControls.PrintClassDomainSemesterScore.resources
+D:\GitProjModules\ischoolDesktop\JHPermrec\JHSchool.Permrec\obj\Debug\JHSchool.Permrec.ClassExtendControls.PrintClassSubjectSemesterScore.resources
+D:\GitProjModules\ischoolDesktop\JHPermrec\JHSchool.Permrec\obj\Debug\JHSchool.Permrec.ClassExtendControls.Reports.ClassAgePercentageRpt.resources
+D:\GitProjModules\ischoolDesktop\JHPermrec\JHSchool.Permrec\obj\Debug\JHSchool.Permrec.ClassExtendControls.Reports.ClassParentJobPercentageRpt.resources
+D:\GitProjModules\ischoolDesktop\JHPermrec\JHSchool.Permrec\obj\Debug\JHSchool.Permrec.ClassExtendControls.Reports.ClassStudentListRptForm.resources
+D:\GitProjModules\ischoolDesktop\JHPermrec\JHSchool.Permrec\obj\Debug\JHSchool.Permrec.ClassExtendControls.Reports.ClassStudentTagCountRpt.resources
+D:\GitProjModules\ischoolDesktop\JHPermrec\JHSchool.Permrec\obj\Debug\JHSchool.Permrec.ClassExtendControls.SelectExamPrint.resources
+D:\GitProjModules\ischoolDesktop\JHPermrec\JHSchool.Permrec\obj\Debug\JHSchool.Permrec.EduAdminExtendCotnrols.ClassUpgrade.ClassUpgradeForm.resources
+D:\GitProjModules\ischoolDesktop\JHPermrec\JHSchool.Permrec\obj\Debug\JHSchool.Permrec.EduAdminExtendCotnrols.EducationDataCreator.EducationCodeCreateForm.resources
+D:\GitProjModules\ischoolDesktop\JHPermrec\JHSchool.Permrec\obj\Debug\JHSchool.Permrec.EduAdminExtendCotnrols.StudGraduateDocNo.BatchStudGraduateDocNo.resources
+D:\GitProjModules\ischoolDesktop\JHPermrec\JHSchool.Permrec\obj\Debug\JHSchool.Permrec.ImportExport.ExportStudentV2.resources
+D:\GitProjModules\ischoolDesktop\JHPermrec\JHSchool.Permrec\obj\Debug\JHSchool.Permrec.ImportExport.ImportStudentV2.resources
+D:\GitProjModules\ischoolDesktop\JHPermrec\JHSchool.Permrec\obj\Debug\JHSchool.Permrec.ImportExport.ExportTeacherV2.resources
+D:\GitProjModules\ischoolDesktop\JHPermrec\JHSchool.Permrec\obj\Debug\JHSchool.Permrec.Legacy.PalmerwormItem.resources
+D:\GitProjModules\ischoolDesktop\JHPermrec\JHSchool.Permrec\obj\Debug\JHSchool.Permrec.Legacy.PalmerwormItemBase.resources
+D:\GitProjModules\ischoolDesktop\JHPermrec\JHSchool.Permrec\obj\Debug\JHSchool.Permrec.Legacy.SMSForm.resources
+D:\GitProjModules\ischoolDesktop\JHPermrec\JHSchool.Permrec\obj\Debug\JHSchool.Permrec.StudentExtendControls.BeforeEnrollmentItem.resources
+D:\GitProjModules\ischoolDesktop\JHPermrec\JHSchool.Permrec\obj\Debug\JHSchool.Permrec.StudentExtendControls.ClassItem.resources
+D:\GitProjModules\ischoolDesktop\JHPermrec\JHSchool.Permrec\obj\Debug\JHSchool.Permrec.StudentExtendControls.MapForm.resources
+D:\GitProjModules\ischoolDesktop\JHPermrec\JHSchool.Permrec\obj\Debug\JHSchool.Permrec.StudentExtendControls.PhotosBatchImportExports.PhotoCompleteMessage.resources
+D:\GitProjModules\ischoolDesktop\JHPermrec\JHSchool.Permrec\obj\Debug\JHSchool.Permrec.StudentExtendControls.PhotosBatchImportExports.PhotosBatchExportForm.resources
+D:\GitProjModules\ischoolDesktop\JHPermrec\JHSchool.Permrec\obj\Debug\JHSchool.Permrec.StudentExtendControls.PhotosBatchImportExports.PhotosBatchImportForm.resources
+D:\GitProjModules\ischoolDesktop\JHPermrec\JHSchool.Permrec\obj\Debug\JHSchool.Permrec.StudentExtendControls.Reports.RptResource.resources
+D:\GitProjModules\ischoolDesktop\JHPermrec\JHSchool.Permrec\obj\Debug\JHSchool.Permrec.StudentExtendControls.Reports.StudentAtSchoolCertificateForm.resources
+D:\GitProjModules\ischoolDesktop\JHPermrec\JHSchool.Permrec\obj\Debug\JHSchool.Permrec.StudentExtendControls.Reports.StudentBackToArticleForm.resources
+D:\GitProjModules\ischoolDesktop\JHPermrec\JHSchool.Permrec\obj\Debug\JHSchool.Permrec.StudentExtendControls.Reports.StudentIDCardForm.resources
+D:\GitProjModules\ischoolDesktop\JHPermrec\JHSchool.Permrec\obj\Debug\JHSchool.Permrec.StudentExtendControls.Reports.StudentIDCardFormOld.resources
+D:\GitProjModules\ischoolDesktop\JHPermrec\JHSchool.Permrec\obj\Debug\JHSchool.Permrec.StudentExtendControls.Reports.StudentLeaveForm.resources
+D:\GitProjModules\ischoolDesktop\JHPermrec\JHSchool.Permrec\obj\Debug\JHSchool.Permrec.StudentExtendControls.Reports.StudentTransExportForm.resources
+D:\GitProjModules\ischoolDesktop\JHPermrec\JHSchool.Permrec\obj\Debug\JHSchool.Permrec.StudentExtendControls.Reports.StudGraduateCertficateForm.resources
+D:\GitProjModules\ischoolDesktop\JHPermrec\JHSchool.Permrec\obj\Debug\JHSchool.Permrec.StudentExtendControls.Reports.StudGraduateCertficateFormA.resources
+D:\GitProjModules\ischoolDesktop\JHPermrec\JHSchool.Permrec\obj\Debug\JHSchool.Permrec.StudentExtendControls.Ribbon.BatchAddressLatitudeForm.resources
+D:\GitProjModules\ischoolDesktop\JHPermrec\JHSchool.Permrec\obj\Debug\JHSchool.Permrec.StudentExtendControls.Ribbon.TemporaStudentManager.resources
+D:\GitProjModules\ischoolDesktop\JHPermrec\JHSchool.Permrec\obj\Debug\JHSchool.Permrec.StudentExtendControls.SemesterHistoryDetail.resources
+D:\GitProjModules\ischoolDesktop\JHPermrec\JHSchool.Permrec\obj\Debug\JHSchool.Permrec.Properties.Resources.resources
+D:\GitProjModules\ischoolDesktop\JHPermrec\JHSchool.Permrec\obj\Debug\JHSchool.Permrec.StudentExtendControls.AddressPalmerwormItem.resources
+D:\GitProjModules\ischoolDesktop\JHPermrec\JHSchool.Permrec\obj\Debug\JHSchool.Permrec.StudentExtendControls.DiplomaInfoPalmerworm.resources
+D:\GitProjModules\ischoolDesktop\JHPermrec\JHSchool.Permrec\obj\Debug\JHSchool.Permrec.StudentExtendControls.ExtensionValuesPalmerwormItem.resources
+D:\GitProjModules\ischoolDesktop\JHPermrec\JHSchool.Permrec\obj\Debug\JHSchool.Permrec.StudentExtendControls.ParentInfoPalmerwormItem.resources
+D:\GitProjModules\ischoolDesktop\JHPermrec\JHSchool.Permrec\obj\Debug\JHSchool.Permrec.StudentExtendControls.PhonePalmerwormItem.resources
+D:\GitProjModules\ischoolDesktop\JHPermrec\JHSchool.Permrec\obj\Debug\JHSchool.Permrec.Legacy.UpdateRecordForm.resources
+D:\GitProjModules\ischoolDesktop\JHPermrec\JHSchool.Permrec\obj\Debug\JHSchool.Permrec.Legacy.UpdateRecordInfo.resources
+D:\GitProjModules\ischoolDesktop\JHPermrec\JHSchool.Permrec\obj\Debug\JHSchool.Permrec.csproj.GenerateResource.Cache
+D:\GitProjModules\ischoolDesktop\JHPermrec\JHSchool.Permrec\obj\Debug\JHSchool.Permrec.dll
+D:\GitProjModules\ischoolDesktop\JHPermrec\JHSchool.Permrec\obj\Debug\JHSchool.Permrec.pdb
