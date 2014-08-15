@@ -61,6 +61,8 @@ namespace JHPermrec.UpdateRecord
                 DAL.DALTransfer2.CheckCanInputUpdateType.Add(JHPermrec.UpdateRecord.DAL.DALTransfer2.UpdateType.新生);
                 DAL.DALTransfer2.CheckCanInputUpdateType.Add(JHPermrec.UpdateRecord.DAL.DALTransfer2.UpdateType.畢業);
                 DAL.DALTransfer2.CheckCanInputUpdateType.Add(JHPermrec.UpdateRecord.DAL.DALTransfer2.UpdateType.更正學籍);
+                // 2014/8/15 加入
+                DAL.DALTransfer2.CheckCanInputUpdateType.Add(JHPermrec.UpdateRecord.DAL.DALTransfer2.UpdateType.死亡);
 
                 // 異動匯入匯出
                 CanUseUpRecIE01 = CanUseUpRecIE02 = CanUseUpRecIE03 = CanUseUpRecIE04 = CanUseUpRecIE05=CanUseUpRecIE06 = CanUseUpRecIE07 =CanUseUpRecIE08=CanUseUpRecIE09= true;

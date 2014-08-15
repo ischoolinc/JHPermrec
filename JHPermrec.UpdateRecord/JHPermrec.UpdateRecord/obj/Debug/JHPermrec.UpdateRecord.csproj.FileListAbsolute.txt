@@ -208,6 +208,6 @@ D:\GitProjModules\ischoolDesktop\JHPermrec\JHPermrec.UpdateRecord\JHPermrec.Upda
 D:\GitProjModules\ischoolDesktop\JHPermrec\JHPermrec.UpdateRecord\JHPermrec.UpdateRecord\bin\Debug\JHPermrec.UpdateRecord.pdb
 D:\GitProjModules\ischoolDesktop\JHPermrec\JHPermrec.UpdateRecord\JHPermrec.UpdateRecord\obj\Debug\JHPermrec.UpdateRecord.dll
 D:\GitProjModules\ischoolDesktop\JHPermrec\JHPermrec.UpdateRecord\JHPermrec.UpdateRecord\obj\Debug\JHPermrec.UpdateRecord.pdb
-D:\GitProjModules\ischoolDesktop\JHPermrec\JHPermrec.UpdateRecord\JHPermrec.UpdateRecord\obj\Debug\JHPermrec.UpdateRecord.csprojResolveAssemblyReference.cache
 D:\GitProjModules\ischoolDesktop\JHPermrec\JHPermrec.UpdateRecord\JHPermrec.UpdateRecord\bin\Debug\IRewriteAPI_JH.dll
 D:\GitProjModules\ischoolDesktop\JHPermrec\JHPermrec.UpdateRecord\JHPermrec.UpdateRecord\bin\Debug\IRewriteAPI_JH.pdb
+D:\GitProjModules\ischoolDesktop\JHPermrec\JHPermrec.UpdateRecord\JHPermrec.UpdateRecord\obj\Debug\JHPermrec.UpdateRecord.csprojResolveAssemblyReference.cache

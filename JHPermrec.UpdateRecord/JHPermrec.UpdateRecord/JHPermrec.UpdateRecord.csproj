@@ -214,6 +214,8 @@
     <Compile Include="DAL\StudDiplomaInfoJuniorDiplomaNumber.cs" />
     <Compile Include="DAL\StudUpdateRecordEntity.cs" />
     <Compile Include="GovernmentalDocument\DAL\DALTransfer.cs" />
+    <Compile Include="GovernmentalDocument\NameList\ListProvider\DeadStudentListProvider.cs" />
+    <Compile Include="GovernmentalDocument\NameList\Lists\DeadStudentList.cs" />
     <Compile Include="GovernmentalDocument\ReportBuilder\GDResources.Designer.cs" />
     <Compile Include="GovernmentalDocument\NameList\BuildWizard.cs">
       <SubType>Form</SubType>
@@ -665,6 +667,7 @@
     <None Include="GovernmentalDocument\GDResources\HsinChu\JTransfer01ListTemplate_HsinChu.xls" />
     <None Include="GovernmentalDocument\GDResources\HsinChu\JTransferStudentUpdateRecordTemplate_HsinChu.xls" />
     <None Include="GovernmentalDocument\GDResources\JContinueStudentUpdateRecordListTemplate.xls" />
+    <None Include="GovernmentalDocument\GDResources\JDeadStudentListTemplate.xls" />
     <None Include="GovernmentalDocument\GDResources\JEnrollmentListTemplate.xls" />
     <None Include="GovernmentalDocument\GDResources\JExtendingStudentListTemplate.xls" />
     <None Include="GovernmentalDocument\GDResources\JGraduatingStudentListTemplate.xls" />

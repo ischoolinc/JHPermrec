@@ -175,4 +175,7 @@
   <data name="JUpdateStudentPermrecTemplate_KH" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>gdresources\jupdatestudentpermrectemplate_kh.xls;System.Byte[], mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
+  <data name="JDeadStudentListTemplate" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>gdresources\jdeadstudentlisttemplate.xls;System.Byte[], mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
 </root>

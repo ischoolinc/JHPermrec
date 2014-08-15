@@ -64,6 +64,9 @@ namespace JHPermrec.UpdateRecord.GovernmentalDocument.NameList
 
                 // 更正學籍
                 //AddProvider(new UpdateStudentPermrecListProvider());
+
+                // 死亡
+                AddProvider(new DeadStudentListProvider());
             }
 
             // 台中縣

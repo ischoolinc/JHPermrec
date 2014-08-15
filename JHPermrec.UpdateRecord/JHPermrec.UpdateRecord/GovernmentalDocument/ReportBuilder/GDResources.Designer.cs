@@ -187,5 +187,14 @@ namespace JHPermrec.UpdateRecord.GovernmentalDocument {
                 return ((byte[])(obj));
             }
         }
+
+        internal static byte[] JDeadStudentListTemplate
+        {
+            get
+            {
+                object obj = ResourceManager.GetObject("JDeadStudentListTemplate", resourceCulture);
+                return ((byte[])(obj));
+            }
+        }
     }
 }

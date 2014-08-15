@@ -58,6 +58,9 @@ namespace JHPermrec.UpdateRecord.GovernmentalDocument.Process
                 //if (ReportBuilderManager.Items["更正學籍學生名冊"].Count == 0)
                 //    ReportBuilderManager.Items["更正學籍學生名冊"].Add(new UpdateStudentPermrecList());
 
+
+                if (ReportBuilderManager.Items["死亡學生名冊"].Count == 0)
+                    ReportBuilderManager.Items["死亡學生名冊"].Add(new DeadStudentList());
             }
 
 
