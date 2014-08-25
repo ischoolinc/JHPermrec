@@ -255,7 +255,7 @@ namespace JHSchool.Permrec.Legacy
 
             if (!_saved)
             {
-                if (MsgBox.Show("這個動作將放棄目前編輯中的資料，是否確定離開?", "提醒", MessageBoxButtons.OKCancel) == DialogResult.Cancel)
+                if (FISCA.Presentation.Controls.MsgBox.Show("這個動作將放棄目前編輯中的資料，是否確定離開?", "提醒", MessageBoxButtons.OKCancel) == DialogResult.Cancel)
                     e.Cancel = true;
             }
         }
@@ -268,7 +268,7 @@ namespace JHSchool.Permrec.Legacy
         {
             bool valid = updateRecordInfo1.IsValid();
             if (!valid)
-                MsgBox.Show("資料錯誤，請檢查輸入資料", "錯誤", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                FISCA.Presentation.Controls.MsgBox.Show("資料錯誤，請檢查輸入資料", "錯誤", MessageBoxButtons.OK, MessageBoxIcon.Warning);
             return valid;
         }
 

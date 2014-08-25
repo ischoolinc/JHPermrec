@@ -348,11 +348,11 @@ namespace JHSchool.Permrec.ClassExtendControls
                     }
                 }
                 else
-                    MsgBox.Show("檔案尚未儲存");
+                    FISCA.Presentation.Controls.MsgBox.Show("檔案尚未儲存");
             }
             catch
             {
-                MsgBox.Show("檔案儲存錯誤,請檢查檔案是否開啟中!!");
+                FISCA.Presentation.Controls.MsgBox.Show("檔案儲存錯誤,請檢查檔案是否開啟中!!");
             }
 
             SmartSchool.Customization.PlugIn.Global.SetStatusBarMessage("已完成");

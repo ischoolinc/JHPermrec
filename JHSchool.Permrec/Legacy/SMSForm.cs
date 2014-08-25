@@ -41,7 +41,7 @@ namespace JHSchool.Permrec.Legacy
 
         private void btnSubmit_Click(object sender, EventArgs e)
         {
-            if (MsgBox.Show("您確定要發送此簡訊給『" + _number + "』?", "確認", MessageBoxButtons.YesNo) == DialogResult.Yes)
+            if (FISCA.Presentation.Controls.MsgBox.Show("您確定要發送此簡訊給『" + _number + "』?", "確認", MessageBoxButtons.YesNo) == DialogResult.Yes)
             {
                 //SeniorHSBase.Feature.Legacy.Config.SendSMS(_number, this.txtContent.Text);
                 this.Close();

@@ -38,7 +38,7 @@ namespace JHSchool.Permrec.EduAdminExtendCotnrols.StudGraduateDocNo
 
         Dictionary<string, string> tmpGraduateStatus = new Dictionary<string, string>();
 
-        private EnhancedErrorProvider Errors { get; set; }
+        private SmartSchool.Common.EnhancedErrorProvider Errors { get; set; }
         bool chkInputData = false;
         const string  optName1 = "依學號遞增";
 
@@ -92,7 +92,7 @@ namespace JHSchool.Permrec.EduAdminExtendCotnrols.StudGraduateDocNo
             cboSortBySnum.Checked = true;
 
             if(Errors ==null )
-                Errors = new EnhancedErrorProvider();
+                Errors = new SmartSchool.Common.EnhancedErrorProvider();
 
             studRecSDIs = new List<StudDiplomaInfoJuniorDiplomaNumber>();
         }
@@ -579,7 +579,7 @@ namespace JHSchool.Permrec.EduAdminExtendCotnrols.StudGraduateDocNo
         private void txtGRDoc_TextChanged(object sender, EventArgs e)
         {
             if (Errors == null)
-                Errors = new EnhancedErrorProvider();
+                Errors = new SmartSchool.Common.EnhancedErrorProvider();
             Errors.Clear();
 
         }

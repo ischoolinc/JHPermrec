@@ -5,6 +5,9 @@ using System.Text;
 using JHSchool.Editor;
 using System.ComponentModel;
 using System.Windows.Forms;
+using FISCA.Data;
+using System.Data;
+using JHSchool.Data;
 
 namespace JHSchool.Permrec.EduAdminExtendCotnrols.ClassUpgrade.DAL
 {
@@ -215,56 +218,87 @@ namespace JHSchool.Permrec.EduAdminExtendCotnrols.ClassUpgrade.DAL
         /// <returns></returns>
         public static List<ClassItem> getClassItems()
         {
-            JHSchool.Data.JHClass.RemoveAll();
-            JHSchool.Data.JHClass.SelectAll();
-            // 找出一般生班級
-
-            List<string> ClassIDList = new List<string> ();
-            List<JHSchool.Data.JHClassRecord> classRecList = new List<JHSchool.Data.JHClassRecord>();
-
-            foreach (JHSchool.Data.JHStudentRecord stud in JHSchool.Data.JHStudent.SelectAll ())
-                if(stud.Status == K12.Data.StudentRecord.StudentStatus.一般 )
-                    if(!string.IsNullOrEmpty(stud.RefClassID ))
-                    if (!ClassIDList.Contains(stud.RefClassID))
-                    {
-                        ClassIDList.Add(stud.RefClassID);
-                        classRecList.Add(stud.Class);
-                    }
             List<ClassItem> ClassItems = new List<ClassItem>();
-            List<ClassItem> tmpCItems = new List<ClassItem>();
-            foreach (JHSchool.Data.JHClassRecord cr in classRecList)
+            QueryHelper qh = new QueryHelper();
+            string strSQL = @"select distinct class.id as cid,class.grade_year,class.class_name,class.naming_rule from student inner join class on student.ref_class_id=class.id where student.status=1 order by class.grade_year,class.class_name";
+            DataTable dt = qh.Select(strSQL);
+            foreach (DataRow dr in dt.Rows)
             {
-                if (cr.GradeYear.HasValue)
-                {
-                    ClassItem ci = new ClassItem();
-                    ci.ClassID = cr.ID;
-                    if (cr.GradeYear.HasValue)
-                        ci.GradeYear = cr.GradeYear.Value + "";
-                    ci.ClassName = cr.Name;
-                    ci.NamingRule = cr.NamingRule;
-                    ci.classrecord = cr;
-                    tmpCItems.Add(ci);
-                    ci = null;
-                }
+                ClassItem ci = new ClassItem();
+                ci.ClassID = dr["cid"].ToString();
+                ci.ClassName = dr["class_name"].ToString();
+                ci.GradeYear = dr["grade_year"].ToString();
+                ci.NamingRule = dr["naming_rule"].ToString().Trim();
+                
+                ClassItems.Add(ci);
             }
 
-            // 依年級班級名稱排序
-            List<string> grList = new List<string>();
-            foreach (ClassItem ci in tmpCItems)
-                if (!grList.Contains(ci.GradeYear))
-                    grList.Add(ci.GradeYear);
-            grList.Sort();
-            List<ClassItem> tmpsortItem = new List<ClassItem> ();
-            foreach (string str in grList)
+            List<string> cids = ClassItems.Select(x => x.ClassID).ToList();
+
+            List<JHClassRecord> CRecList = JHClass.SelectByIDs(cids);
+            Dictionary<string, JHClassRecord> CRDict = new Dictionary<string, JHClassRecord>();
+
+            foreach (JHClassRecord cr in CRecList)
+                CRDict.Add(cr.ID, cr);
+
+            foreach (ClassItem ci in ClassItems)
             {
-                tmpsortItem.Clear();
-                foreach (ClassItem ci in tmpCItems)
-                    if (str == ci.GradeYear)
-                        tmpsortItem.Add(ci);                  
-                tmpsortItem.Sort(new Comparison<ClassItem>(tmpSortClassItem1));
-                ClassItems.AddRange(tmpsortItem);
+                if (CRDict.ContainsKey(ci.ClassID))
+                    ci.classrecord = CRDict[ci.ClassID];
             }
 
+            #region old
+            //JHSchool.Data.JHClass.RemoveAll();
+            //JHSchool.Data.JHClass.SelectAll();
+            //// 找出一般生班級
+
+            //List<string> ClassIDList = new List<string>();
+            //List<JHSchool.Data.JHClassRecord> classRecList = new List<JHSchool.Data.JHClassRecord>();
+
+            //foreach (JHSchool.Data.JHStudentRecord stud in JHSchool.Data.JHStudent.SelectAll())
+            //    if (stud.Status == K12.Data.StudentRecord.StudentStatus.一般)
+            //        if (!string.IsNullOrEmpty(stud.RefClassID))
+            //            if (!ClassIDList.Contains(stud.RefClassID))
+            //            {
+            //                ClassIDList.Add(stud.RefClassID);
+            //                classRecList.Add(stud.Class);
+            //            }
+            //List<ClassItem> ClassItems = new List<ClassItem>();
+            //List<ClassItem> tmpCItems = new List<ClassItem>();
+            //foreach (JHSchool.Data.JHClassRecord cr in classRecList)
+            //{
+            //    if (cr.GradeYear.HasValue)
+            //    {
+            //        ClassItem ci = new ClassItem();
+            //        ci.ClassID = cr.ID;
+            //        if (cr.GradeYear.HasValue)
+            //            ci.GradeYear = cr.GradeYear.Value + "";
+            //        ci.ClassName = cr.Name;
+            //        ci.NamingRule = cr.NamingRule;
+            //        ci.classrecord = cr;
+            //        tmpCItems.Add(ci);
+            //        ci = null;
+            //    }
+            //}
+
+            //// 依年級班級名稱排序
+            //List<string> grList = new List<string>();
+            //foreach (ClassItem ci in tmpCItems)
+            //    if (!grList.Contains(ci.GradeYear))
+            //        grList.Add(ci.GradeYear);
+            //grList.Sort();
+            //List<ClassItem> tmpsortItem = new List<ClassItem>();
+            //foreach (string str in grList)
+            //{
+            //    tmpsortItem.Clear();
+            //    foreach (ClassItem ci in tmpCItems)
+            //        if (str == ci.GradeYear)
+            //            tmpsortItem.Add(ci);
+            //    tmpsortItem.Sort(new Comparison<ClassItem>(tmpSortClassItem1));
+            //    ClassItems.AddRange(tmpsortItem);
+            //}
+            #endregion
+            
             return ClassItems;
         }
 
@@ -275,9 +309,9 @@ namespace JHSchool.Permrec.EduAdminExtendCotnrols.ClassUpgrade.DAL
 
         public static string ParseClassName(string namingRule, int gradeYear)
         {
-            if (gradeYear >= 6)
-                gradeYear -= 6;
-            gradeYear--;
+            //if (gradeYear >= 6)
+            //    gradeYear -= 6;
+            //gradeYear--;
             if (!ValidateNamingRule(namingRule))
                 return namingRule;
             string classlist_firstname = "", classlist_lastname = "";
@@ -305,10 +339,24 @@ namespace JHSchool.Permrec.EduAdminExtendCotnrols.ClassUpgrade.DAL
             string[] listArray = new string[tmp_convert.Split(',').Length];
             listArray = tmp_convert.Split(',');
 
+            int idx = 0;
+
+            if ((gradeYear - 1) >= 0)
+                idx = gradeYear - 1;
+
+            if (gradeYear - 4 >= 0)
+                idx = gradeYear - 4;
+
+            if (gradeYear - 7 >= 0)
+                idx = gradeYear - 7;
+
+            if (gradeYear - 10 >= 0)
+                idx = gradeYear - 10;
+            
             // 檢查是否在清單範圍
-            if (gradeYear >= 0 && gradeYear < listArray.Length)
+            if (idx >= 0 && idx < listArray.Length)
             {
-                tmp_convert = classlist_firstname + listArray[gradeYear] + classlist_lastname;
+                tmp_convert = classlist_firstname + listArray[idx] + classlist_lastname;
             }
             else
             {
