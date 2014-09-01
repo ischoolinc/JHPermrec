@@ -207,7 +207,7 @@
             this.intGradeYear.BackgroundStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square;
             this.intGradeYear.ButtonFreeText.Shortcut = DevComponents.DotNetBar.eShortcut.F2;
             this.intGradeYear.Location = new System.Drawing.Point(410, 12);
-            this.intGradeYear.MaxValue = 9;
+            this.intGradeYear.MaxValue = 12;
             this.intGradeYear.MinValue = 1;
             this.intGradeYear.Name = "intGradeYear";
             this.intGradeYear.Size = new System.Drawing.Size(49, 23);
@@ -230,6 +230,7 @@
             this.Controls.Add(this.btnConfirm);
             this.Controls.Add(this.UpdateRecordEditorPanle);
             this.Controls.Add(this.cbxSel);
+            this.DoubleBuffered = true;
             this.Font = new System.Drawing.Font("微軟正黑體", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
             this.Name = "UpdateRecordItemForm";
             this.Text = "管理學生異動資料";
