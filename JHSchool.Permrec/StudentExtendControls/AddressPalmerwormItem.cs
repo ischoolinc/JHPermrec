@@ -27,7 +27,7 @@ namespace JHSchool.Permrec.StudentExtendControls
             Mailing,
             Other
         }
- 
+
         private EnhancedErrorProvider _errors;
         private EnhancedErrorProvider _warnings;
 
@@ -44,7 +44,7 @@ namespace JHSchool.Permrec.StudentExtendControls
             InitializeComponent();
             Group = "地址資料";
 
-            _errors = new EnhancedErrorProvider();                 
+            _errors = new EnhancedErrorProvider();
             _warnings = new EnhancedErrorProvider();
             prlp = new PermRecLogProcess();
 
@@ -63,7 +63,7 @@ namespace JHSchool.Permrec.StudentExtendControls
 
             // 加入戶籍 Listener Data
             _DataListener_Permanent.Add(new TextBoxSource(txtZipcode));
-            _DataListener_Permanent.Add(new ComboBoxSource(cboCounty,ComboBoxSource.ListenAttribute.Text));
+            _DataListener_Permanent.Add(new ComboBoxSource(cboCounty, ComboBoxSource.ListenAttribute.Text));
             _DataListener_Permanent.Add(new ComboBoxSource(cboTown, ComboBoxSource.ListenAttribute.Text));
             _DataListener_Permanent.Add(new TextBoxSource(txtDistrict));
             _DataListener_Permanent.Add(new TextBoxSource(txtArea));
@@ -177,7 +177,7 @@ namespace JHSchool.Permrec.StudentExtendControls
             //        txtArea.Text += "鄰";
             //}
 
-           // 檢查畫面儲存相對應
+            // 檢查畫面儲存相對應
             if (_address_type == AddressType.Permanent)
             {
                 _StudAddressRec.Permanent.ZipCode = txtZipcode.Text;
@@ -189,7 +189,7 @@ namespace JHSchool.Permrec.StudentExtendControls
                 _StudAddressRec.Permanent.Longitude = txtLongtitude.Text;
                 _StudAddressRec.Permanent.Latitude = txtLatitude.Text;
 
-           }
+            }
 
             if (_address_type == AddressType.Mailing)
             {
@@ -245,7 +245,7 @@ namespace JHSchool.Permrec.StudentExtendControls
             JHAddress.Update(_StudAddressRec);
             prlp.SetActionBy("學籍", "學生地址資訊");
             prlp.SetAction("修改學生地址資訊");
-            JHStudentRecord studRec=JHStudent.SelectByID(PrimaryKey );
+            JHStudentRecord studRec = JHStudent.SelectByID(PrimaryKey);
             prlp.SetDescTitle("學生姓名:" + studRec.Name + ",學號:" + studRec.StudentNumber + ",");
             prlp.SaveLog("", "", "student", PrimaryKey);
             BindDataToForm();
@@ -262,13 +262,13 @@ namespace JHSchool.Permrec.StudentExtendControls
             }
             Initialize();
             BindDataToForm();
-            
+
         }
 
         // 透過DAL讀取學生地址資訊
         void BGWorker_DoWork(object sender, DoWorkEventArgs e)
         {
-            _StudAddressRec = JHAddress.SelectByStudentID(PrimaryKey);   
+            _StudAddressRec = JHAddress.SelectByStudentID(PrimaryKey);
         }
 
         // 取得地址對應中文名稱
@@ -281,7 +281,7 @@ namespace JHSchool.Permrec.StudentExtendControls
             else if (_address_type == AddressType.Other)
                 return "其它地址";
             else
-                return string.Empty;        
+                return string.Empty;
         }
 
         // 填入地址資訊到畫面
@@ -290,26 +290,26 @@ namespace JHSchool.Permrec.StudentExtendControls
             DataListenerPause();
 
             prlp.SetBeforeSaveText("戶籍郵遞區號", _StudAddressRec.Permanent.ZipCode);
-            prlp.SetBeforeSaveText("戶籍縣市", _StudAddressRec.Permanent.County );
+            prlp.SetBeforeSaveText("戶籍縣市", _StudAddressRec.Permanent.County);
             prlp.SetBeforeSaveText("戶籍鄉鎮市區", _StudAddressRec.Permanent.Town);
-            prlp.SetBeforeSaveText("戶籍村里", _StudAddressRec.Permanent.District );
-            prlp.SetBeforeSaveText("戶籍鄰", _StudAddressRec.Permanent.Area );
-            prlp.SetBeforeSaveText("戶籍其它地址", _StudAddressRec.Permanent.Detail );
-            prlp.SetBeforeSaveText("戶籍經度", _StudAddressRec.Permanent.Longitude );
+            prlp.SetBeforeSaveText("戶籍村里", _StudAddressRec.Permanent.District);
+            prlp.SetBeforeSaveText("戶籍鄰", _StudAddressRec.Permanent.Area);
+            prlp.SetBeforeSaveText("戶籍其它地址", _StudAddressRec.Permanent.Detail);
+            prlp.SetBeforeSaveText("戶籍經度", _StudAddressRec.Permanent.Longitude);
             prlp.SetBeforeSaveText("戶籍緯度", _StudAddressRec.Permanent.Latitude);
-            prlp.SetBeforeSaveText("聯絡郵遞區號", _StudAddressRec.Mailing.ZipCode );
-            prlp.SetBeforeSaveText("聯絡縣市", _StudAddressRec.Mailing.County );
-            prlp.SetBeforeSaveText("聯絡鄉鎮市區", _StudAddressRec.Mailing.Town );
-            prlp.SetBeforeSaveText("聯絡村里", _StudAddressRec.Mailing.District );
-            prlp.SetBeforeSaveText("聯絡鄰", _StudAddressRec.Mailing.Area );
-            prlp.SetBeforeSaveText("聯絡其它地址", _StudAddressRec.Mailing.Detail );
-            prlp.SetBeforeSaveText("聯絡經度", _StudAddressRec.Mailing.Longitude );
-            prlp.SetBeforeSaveText("聯絡緯度", _StudAddressRec.Mailing.Latitude );
+            prlp.SetBeforeSaveText("聯絡郵遞區號", _StudAddressRec.Mailing.ZipCode);
+            prlp.SetBeforeSaveText("聯絡縣市", _StudAddressRec.Mailing.County);
+            prlp.SetBeforeSaveText("聯絡鄉鎮市區", _StudAddressRec.Mailing.Town);
+            prlp.SetBeforeSaveText("聯絡村里", _StudAddressRec.Mailing.District);
+            prlp.SetBeforeSaveText("聯絡鄰", _StudAddressRec.Mailing.Area);
+            prlp.SetBeforeSaveText("聯絡其它地址", _StudAddressRec.Mailing.Detail);
+            prlp.SetBeforeSaveText("聯絡經度", _StudAddressRec.Mailing.Longitude);
+            prlp.SetBeforeSaveText("聯絡緯度", _StudAddressRec.Mailing.Latitude);
             prlp.SetBeforeSaveText("其它郵遞區號", _StudAddressRec.Address1.ZipCode);
-            prlp.SetBeforeSaveText("其它縣市", _StudAddressRec.Address1.County );
+            prlp.SetBeforeSaveText("其它縣市", _StudAddressRec.Address1.County);
             prlp.SetBeforeSaveText("其它鄉鎮市區", _StudAddressRec.Address1.Town);
             prlp.SetBeforeSaveText("其它村里", _StudAddressRec.Address1.District);
-            prlp.SetBeforeSaveText("其它鄰", _StudAddressRec.Address1.Area );
+            prlp.SetBeforeSaveText("其它鄰", _StudAddressRec.Address1.Area);
             prlp.SetBeforeSaveText("其它其它地址", _StudAddressRec.Address1.Detail);
             prlp.SetBeforeSaveText("其它經度", _StudAddressRec.Address1.Longitude);
             prlp.SetBeforeSaveText("其它緯度", _StudAddressRec.Address1.Latitude);
@@ -362,7 +362,7 @@ namespace JHSchool.Permrec.StudentExtendControls
             }
 
 
-        }        
+        }
 
         protected override void OnPrimaryKeyChanged(EventArgs e)
         {
@@ -389,7 +389,7 @@ namespace JHSchool.Permrec.StudentExtendControls
         }
 
         void _getCountyBackgroundWorker_DoWork(object sender, DoWorkEventArgs e)
-        {            
+        {
             e.Result = Framework.Feature.Config.GetCountyList();
         }
 
@@ -440,7 +440,16 @@ namespace JHSchool.Permrec.StudentExtendControls
             if (!string.IsNullOrEmpty(value))
             {
                 if (_zip_code_mapping.ContainsKey(value))
-                    txtZipcode.Text = _zip_code_mapping[value];
+                {
+                    if (txtZipcode.Text.Length > 3)
+                    {
+                        txtZipcode.Text = _zip_code_mapping[value] + txtZipcode.Text.Substring(3, txtZipcode.Text.Length - 3);
+                    }
+                    else
+                    {
+                        txtZipcode.Text = _zip_code_mapping[value];
+                    }
+                }
             }
             ShowFullAddress();
         }
@@ -567,7 +576,13 @@ namespace JHSchool.Permrec.StudentExtendControls
 
         private void CheckZipCode()
         {
-            KeyValuePair<string, string> ctPair = Framework.Feature.Config.FindTownByZipCode(txtZipcode.Text);
+            string zipcode = "";
+            if (txtZipcode.Text.Length > 3)
+                zipcode = txtZipcode.Text.Remove(3);
+            else
+                zipcode = txtZipcode.Text;
+
+            KeyValuePair<string, string> ctPair = Framework.Feature.Config.FindTownByZipCode(zipcode);
             if (ctPair.Key == null)
                 _warnings.SetError(txtZipcode, "查無此郵遞區號對應縣市鄉鎮資料。");
             else
@@ -586,7 +601,7 @@ namespace JHSchool.Permrec.StudentExtendControls
         {
             return !_errors.HasError;
         }
-        
+
         private K12.Data.AddressItem GetCurrentAddress()
         {
             if (_address_type == AddressType.Permanent)
@@ -603,7 +618,7 @@ namespace JHSchool.Permrec.StudentExtendControls
 
         private bool _date_updating = false;
         private void DisplayAddress(K12.Data.AddressItem addr)
-        {   
+        {
             _date_updating = true;
             btnAddressType.Text = GetAddressTypeTitle();
             if (btnAddressType.Text == "戶籍地址")
@@ -689,7 +704,7 @@ namespace JHSchool.Permrec.StudentExtendControls
 
         private void lnklblAddress1_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
         {
-             
+
             if (btnAddressType.Text == "戶籍地址")
             {
                 //複製聯絡地址
@@ -705,7 +720,7 @@ namespace JHSchool.Permrec.StudentExtendControls
 
             if (btnAddressType.Text == "聯絡地址")
             {
-                
+
                 // 複製戶籍地址
                 txtZipcode.Text = _StudAddressRec.Permanent.ZipCode;
                 cboCounty.Text = _StudAddressRec.Permanent.County;
@@ -735,7 +750,7 @@ namespace JHSchool.Permrec.StudentExtendControls
 
         private void lnklblAddress2_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
         {
-             
+
             if (btnAddressType.Text == "戶籍地址")
             {
                 // 複製其它地址
