@@ -21,6 +21,7 @@ namespace JHSchool.Permrec.StudentExtendControls
         private AddressType _address_type;
         private PermRecLogProcess prlp;
 
+        private CountyTown _CountyTown = new CountyTown();
         private enum AddressType
         {
             Permanent,
@@ -390,7 +391,8 @@ namespace JHSchool.Permrec.StudentExtendControls
 
         void _getCountyBackgroundWorker_DoWork(object sender, DoWorkEventArgs e)
         {
-            e.Result = Framework.Feature.Config.GetCountyList();
+            //e.Result = Framework.Feature.Config.GetCountyList();
+            e.Result = _CountyTown.GetCountyList();
         }
 
         private void Initialize()
@@ -412,17 +414,22 @@ namespace JHSchool.Permrec.StudentExtendControls
             cboTown.Items.Clear();
             if (cboCounty.GetText() != "")
             {
-                XmlElement[] townList = Framework.Feature.Config.GetTownList(cboCounty.Text);
-                _zip_code_mapping = new Dictionary<string, string>();
-                foreach (XmlElement each in townList)
-                {
-                    string name = each.GetAttribute("Name");
+                //XmlElement[] townList = Framework.Feature.Config.GetTownList(cboCounty.Text);
+                //_zip_code_mapping = new Dictionary<string, string>();
+                //foreach (XmlElement each in townList)
+                //{
+                //    string name = each.GetAttribute("Name");
 
-                    if (!_zip_code_mapping.ContainsKey(name))
-                        _zip_code_mapping.Add(name, each.GetAttribute("Code"));
+                //    if (!_zip_code_mapping.ContainsKey(name))
+                //        _zip_code_mapping.Add(name, each.GetAttribute("Code"));
 
-                    cboTown.AddItem(name);
-                }
+                //    cboTown.AddItem(name);
+                //}
+
+                _zip_code_mapping = _CountyTown.GetTownZipCodeDict(cboCounty.GetText());
+                foreach (string key in _zip_code_mapping.Keys)
+                    cboTown.AddItem(key);
+
             }
 
             ShowFullAddress();

@@ -173,6 +173,7 @@
     <Reference Include="System.Web" />
     <Reference Include="System.Windows.Forms" />
     <Reference Include="System.Xml" />
+    <Reference Include="System.Xml.Linq" />
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Address.cs" />
@@ -341,6 +342,7 @@
     <Compile Include="StudentExtendControls\ClassItem.Designer.cs">
       <DependentUpon>ClassItem.cs</DependentUpon>
     </Compile>
+    <Compile Include="StudentExtendControls\CountyTown.cs" />
     <Compile Include="StudentExtendControls\MapForm.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -711,6 +713,7 @@
     <Content Include="Library\SmartSchool.Common.pdb" />
     <Content Include="Library\SmartSchool.Common.xml" />
     <Content Include="Library\SmartSchool.Customization.PlugIn.dll" />
+    <Content Include="Resources\CountyTownBelong.xml" />
     <Content Include="Resources\paste_64.png" />
     <None Include="Resources\schedule_64.png" />
     <None Include="Resources\report.png" />
