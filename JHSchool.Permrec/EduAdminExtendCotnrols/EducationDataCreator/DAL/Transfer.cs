@@ -28,25 +28,26 @@ namespace JHSchool.Permrec.EduAdminExtendCotnrols.EducationDataCreator.DAL
                 // 一般
                 if (studRec.Status == JHSchool.Data.JHStudentRecord.StudentStatus.一般 || studRec.Status == JHSchool.Data.JHStudentRecord.StudentStatus.輟學 || studRec.Status == JHSchool.Data.JHStudentRecord.StudentStatus.畢業或離校)
                 {
+                    DAL.StudentEntity se = new StudentEntity();
+
                     if (studRec.Class != null)
                     {
-                            DAL.StudentEntity se = new StudentEntity();
                             se.ClassName = studRec.Class.Name;
-
                             if(studRec.Class.GradeYear.HasValue)
                                 se.GradeYear = studRec.Class.GradeYear.Value;
-
-                            se.IDNumber = studRec.IDNumber;
-                            se.Name = studRec.Name;
-                            if(studRec.SeatNo.HasValue)
-                                se.SeatNo = studRec.SeatNo.Value;
-                            if(studRec.Birthday.HasValue)
-                                se.Birthday = studRec.Birthday.Value;
-
-                            se.ID = studRec.ID;
-                            se.SchoolCode = SchoolCode;                            
-                            StudentEntityList.Add(se);
                     }
+                    se.IDNumber = studRec.IDNumber;
+                    se.Name = studRec.Name;
+                    if (studRec.SeatNo.HasValue)
+                        se.SeatNo = studRec.SeatNo.Value;
+                    if (studRec.Birthday.HasValue)
+                        se.Birthday = studRec.Birthday.Value;
+
+                    se.ID = studRec.ID;
+                    se.SchoolCode = SchoolCode;
+                    se.StudStatus = studRec.Status.ToString();
+                    StudentEntityList.Add(se);
+
                 }
 
                 //// 輟學
@@ -77,8 +78,12 @@ namespace JHSchool.Permrec.EduAdminExtendCotnrols.EducationDataCreator.DAL
             Dictionary<string, string> StatusInfo = new Dictionary<string, string>();
             foreach (JHSchool.Data.JHLeaveInfoRecord lir in LeaveInfoList)
             {
-                if(lir.Reason != null )
-                    StatusInfo.Add(lir.RefStudentID, lir.Reason.Trim());
+                string Reason = "";
+
+                if (lir.Reason != null)
+                    Reason = lir.Reason.Replace(" ", "");
+
+                StatusInfo.Add(lir.RefStudentID,Reason);
             }
             foreach (StudentEntity se in StudentEntityList)
             {

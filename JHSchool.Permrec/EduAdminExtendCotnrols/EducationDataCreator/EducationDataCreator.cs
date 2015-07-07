@@ -63,7 +63,7 @@ namespace JHSchool.Permrec.EduAdminExtendCotnrols.EducationDataCreator
         }
 
         /// <summary>
-        /// 傳入選擇狀態 是新生或畢業，畢業81
+        /// 傳入選擇狀態 是新生或畢業，畢業、修業81
         /// </summary>
         /// <param name="ST"></param>
         public void SetStatus(SelectType ST)
@@ -75,11 +75,22 @@ namespace JHSchool.Permrec.EduAdminExtendCotnrols.EducationDataCreator
 
                 // 自己檢查資料是否正確
                 if (ST == SelectType.畢業)
-                {                    
-                    if (se.Status == "畢業")
+                {
+                    se.CertCode = "  ";
+
+                    if (se.Status == "畢業" || se.Status =="修業")
                         se.CertCode = "81";
                     else
-                        se.CertCode = "82";
+                    {
+                        // 計算年齡，以當年12/31計算,一年天數365.2422天
+                        DateTime dt = new DateTime(DateTime.Now.Year, 12, 31);
+                        TimeSpan ts = dt - se.Birthday;
+                        double age = ts.TotalDays / 365.2422;
+
+                        // 如果學生是中輟或滿15歲,代碼82
+                        if (age >= 15 || se.StudStatus == "輟學")
+                            se.CertCode = "82";
+                    }                        
                 }
                 else
                 {

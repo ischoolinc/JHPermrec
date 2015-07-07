@@ -63,6 +63,11 @@ namespace JHSchool.Permrec.EduAdminExtendCotnrols.EducationDataCreator.DAL
         public string Status { get; set; }
 
         /// <summary>
+        /// 學生狀態
+        /// </summary>
+        public string StudStatus { get; set; }
+
+        /// <summary>
         /// 取得報部生日
         /// </summary>
         /// <returns></returns>
