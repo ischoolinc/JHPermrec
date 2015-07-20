@@ -55,6 +55,7 @@ namespace JHPermrec.UpdateRecord.GovernmentalDocument.NameList
 
             #endregion
             rowj = 4;
+            wb.Worksheets[0].Cells[rowi, 3].PutValue(StudBatchUpdateRecEntity.GetContentSchoolName() + "  " + StudBatchUpdateRecEntity.GetContentSchoolYear() + "學年度第" + StudBatchUpdateRecEntity.GetContentSemester() + "學期");
 
                 //將xml資料填入至excel
                 foreach (StudBatchUpdateRecContentEntity sburce in data.Values)

@@ -104,6 +104,7 @@
     </Reference>
     <Reference Include="IRewriteAPI_JH">
       <HintPath>..\..\..\JHCore\IRewriteAPI_JH\bin\Debug\IRewriteAPI_JH.dll</HintPath>
+      <Private>False</Private>
     </Reference>
     <Reference Include="JHSchool, Version=1.0.3.4, Culture=neutral, processorArchitecture=MSIL">
       <SpecificVersion>False</SpecificVersion>

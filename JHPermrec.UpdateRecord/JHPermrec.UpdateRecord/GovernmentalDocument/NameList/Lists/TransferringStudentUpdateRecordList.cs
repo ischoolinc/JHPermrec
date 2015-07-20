@@ -184,7 +184,7 @@ namespace JHPermrec.UpdateRecord.GovernmentalDocument.NameList
             #endregion
             rowj = 4;
 
-                        wb.Worksheets[0].Cells[rowi, 4].PutValue(StudBatchUpdateRecEntity.GetContentSchoolName ());
+                        wb.Worksheets[0].Cells[rowi, 4].PutValue(StudBatchUpdateRecEntity.GetContentSchoolName() + "  " + StudBatchUpdateRecEntity.GetContentSchoolYear() + "學年度第" + StudBatchUpdateRecEntity.GetContentSemester() + "學期");
                         wb.Worksheets[0].Cells[rowi, 8].PutValue("列印日期：" + strPrintDate);
                         wb.Worksheets[0].Cells[rowi + 1, 8].PutValue("列印時間：" + DateTime.Now.ToLongTimeString());
                       

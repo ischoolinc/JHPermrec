@@ -63,8 +63,7 @@ namespace JHPermrec.UpdateRecord.GovernmentalDocument.NameList
             int recCount = 0;
             int totalRec = data.Count;
 
-            rowj = 4;
-
+            rowj = 4;                        
             wb.Worksheets[0].Cells[rowi, 4].PutValue(StudBatchUpdateRecEntity.GetContentSchoolName() + "  " + StudBatchUpdateRecEntity.GetContentSchoolYear() + "學年第 " + StudBatchUpdateRecEntity.GetContentSemester() + "學期");
             wb.Worksheets[0].Cells[rowi, 8].PutValue("列印日期：" + UpdateRecordUtil.ChangeDate1911(DateTime.Now.ToString()));
             wb.Worksheets[0].Cells[rowi + 1, 8].PutValue("列印時間：" + DateTime.Now.ToLongTimeString());
