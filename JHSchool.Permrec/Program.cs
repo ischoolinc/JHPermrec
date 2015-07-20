@@ -224,6 +224,13 @@ namespace JHSchool.Permrec
                     MsgBox.Show("請選擇學生");
             };
 
+            string 轉出回條 = "ischool/國中系統/學生/報表/學籍/轉出回條";
+            FISCA.Features.Register(轉出回條, arg =>
+            {
+                JHSchool.Permrec.StudentExtendControls.Reports.StudentBackToArticleForm sbtaf = new JHSchool.Permrec.StudentExtendControls.Reports.StudentBackToArticleForm();
+                sbtaf.ShowDialog();
+            });
+
             // 在學證明書_無成績
             rbStudentReports["在學證明書(無成績)"].Enable = User.Acl["JHSchool.Student.Report0090"].Executable;
             rbStudentReports["在學證明書(無成績)"].Click += delegate
