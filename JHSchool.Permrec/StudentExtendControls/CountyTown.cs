@@ -19,11 +19,13 @@ namespace JHSchool.Permrec.StudentExtendControls
 
         List<string> _CountyList;
         Dictionary<string, Dictionary<string, string>> _ZipTownMapDict;
+        Dictionary<string, KeyValuePair<string, string>> _ZipCodeMapDict;
 
         public CountyTown()
         {
             _CountyList = new List<string>();
             _ZipTownMapDict = new Dictionary<string, Dictionary<string, string>>();
+            _ZipCodeMapDict = new Dictionary<string, KeyValuePair<string, string>>();
             try
             {
                 _ElmRoot = XElement.Parse(Properties.Resources.CountyTownBelong);
@@ -37,6 +39,9 @@ namespace JHSchool.Permrec.StudentExtendControls
 
                         if (!_CountyList.Contains(county))
                             _CountyList.Add(county);
+
+                        if (!_ZipCodeMapDict.ContainsKey(code))
+                            _ZipCodeMapDict.Add(code, new KeyValuePair<string, string>(county,name));                        
 
                         if (!_ZipTownMapDict.ContainsKey(county))
                             _ZipTownMapDict.Add(county, new Dictionary<string, string>());
@@ -69,6 +74,19 @@ namespace JHSchool.Permrec.StudentExtendControls
                 return _ZipTownMapDict[County];
             else
                 return new Dictionary<string, string>();
+        }
+        
+        /// <summary>
+        /// 透過郵地區號取得內容
+        /// </summary>
+        /// <param name="Code"></param>
+        /// <returns></returns>
+        public KeyValuePair<string, string> GetTownCountyNameDict(string Code)
+        {
+            if (_ZipCodeMapDict.ContainsKey(Code))
+                return _ZipCodeMapDict[Code];
+            else
+                return new KeyValuePair<string, string>();
         }
     }
 

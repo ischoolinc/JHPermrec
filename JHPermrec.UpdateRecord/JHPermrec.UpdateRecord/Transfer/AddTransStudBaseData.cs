@@ -20,9 +20,14 @@ namespace JHPermrec.UpdateRecord.Transfer
         private EnhancedErrorProvider _warnings;
         private EnhancedErrorProvider _errors = new EnhancedErrorProvider();
 
+        JHSchool.Permrec.StudentExtendControls.CountyTown _CountyTown;
+
+
         public AddTransStudBaseData(JHSchool.Data.JHStudentRecord studentEntity)
         {                        
             InitializeComponent();
+            _CountyTown = new JHSchool.Permrec.StudentExtendControls.CountyTown();
+            
             student = studentEntity;
             _StudentID = student.ID;
             ParentRec = JHSchool.Data.JHParent.SelectByStudentID(_StudentID);
@@ -365,7 +370,10 @@ namespace JHPermrec.UpdateRecord.Transfer
 
         private void CheckZipCode()
         {
-            KeyValuePair<string, string> ctPair = Framework.Feature.Config.FindTownByZipCode(txtZipcode.Text);
+            // KeyValuePair<string, string> ctPair = Framework.Feature.Config.FindTownByZipCode(txtZipcode.Text);
+
+            KeyValuePair<string, string> ctPair = _CountyTown.GetTownCountyNameDict(txtZipcode.Text);
+
             if (ctPair.Key == null)
                 _warnings.SetError(txtZipcode, "查無此郵遞區號對應縣市鄉鎮資料。");
             else
