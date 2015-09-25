@@ -14,7 +14,7 @@ namespace UserDefineData.ImportExport
         public ExportUserDefData()
         {
             this.Image = null;
-            this.Text = "匯出自訂資料欄位(Beta)";
+            this.Text = "匯出自訂資料欄位";
             ExportItemList = new List<string>();
             ExportItemList.Add("欄位名稱");
             ExportItemList.Add("值");        

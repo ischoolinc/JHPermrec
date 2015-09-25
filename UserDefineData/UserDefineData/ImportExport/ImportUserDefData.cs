@@ -13,7 +13,7 @@ namespace UserDefineData.ImportExport
         {
 
             this.Image = null;
-            this.Text = "匯入自訂資料欄位(Beta)";    
+            this.Text = "匯入自訂資料欄位";
         
         }
 

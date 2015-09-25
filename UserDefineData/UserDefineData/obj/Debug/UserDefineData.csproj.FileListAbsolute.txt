@@ -42,3 +42,4 @@ D:\GitProjModules\ischoolDesktop\JHPermrec\UserDefineData\UserDefineData\obj\Deb
 D:\GitProjModules\ischoolDesktop\JHPermrec\UserDefineData\UserDefineData\obj\Debug\UserDefineData.csproj.GenerateResource.Cache
 D:\GitProjModules\ischoolDesktop\JHPermrec\UserDefineData\UserDefineData\obj\Debug\UserDefineData.dll
 D:\GitProjModules\ischoolDesktop\JHPermrec\UserDefineData\UserDefineData\obj\Debug\UserDefineData.pdb
+D:\GitProjModules\ischoolDesktop\JHPermrec\UserDefineData\UserDefineData\obj\Debug\UserDefineData.csprojResolveAssemblyReference.cache

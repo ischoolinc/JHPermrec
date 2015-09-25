@@ -104,8 +104,9 @@
             this.Controls.Add(this.btnCancel);
             this.Controls.Add(this.btnSave);
             this.Controls.Add(this.dgv);
+            this.DoubleBuffered = true;
             this.Name = "SetUserDefineDataForm";
-            this.Text = "設定自訂資料欄位(Beta)";
+            this.Text = "設定自訂資料欄位";
             this.Load += new System.EventHandler(this.SetUserDefineDataForm_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dgv)).EndInit();
             this.ResumeLayout(false);
