@@ -30,3 +30,15 @@ D:\GitHub2\國中學籍\JHPermrec\UserDefineData\UserDefineData\obj\Debug\UserDe
 D:\GitHub2\國中學籍\JHPermrec\UserDefineData\UserDefineData\obj\Debug\UserDefineData.csproj.GenerateResource.Cache
 D:\GitHub2\國中學籍\JHPermrec\UserDefineData\UserDefineData\obj\Debug\UserDefineData.dll
 D:\GitHub2\國中學籍\JHPermrec\UserDefineData\UserDefineData\obj\Debug\UserDefineData.pdb
+D:\GitProjModules\ischoolDesktop\JHPermrec\UserDefineData\UserDefineData\bin\debug\UserDefineData.dll
+D:\GitProjModules\ischoolDesktop\JHPermrec\UserDefineData\UserDefineData\bin\debug\UserDefineData.pdb
+D:\GitProjModules\ischoolDesktop\JHPermrec\UserDefineData\UserDefineData\obj\Debug\UserDefineData.ImportExport.ExportStudentV2.resources
+D:\GitProjModules\ischoolDesktop\JHPermrec\UserDefineData\UserDefineData\obj\Debug\UserDefineData.ImportExport.ImportStudentV2.resources
+D:\GitProjModules\ischoolDesktop\JHPermrec\UserDefineData\UserDefineData\obj\Debug\UserDefineData.ImportExport.ExportStudentV2SH.resources
+D:\GitProjModules\ischoolDesktop\JHPermrec\UserDefineData\UserDefineData\obj\Debug\UserDefineData.ImportExport.ImportStudentV2SH.resources
+D:\GitProjModules\ischoolDesktop\JHPermrec\UserDefineData\UserDefineData\obj\Debug\UserDefineData.Properties.Resources.resources
+D:\GitProjModules\ischoolDesktop\JHPermrec\UserDefineData\UserDefineData\obj\Debug\UserDefineData.SetUserDefineDataForm.resources
+D:\GitProjModules\ischoolDesktop\JHPermrec\UserDefineData\UserDefineData\obj\Debug\UserDefineData.UserDefineDataItem.resources
+D:\GitProjModules\ischoolDesktop\JHPermrec\UserDefineData\UserDefineData\obj\Debug\UserDefineData.csproj.GenerateResource.Cache
+D:\GitProjModules\ischoolDesktop\JHPermrec\UserDefineData\UserDefineData\obj\Debug\UserDefineData.dll
+D:\GitProjModules\ischoolDesktop\JHPermrec\UserDefineData\UserDefineData\obj\Debug\UserDefineData.pdb

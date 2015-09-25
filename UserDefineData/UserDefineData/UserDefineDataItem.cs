@@ -13,7 +13,7 @@ using K12.Data;
 namespace UserDefineData
 {
     // 自訂資料欄位
-    [FeatureCode("JHSchool.Student.UserDefineData", "自訂資料欄位(Beta)")]
+    [FeatureCode("JHSchool.Student.UserDefineData", "自訂資料欄位")]
     public partial class UserDefineDataItem : DetailContent
     {
 
@@ -184,15 +184,12 @@ namespace UserDefineData
 
                     // 新增至 UDT
                     UDTTransfer.InsertDataToUDT(_InsertDataList);
-
-                    if (LoadManager.GetSystemType() == SystemType.國中)
-                    {
                         prlp.SetActionBy("學生", "自訂資料欄位");
                         prlp.SetAction("修改自訂資料欄位");
                         StudentRecord studRec = Student.SelectByID(PrimaryKey);
                         prlp.SetDescTitle("學生姓名:" + studRec.Name + ",學號:" + studRec.StudentNumber + ",");
                         prlp.SaveLog("", "", "student", PrimaryKey);
-                    }
+                    
 
                 }
                 

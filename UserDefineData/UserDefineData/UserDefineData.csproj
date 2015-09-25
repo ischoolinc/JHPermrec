@@ -46,7 +46,8 @@
     <DefineConstants>DEBUG;TRACE</DefineConstants>
     <ErrorReport>prompt</ErrorReport>
     <WarningLevel>4</WarningLevel>
-    <DocumentationFile>..\..\..\ischool\bin\Debug\UserDefineData.XML</DocumentationFile>
+    <DocumentationFile>
+    </DocumentationFile>
     <CodeAnalysisRuleSet>AllRules.ruleset</CodeAnalysisRuleSet>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
@@ -194,7 +195,6 @@
     <Compile Include="ImportExport\ExportStudentV2SH.Designer.cs">
       <DependentUpon>ExportStudentV2SH.cs</DependentUpon>
     </Compile>
-    <Compile Include="LoadManager.cs" />
     <Compile Include="PermRecLogProcess.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
