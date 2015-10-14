@@ -60,7 +60,8 @@ namespace JHSchool.Permrec
             Class.Instance.AddDetailBulider(new FISCA.Presentation.DetailBulider<JHSchool.Permrec.ClassExtendControls.ClassStudentItem>());
             Student.Instance.AddDetailBulider(new DetailBulider<StudentExtendControls.AddressPalmerwormItem>());
             Student.Instance.AddDetailBulider(new FISCA.Presentation.DetailBulider<JHSchool.Permrec.StudentExtendControls.PhonePalmerwormItem>());
-            Student.Instance.AddDetailBulider(new ContentItemBulider<StudentExtendControls.ExtensionValuesPalmerwormItem>());
+            // 高中自訂欄位註解
+//            Student.Instance.AddDetailBulider(new ContentItemBulider<StudentExtendControls.ExtensionValuesPalmerwormItem>());
             Student.Instance.AddDetailBulider(new DetailBulider<StudentExtendControls.DiplomaInfoPalmerworm>());
 
             Student.Instance.AddDetailBulider(new FISCA.Presentation.DetailBulider<JHSchool.Permrec.StudentExtendControls.ParentInfoPalmerwormItem>());
@@ -269,6 +270,18 @@ namespace JHSchool.Permrec
                 else
                     MsgBox.Show("請選擇學生");
             };
+
+            string URL轉學證明書 = "ischool/國中系統/學生/報表/學籍/轉學證明書";
+            FISCA.Features.Register(URL轉學證明書, arg =>
+            {
+                if (Student.Instance.SelectedList.Count >= 1)
+                {
+                    JHSchool.Permrec.StudentExtendControls.Reports.StudentTransExportForm stff = new JHSchool.Permrec.StudentExtendControls.Reports.StudentTransExportForm();
+                    stff.ShowDialog();
+                }
+                else
+                    MsgBox.Show("請選擇學生");
+            });
 
             if (ModuleType == ModuleFlag.KaoHsiung)
             {
