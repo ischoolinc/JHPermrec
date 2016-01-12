@@ -135,22 +135,27 @@ namespace JHPermrec.UpdateRecord.UpdateRecordItemControls
             cd = JHSchool.School.Configuration[updateConfigKey];
             if (!cd.Contains(SuspensionConfigKey))
             {
-                cd[SuspensionConfigKey] = "因病;出國;其他;死亡";
+                cd[SuspensionConfigKey] = "因病;出國";
                 cd.Save();
 
             }
             string[] reasons = cd[SuspensionConfigKey].Split(new char[] { ';' }, StringSplitOptions.RemoveEmptyEntries);
             List<string> reasonList = new List<string>(reasons);
-            foreach (string reason in reasons)
-            {
-                this.cboUpdateDescription.Items.Add(reason);
-            }
-            foreach (string defaultreason in new string[] { "因病", "出國", "其他","死亡" })
+
+            if (reasonList.Contains("其他"))
+                reasonList.Remove("其他");
+
+            if (reasonList.Contains("死亡"))
+                reasonList.Remove("死亡");
+            foreach (string defaultreason in new string[] { "因病", "出國" })
             {
                 if (!reasonList.Contains(defaultreason))
-                    this.cboUpdateDescription.Items.Add(defaultreason);
+                    reasonList.Add(defaultreason);
 
             }
+
+            foreach (string name in reasonList)
+                this.cboUpdateDescription.Items.Add(name);
 
             _StudUpdateRecordEntity = sure;
             SetUpdateRecordInfoToForm();
