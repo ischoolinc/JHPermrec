@@ -29,6 +29,8 @@ namespace JHSchool.Permrec.StudentExtendControls.Reports
         private byte[] defalutTemplate;
         private string base64 = "";
 
+        private int _photo_inch = 0;
+
         int _StudentCount = 0;
 
         private CountyType UseCountyType;
@@ -238,7 +240,7 @@ namespace JHSchool.Permrec.StudentExtendControls.Reports
         /// 列印資料
         /// </summary>
         /// <param name="StudentIDList"></param>        
-        public bool PrintData(List<string> StudentIDList, bool isDefaultTemplate, bool isUseSystemPhoto, int StudentCount)
+        public bool PrintData(List<string> StudentIDList, bool isDefaultTemplate, bool isUseSystemPhoto, int StudentCount,int Photo_inch)
         {
             FISCA.Presentation.MotherForm.SetStatusBarMessage("開始產生資料..");
             GetUserDefineTemplateFromSystem();
@@ -246,6 +248,9 @@ namespace JHSchool.Permrec.StudentExtendControls.Reports
             _isDefaultTemplate = isDefaultTemplate;
             _isUseSystemPhoto = isUseSystemPhoto;
             _StudentCount = StudentCount;
+
+
+            _photo_inch = Photo_inch;
 
             bkWorkPrint = new BackgroundWorker();
             bkWorkPrint.DoWork += new DoWorkEventHandler(bkWorkPrint_DoWork);
@@ -446,13 +451,14 @@ namespace JHSchool.Permrec.StudentExtendControls.Reports
                 if (UseCountyType == CountyType.高雄)
                 {
                     photoShape.WrapType = WrapType.Inline;//設定文繞圖
-
+                  
                     //resize
                     double origSizeRatio = photoShape.ImageData.ImageSize.HeightPoints / photoShape.ImageData.ImageSize.WidthPoints;
                     Cell curCell = photoBuilder.CurrentParagraph.ParentNode as Cell;
                     shapeHeight = (curCell.ParentNode as Row).RowFormat.Height * 4;
                     shapeWidth = curCell.CellFormat.Width;
 
+                    
                     if ((shapeHeight / shapeWidth) < origSizeRatio)
                         shapeWidth = shapeHeight / origSizeRatio;
                     else
@@ -463,6 +469,17 @@ namespace JHSchool.Permrec.StudentExtendControls.Reports
                     ////shapeHeight = (curCell.ParentNode as Row).RowFormat.Height * 4;
                     //shapeHeight = (curCell.ParentNode as Row).RowFormat.Height;
                     //shapeWidth = curCell.CellFormat.Width;
+
+
+                    //2016/9/22 穎驊新增，動態計算調整學生證照片，寬度不再超格
+                    if (shapeWidth > (curCell.CellFormat.Width - curCell.CellFormat.RightPadding - curCell.CellFormat.LeftPadding))
+                    {
+                        shapeWidth = (curCell.CellFormat.Width - curCell.CellFormat.RightPadding - curCell.CellFormat.LeftPadding);
+
+                        shapeHeight = shapeHeight * ((curCell.CellFormat.Width - curCell.CellFormat.RightPadding - curCell.CellFormat.LeftPadding) / shapeWidth);
+
+                    }
+
                 }
 
                 if (UseCountyType == CountyType.新竹)
@@ -484,9 +501,26 @@ namespace JHSchool.Permrec.StudentExtendControls.Reports
 
                 photoShape.Height = shapeHeight;
                 photoShape.Width = shapeWidth;
+
+
+                //2016/9/22 穎驊新增，動態計算調整學生證大小，分為一吋、二吋
+
+                //一吋
+                if (_photo_inch == 1) 
+                {
+                    photoShape.Width = ConvertUtil.MillimeterToPoint(25);
+                    photoShape.Height = ConvertUtil.MillimeterToPoint(35);                
+                }
+
+                //2吋
+                if (_photo_inch == 2)
+                { 
+                    photoShape.Width = ConvertUtil.MillimeterToPoint(35);
+                    photoShape.Height = ConvertUtil.MillimeterToPoint(45);                
+                }
+
                 //photoShape.Top = 28;
-
-
+      
                 photoBuilder.InsertNode(photoShape);
             }
 

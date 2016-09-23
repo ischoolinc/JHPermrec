@@ -35,12 +35,19 @@
             this.lnkUserDefine = new System.Windows.Forms.LinkLabel();
             this.cmdPrint = new DevComponents.DotNetBar.ButtonX();
             this.lnkDefault = new System.Windows.Forms.LinkLabel();
-            this.chkUseSystemPhoto = new DevComponents.DotNetBar.Controls.CheckBoxX();
+            this.chkUseSystemPhotoAuto = new DevComponents.DotNetBar.Controls.CheckBoxX();
+            this.chkUseSystemPhoto_1_Inch = new DevComponents.DotNetBar.Controls.CheckBoxX();
+            this.chkUseSystemPhoto_2_Inch = new DevComponents.DotNetBar.Controls.CheckBoxX();
             this.SuspendLayout();
             // 
             // cbxUserDefine
             // 
             this.cbxUserDefine.BackColor = System.Drawing.Color.Transparent;
+            // 
+            // 
+            // 
+            this.cbxUserDefine.BackgroundStyle.Class = "";
+            this.cbxUserDefine.BackgroundStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square;
             this.cbxUserDefine.CheckBoxStyle = DevComponents.DotNetBar.eCheckBoxStyle.RadioButton;
             this.cbxUserDefine.Location = new System.Drawing.Point(5, 34);
             this.cbxUserDefine.Name = "cbxUserDefine";
@@ -53,7 +60,7 @@
             this.btnExit.BackColor = System.Drawing.Color.Transparent;
             this.btnExit.ColorTable = DevComponents.DotNetBar.eButtonColor.OrangeWithBackground;
             this.btnExit.Font = new System.Drawing.Font("微軟正黑體", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
-            this.btnExit.Location = new System.Drawing.Point(106, 92);
+            this.btnExit.Location = new System.Drawing.Point(106, 155);
             this.btnExit.Name = "btnExit";
             this.btnExit.Size = new System.Drawing.Size(61, 23);
             this.btnExit.TabIndex = 9;
@@ -63,6 +70,11 @@
             // cbxDefault
             // 
             this.cbxDefault.BackColor = System.Drawing.Color.Transparent;
+            // 
+            // 
+            // 
+            this.cbxDefault.BackgroundStyle.Class = "";
+            this.cbxDefault.BackgroundStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square;
             this.cbxDefault.CheckBoxStyle = DevComponents.DotNetBar.eCheckBoxStyle.RadioButton;
             this.cbxDefault.Location = new System.Drawing.Point(5, 5);
             this.cbxDefault.Name = "cbxDefault";
@@ -75,7 +87,7 @@
             this.lnkUpload.BackColor = System.Drawing.Color.Transparent;
             this.lnkUpload.Location = new System.Drawing.Point(117, 39);
             this.lnkUpload.Name = "lnkUpload";
-            this.lnkUpload.Size = new System.Drawing.Size(29, 12);
+            this.lnkUpload.Size = new System.Drawing.Size(34, 17);
             this.lnkUpload.TabIndex = 8;
             this.lnkUpload.TabStop = true;
             this.lnkUpload.Text = "上傳";
@@ -87,7 +99,7 @@
             this.lnkUserDefine.BackColor = System.Drawing.Color.Transparent;
             this.lnkUserDefine.Location = new System.Drawing.Point(30, 39);
             this.lnkUserDefine.Name = "lnkUserDefine";
-            this.lnkUserDefine.Size = new System.Drawing.Size(77, 12);
+            this.lnkUserDefine.Size = new System.Drawing.Size(86, 17);
             this.lnkUserDefine.TabIndex = 6;
             this.lnkUserDefine.TabStop = true;
             this.lnkUserDefine.Text = "檢視自訂範本";
@@ -99,7 +111,7 @@
             this.cmdPrint.BackColor = System.Drawing.Color.Transparent;
             this.cmdPrint.ColorTable = DevComponents.DotNetBar.eButtonColor.OrangeWithBackground;
             this.cmdPrint.Font = new System.Drawing.Font("微軟正黑體", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
-            this.cmdPrint.Location = new System.Drawing.Point(33, 92);
+            this.cmdPrint.Location = new System.Drawing.Point(33, 155);
             this.cmdPrint.Name = "cmdPrint";
             this.cmdPrint.Size = new System.Drawing.Size(61, 23);
             this.cmdPrint.TabIndex = 7;
@@ -119,22 +131,62 @@
             this.lnkDefault.Text = "檢視預設範本";
             this.lnkDefault.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.lnkDefault_LinkClicked);
             // 
-            // chkUseSystemPhoto
+            // chkUseSystemPhotoAuto
             // 
-            this.chkUseSystemPhoto.BackColor = System.Drawing.Color.Transparent;
-            this.chkUseSystemPhoto.Font = new System.Drawing.Font("微軟正黑體", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
-            this.chkUseSystemPhoto.Location = new System.Drawing.Point(5, 63);
-            this.chkUseSystemPhoto.Name = "chkUseSystemPhoto";
-            this.chkUseSystemPhoto.Size = new System.Drawing.Size(123, 23);
-            this.chkUseSystemPhoto.TabIndex = 12;
-            this.chkUseSystemPhoto.Text = "使用系統內照片";
+            this.chkUseSystemPhotoAuto.BackColor = System.Drawing.Color.Transparent;
+            // 
+            // 
+            // 
+            this.chkUseSystemPhotoAuto.BackgroundStyle.Class = "";
+            this.chkUseSystemPhotoAuto.BackgroundStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square;
+            this.chkUseSystemPhotoAuto.Font = new System.Drawing.Font("微軟正黑體", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
+            this.chkUseSystemPhotoAuto.Location = new System.Drawing.Point(5, 63);
+            this.chkUseSystemPhotoAuto.Name = "chkUseSystemPhotoAuto";
+            this.chkUseSystemPhotoAuto.Size = new System.Drawing.Size(173, 23);
+            this.chkUseSystemPhotoAuto.TabIndex = 12;
+            this.chkUseSystemPhotoAuto.Text = "使用系統內照片(自動大小)";
+            this.chkUseSystemPhotoAuto.CheckedChanged += new System.EventHandler(this.chkUseSystemPhotoAuto_CheckedChanged);
+            // 
+            // chkUseSystemPhoto_1_Inch
+            // 
+            this.chkUseSystemPhoto_1_Inch.BackColor = System.Drawing.Color.Transparent;
+            // 
+            // 
+            // 
+            this.chkUseSystemPhoto_1_Inch.BackgroundStyle.Class = "";
+            this.chkUseSystemPhoto_1_Inch.BackgroundStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square;
+            this.chkUseSystemPhoto_1_Inch.Font = new System.Drawing.Font("微軟正黑體", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
+            this.chkUseSystemPhoto_1_Inch.Location = new System.Drawing.Point(5, 92);
+            this.chkUseSystemPhoto_1_Inch.Name = "chkUseSystemPhoto_1_Inch";
+            this.chkUseSystemPhoto_1_Inch.Size = new System.Drawing.Size(173, 23);
+            this.chkUseSystemPhoto_1_Inch.TabIndex = 13;
+            this.chkUseSystemPhoto_1_Inch.Text = "使用系統內照片(一吋)";
+            this.chkUseSystemPhoto_1_Inch.CheckedChanged += new System.EventHandler(this.chkUseSystemPhoto_1_Inch_CheckedChanged);
+            // 
+            // chkUseSystemPhoto_2_Inch
+            // 
+            this.chkUseSystemPhoto_2_Inch.BackColor = System.Drawing.Color.Transparent;
+            // 
+            // 
+            // 
+            this.chkUseSystemPhoto_2_Inch.BackgroundStyle.Class = "";
+            this.chkUseSystemPhoto_2_Inch.BackgroundStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square;
+            this.chkUseSystemPhoto_2_Inch.Font = new System.Drawing.Font("微軟正黑體", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
+            this.chkUseSystemPhoto_2_Inch.Location = new System.Drawing.Point(5, 121);
+            this.chkUseSystemPhoto_2_Inch.Name = "chkUseSystemPhoto_2_Inch";
+            this.chkUseSystemPhoto_2_Inch.Size = new System.Drawing.Size(173, 23);
+            this.chkUseSystemPhoto_2_Inch.TabIndex = 14;
+            this.chkUseSystemPhoto_2_Inch.Text = "使用系統內照片(二吋)";
+            this.chkUseSystemPhoto_2_Inch.CheckedChanged += new System.EventHandler(this.chkUseSystemPhoto_2_Inch_CheckedChanged);
             // 
             // StudentIDCardForm
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 12F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 17F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(178, 121);
-            this.Controls.Add(this.chkUseSystemPhoto);
+            this.ClientSize = new System.Drawing.Size(190, 190);
+            this.Controls.Add(this.chkUseSystemPhoto_2_Inch);
+            this.Controls.Add(this.chkUseSystemPhoto_1_Inch);
+            this.Controls.Add(this.chkUseSystemPhotoAuto);
             this.Controls.Add(this.cbxUserDefine);
             this.Controls.Add(this.btnExit);
             this.Controls.Add(this.cbxDefault);
@@ -142,8 +194,7 @@
             this.Controls.Add(this.lnkUserDefine);
             this.Controls.Add(this.cmdPrint);
             this.Controls.Add(this.lnkDefault);
-            this.MaximumSize = new System.Drawing.Size(186, 155);
-            this.MinimumSize = new System.Drawing.Size(186, 155);
+            this.DoubleBuffered = true;
             this.Name = "StudentIDCardForm";
             this.Text = "學生證範本設定與列印";
             this.ResumeLayout(false);
@@ -160,6 +211,8 @@
         private System.Windows.Forms.LinkLabel lnkUserDefine;
         private DevComponents.DotNetBar.ButtonX cmdPrint;
         private System.Windows.Forms.LinkLabel lnkDefault;
-        private DevComponents.DotNetBar.Controls.CheckBoxX chkUseSystemPhoto;
+        private DevComponents.DotNetBar.Controls.CheckBoxX chkUseSystemPhotoAuto;
+        private DevComponents.DotNetBar.Controls.CheckBoxX chkUseSystemPhoto_1_Inch;
+        private DevComponents.DotNetBar.Controls.CheckBoxX chkUseSystemPhoto_2_Inch;
     }
 }

@@ -15,6 +15,8 @@ namespace JHSchool.Permrec.StudentExtendControls.Reports
         bool isDefalutTemplate = true;
         bool isUseSystemPhoto = false;
 
+        int Photo_inch = 0;
+
         public enum UseModuleType { 學生, 班級 };
         private UseModuleType _UseModule;
 
@@ -62,15 +64,35 @@ namespace JHSchool.Permrec.StudentExtendControls.Reports
             else
                 isDefalutTemplate = false;
 
-            if (chkUseSystemPhoto.Checked)
+            if (chkUseSystemPhotoAuto.Checked)
             {
                 isUseSystemPhoto = true;
                 DAL.DALTransfer.UseStudPhotp = true;
+                Photo_inch = 0;
             }
             else
             {
                 isUseSystemPhoto = false;
                 DAL.DALTransfer.UseStudPhotp = false;
+            }
+
+            //2016/9/22 穎驊新增，新增高雄國中學生證列印可以調整一吋、二吋大小
+
+            if (chkUseSystemPhoto_1_Inch.Checked) 
+            {
+                isUseSystemPhoto = true;
+                DAL.DALTransfer.UseStudPhotp = true;
+                Photo_inch = 1;
+            
+            
+            }
+            if (chkUseSystemPhoto_2_Inch.Checked)
+            {
+                isUseSystemPhoto = true;
+                DAL.DALTransfer.UseStudPhotp = true;
+                Photo_inch = 2;
+
+
             }
 
             cmdPrint.Enabled = false;
@@ -80,7 +102,7 @@ namespace JHSchool.Permrec.StudentExtendControls.Reports
 
             if (_UseModule == UseModuleType.學生)
             {
-                isPrintFinish = sidm.PrintData(Student.Instance.SelectedKeys, isDefalutTemplate, isUseSystemPhoto, Student.Instance.SelectedKeys.Count);
+                isPrintFinish = sidm.PrintData(Student.Instance.SelectedKeys, isDefalutTemplate, isUseSystemPhoto, Student.Instance.SelectedKeys.Count,Photo_inch);
                 LogCot = Student.Instance.SelectedKeys.Count;
             }
 
@@ -95,7 +117,7 @@ namespace JHSchool.Permrec.StudentExtendControls.Reports
                     foreach (StudentRecord studRec in cr.Students.GetStatusStudents("輟學"))
                         StudentIDList.Add(studRec.ID);                
                 }
-                isPrintFinish = sidm.PrintData(StudentIDList, isDefalutTemplate, isUseSystemPhoto,StudentIDList.Count);
+                isPrintFinish = sidm.PrintData(StudentIDList, isDefalutTemplate, isUseSystemPhoto,StudentIDList.Count,Photo_inch);
                 LogCot = StudentIDList.Count;
             }
 
@@ -105,6 +127,35 @@ namespace JHSchool.Permrec.StudentExtendControls.Reports
                 PermRecLogProcess prlp = new PermRecLogProcess();
                 prlp.SaveLog("學生.報表", "列印", "列印"+LogCot+"筆學生證資料。");
                 cmdPrint.Enabled = true;
+            }
+        }
+
+
+        //使使用者只能在自動大小、一吋照片、二吋照片中選一個選項
+        private void chkUseSystemPhotoAuto_CheckedChanged(object sender, EventArgs e)
+        {
+            if (chkUseSystemPhotoAuto.Checked == true) 
+            {
+                chkUseSystemPhoto_1_Inch.Checked = false;
+                chkUseSystemPhoto_2_Inch.Checked = false;            
+            }
+        }
+
+        private void chkUseSystemPhoto_1_Inch_CheckedChanged(object sender, EventArgs e)
+        {
+            if (chkUseSystemPhoto_1_Inch.Checked == true)
+            {
+                chkUseSystemPhotoAuto.Checked = false;
+                chkUseSystemPhoto_2_Inch.Checked = false;                
+            }
+        }
+
+        private void chkUseSystemPhoto_2_Inch_CheckedChanged(object sender, EventArgs e)
+        {
+            if (chkUseSystemPhoto_2_Inch.Checked == true)
+            {
+                chkUseSystemPhoto_1_Inch.Checked = false;
+                chkUseSystemPhotoAuto.Checked = false;                
             }
         }
     }
