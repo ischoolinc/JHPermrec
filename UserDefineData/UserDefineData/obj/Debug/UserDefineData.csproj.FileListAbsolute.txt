@@ -43,3 +43,16 @@ D:\GitProjModules\ischoolDesktop\JHPermrec\UserDefineData\UserDefineData\obj\Deb
 D:\GitProjModules\ischoolDesktop\JHPermrec\UserDefineData\UserDefineData\obj\Debug\UserDefineData.dll
 D:\GitProjModules\ischoolDesktop\JHPermrec\UserDefineData\UserDefineData\obj\Debug\UserDefineData.pdb
 D:\GitProjModules\ischoolDesktop\JHPermrec\UserDefineData\UserDefineData\obj\Debug\UserDefineData.csprojResolveAssemblyReference.cache
+C:\Users\ED\Documents\ischool_github\JHPermrec\UserDefineData\UserDefineData\bin\debug\UserDefineData.dll
+C:\Users\ED\Documents\ischool_github\JHPermrec\UserDefineData\UserDefineData\bin\debug\UserDefineData.pdb
+C:\Users\ED\Documents\ischool_github\JHPermrec\UserDefineData\UserDefineData\obj\Debug\UserDefineData.csprojResolveAssemblyReference.cache
+C:\Users\ED\Documents\ischool_github\JHPermrec\UserDefineData\UserDefineData\obj\Debug\UserDefineData.ImportExport.ExportStudentV2.resources
+C:\Users\ED\Documents\ischool_github\JHPermrec\UserDefineData\UserDefineData\obj\Debug\UserDefineData.ImportExport.ImportStudentV2.resources
+C:\Users\ED\Documents\ischool_github\JHPermrec\UserDefineData\UserDefineData\obj\Debug\UserDefineData.ImportExport.ExportStudentV2SH.resources
+C:\Users\ED\Documents\ischool_github\JHPermrec\UserDefineData\UserDefineData\obj\Debug\UserDefineData.ImportExport.ImportStudentV2SH.resources
+C:\Users\ED\Documents\ischool_github\JHPermrec\UserDefineData\UserDefineData\obj\Debug\UserDefineData.Properties.Resources.resources
+C:\Users\ED\Documents\ischool_github\JHPermrec\UserDefineData\UserDefineData\obj\Debug\UserDefineData.SetUserDefineDataForm.resources
+C:\Users\ED\Documents\ischool_github\JHPermrec\UserDefineData\UserDefineData\obj\Debug\UserDefineData.UserDefineDataItem.resources
+C:\Users\ED\Documents\ischool_github\JHPermrec\UserDefineData\UserDefineData\obj\Debug\UserDefineData.csproj.GenerateResource.Cache
+C:\Users\ED\Documents\ischool_github\JHPermrec\UserDefineData\UserDefineData\obj\Debug\UserDefineData.dll
+C:\Users\ED\Documents\ischool_github\JHPermrec\UserDefineData\UserDefineData\obj\Debug\UserDefineData.pdb

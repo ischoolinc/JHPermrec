@@ -22,6 +22,9 @@ namespace UserDefineData
             string strUserDefineDataExportAcl = "Student.ischool_UserDefineData_Export";
 
 
+            // 載入設定
+            Global.StartDefaultValue();
+
             // 加入合理性檢查
             // 自訂欄位資料欄位重複
             try
