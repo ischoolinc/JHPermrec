@@ -109,6 +109,10 @@
       <HintPath>Library\FISCA.Presentation.dll</HintPath>
       <Private>False</Private>
     </Reference>
+    <Reference Include="FISCA.UDT">
+      <HintPath>Library\FISCA.UDT.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
     <Reference Include="Framework">
       <HintPath>Library\Framework.dll</HintPath>
       <Private>False</Private>
@@ -248,6 +252,7 @@
     <Compile Include="ClassExtendControls\SelectExamPrint.Designer.cs">
       <DependentUpon>SelectExamPrint.cs</DependentUpon>
     </Compile>
+    <Compile Include="DAO\UDT_NationalityMapping.cs" />
     <Compile Include="EduAdminExtendCotnrols\ClassUpgrade\ClassItem.cs" />
     <Compile Include="EduAdminExtendCotnrols\ClassUpgrade\ClassUpgradeForm.cs">
       <SubType>Form</SubType>
@@ -672,6 +677,7 @@
     </EmbeddedResource>
   </ItemGroup>
   <ItemGroup>
+    <Content Include="Resources\Warning_Icon_round.ico" />
     <None Include="Resources\user_write_64.png" />
     <None Include="Resources\world_zoom_64.png" />
     <None Include="Resources\defaultsearchimage.png" />

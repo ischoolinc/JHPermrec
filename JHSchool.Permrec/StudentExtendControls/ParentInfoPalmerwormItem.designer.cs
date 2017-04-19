@@ -28,6 +28,8 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(ParentInfoPalmerwormItem));
             this.label6 = new System.Windows.Forms.Label();
             this.lblRelationship = new System.Windows.Forms.Label();
             this.lblAlive = new System.Windows.Forms.Label();
@@ -51,6 +53,8 @@
             this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.txtParentPhone = new DevComponents.DotNetBar.Controls.TextBoxX();
+            this.errorProvider1 = new System.Windows.Forms.ErrorProvider(this.components);
+            ((System.ComponentModel.ISupportInitialize)(this.errorProvider1)).BeginInit();
             this.SuspendLayout();
             // 
             // label6
@@ -244,6 +248,7 @@
             this.cboNationality.Name = "cboNationality";
             this.cboNationality.Size = new System.Drawing.Size(156, 24);
             this.cboNationality.TabIndex = 3;
+            this.cboNationality.TextChanged += new System.EventHandler(this.cboNationality_TextChanged);
             // 
             // cboRelationship
             // 
@@ -361,6 +366,11 @@
             this.txtParentPhone.Size = new System.Drawing.Size(156, 25);
             this.txtParentPhone.TabIndex = 2;
             // 
+            // errorProvider1
+            // 
+            this.errorProvider1.ContainerControl = this;
+            this.errorProvider1.Icon = ((System.Drawing.Icon)(resources.GetObject("errorProvider1.Icon")));
+            // 
             // ParentInfoPalmerwormItem
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 17F);
@@ -388,6 +398,7 @@
             this.Margin = new System.Windows.Forms.Padding(5, 6, 5, 6);
             this.Name = "ParentInfoPalmerwormItem";
             this.Size = new System.Drawing.Size(550, 190);
+            ((System.ComponentModel.ISupportInitialize)(this.errorProvider1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -418,5 +429,6 @@
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label label2;
         private DevComponents.DotNetBar.Controls.TextBoxX txtParentPhone;
+        private System.Windows.Forms.ErrorProvider errorProvider1;
     }
 }
