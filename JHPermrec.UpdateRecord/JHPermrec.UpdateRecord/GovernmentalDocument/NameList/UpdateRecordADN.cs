@@ -3,6 +3,7 @@ using System.Windows.Forms;
 using FISCA.DSAUtil;
 using Framework;
 using JHSchool.Permrec.Feature.Legacy;
+using System.Xml;
 
 namespace JHPermrec.UpdateRecord.GovernmentalDocument.NameList
 {
@@ -77,7 +78,7 @@ namespace JHPermrec.UpdateRecord.GovernmentalDocument.NameList
 
             foreach (IEntryFormat entity in _provider.GetEntities())
                 helper.AddElement("UpdateRecord/Condition", "ID", entity.ID);
-            
+
             try
             {
                 EditStudent.ModifyUpdateRecord(new DSRequest(helper));
@@ -88,6 +89,36 @@ namespace JHPermrec.UpdateRecord.GovernmentalDocument.NameList
             {
                 MsgBox.Show("編輯核准文號失敗：" + ex);
             }
+
+
+            string batchName = "";
+            string schoolYear = "";
+            string semester = "";
+
+            if (_provider.ID != "")
+            {
+                DSResponse dsrsp = QueryStudent.GetUpdateRecordBatch(_provider.ID);
+
+                DSXmlHelper helper_ = dsrsp.GetContent();
+
+                //填上名冊的 學年、學期、名稱
+                foreach (XmlNode node in helper_.GetElements("UpdateRecordBatch"))
+                {
+                    schoolYear = node.SelectSingleNode("SchoolYear").InnerText;
+                    semester = node.SelectSingleNode("Semester").InnerText;
+                    batchName = node.SelectSingleNode("Name").InnerText;
+                }
+                // log，2018/3/1 穎驊新增，因應高雄 [10-03][01] 整個學年度核准過的文號的異動名冊全部不見了 項目
+                // 本異動名冊 原只有新增會有系統紀錄，現在調整刪除、登打文號都會有紀錄
+                JHSchool.PermRecLogProcess prlp = new JHSchool.PermRecLogProcess();
+                string desc = "登錄文號" + schoolYear + "學年度,第" + semester + "學期," + batchName + "名冊,日期:" + dtpDate.DateString + ",文號:"+ txtNumber.Text;
+                prlp.SaveLog("教務.名冊", "登錄文號", desc);
+               
+            }
+
+       
+
+
             this.Close();
             
         }

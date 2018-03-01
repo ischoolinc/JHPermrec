@@ -376,22 +376,58 @@ namespace JHPermrec.UpdateRecord.GovernmentalDocument.NameList
 
         private void btnDelete_Click(object sender, EventArgs e)
         {
-              string id="";
+            string id = "";
+            string batchName = "";
+            string schoolYear = "";
+            string semester = "";
+
             if (itmPanelLeft.SelectedItems.Count  < 1)
                 return;
             //if (lstList.FocusedItem == null)
             //    return;
-            foreach (ButtonItem item in itmPanelLeft.SelectedItems )
-                if(item.Checked==true )
-                  id=item.Tag.ToString ();
-//            string id = lstList.FocusedItem.Tag.ToString();
-            if(id!="")
-            if (MsgBox.Show("您確定刪除該名冊及其內容?", "確定", MessageBoxButtons.YesNo) == DialogResult.Yes)
+            foreach (ButtonItem item in itmPanelLeft.SelectedItems)
             {
-                UpdateRecordBatch.DeleteBatch(id);
-                Initialize();
-                LoadBatchList();
+                if (item.Checked == true)
+                {
+                    id = item.Tag.ToString();
+                    
+                }
+
             }
+
+
+            if (id != "")
+            {
+                DSResponse dsrsp = QueryStudent.GetUpdateRecordBatch(id);
+
+                DSXmlHelper helper = dsrsp.GetContent();
+
+                //填上名冊的 學年、學期、名稱
+                foreach (XmlNode node in helper.GetElements("UpdateRecordBatch"))
+                {
+                    schoolYear = node.SelectSingleNode("SchoolYear").InnerText;
+                    semester = node.SelectSingleNode("Semester").InnerText;
+                    batchName = node.SelectSingleNode("Name").InnerText;
+                }
+
+                if (MsgBox.Show("您確定刪除該名冊及其內容?", "確定", MessageBoxButtons.YesNo) == DialogResult.Yes)
+                {
+
+                    UpdateRecordBatch.DeleteBatch(id);
+
+                    // log，2018/3/1 穎驊新增，因應高雄 [10-03][01] 整個學年度核准過的文號的異動名冊全部不見了 項目
+                    // 本異動名冊 原只有新增會有系統紀錄，現在調整刪除、登打文號都會有紀錄
+                    JHSchool.PermRecLogProcess prlp = new JHSchool.PermRecLogProcess();
+                    string desc = "刪除" + schoolYear +"學年度,第" + semester +"學期," + batchName + "名冊";
+                    prlp.SaveLog("教務.名冊", "刪除", desc);
+                    Initialize();
+                    LoadBatchList();
+                }
+            }
+         
+            
+            
+           
         }
 
         private void ListForm_Load(object sender, EventArgs e)
