@@ -78,7 +78,8 @@ namespace JHPermrec.UpdateRecord.GovernmentalDocument.NameList
 
                     wb.Worksheets[0].Cells[rowj, 0].PutValue(sburce.GetStudentNumber ());
                     wb.Worksheets[0].Cells[rowj, 1].PutValue(sburce.GetName ());                    
-                        wb.Worksheets[0].Cells[rowj, 2].PutValue(sburce.GetClassYear ());
+                    //wb.Worksheets[0].Cells[rowj, 2].PutValue(sburce.GetClassYear ());// 穎驊更新，檢查 # 6202 客服，發現年級欄位抓錯，不應該找取班級年級，而該用異動年級
+                    wb.Worksheets[0].Cells[rowj, 2].PutValue(sburce.GetGradeYear());
                     wb.Worksheets[0].Cells[rowj, 3].PutValue(StudBatchUpdateRecEntity.GetContentSemester ());
                     DateTime dt;
                     // 用西元轉換
@@ -301,8 +302,9 @@ namespace JHPermrec.UpdateRecord.GovernmentalDocument.NameList
                     recCount++;
 
                     wb.Worksheets[0].Cells[rowj, 0].PutValue(sburce.GetStudentNumber ());
-                    wb.Worksheets[0].Cells[rowj, 1].PutValue(sburce.GetName ());                    
-                    wb.Worksheets[0].Cells[rowj, 2].PutValue(sburce.GetClassYear());
+                    wb.Worksheets[0].Cells[rowj, 1].PutValue(sburce.GetName ());
+                    //wb.Worksheets[0].Cells[rowj, 2].PutValue(sburce.GetClassYear()); // 穎驊更新，檢查 # 6202 客服，發現年級欄位抓錯，不應該找取班級年級，而該用異動年級
+                    wb.Worksheets[0].Cells[rowj, 2].PutValue(sburce.GetGradeYear());
                     wb.Worksheets[0].Cells[rowj, 3].PutValue(strSemester);
 
                     wb.Worksheets[0].Cells.CreateRange(rowj, 4, 1, 2).Merge();
