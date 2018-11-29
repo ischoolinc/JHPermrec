@@ -4,6 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Data;
 using Aspose.Words;
+using Aspose.Words.Tables;
 using System.IO;
 using Aspose.Words.Reporting;
 using Aspose.Words.Drawing;
@@ -84,7 +85,7 @@ namespace JHSchool.Permrec.StudentExtendControls
             int log2 = DateTime.Now.TimeOfDay.Seconds;
             System.Console.WriteLine("log2:{0}", log2);
 
-            doc.MailMerge.MergeField += new MergeFieldEventHandler(MailMerge_MergeField);
+            doc.MailMerge.FieldMergingCallback = new InsertDocumentAtMailMergeHandler();
             doc.MailMerge.Execute(dt);
             
             DocumentBuilder bulider = new DocumentBuilder(doc);
@@ -122,72 +123,83 @@ namespace JHSchool.Permrec.StudentExtendControls
             SmartSchool.Customization.PlugIn.Global.SetStatusBarMessage("已完成");
         }
 
-        private void MailMerge_MergeField(object sender, MergeFieldEventArgs e)
+        private class InsertDocumentAtMailMergeHandler : IFieldMergingCallback
         {
-            if (e.FieldName == "照片")
+            void IFieldMergingCallback.FieldMerging(FieldMergingArgs e)
             {
-                byte[] photo = e.FieldValue as byte[];
-                if (photo == null)
-                    return;
-                DocumentBuilder photoBuilder = new DocumentBuilder(e.Document);
-                photoBuilder.MoveToField(e.Field, true);
-                e.Field.Remove();
-
-                Shape photoShape = new Shape(e.Document, ShapeType.Image);
-                photoShape.ImageData.SetImage(photo);
-                photoShape.WrapType = WrapType.Inline;//設定文繞圖
-
-                //resize
-                double origSizeRatio = photoShape.ImageData.ImageSize.HeightPoints / photoShape.ImageData.ImageSize.WidthPoints;
-                Cell curCell = photoBuilder.CurrentParagraph.ParentNode as Cell;
-                double shapeHeight = (curCell.ParentNode as Row).RowFormat.Height * 4;
-                double shapeWidth = curCell.CellFormat.Width;
-
-                if ((shapeHeight / shapeWidth) < origSizeRatio)
-                    shapeWidth = shapeHeight / origSizeRatio;
-                else
-                    shapeHeight = shapeWidth * origSizeRatio;
-
-                photoShape.Height = shapeHeight;
-                photoShape.Width = shapeWidth;
-
-                photoBuilder.InsertNode(photoShape);
-            }
-
-            if (e.FieldName == "條碼")
-            {
-                DocumentBuilder builder = new DocumentBuilder(e.Document);
-                builder.MoveToField(e.Field, true);//將游標移到條碼所在欄位
-                e.Field.Remove();//將原先的合併欄位刪除
-
-                BarCodeBuilder bb = new BarCodeBuilder();
-                if (e.FieldValue.ToString() !="")
+                if (e.FieldName == "照片")
                 {
-                    bb.CodeText = e.FieldValue.ToString();
+                    byte[] photo = e.FieldValue as byte[];
+                    if (photo == null)
+                        return;
+                    DocumentBuilder photoBuilder = new DocumentBuilder(e.Document);
+                    photoBuilder.MoveToField(e.Field, true);
+                    e.Field.Remove();
 
+                    Shape photoShape = new Shape(e.Document, ShapeType.Image);
+                    photoShape.ImageData.SetImage(photo);
+                    photoShape.WrapType = WrapType.Inline;//設定文繞圖
 
-                    bb.SymbologyType = Symbology.Code128;
+                    //resize
+                    double origSizeRatio = photoShape.ImageData.ImageSize.HeightPoints / photoShape.ImageData.ImageSize.WidthPoints;
+                    Cell curCell = photoBuilder.CurrentParagraph.ParentNode as Cell;
+                    double shapeHeight = (curCell.ParentNode as Row).RowFormat.Height * 4;
+                    double shapeWidth = curCell.CellFormat.Width;
 
+                    if ((shapeHeight / shapeWidth) < origSizeRatio)
+                        shapeWidth = shapeHeight / origSizeRatio;
+                    else
+                        shapeHeight = shapeWidth * origSizeRatio;
 
-                }
-                else
-                {
-                    
-                    bb.CodeLocation = CodeLocation.None;//不輸出學號
+                    photoShape.Height = shapeHeight;
+                    photoShape.Width = shapeWidth;
+
+                    photoBuilder.InsertNode(photoShape);
                 }
 
-                bb.xDimension = 0.5f;
-                bb.BarHeight = 4.0f;
-               
+                if (e.FieldName == "條碼")
+                {
+                    DocumentBuilder builder = new DocumentBuilder(e.Document);
+                    builder.MoveToField(e.Field, true);//將游標移到條碼所在欄位
+                    e.Field.Remove();//將原先的合併欄位刪除
 
-                MemoryStream stream = new MemoryStream();
-                bb.Save(stream, ImageFormat.Jpeg);//將產生出的條碼存成圖檔
+                    BarCodeBuilder bb = new BarCodeBuilder();
+                    if (e.FieldValue.ToString() != "")
+                    {
+                        bb.CodeText = e.FieldValue.ToString();
 
-                builder.InsertImage(stream);//
+
+                        bb.SymbologyType = Symbology.Code128;
+
+
+                    }
+                    else
+                    {
+
+                        bb.CodeLocation = CodeLocation.None;//不輸出學號
+                    }
+
+                    bb.xDimension = 0.5f;
+                    bb.BarHeight = 4.0f;
+
+
+                    MemoryStream stream = new MemoryStream();
+                    bb.Save(stream, ImageFormat.Jpeg);//將產生出的條碼存成圖檔
+
+                    builder.InsertImage(stream);//
+
+                }
 
             }
-            
+
+            void IFieldMergingCallback.ImageFieldMerging(ImageFieldMergingArgs args)
+            {
+                // Do nothing.
+            }
+
         }
+
+         
 
         /// <summary>
         /// 根據 DataSourceType 來取得學生清單

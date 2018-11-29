@@ -4,10 +4,13 @@ using System.Text;
 using System.IO;
 using System.Xml;
 using Aspose.Words;
+using Aspose.Words.Tables;
 using Framework;
 using System.Windows.Forms;
 using System.ComponentModel;
 using Aspose.Words.Drawing;
+using Aspose.Words.Reporting;
+
 namespace JHSchool.Permrec.StudentExtendControls.Reports
 {
     class StudGraduateCertficateManager
@@ -153,7 +156,7 @@ namespace JHSchool.Permrec.StudentExtendControls.Reports
             {
                 try
                 {
-                    if (Document.DetectFileFormat(ofd.FileName) == LoadFormat.Doc)
+                    if (FileFormatUtil.DetectFileFormat(ofd.FileName).LoadFormat == LoadFormat.Doc)
                     {
                         FileStream fs = new FileStream(ofd.FileName, FileMode.Open);
 
@@ -205,7 +208,7 @@ namespace JHSchool.Permrec.StudentExtendControls.Reports
                 try
                 {
                     FileStream fs = new FileStream(sfd.FileName, FileMode.Create);
-                    if (_buffer != null && Aspose.Words.Document.DetectFileFormat(new MemoryStream(_buffer)) == Aspose.Words.LoadFormat.Doc)
+                    if (_buffer != null && Aspose.Words.FileFormatUtil.DetectFileFormat(new MemoryStream(_buffer)).LoadFormat == Aspose.Words.LoadFormat.Doc)
                         fs.Write(_buffer, 0, _buffer.Length);
                     else
                         fs.Write(defalutTemplate, 0, defalutTemplate.Length);
@@ -336,7 +339,7 @@ namespace JHSchool.Permrec.StudentExtendControls.Reports
                         docTemplate = new Document(new MemoryStream(_buffer));
                 }
 
-                docTemplate.MailMerge.MergeField += new Aspose.Words.Reporting.MergeFieldEventHandler(MailMerge_MergeField);
+                docTemplate.MailMerge.FieldMergingCallback = new InsertDocumentAtMailMergeHandler();
                 docTemplate.MailMerge.RemoveEmptyParagraphs = true;
                 docTemplate.MailMerge.Execute(rptKeys.ToArray(), rptValues.ToArray());
                 doc.Sections.Add(doc.ImportNode(docTemplate.Sections[0], true));
@@ -346,34 +349,44 @@ namespace JHSchool.Permrec.StudentExtendControls.Reports
             e.Result = doc;
         }
 
-        void MailMerge_MergeField(object sender, Aspose.Words.Reporting.MergeFieldEventArgs e)
+        private class InsertDocumentAtMailMergeHandler : IFieldMergingCallback
         {
-            if (e.FieldName == "畢業照片")
+            void IFieldMergingCallback.FieldMerging(FieldMergingArgs e)
             {
-                byte[] photo = e.FieldValue as byte[];
-                if (photo == null)
-                    return;
-                DocumentBuilder photoBuilder = new DocumentBuilder(e.Document);
-                photoBuilder.MoveToField(e.Field, true);
-                e.Field.Remove();
+                if (e.FieldName == "畢業照片")
+                {
+                    byte[] photo = e.FieldValue as byte[];
+                    if (photo == null)
+                        return;
+                    DocumentBuilder photoBuilder = new DocumentBuilder(e.Document);
+                    photoBuilder.MoveToField(e.Field, true);
+                    e.Field.Remove();
 
-                Shape photoShape = new Shape(e.Document, ShapeType.Image);
-                photoShape.ImageData.SetImage(photo);
-                double shapeHeight = 0;
-                double shapeWidth = 0;
-                photoShape.WrapType = WrapType.Inline;//設定文繞圖
+                    Shape photoShape = new Shape(e.Document, ShapeType.Image);
+                    photoShape.ImageData.SetImage(photo);
+                    double shapeHeight = 0;
+                    double shapeWidth = 0;
+                    photoShape.WrapType = WrapType.Inline;//設定文繞圖
 
-                //resize
+                    //resize
 
-                double origSizeRatio = photoShape.ImageData.ImageSize.HeightPoints / photoShape.ImageData.ImageSize.WidthPoints;
-                Cell curCell = photoBuilder.CurrentParagraph.ParentNode as Cell;
-                shapeHeight = (curCell.ParentNode as Row).RowFormat.Height;
-                shapeWidth = curCell.CellFormat.Width;
-                photoShape.Height = shapeHeight;
-                photoShape.Width = shapeWidth;
-                photoBuilder.InsertNode(photoShape);
+                    double origSizeRatio = photoShape.ImageData.ImageSize.HeightPoints / photoShape.ImageData.ImageSize.WidthPoints;
+                    Cell curCell = photoBuilder.CurrentParagraph.ParentNode as Cell;
+                    shapeHeight = (curCell.ParentNode as Row).RowFormat.Height;
+                    shapeWidth = curCell.CellFormat.Width;
+                    photoShape.Height = shapeHeight;
+                    photoShape.Width = shapeWidth;
+                    photoBuilder.InsertNode(photoShape);
+                }
+
             }
 
+            void IFieldMergingCallback.ImageFieldMerging(ImageFieldMergingArgs args)
+            {
+                // Do nothing.
+            }
         }
+
+        
     }
 }

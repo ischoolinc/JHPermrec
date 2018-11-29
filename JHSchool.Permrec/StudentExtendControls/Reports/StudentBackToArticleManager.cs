@@ -3,6 +3,8 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using Aspose.Words;
+using Aspose.Words.Tables;
+using Aspose.Words.Reporting;
 using System.ComponentModel;
 using System.IO;
 using System.Windows.Forms;
@@ -108,7 +110,7 @@ namespace JHSchool.Permrec.StudentExtendControls.Reports
             {
                 try
                 {
-                    if (Document.DetectFileFormat(ofd.FileName) == LoadFormat.Doc)
+                    if (FileFormatUtil.DetectFileFormat(ofd.FileName).LoadFormat == LoadFormat.Doc)
                     {
                         FileStream fs = new FileStream(ofd.FileName, FileMode.Open);
 
@@ -160,7 +162,7 @@ namespace JHSchool.Permrec.StudentExtendControls.Reports
                 try
                 {
                     FileStream fs = new FileStream(sfd.FileName, FileMode.Create);
-                    if (_buffer != null && Aspose.Words.Document.DetectFileFormat(new MemoryStream(_buffer)) == Aspose.Words.LoadFormat.Doc)
+                    if (_buffer != null && Aspose.Words.FileFormatUtil.DetectFileFormat(new MemoryStream(_buffer)).LoadFormat == Aspose.Words.LoadFormat.Doc)
                         fs.Write(_buffer, 0, _buffer.Length);
                     else
                         fs.Write(defalutTemplate, 0, defalutTemplate.Length);
@@ -281,7 +283,7 @@ namespace JHSchool.Permrec.StudentExtendControls.Reports
                     else
                         docTemplate = new Document(new MemoryStream(_buffer));
                 }
-                docTemplate.MailMerge.MergeField += new Aspose.Words.Reporting.MergeFieldEventHandler(MailMerge_MergeField);
+                docTemplate.MailMerge.FieldMergingCallback = new InsertDocumentAtMailMergeHandler();
                 docTemplate.MailMerge.RemoveEmptyParagraphs = true;
                 docTemplate.MailMerge.Execute(rptKeys.ToArray(), rptValues.ToArray());
                 doc.Sections.Add(doc.ImportNode(docTemplate.Sections[0],true ));
@@ -290,9 +292,20 @@ namespace JHSchool.Permrec.StudentExtendControls.Reports
             e.Result = doc;
         }
 
-        void MailMerge_MergeField(object sender, Aspose.Words.Reporting.MergeFieldEventArgs e)
+        private class InsertDocumentAtMailMergeHandler : IFieldMergingCallback
         {
-            
+            void IFieldMergingCallback.FieldMerging(FieldMergingArgs e)
+            {
+
+            }
+
+            void IFieldMergingCallback.ImageFieldMerging(ImageFieldMergingArgs args)
+            {
+                // Do nothing.
+            }
+
         }
+
+
     }
 }

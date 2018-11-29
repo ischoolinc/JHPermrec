@@ -4,6 +4,8 @@ using System.Text;
 using System.IO;
 using System.Xml;
 using Aspose.Words;
+using Aspose.Words.Tables;
+using Aspose.Words.Reporting;
 using Framework;
 using System.Windows.Forms;
 using System.ComponentModel;
@@ -157,7 +159,7 @@ namespace JHSchool.Permrec.StudentExtendControls.Reports
             {
                 try
                 {
-                    if (Document.DetectFileFormat(ofd.FileName) == LoadFormat.Doc)
+                    if (FileFormatUtil.DetectFileFormat(ofd.FileName).LoadFormat == LoadFormat.Doc)
                     {
                         FileStream fs = new FileStream(ofd.FileName, FileMode.Open);
 
@@ -209,7 +211,7 @@ namespace JHSchool.Permrec.StudentExtendControls.Reports
                 try
                 {
                     FileStream fs = new FileStream(sfd.FileName, FileMode.Create);
-                    if (_buffer != null && Aspose.Words.Document.DetectFileFormat(new MemoryStream(_buffer)) == Aspose.Words.LoadFormat.Doc)
+                    if (_buffer != null && Aspose.Words.FileFormatUtil.DetectFileFormat(new MemoryStream(_buffer)).LoadFormat == Aspose.Words.LoadFormat.Doc)
                         fs.Write(_buffer, 0, _buffer.Length);
                     else
                         fs.Write(defalutTemplate, 0, defalutTemplate.Length);
@@ -296,22 +298,22 @@ namespace JHSchool.Permrec.StudentExtendControls.Reports
             Document doc = new Document();
             doc.Sections.Clear();
             int cot = 0;
-            foreach (DAL.StudentLeaveEntity  se in StudentLeaveEntityList )
+            foreach (DAL.StudentLeaveEntity se in StudentLeaveEntityList)
             {
                 Dictionary<string, object> baseData = new Dictionary<string, object>();
                 baseData.Add("姓名", se.Name);
                 baseData.Add("學校名稱", se.SchoolName);
                 baseData.Add("校長姓名", se.ChancellorName);
-                baseData.Add("入學照片", se.GetPhotoImage ());
-                baseData.Add("民國生日", se.GetChineseBirthday ());
+                baseData.Add("入學照片", se.GetPhotoImage());
+                baseData.Add("民國生日", se.GetChineseBirthday());
                 baseData.Add("班級年級", se.ClassGradeYear);
-                baseData.Add("學期", _Semester);                
+                baseData.Add("學期", _Semester);
                 baseData.Add("今天民國日期", GetSystemTodayChineseDate());
                 baseData.Add("文號", _CertDoc);
                 baseData.Add("第號", _CertNo);
                 baseData.Add("異動原因", se.UpdateDesc);
-                baseData.Add("新生異動日期", se.GetChineseUR01Date ());
-                baseData.Add("新生異動核准中文日期", se.GetChineseUR01CertDate ());
+                baseData.Add("新生異動日期", se.GetChineseUR01Date());
+                baseData.Add("新生異動核准中文日期", se.GetChineseUR01CertDate());
                 baseData.Add("新生異動核准文號", se.UR01CertDocNo);
                 baseData.Add("性別", se.Gender);
                 baseData.Add("聯絡地址", se.ContactAddress);
@@ -341,7 +343,7 @@ namespace JHSchool.Permrec.StudentExtendControls.Reports
                         docTemplate = new Document(new MemoryStream(_buffer));
                 }
 
-                docTemplate.MailMerge.MergeField += new Aspose.Words.Reporting.MergeFieldEventHandler(MailMerge_MergeField);
+                docTemplate.MailMerge.FieldMergingCallback = new InsertDocumentAtMailMergeHandler();
                 docTemplate.MailMerge.RemoveEmptyParagraphs = true;
                 docTemplate.MailMerge.Execute(rptKeys.ToArray(), rptValues.ToArray());
                 doc.Sections.Add(doc.ImportNode(docTemplate.Sections[0], true));
@@ -351,35 +353,47 @@ namespace JHSchool.Permrec.StudentExtendControls.Reports
             e.Result = doc;
         }
 
-        void MailMerge_MergeField(object sender, Aspose.Words.Reporting.MergeFieldEventArgs e)
+
+        private class InsertDocumentAtMailMergeHandler : IFieldMergingCallback
         {
-            if (e.FieldName == "入學照片")
+            void IFieldMergingCallback.FieldMerging(FieldMergingArgs e)
             {
-                byte[] photo = e.FieldValue as byte[];
-                if (photo == null)
-                    return;
-                DocumentBuilder photoBuilder = new DocumentBuilder(e.Document);
-                photoBuilder.MoveToField(e.Field, true);
-                e.Field.Remove();
+                if (e.FieldName == "入學照片")
+                {
+                    byte[] photo = e.FieldValue as byte[];
+                    if (photo == null)
+                        return;
+                    DocumentBuilder photoBuilder = new DocumentBuilder(e.Document);
+                    photoBuilder.MoveToField(e.Field, true);
+                    e.Field.Remove();
 
-                Shape photoShape = new Shape(e.Document, ShapeType.Image);
-                photoShape.ImageData.SetImage(photo);
-                double shapeHeight = 0;
-                double shapeWidth = 0;
-                photoShape.WrapType = WrapType.Inline;//設定文繞圖
+                    Shape photoShape = new Shape(e.Document, ShapeType.Image);
+                    photoShape.ImageData.SetImage(photo);
+                    double shapeHeight = 0;
+                    double shapeWidth = 0;
+                    photoShape.WrapType = WrapType.Inline;//設定文繞圖
 
-                //resize
+                    //resize
 
-                double origSizeRatio = photoShape.ImageData.ImageSize.HeightPoints / photoShape.ImageData.ImageSize.WidthPoints;
-                Cell curCell = photoBuilder.CurrentParagraph.ParentNode as Cell;
-                shapeHeight = (curCell.ParentNode as Row).RowFormat.Height;
-                shapeWidth = curCell.CellFormat.Width;
-                photoShape.Height = shapeHeight;
-                photoShape.Width = shapeWidth;
-                photoBuilder.InsertNode(photoShape);
+                    double origSizeRatio = photoShape.ImageData.ImageSize.HeightPoints / photoShape.ImageData.ImageSize.WidthPoints;
+                    Cell curCell = photoBuilder.CurrentParagraph.ParentNode as Cell;
+                    shapeHeight = (curCell.ParentNode as Row).RowFormat.Height;
+                    shapeWidth = curCell.CellFormat.Width;
+                    photoShape.Height = shapeHeight;
+                    photoShape.Width = shapeWidth;
+                    photoBuilder.InsertNode(photoShape);
+                }
+
             }
 
+            void IFieldMergingCallback.ImageFieldMerging(ImageFieldMergingArgs args)
+            {
+                // Do nothing.
+            }
         }
+
+
+        
 
     }
 }

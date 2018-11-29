@@ -4,6 +4,8 @@ using System.Linq;
 using System.Text;
 using System.ComponentModel;
 using Aspose.Words;
+using Aspose.Words.Tables;
+using Aspose.Words.Reporting;
 using System.Windows.Forms;
 using FISCA.Presentation.Controls;
 using System.IO;
@@ -32,7 +34,7 @@ namespace JHSchool.Permrec.StudentExtendControls.Reports
         int _StudentCount = 0;
 
 
-        private CountyType UseCountyType;
+        private static CountyType UseCountyType;
         /// <summary>
         /// 取得是否讀取設樣版
         /// </summary>
@@ -137,7 +139,7 @@ namespace JHSchool.Permrec.StudentExtendControls.Reports
             {
                 try
                 {
-                    if (Document.DetectFileFormat(ofd.FileName) == LoadFormat.Doc)
+                    if (FileFormatUtil.DetectFileFormat(ofd.FileName).LoadFormat == LoadFormat.Doc)
                     {
                         FileStream fs = new FileStream(ofd.FileName, FileMode.Open);
 
@@ -220,7 +222,7 @@ namespace JHSchool.Permrec.StudentExtendControls.Reports
                 try
                 {
                     FileStream fs = new FileStream(sfd.FileName, FileMode.Create);
-                    if (_buffer != null && Aspose.Words.Document.DetectFileFormat(new MemoryStream(_buffer)) == Aspose.Words.LoadFormat.Doc)
+                    if (_buffer != null && Aspose.Words.FileFormatUtil.DetectFileFormat(new MemoryStream(_buffer)).LoadFormat == Aspose.Words.LoadFormat.Doc)
                         fs.Write(_buffer, 0, _buffer.Length);
                     else
                         fs.Write(defalutTemplate, 0, defalutTemplate.Length);
@@ -385,7 +387,7 @@ namespace JHSchool.Permrec.StudentExtendControls.Reports
                     docTemplate = new Document(new MemoryStream(_buffer));
             }
 
-            docTemplate.MailMerge.MergeField += new Aspose.Words.Reporting.MergeFieldEventHandler(MailMerge_MergeField);
+            docTemplate.MailMerge.FieldMergingCallback = new InsertDocumentAtMailMergeHandler();
             docTemplate.MailMerge.RemoveEmptyParagraphs = true;
             docTemplate.MailMerge.Execute(dt);
             DocumentBuilder bulider = new DocumentBuilder(docTemplate);
@@ -429,105 +431,126 @@ namespace JHSchool.Permrec.StudentExtendControls.Reports
 
 
             bkWorkPrint.ReportProgress((int)(((double)cot++ * 100.0) / (double)_StudentList.Count));
+
+            // 2018/11/29 穎驊註解，發現換成新的 Apsose.Word 後 功能變數 NEXT  \* MERGEFORMAT  會刪不乾淨
+            // 在此多一行，將沒有用到的功能變數都刪掉。
+            // 備註:
+            //     This method removes MERGEFIELD and NEXT fields from the document. This method
+            //     could be useful if your mail merge operation does not always need to populate
+            //     all fields in the document. Use this method to remove all remaining mail merge
+            //     fields.
+            docTemplate.MailMerge.DeleteFields();
+
             e.Result = docTemplate;
         }
 
-        void MailMerge_MergeField(object sender, Aspose.Words.Reporting.MergeFieldEventArgs e)
+
+        private class InsertDocumentAtMailMergeHandler : IFieldMergingCallback
         {
-            if (e.FieldName == "照片")
+            void IFieldMergingCallback.FieldMerging(FieldMergingArgs e)
             {
-                byte[] photo = e.FieldValue as byte[];
-                if (photo == null)
-                    return;
-                DocumentBuilder photoBuilder = new DocumentBuilder(e.Document);
-                photoBuilder.MoveToField(e.Field, true);
-                e.Field.Remove();
-
-                Shape photoShape = new Shape(e.Document, ShapeType.Image);
-                photoShape.ImageData.SetImage(photo);
-                double shapeHeight = 0;
-                double shapeWidth = 0;
-                if (UseCountyType == CountyType.高雄)
+                if (e.FieldName == "照片")
                 {
-                    photoShape.WrapType = WrapType.Inline;//設定文繞圖
+                    byte[] photo = e.FieldValue as byte[];
+                    if (photo == null)
+                        return;
+                    DocumentBuilder photoBuilder = new DocumentBuilder(e.Document);
+                    photoBuilder.MoveToField(e.Field, true);
+                    e.Field.Remove();
 
-                    //resize
-                    //double origSizeRatio = photoShape.ImageData.ImageSize.HeightPoints / photoShape.ImageData.ImageSize.WidthPoints;
-                    //Cell curCell = photoBuilder.CurrentParagraph.ParentNode as Cell;
-                    //shapeHeight = (curCell.ParentNode as Row).RowFormat.Height * 4;
-                    //shapeWidth = curCell.CellFormat.Width;
+                    Shape photoShape = new Shape(e.Document, ShapeType.Image);
+                    photoShape.ImageData.SetImage(photo);
+                    double shapeHeight = 0;
+                    double shapeWidth = 0;
+                    if (UseCountyType == CountyType.高雄)
+                    {
+                        photoShape.WrapType = WrapType.Inline;//設定文繞圖
 
-                    //if ((shapeHeight / shapeWidth) < origSizeRatio)
-                    //    shapeWidth = shapeHeight / origSizeRatio;
-                    //else
-                    //    shapeHeight = shapeWidth * origSizeRatio;
+                        //resize
+                        //double origSizeRatio = photoShape.ImageData.ImageSize.HeightPoints / photoShape.ImageData.ImageSize.WidthPoints;
+                        //Cell curCell = photoBuilder.CurrentParagraph.ParentNode as Cell;
+                        //shapeHeight = (curCell.ParentNode as Row).RowFormat.Height * 4;
+                        //shapeWidth = curCell.CellFormat.Width;
 
-                    double origSizeRatio = photoShape.ImageData.ImageSize.HeightPoints / photoShape.ImageData.ImageSize.WidthPoints;
-                    Cell curCell = photoBuilder.CurrentParagraph.ParentNode as Cell;
-                    //shapeHeight = (curCell.ParentNode as Row).RowFormat.Height * 4;
-                    shapeHeight = (curCell.ParentNode as Row).RowFormat.Height;
-                    shapeWidth = curCell.CellFormat.Width;
+                        //if ((shapeHeight / shapeWidth) < origSizeRatio)
+                        //    shapeWidth = shapeHeight / origSizeRatio;
+                        //else
+                        //    shapeHeight = shapeWidth * origSizeRatio;
+
+                        double origSizeRatio = photoShape.ImageData.ImageSize.HeightPoints / photoShape.ImageData.ImageSize.WidthPoints;
+                        Cell curCell = photoBuilder.CurrentParagraph.ParentNode as Cell;
+                        //shapeHeight = (curCell.ParentNode as Row).RowFormat.Height * 4;
+                        shapeHeight = (curCell.ParentNode as Row).RowFormat.Height;
+                        shapeWidth = curCell.CellFormat.Width;
+                    }
+
+                    if (UseCountyType == CountyType.新竹)
+                    {
+                        photoShape.WrapType = WrapType.Inline;//設定文繞圖
+
+                        //resize
+                        double origSizeRatio = photoShape.ImageData.ImageSize.HeightPoints / photoShape.ImageData.ImageSize.WidthPoints;
+                        Cell curCell = photoBuilder.CurrentParagraph.ParentNode as Cell;
+                        //shapeHeight = (curCell.ParentNode as Row).RowFormat.Height * 4;
+                        shapeHeight = (curCell.ParentNode as Row).RowFormat.Height;
+                        shapeWidth = curCell.CellFormat.Width;
+
+                        //if ((shapeHeight / shapeWidth) < origSizeRatio)
+                        //    shapeWidth = shapeHeight / origSizeRatio;
+                        //else
+                        //    shapeHeight = shapeWidth * origSizeRatio;
+                    }
+
+                    photoShape.Height = shapeHeight;
+                    photoShape.Width = shapeWidth;
+                    //photoShape.Top = 28;
+
+
+                    photoBuilder.InsertNode(photoShape);
                 }
 
-                if (UseCountyType == CountyType.新竹)
+                if (e.FieldName == "條碼")
                 {
-                    photoShape.WrapType = WrapType.Inline;//設定文繞圖
+                    DocumentBuilder builder = new DocumentBuilder(e.Document);
+                    builder.MoveToField(e.Field, true);//將游標移到條碼所在欄位
+                    e.Field.Remove();//將原先的合併欄位刪除
 
-                    //resize
-                    double origSizeRatio = photoShape.ImageData.ImageSize.HeightPoints / photoShape.ImageData.ImageSize.WidthPoints;
-                    Cell curCell = photoBuilder.CurrentParagraph.ParentNode as Cell;
-                    //shapeHeight = (curCell.ParentNode as Row).RowFormat.Height * 4;
-                    shapeHeight = (curCell.ParentNode as Row).RowFormat.Height;
-                    shapeWidth = curCell.CellFormat.Width;
+                    BarCodeBuilder bb = new BarCodeBuilder();
+                    if (e.FieldValue != null)
+                        if (e.FieldValue.ToString() != "")
+                        {
+                            bb.CodeText = e.FieldValue.ToString();
 
-                    //if ((shapeHeight / shapeWidth) < origSizeRatio)
-                    //    shapeWidth = shapeHeight / origSizeRatio;
-                    //else
-                    //    shapeHeight = shapeWidth * origSizeRatio;
+
+                            bb.SymbologyType = Symbology.Code128;
+
+
+                        }
+                        else
+                        {
+
+                            bb.CodeLocation = CodeLocation.None;//不輸出學號
+                        }
+
+                    bb.xDimension = 0.5f;
+                    bb.BarHeight = 4.0f;
+
+
+                    MemoryStream stream = new MemoryStream();
+                    bb.Save(stream, ImageFormat.Jpeg);//將產生出的條碼存成圖檔
+
+                    builder.InsertImage(stream);//
+
                 }
-
-                photoShape.Height = shapeHeight;
-                photoShape.Width = shapeWidth ;
-                //photoShape.Top = 28;
-
-
-                photoBuilder.InsertNode(photoShape);
             }
 
-            if (e.FieldName == "條碼")
+            void IFieldMergingCallback.ImageFieldMerging(ImageFieldMergingArgs args)
             {
-                DocumentBuilder builder = new DocumentBuilder(e.Document);
-                builder.MoveToField(e.Field, true);//將游標移到條碼所在欄位
-                e.Field.Remove();//將原先的合併欄位刪除
-
-                BarCodeBuilder bb = new BarCodeBuilder();
-                if (e.FieldValue != null)
-                    if (e.FieldValue.ToString() != "")
-                    {
-                        bb.CodeText = e.FieldValue.ToString();
-
-
-                        bb.SymbologyType = Symbology.Code128;
-
-
-                    }
-                    else
-                    {
-
-                        bb.CodeLocation = CodeLocation.None;//不輸出學號
-                    }
-
-                bb.xDimension = 0.5f;
-                bb.BarHeight = 4.0f;
-
-
-                MemoryStream stream = new MemoryStream();
-                bb.Save(stream, ImageFormat.Jpeg);//將產生出的條碼存成圖檔
-
-                builder.InsertImage(stream);//
-
+                // Do nothing.
             }
         }
+
+        
 
     }
 }
