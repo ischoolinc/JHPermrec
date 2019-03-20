@@ -736,8 +736,9 @@
     <None Include="Resources\班級成績單.xls" />
     <None Include="Resources\男女人數統計表.xls" />
     <None Include="StudentExtendControls\Reports\RptTemplate\入學回覆單樣版%28高雄%29.doc" />
+    <None Include="StudentExtendControls\Reports\RptTemplate\在學證明書中文%28高雄%29.doc" />
     <None Include="StudentExtendControls\Reports\RptTemplate\在學證明書%28無成績%29新竹.doc" />
-    <None Include="StudentExtendControls\Reports\RptTemplate\在學證明書樣版%28高雄%29.doc" />
+    <None Include="StudentExtendControls\Reports\RptTemplate\在學證明書中英文.doc" />
     <None Include="StudentExtendControls\Reports\RptTemplate\學生證樣板%28新竹%29New.doc" />
     <None Include="StudentExtendControls\Reports\RptTemplate\學生證樣板%28高雄%29.doc" />
     <None Include="StudentExtendControls\Reports\RptTemplate\學生證樣版%28新竹%29.doc" />

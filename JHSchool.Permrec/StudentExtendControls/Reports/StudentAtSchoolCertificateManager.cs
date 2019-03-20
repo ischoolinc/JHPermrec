@@ -10,6 +10,8 @@ using Framework;
 using System.Xml;
 using System.IO;
 using System.Windows.Forms;
+using Aspose.Words.Drawing;
+using System.Globalization;
 
 namespace JHSchool.Permrec.StudentExtendControls.Reports
 {
@@ -18,10 +20,12 @@ namespace JHSchool.Permrec.StudentExtendControls.Reports
         List<DAL.StudentEntity> _StudentList;
         private BackgroundWorker bkWorkPrint;
         private bool _isDefaultTemplate = true;
+        private bool _isDefaultTemplateChinese = false;  // [ischoolkingdom] Vicky新增，[11-04][02]在學證明書(英文)
         private byte[] _buffer = null;
         
         
         private byte[] defalutTemplate;
+        private byte[] defalutTemplate_Chi;
         private string base64 = "";
         private bool _isUpload = false;
         private string _Semester = "";
@@ -44,9 +48,16 @@ namespace JHSchool.Permrec.StudentExtendControls.Reports
             GetUserDefineTemplateFromSystem();
             // 判斷使用新竹或高雄樣版
             if (Program.ModuleType == Program.ModuleFlag.HsinChu)
-                defalutTemplate = JHSchool.Permrec.StudentExtendControls.Reports.RptResource.在學證明書_無成績_新竹;
+            {
+                defalutTemplate = JHSchool.Permrec.StudentExtendControls.Reports.RptResource.在學證明書中英文;
+                defalutTemplate_Chi = JHSchool.Permrec.StudentExtendControls.Reports.RptResource.在學證明書_無成績_新竹;
+            }
             else
-                defalutTemplate = JHSchool.Permrec.StudentExtendControls.Reports.RptResource.在學證明書樣版_高雄_;
+            {
+                defalutTemplate = JHSchool.Permrec.StudentExtendControls.Reports.RptResource.在學證明書中英文;
+                defalutTemplate_Chi =JHSchool.Permrec.StudentExtendControls.Reports.RptResource.在學證明書中文_高雄_;
+            }
+            
         }
 
         /// <summary>
@@ -117,15 +128,42 @@ namespace JHSchool.Permrec.StudentExtendControls.Reports
                 #endregion
             }        
         }
-
+        // [ischoolkingdom] Vicky新增，[11-04][02]在學證明書(英文)，新增預設中文樣板、中英文預設樣板選擇
         /// <summary>
-        /// 儲存預設樣版
+        /// 儲存預設樣版(中文)
         /// </summary>
-        public void SaveDefaulTemplate()
+        public void SaveDefaulTemplate_Chi()
         {
             SaveFileDialog sfd = new SaveFileDialog();
             sfd.Title = "另存新檔";
-            sfd.FileName = "在學證明書(無成績).doc";
+            sfd.FileName = "中文在學證明書(無成績).doc";
+            sfd.Filter = "Word檔案 (*.doc)|*.doc|所有檔案 (*.*)|*.*";
+            if (sfd.ShowDialog() == DialogResult.OK)
+            {
+                try
+                {
+                    defalutTemplate_Chi = JHSchool.Permrec.StudentExtendControls.Reports.RptResource.在學證明書中文_高雄_;
+                    FileStream fs = new FileStream(sfd.FileName, FileMode.Create);
+                    fs.Write(defalutTemplate_Chi, 0, defalutTemplate_Chi.Length);
+                    fs.Close();
+                    System.Diagnostics.Process.Start(sfd.FileName);
+                }
+                catch
+                {
+                    MsgBox.Show("指定路徑無法存取。", "另存檔案失敗", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    return;
+                }
+            }
+        }
+
+        /// <summary>
+        /// 儲存預設樣版(中英文)
+        /// </summary>
+        public void SaveDefaulTemplate_ChiEng()
+        {
+            SaveFileDialog sfd = new SaveFileDialog();
+            sfd.Title = "另存新檔";
+            sfd.FileName = "中英文在學證明書(無成績).doc";
             sfd.Filter = "Word檔案 (*.doc)|*.doc|所有檔案 (*.*)|*.*";
             if (sfd.ShowDialog() == DialogResult.OK)
             {
@@ -234,11 +272,13 @@ namespace JHSchool.Permrec.StudentExtendControls.Reports
         /// 列印資料
         /// </summary>
         /// <param name="StudentIDList"></param>        
-        public void PrintData(List<string> StudentIDList,bool isDefaultTemplate)
+        public void PrintData(List<string> StudentIDList,bool isDefaultTemplate, bool isDefaultTemplateChinese)
         {
-            GetUserDefineTemplateFromSystem();
+            GetUserDefineTemplateFromSystem();            
+            DAL.DALTransfer.UseStudPhotp = true; // [ischoolkingdom] Vicky新增，[11-04][02]在學證明書(英文)，新增照片顯示
             _StudentList = DAL.DALTransfer.GetStudentEntityList(StudentIDList);
             _isDefaultTemplate = isDefaultTemplate;
+            _isDefaultTemplateChinese = isDefaultTemplateChinese; 
             bkWorkPrint = new BackgroundWorker();
             bkWorkPrint.DoWork += new DoWorkEventHandler(bkWorkPrint_DoWork);
             bkWorkPrint.RunWorkerCompleted += new RunWorkerCompletedEventHandler(bkWorkPrint_RunWorkerCompleted);
@@ -295,22 +335,29 @@ namespace JHSchool.Permrec.StudentExtendControls.Reports
             foreach (DAL.StudentEntity se in _StudentList)
             {
                 Dictionary<string, object> baseData = new Dictionary<string, object>();
+                // [ischoolkingdom] Vicky新增，[11-04][02]在學證明書(英文)，新增 學生英文姓名、學校英文名稱、英文生日、今天英文日期、校長英文名、新生照片，整理舊校長教務主任名的code。
                 baseData.Add("學生姓名", se.StudentName);
+                baseData.Add("學生英文姓名", se.StudentEnglishName);
                 baseData.Add("學校中文名稱", se.SchoolChineseName);
+                baseData.Add("學校英文名稱", se.SchoolEnglishName);
                 baseData.Add("學校地址", se.SchoolAddress);
+                baseData.Add("英文生日", se.GetEnglishBirthday());
                 baseData.Add("生日年", se.GetBirthdayChineseYear());
                 baseData.Add("生日月", se.GetBirthdayMonth());
                 baseData.Add("生日日", se.GetBirthdayDay ());
                 baseData.Add("班級名稱", se.ClassName);
                 baseData.Add("班級年級", se.GradeYear);
+                baseData.Add("今天英文日期", DateTime.Now.ToString("MMMM dd, yyyy", new CultureInfo("en-US")));
                 baseData.Add("今天民國日期", GetSystemTodayChineseDate());
                 baseData.Add("文號", _CertDoc);
                 baseData.Add("第號", _CertNo);
                 baseData.Add("學期", _Semester);
                 baseData.Add("身分證號", se.IDNumber);
-                baseData.Add("校長姓名", JHSchool.Data.JHSchoolInfo.ChancellorChineseName);
-                baseData.Add("教務主任姓名", JHSchool.Data.JHSchoolInfo.EduDirectorName);
-                
+                baseData.Add("校長姓名", se.ChancellorChineseName);
+                baseData.Add("校長英文姓名", se.ChancellorEnglishName);
+                baseData.Add("教務主任姓名", se.EduDirectorName);
+                baseData.Add("新生照片", se.GetPhotoImage());
+
 
                 List<string> rptKeys = new List<string>();
                 List<object> rptValues = new List<object>();
@@ -323,14 +370,20 @@ namespace JHSchool.Permrec.StudentExtendControls.Reports
                 
                 Document docTemplate;
 
-                if (_isDefaultTemplate)
+                // [ischoolkingdom] Vicky新增，[11-04][02]在學證明書(英文)
+                if (_isDefaultTemplate && !_isDefaultTemplateChinese) //選擇中英文預設
                     docTemplate = new Document(new MemoryStream(defalutTemplate));
                 else
                 {
-                    if(_buffer.Length<1)
-                        docTemplate = new Document(new MemoryStream(defalutTemplate));
-                    else
-                        docTemplate = new Document(new MemoryStream(_buffer));
+                    if (_isDefaultTemplate && _isDefaultTemplateChinese) //選擇中文預設
+                        docTemplate = new Document(new MemoryStream(defalutTemplate_Chi));
+                    else  //選擇自訂
+                    {
+                        if (_buffer.Length < 1)
+                            docTemplate = new Document(new MemoryStream(defalutTemplate));
+                        else
+                            docTemplate = new Document(new MemoryStream(_buffer));
+                    }                    
                 }
 
                 docTemplate.MailMerge.FieldMergingCallback = new InsertDocumentAtMailMergeHandler();
@@ -354,9 +407,35 @@ namespace JHSchool.Permrec.StudentExtendControls.Reports
 
         private class InsertDocumentAtMailMergeHandler : IFieldMergingCallback
         {
-
+            // [ischoolkingdom] Vicky新增，[11-04][02]在學證明書(英文)，新增照片
             void IFieldMergingCallback.FieldMerging(FieldMergingArgs e)
             {
+                if (e.FieldName == "新生照片")
+                {
+                    byte[] photo = e.FieldValue as byte[];
+                    if (photo == null)
+                        return;
+                    DocumentBuilder photoBuilder = new DocumentBuilder(e.Document);
+                    photoBuilder.MoveToField(e.Field, true);
+                    e.Field.Remove();
+
+                    Shape photoShape = new Shape(e.Document, ShapeType.Image);
+                    photoShape.ImageData.SetImage(photo);
+                    double shapeHeight = 0;
+                    double shapeWidth = 0;
+                    photoShape.WrapType = WrapType.Inline;//設定文繞圖
+
+                    //resize
+
+                    double origSizeRatio = photoShape.ImageData.ImageSize.HeightPoints / photoShape.ImageData.ImageSize.WidthPoints;
+                    Cell curCell = photoBuilder.CurrentParagraph.ParentNode as Cell;
+                    shapeHeight = (curCell.ParentNode as Row).RowFormat.Height;
+                    shapeWidth = curCell.CellFormat.Width;
+                    photoShape.Height = shapeHeight;
+                    photoShape.Width = shapeWidth;
+                    photoBuilder.InsertNode(photoShape);
+                }
+
 
             }
 

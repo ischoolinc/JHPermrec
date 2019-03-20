@@ -16,13 +16,18 @@ namespace JHSchool.Permrec.StudentExtendControls.Reports.DAL
         /// <returns></returns>        /// 
         public static List<StudentEntity> GetStudentEntityList(List<string> StudentIDList)
         {
-            string SchoolName = JHSchool.Data.JHSchoolInfo.ChineseName;
+            string SchoolName = JHSchool.Data.JHSchoolInfo.ChineseName;            
+            // [ischoolkingdom] Vicky新增，[11-04][02]在學證明書(英文)，新增學校英文名、校長英文名，把校長跟教務主任姓名搬移至此。
+            string schoolEngName = JHSchool.Data.JHSchoolInfo.EnglishName;
             string SchoolAddress = JHSchool.Data.JHSchoolInfo.Address;
             string SchoolTelephone = JHSchool.Data.JHSchoolInfo.Telephone;
             string SchoolFax = JHSchool.Data.JHSchoolInfo.Fax;
-            
+            string ChancellorEnglishName = JHSchool.Data.JHSchoolInfo.ChancellorEnglishName;
+            string ChancellorChineseName = JHSchool.Data.JHSchoolInfo.ChancellorChineseName;
+            string EduDirectorName = JHSchool.Data.JHSchoolInfo.EduDirectorName;
+
             // 照片 Idx
-            Dictionary<string, string> FreshmanPhotoDic = K12.Data.Photo.SelectFreshmanPhoto(StudentIDList);
+            Dictionary<string, string> freshmanPhotoDic = K12.Data.Photo.SelectFreshmanPhoto(StudentIDList);
 
             // 取得畢業資訊
             Dictionary<string, JHLeaveInfoRecord> StudLIR = GetStudentLeaveInfoDic(StudentIDList);
@@ -49,6 +54,8 @@ namespace JHSchool.Permrec.StudentExtendControls.Reports.DAL
                 se.StudentEnglishName = studRec.EnglishName;
                 // 學校中文名稱
                 se.SchoolChineseName = SchoolName;
+                // 學校英文名稱
+                se.SchoolEnglishName = schoolEngName;
                 // 學校中文地址
                 se.SchoolAddress = SchoolAddress;
                 if (studRec.Class != null)
@@ -73,12 +80,17 @@ namespace JHSchool.Permrec.StudentExtendControls.Reports.DAL
                 se.SchoolTelephone = SchoolTelephone;
                 // 學校傳真號碼
                 se.SchoolFax = SchoolFax;
+                // [ischoolkingdom] Vicky新增，[11-04][02]在學證明書(英文)，新增校長、教務主任姓名。
+                //校長英文姓名、中文姓名
+                se.ChancellorEnglishName = ChancellorEnglishName;
+                se.ChancellorChineseName = ChancellorChineseName;
+                // 教務主任姓名
+                se.EduDirectorName = EduDirectorName;
 
-                
                 // 當有使用照片
                 if (UseStudPhotp)
-                    if (FreshmanPhotoDic.ContainsKey(studRec.ID))
-                        se.PhotoStr = FreshmanPhotoDic[studRec.ID];
+                    if (freshmanPhotoDic.ContainsKey(studRec.ID))
+                        se.PhotoStr = freshmanPhotoDic[studRec.ID];
                 se.Gender = studRec.Gender;
                 // 取得監護人
                 if (Parent1Dic.ContainsKey(studRec.ID))

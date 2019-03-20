@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
+using System.Globalization;
 
 namespace JHSchool.Permrec.StudentExtendControls.Reports.DAL
 {
@@ -13,16 +14,37 @@ namespace JHSchool.Permrec.StudentExtendControls.Reports.DAL
         public string StudentName { get; set; }
         
         public string StudentID { get; set; }
-
+        
         /// <summary>
         /// 學校中文名稱
         /// </summary>
         public string SchoolChineseName { get; set; }
 
+        // [ischoolkingdom] Vicky新增，[11-04][02]在學證明書(英文)，新增學校英文名、校長、教務主任姓名。
+        /// <summary>
+        /// 學校英文名稱
+        /// </summary>
+        public string SchoolEnglishName { get; set; }
+
         /// <summary>
         /// 學校住址
         /// </summary>
         public string SchoolAddress { get; set; }
+
+        /// <summary>
+        /// 校長英文姓名
+        /// </summary>
+        public string ChancellorEnglishName { get; set; }
+
+        /// <summary>
+        /// 校長中文姓名
+        /// </summary>
+        public string ChancellorChineseName { get; set; }
+
+        /// <summary>
+        /// 教務主任姓名
+        /// </summary>
+        public string EduDirectorName { get; set; }
 
         /// <summary>
         /// 生日
@@ -105,6 +127,18 @@ namespace JHSchool.Permrec.StudentExtendControls.Reports.DAL
             
         }
 
+        // [ischoolkingdom] Vicky新增，[11-04][02]在學證明書(英文)，生日含英文月份顯示
+        /// <summary>
+        /// 取得英文生日
+        /// </summary>
+        public string GetEnglishBirthday()
+        {
+            if (Birthday == DateTime.MinValue)
+                return string.Empty;
+
+            return Birthday.ToString("MMMM dd, yyyy", new CultureInfo("en-US"));
+        }
+
         public string GetBirthdayStr()
         {
             if (Birthday == DateTime.MinValue)
@@ -144,6 +178,7 @@ namespace JHSchool.Permrec.StudentExtendControls.Reports.DAL
         /// <returns></returns>
         public byte[] GetPhotoImage()
         {
+            
             byte[] bytePhoto = PhotoStr.Equals(string.Empty) ? null : Convert.FromBase64String(PhotoStr);
             return bytePhoto;        
         }
