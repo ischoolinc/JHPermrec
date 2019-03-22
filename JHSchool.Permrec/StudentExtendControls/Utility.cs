@@ -33,16 +33,16 @@ namespace JHSchool.Permrec.StudentExtendControls
         }
 
         /// <summary>
-        /// 國籍預設資料
+        /// 國籍預設資料(舊版2019.03前)
         /// </summary>
         /// <returns></returns>
-        public static List<string> GetNationalityList()
-        {
-            List<string> retVal = new List<string>();
-            string item = "中華民國,中華人民共合國,孟加拉,緬甸,印尼,日本,韓國,馬來西亞,菲律賓,新加坡,泰國,越南,汶萊,澳大利亞,紐西蘭,埃及,南非,法國,義大利,瑞典,英國,德國,加拿大,哥斯大黎加,瓜地馬拉,美國,阿根廷,巴西,哥倫比亞,巴拉圭,烏拉圭,其他";
-            retVal.AddRange(item.Split(',').ToArray());
-            return retVal;
-        }
+        //public static List<string> GetNationalityList()
+        //{
+        //    List<string> retVal = new List<string>();
+        //    string item = "中華民國,中華人民共合國,孟加拉,緬甸,印尼,日本,韓國,馬來西亞,菲律賓,新加坡,泰國,越南,汶萊,澳大利亞,紐西蘭,埃及,南非,法國,義大利,瑞典,英國,德國,加拿大,哥斯大黎加,瓜地馬拉,美國,阿根廷,巴西,哥倫比亞,巴拉圭,烏拉圭,其他";
+        //    retVal.AddRange(item.Split(',').ToArray());
+        //    return retVal;
+        //}
 
         /// <summary>
         /// 最高學歷預設資料
