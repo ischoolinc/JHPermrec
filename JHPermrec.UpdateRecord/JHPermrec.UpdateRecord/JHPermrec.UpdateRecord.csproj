@@ -105,6 +105,7 @@
     <Reference Include="IRewriteAPI_JH, Version=1.0.0.9, Culture=neutral, processorArchitecture=MSIL">
       <SpecificVersion>False</SpecificVersion>
       <HintPath>Library\IRewriteAPI_JH.dll</HintPath>
+      <Private>False</Private>
     </Reference>
     <Reference Include="JHSchool, Version=1.0.3.4, Culture=neutral, processorArchitecture=MSIL">
       <SpecificVersion>False</SpecificVersion>
