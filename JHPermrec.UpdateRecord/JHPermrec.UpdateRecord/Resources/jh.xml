@@ -164,13 +164,13 @@
   <School Code="024D03" Name="縣立復興國中補校" County="宜蘭縣" />
   <School Code="024D04" Name="縣立東光國中補校" County="宜蘭縣" />
   <School Code="031301" Name="私立漢英高中附設國中" County="桃園市" />
-  <School Code="031310" Name="私立六和高中附設國中" County="桃園縣" />
+  <School Code="031310" Name="私立六和高中附設國中" County="桃園市" />
   <School Code="031311" Name="桃園市復旦高中附設國中" County="桃園市" />
   <School Code="031312" Name="桃園市治平高中附設國中" County="桃園市" />
   <School Code="031313" Name="桃園市振聲高中附設國中" County="桃園市" />
   <School Code="031319" Name="桃園市清華高中附設國中" County="桃園市" />
   <School Code="031320" Name="桃園市新興高中附設國中" County="桃園市" />
-  <School Code="031326" Name="私立大華高中附設國中" County="桃園縣" />
+  <School Code="031326" Name="私立大華高中附設國中" County="桃園市" />
   <School Code="031502" Name="私立有得國中(小)" County="桃園市" />
   <School Code="031503" Name="私立康萊爾國中(小)" County="桃園市" />
   <School Code="033501" Name="市立文青國中(小)(籌備處)" County="桃園市" />
@@ -206,10 +206,10 @@
   <School Code="034529" Name="市立仁美國中" County="桃園市" />
   <School Code="034530" Name="市立富岡國中" County="桃園市" />
   <School Code="034531" Name="市立瑞原國中" County="桃園市" />
-  <School Code="034532" Name="縣立新坡國中" County="桃園縣" />
+  <School Code="034532" Name="縣立新坡國中" County="桃園市" />
   <School Code="034533" Name="市立觀音國中" County="桃園市" />
   <School Code="034534" Name="市立草漯國中" County="桃園市" />
-  <School Code="034535" Name="縣立新屋國中" County="桃園縣" />
+  <School Code="034535" Name="縣立新屋國中" County="桃園市" />
   <School Code="034536" Name="市立大坡國中" County="桃園市" />
   <School Code="034537" Name="市立永安國中" County="桃園市" />
   <School Code="034538" Name="市立龍潭國中" County="桃園市" />

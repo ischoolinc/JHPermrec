@@ -358,8 +358,8 @@
   <School Code="024E11" Name="縣立冬山國小補校" County="宜蘭縣" />
   <School Code="031320" Name="桃園市新興高中附設國小" County="桃園市" />
   <School Code="031326" Name="私立大華高中附設國小" County="桃園市" />
-  <School Code="031601" Name="私立福祿貝爾國小" County="桃園縣" />
-  <School Code="031602" Name="私立諾瓦國小" County="桃園縣" />
+  <School Code="031601" Name="私立福祿貝爾國小" County="桃園市" />
+  <School Code="031602" Name="私立諾瓦國小" County="桃園市" />
   <School Code="031603" Name="私立有得國(中)小" County="桃園市" />
   <School Code="031604" Name="私立康萊爾國(中)小" County="桃園市" />
   <School Code="033601" Name="市立文青國(中)小(籌備處)" County="桃園市" />
@@ -503,7 +503,7 @@
   <School Code="034736" Name="市立高義國小" County="桃園市" />
   <School Code="034737" Name="市立長興國小" County="桃園市" />
   <School Code="034738" Name="市立三光國小" County="桃園市" />
-  <School Code="034739" Name="縣立高坡國小" County="桃園縣" />
+  <School Code="034739" Name="縣立高坡國小" County="桃園市" />
   <School Code="034740" Name="市立羅浮國小" County="桃園市" />
   <School Code="034741" Name="市立巴崚國小" County="桃園市" />
   <School Code="034742" Name="市立東安國小" County="桃園市" />
