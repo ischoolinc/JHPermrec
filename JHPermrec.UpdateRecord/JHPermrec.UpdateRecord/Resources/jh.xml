@@ -1128,9 +1128,9 @@
   <School Code="724503" Name="縣立中山國中" County="連江縣" />
   <School Code="724504" Name="縣立敬恆國中(小)" County="連江縣" />
   <School Code="724505" Name="縣立東引國中(小)" County="連江縣" />
-  <School Code="801M01" Name="東莞台商子弟學校&#xA;(設有高中、高職、國中&#xA;、國小、幼兒園)" County="廣東省東莞市" />
-  <School Code="801M02" Name="華東臺商子女學校&#xA;(設有高中、國中、國小&#xA;、幼兒園)" County="江蘇省昆山市" />
-  <School Code="801M03" Name="上海台商子女學校&#xA;（設有高中、國中、國小&#xA;、幼兒園）" County="上海市" />
+  <School Code="801M01" Name="東莞台商子弟學校(設有高中、高職、國中、國小、幼兒園)" County="廣東省東莞市" />
+  <School Code="801M02" Name="華東臺商子女學校(設有高中、國中、國小、幼兒園)" County="江蘇省昆山市" />
+  <School Code="801M03" Name="上海台商子女學校（設有高中、國中、國小、幼兒園）" County="上海市" />
   <School Code="901S02" Name="印尼 泗水臺灣學校&#xA;" County="印尼" />
   <School Code="901S07" Name="馬來西亞 檳吉臺灣學校" County="馬來西亞" />
 </SchoolList>
