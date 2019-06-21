@@ -8,11 +8,8 @@
   <School Code="011603" Name="私立及人國小" County="新北市" />
   <School Code="011604" Name="私立竹林國小" County="新北市" />
   <School Code="011606" Name="私立信賢種籽親子實小" County="新北市" />
-  <School Code="011607" Name="私立裕德國小" County="新北市" />
   <School Code="013601" Name="市立北大國小" County="新北市" />
   <School Code="013602" Name="市立新林國小" County="新北市" />
-  <School Code="013603" Name="市立淡海國小(籌備處)" County="新北市" />
-  <School Code="013604" Name="市立東湖國小(籌備處)" County="新北市" />
   <School Code="014601" Name="市立板橋國小" County="新北市" />
   <School Code="014602" Name="市立國光國小" County="新北市" />
   <School Code="014603" Name="市立新埔國小" County="新北市" />
@@ -344,7 +341,6 @@
   <School Code="024677" Name="縣立金岳國小" County="宜蘭縣" />
   <School Code="024678" Name="縣立金洋國小" County="宜蘭縣" />
   <School Code="024698" Name="縣立人文國(中)小" County="宜蘭縣" />
-  <School Code="024699" Name="縣立慈心華德福實驗國(中)小" County="宜蘭縣" />
   <School Code="024701" Name="縣立清溝國小" County="宜蘭縣" />
   <School Code="024E01" Name="縣立中山國小補校" County="宜蘭縣" />
   <School Code="024E02" Name="縣立羅東國小補校" County="宜蘭縣" />
@@ -362,7 +358,6 @@
   <School Code="031602" Name="私立諾瓦國小" County="桃園市" />
   <School Code="031603" Name="私立有得國(中)小" County="桃園市" />
   <School Code="031604" Name="私立康萊爾國(中)小" County="桃園市" />
-  <School Code="033601" Name="市立文青國(中)小(籌備處)" County="桃園市" />
   <School Code="033E01" Name="市立光明國小補校" County="桃園市" />
   <School Code="034529" Name="市立仁美國中附設國小" County="桃園市" />
   <School Code="034601" Name="市立桃園國小" County="桃園市" />
@@ -503,7 +498,6 @@
   <School Code="034736" Name="市立高義國小" County="桃園市" />
   <School Code="034737" Name="市立長興國小" County="桃園市" />
   <School Code="034738" Name="市立三光國小" County="桃園市" />
-  <School Code="034739" Name="縣立高坡國小" County="桃園市" />
   <School Code="034740" Name="市立羅浮國小" County="桃園市" />
   <School Code="034741" Name="市立巴崚國小" County="桃園市" />
   <School Code="034742" Name="市立東安國小" County="桃園市" />
@@ -632,7 +626,6 @@
   <School Code="044658" Name="縣立寶山國小" County="新竹縣" />
   <School Code="044659" Name="縣立新城國小" County="新竹縣" />
   <School Code="044660" Name="縣立雙溪國小" County="新竹縣" />
-  <School Code="044661" Name="縣立三峰國小" County="新竹縣" />
   <School Code="044662" Name="縣立北埔國小" County="新竹縣" />
   <School Code="044663" Name="縣立大坪國小" County="新竹縣" />
   <School Code="044664" Name="縣立峨眉國小" County="新竹縣" />
@@ -673,7 +666,6 @@
   <School Code="054610" Name="縣立五穀國小" County="苗栗縣" />
   <School Code="054611" Name="縣立福基國小" County="苗栗縣" />
   <School Code="054612" Name="縣立鶴岡國小" County="苗栗縣" />
-  <School Code="054613" Name="縣立福德國小" County="苗栗縣" />
   <School Code="054614" Name="縣立開礦國小" County="苗栗縣" />
   <School Code="054615" Name="縣立南河國小" County="苗栗縣" />
   <School Code="054616" Name="縣立銅鑼國小" County="苗栗縣" />
@@ -703,12 +695,10 @@
   <School Code="054641" Name="縣立南和國小" County="苗栗縣" />
   <School Code="054642" Name="縣立坪頂國小" County="苗栗縣" />
   <School Code="054643" Name="縣立圳頭國小" County="苗栗縣" />
-  <School Code="054644" Name="縣立楓樹國小" County="苗栗縣" />
   <School Code="054645" Name="縣立福興武術國(中)小" County="苗栗縣" />
   <School Code="054646" Name="縣立西湖國小" County="苗栗縣" />
   <School Code="054647" Name="縣立五湖國小" County="苗栗縣" />
   <School Code="054648" Name="縣立僑文國小" County="苗栗縣" />
-  <School Code="054649" Name="縣立瑞湖國小" County="苗栗縣" />
   <School Code="054650" Name="縣立頭份國小" County="苗栗縣" />
   <School Code="054651" Name="縣立六合國小" County="苗栗縣" />
   <School Code="054652" Name="縣立永貞國小" County="苗栗縣" />
@@ -724,8 +714,6 @@
   <School Code="054662" Name="縣立頂埔國小" County="苗栗縣" />
   <School Code="054663" Name="縣立海口國小" County="苗栗縣" />
   <School Code="054664" Name="縣立三灣國小" County="苗栗縣" />
-  <School Code="054665" Name="縣立大河國小" County="苗栗縣" />
-  <School Code="054667" Name="縣立大坪國小" County="苗栗縣" />
   <School Code="054668" Name="縣立南庄國小" County="苗栗縣" />
   <School Code="054669" Name="縣立田美國小" County="苗栗縣" />
   <School Code="054670" Name="縣立南埔國小" County="苗栗縣" />
@@ -736,11 +724,9 @@
   <School Code="054675" Name="縣立錦水國小" County="苗栗縣" />
   <School Code="054676" Name="縣立龍昇國小" County="苗栗縣" />
   <School Code="054677" Name="縣立僑樂國小" County="苗栗縣" />
-  <School Code="054678" Name="縣立豐湖國小" County="苗栗縣" />
   <School Code="054679" Name="縣立後龍國小" County="苗栗縣" />
   <School Code="054680" Name="縣立新港國(中)小" County="苗栗縣" />
   <School Code="054681" Name="縣立大山國小" County="苗栗縣" />
-  <School Code="054682" Name="縣立富田國小" County="苗栗縣" />
   <School Code="054683" Name="縣立龍坑國小" County="苗栗縣" />
   <School Code="054684" Name="縣立溪洲國小" County="苗栗縣" />
   <School Code="054685" Name="縣立外埔國小" County="苗栗縣" />
@@ -794,7 +780,6 @@
   <School Code="061322" Name="華德福大地實驗學校附設國小" County="臺中市" />
   <School Code="061601" Name="私立華盛頓國小" County="臺中市" />
   <School Code="063601" Name="市立善水國(中)小" County="臺中市" />
-  <School Code="063602" Name="市立新高國小(籌備處)" County="臺中市" />
   <School Code="063E01" Name="市立太平區中華國小補校" County="臺中市" />
   <School Code="064601" Name="市立豐原國小" County="臺中市" />
   <School Code="064602" Name="市立瑞穗國小" County="臺中市" />
@@ -1158,7 +1143,6 @@
   <School Code="074775" Name="縣立大成國小" County="彰化縣" />
   <School Code="074776" Name="縣立新民國小" County="彰化縣" />
   <School Code="074777" Name="縣立湖北國小" County="彰化縣" />
-  <School Code="074778" Name="縣立鹿江國際國(中)小(籌備處)" County="彰化縣" />
   <School Code="074E06" Name="縣立僑信國小補校" County="彰化縣" />
   <School Code="074E09" Name="縣立秀水國小補校" County="彰化縣" />
   <School Code="074E16" Name="縣立和美國小補校" County="彰化縣" />
@@ -1196,7 +1180,6 @@
   <School Code="084625" Name="縣立忠孝國小" County="南投縣" />
   <School Code="084626" Name="縣立中峰國小" County="南投縣" />
   <School Code="084627" Name="縣立大成國小" County="南投縣" />
-  <School Code="084628" Name="縣立鐘靈國小" County="南投縣" />
   <School Code="084629" Name="縣立草屯國小" County="南投縣" />
   <School Code="084630" Name="縣立敦和國小" County="南投縣" />
   <School Code="084631" Name="縣立新庄國小" County="南投縣" />
@@ -1226,7 +1209,6 @@
   <School Code="084656" Name="縣立隘寮國小" County="南投縣" />
   <School Code="084657" Name="縣立永昌國小" County="南投縣" />
   <School Code="084658" Name="縣立和平國小" County="南投縣" />
-  <School Code="084659" Name="縣立富山國小" County="南投縣" />
   <School Code="084660" Name="縣立名間國小" County="南投縣" />
   <School Code="084661" Name="縣立新街國小" County="南投縣" />
   <School Code="084662" Name="縣立名崗國小" County="南投縣" />
@@ -1242,7 +1224,6 @@
   <School Code="084672" Name="縣立內湖國小" County="南投縣" />
   <School Code="084673" Name="縣立初鄉國小" County="南投縣" />
   <School Code="084674" Name="縣立瑞田國小" County="南投縣" />
-  <School Code="084675" Name="縣立和雅國小" County="南投縣" />
   <School Code="084676" Name="縣立廣興國小" County="南投縣" />
   <School Code="084677" Name="縣立中寮國小" County="南投縣" />
   <School Code="084678" Name="縣立爽文國小" County="南投縣" />
@@ -1252,8 +1233,6 @@
   <School Code="084682" Name="縣立至誠國小" County="南投縣" />
   <School Code="084683" Name="縣立永和國小" County="南投縣" />
   <School Code="084684" Name="縣立廣福國小" County="南投縣" />
-  <School Code="084685" Name="縣立和興國小" County="南投縣" />
-  <School Code="084686" Name="縣立廣英國小" County="南投縣" />
   <School Code="084687" Name="縣立魚池國小" County="南投縣" />
   <School Code="084688" Name="縣立頭社國小" County="南投縣" />
   <School Code="084689" Name="縣立東光國小" County="南投縣" />
@@ -1276,9 +1255,7 @@
   <School Code="084707" Name="縣立郡坑國小" County="南投縣" />
   <School Code="084708" Name="縣立民和國小" County="南投縣" />
   <School Code="084709" Name="縣立新興國小" County="南投縣" />
-  <School Code="084710" Name="縣立玉峰國小" County="南投縣" />
   <School Code="084711" Name="縣立永興國小" County="南投縣" />
-  <School Code="084712" Name="縣立車埕國小" County="南投縣" />
   <School Code="084714" Name="縣立成城國小" County="南投縣" />
   <School Code="084716" Name="縣立信義國小" County="南投縣" />
   <School Code="084717" Name="縣立羅娜國小" County="南投縣" />
@@ -1287,10 +1264,7 @@
   <School Code="084720" Name="縣立人和國小" County="南投縣" />
   <School Code="084721" Name="縣立地利國小" County="南投縣" />
   <School Code="084722" Name="縣立東埔國小" County="南投縣" />
-  <School Code="084723" Name="縣立神木國小" County="南投縣" />
   <School Code="084724" Name="縣立潭南國小" County="南投縣" />
-  <School Code="084725" Name="縣立忠信國小" County="南投縣" />
-  <School Code="084726" Name="縣立自強國小" County="南投縣" />
   <School Code="084727" Name="縣立桐林國小" County="南投縣" />
   <School Code="084728" Name="縣立隆華國小" County="南投縣" />
   <School Code="084729" Name="縣立新鄉國小" County="南投縣" />
@@ -1464,14 +1438,12 @@
   <School Code="094741" Name="縣立成龍國小" County="雲林縣" />
   <School Code="094742" Name="縣立臺興國小" County="雲林縣" />
   <School Code="094743" Name="縣立頂湖國小" County="雲林縣" />
-  <School Code="094744" Name="縣立過港國小" County="雲林縣" />
   <School Code="094746" Name="縣立蔦松國小" County="雲林縣" />
   <School Code="094747" Name="縣立尖山國小" County="雲林縣" />
   <School Code="094748" Name="縣立宏仁國小" County="雲林縣" />
   <School Code="094749" Name="縣立文正國小" County="雲林縣" />
   <School Code="094750" Name="縣立誠正國小" County="雲林縣" />
   <School Code="094751" Name="縣立中興國小" County="雲林縣" />
-  <School Code="094752" Name="縣立和安國小" County="雲林縣" />
   <School Code="094753" Name="縣立水燦林國小" County="雲林縣" />
   <School Code="094754" Name="縣立大興國小" County="雲林縣" />
   <School Code="094755" Name="縣立雲林國小" County="雲林縣" />
@@ -1590,7 +1562,6 @@
   <School Code="104720" Name="縣立瑞里國小" County="嘉義縣" />
   <School Code="104721" Name="縣立大南國小" County="嘉義縣" />
   <School Code="104722" Name="縣立瑞峰國小" County="嘉義縣" />
-  <School Code="104723" Name="縣立安靖國小" County="嘉義縣" />
   <School Code="104724" Name="縣立太和國小" County="嘉義縣" />
   <School Code="104725" Name="縣立仁和國小" County="嘉義縣" />
   <School Code="104726" Name="縣立大埔國(中)小" County="嘉義縣" />
@@ -2037,7 +2008,6 @@
   <School Code="134682" Name="縣立僑德國小" County="屏東縣" />
   <School Code="134683" Name="縣立建興國小" County="屏東縣" />
   <School Code="134684" Name="縣立東海國小" County="屏東縣" />
-  <School Code="134685" Name="縣立太源國小" County="屏東縣" />
   <School Code="134686" Name="縣立東港國小" County="屏東縣" />
   <School Code="134687" Name="縣立東隆國小" County="屏東縣" />
   <School Code="134688" Name="縣立海濱國小" County="屏東縣" />
@@ -2135,7 +2105,6 @@
   <School Code="134E38" Name="縣立鶴聲國小補校" County="屏東縣" />
   <School Code="140601" Name="國立臺東大學附小" County="臺東縣" />
   <School Code="141301" Name="臺東縣均一高中附設國小" County="臺東縣" />
-  <School Code="141601" Name="私立均一國(中)小" County="臺東縣" />
   <School Code="144601" Name="縣立仁愛國小" County="臺東縣" />
   <School Code="144602" Name="縣立復興國小" County="臺東縣" />
   <School Code="144603" Name="縣立光明國小" County="臺東縣" />
@@ -2193,11 +2162,8 @@
   <School Code="144663" Name="縣立成功國小" County="臺東縣" />
   <School Code="144664" Name="縣立信義國小" County="臺東縣" />
   <School Code="144665" Name="縣立三仙國小" County="臺東縣" />
-  <School Code="144666" Name="縣立和平國小" County="臺東縣" />
   <School Code="144667" Name="縣立忠孝國小" County="臺東縣" />
-  <School Code="144668" Name="縣立博愛國小" County="臺東縣" />
   <School Code="144669" Name="縣立長濱國小" County="臺東縣" />
-  <School Code="144670" Name="縣立忠勇國小" County="臺東縣" />
   <School Code="144671" Name="縣立寧埔國小" County="臺東縣" />
   <School Code="144672" Name="縣立竹湖國小" County="臺東縣" />
   <School Code="144673" Name="縣立三間國小" County="臺東縣" />
@@ -2264,7 +2230,6 @@
   <School Code="154632" Name="縣立月眉國小" County="花蓮縣" />
   <School Code="154633" Name="縣立水璉國小" County="花蓮縣" />
   <School Code="154634" Name="縣立鳳林國小" County="花蓮縣" />
-  <School Code="154635" Name="縣立鳳信國小" County="花蓮縣" />
   <School Code="154636" Name="縣立大榮國小" County="花蓮縣" />
   <School Code="154637" Name="縣立鳳仁國小" County="花蓮縣" />
   <School Code="154638" Name="縣立北林國小" County="花蓮縣" />
@@ -2272,7 +2237,6 @@
   <School Code="154642" Name="縣立林榮國小" County="花蓮縣" />
   <School Code="154643" Name="縣立光復國小" County="花蓮縣" />
   <School Code="154644" Name="縣立太巴塱國小" County="花蓮縣" />
-  <School Code="154647" Name="縣立大富國小" County="花蓮縣" />
   <School Code="154648" Name="縣立大進國小" County="花蓮縣" />
   <School Code="154649" Name="縣立瑞穗國小" County="花蓮縣" />
   <School Code="154650" Name="縣立瑞北國小" County="花蓮縣" />
@@ -2297,7 +2261,6 @@
   <School Code="154670" Name="縣立大禹國小" County="花蓮縣" />
   <School Code="154671" Name="縣立長良國小" County="花蓮縣" />
   <School Code="154672" Name="縣立富里國小" County="花蓮縣" />
-  <School Code="154673" Name="縣立富南國小" County="花蓮縣" />
   <School Code="154674" Name="縣立東里國小" County="花蓮縣" />
   <School Code="154675" Name="縣立明里國小" County="花蓮縣" />
   <School Code="154676" Name="縣立吳江國小" County="花蓮縣" />
@@ -2353,23 +2316,19 @@
   <School Code="164614" Name="縣立成功國小" County="澎湖縣" />
   <School Code="164615" Name="縣立西溪國小" County="澎湖縣" />
   <School Code="164616" Name="縣立湖西國小" County="澎湖縣" />
-  <School Code="164617" Name="縣立果葉國小" County="澎湖縣" />
   <School Code="164618" Name="縣立龍門國小" County="澎湖縣" />
   <School Code="164619" Name="縣立隘門國小" County="澎湖縣" />
   <School Code="164620" Name="縣立沙港國小" County="澎湖縣" />
   <School Code="164621" Name="縣立中屯國小" County="澎湖縣" />
   <School Code="164623" Name="縣立講美國小" County="澎湖縣" />
-  <School Code="164624" Name="縣立港子國小" County="澎湖縣" />
   <School Code="164625" Name="縣立赤崁國小" County="澎湖縣" />
   <School Code="164627" Name="縣立鳥嶼國小" County="澎湖縣" />
   <School Code="164628" Name="縣立吉貝國小" County="澎湖縣" />
   <School Code="164629" Name="縣立後寮國小" County="澎湖縣" />
   <School Code="164630" Name="縣立合橫國小" County="澎湖縣" />
   <School Code="164631" Name="縣立竹灣國小" County="澎湖縣" />
-  <School Code="164632" Name="縣立小門國小" County="澎湖縣" />
   <School Code="164633" Name="縣立大池國小" County="澎湖縣" />
   <School Code="164634" Name="縣立池東國小" County="澎湖縣" />
-  <School Code="164635" Name="縣立赤馬國小" County="澎湖縣" />
   <School Code="164636" Name="縣立內垵國小" County="澎湖縣" />
   <School Code="164637" Name="縣立外垵國小" County="澎湖縣" />
   <School Code="164638" Name="縣立望安國小" County="澎湖縣" />
@@ -2405,7 +2364,6 @@
   <School Code="173621" Name="市立中山國小" County="基隆市" />
   <School Code="173622" Name="市立港西國小" County="基隆市" />
   <School Code="173623" Name="市立中華國小" County="基隆市" />
-  <School Code="173624" Name="市立太平國小" County="基隆市" />
   <School Code="173625" Name="市立德和國小" County="基隆市" />
   <School Code="173626" Name="市立七堵國小" County="基隆市" />
   <School Code="173627" Name="市立華興國小" County="基隆市" />
@@ -2433,7 +2391,6 @@
   <School Code="180301" Name="國立科學工業園區實驗高中附設國小" County="新竹市" />
   <School Code="180601" Name="國立清華大學附小" County="新竹市" />
   <School Code="181601" Name="私立曙光國小" County="新竹市" />
-  <School Code="181602" Name="私立矽谷國(中)小" County="新竹市" />
   <School Code="181603" Name="私立新竹市康橋國(中)小" County="新竹市" />
   <School Code="183601" Name="市立新竹國小" County="新竹市" />
   <School Code="183602" Name="市立北門國小" County="新竹市" />
@@ -2474,9 +2431,7 @@
   <School Code="191301" Name="私立東大附中附設國小" County="臺中市" />
   <School Code="191302" Name="私立葳格高中附設國小" County="臺中市" />
   <School Code="191315" Name="私立磊川華德福實驗教育學校附設國小" County="臺中市" />
-  <School Code="191601" Name="私立東大附小" County="臺中市" />
   <School Code="191602" Name="私立育仁國小" County="臺中市" />
-  <School Code="191603" Name="私立葳格(中)小學" County="臺中市" />
   <School Code="191604" Name="私立慎齋小學" County="臺中市" />
   <School Code="191605" Name="私立明道普霖斯頓小學" County="臺中市" />
   <School Code="191606" Name="私立麗喆國(中)小" County="臺中市" />
@@ -2544,7 +2499,6 @@
   <School Code="193662" Name="市立惠來國小" County="臺中市" />
   <School Code="193663" Name="市立大墩國小" County="臺中市" />
   <School Code="193664" Name="市立東海國小" County="臺中市" />
-  <School Code="193665" Name="市立廍子國小(籌備處)" County="臺中市" />
   <School Code="193E01" Name="市立健行國小補校" County="臺中市" />
   <School Code="193E02" Name="市立忠信國小補校" County="臺中市" />
   <School Code="193E03" Name="市立信義國小補校" County="臺中市" />
@@ -2625,7 +2579,6 @@
   <School Code="213644" Name="市立億載國小" County="臺南市" />
   <School Code="213645" Name="市立賢北國小" County="臺南市" />
   <School Code="213646" Name="市立裕文國小" County="臺南市" />
-  <School Code="213647" Name="市立九份子國(中)小(籌備處)" County="臺南市" />
   <School Code="213E01" Name="市立公園國小補校" County="臺南市" />
   <School Code="213E02" Name="市立協進國小補校" County="臺南市" />
   <School Code="213E04" Name="市立海東國小補校" County="臺南市" />
@@ -2697,7 +2650,6 @@
   <School Code="363607" Name="市立大龍國小" County="臺北市" />
   <School Code="363608" Name="市立延平國小" County="臺北市" />
   <School Code="363609" Name="市立大橋國小" County="臺北市" />
-  <School Code="363610" Name="市立明倫國小" County="臺北市" />
   <School Code="363E01" Name="市立永樂國小補校" County="臺北市" />
   <School Code="363E02" Name="市立大龍國小補校" County="臺北市" />
   <School Code="371601" Name="私立光仁小學" County="臺北市" />
@@ -2785,7 +2737,6 @@
   <School Code="413E02" Name="市立社子國小補校" County="臺北市" />
   <School Code="421303" Name="臺北市私立奎山實驗高級中學附設國小" County="臺北市" />
   <School Code="421601" Name="私立薇閣小學" County="臺北市" />
-  <School Code="421602" Name="私立奎山中學附小" County="臺北市" />
   <School Code="423601" Name="市立北投國小" County="臺北市" />
   <School Code="423602" Name="市立逸仙國小" County="臺北市" />
   <School Code="423603" Name="市立石牌國小" County="臺北市" />
@@ -2800,7 +2751,6 @@
   <School Code="423612" Name="市立義方國小" County="臺北市" />
   <School Code="423613" Name="市立立農國小" County="臺北市" />
   <School Code="423614" Name="市立明德國小" County="臺北市" />
-  <School Code="423615" Name="市立洲美國小" County="臺北市" />
   <School Code="423616" Name="市立文化國小" County="臺北市" />
   <School Code="423E01" Name="市立北投國小補校" County="臺北市" />
   <School Code="513601" Name="市立鹽埕國小　" County="高雄市" />
@@ -2928,10 +2878,16 @@
   <School Code="724602" Name="縣立中正國(中)小" County="連江縣" />
   <School Code="724603" Name="縣立仁愛國小" County="連江縣" />
   <School Code="724604" Name="縣立塘岐國小" County="連江縣" />
-  <School Code="724605" Name="縣立板里國小" County="連江縣" />
   <School Code="724606" Name="縣立敬恆國(中)小" County="連江縣" />
   <School Code="724607" Name="縣立東莒國小" County="連江縣" />
   <School Code="724608" Name="縣立東引國(中)小" County="連江縣" />
+  <School Code="013603" Name="市立淡海國小(籌備處)" County="新北市" />
+  <School Code="013604" Name="市立東湖國小(籌備處)" County="新北市" />
+  <School Code="033601" Name="市立文青國(中)小(籌備處)" County="桃園市" />
+  <School Code="063602" Name="市立新高國小(籌備處)" County="臺中市" />
+  <School Code="074778" Name="縣立鹿江國際國(中)小(籌備處)" County="彰化縣" />
+  <School Code="193665" Name="市立廍子國小(籌備處)" County="臺中市" />
+  <School Code="213647" Name="市立九份子國(中)小(籌備處)" County="臺南市" />
   <School Code="801M01" Name="東莞台商子弟學校(設有高中、高職、國中、國小、幼兒園)" County="廣東省東莞市" />
   <School Code="801M02" Name="華東臺商子女學校(設有高中、國中、國小、幼兒園)" County="江蘇省昆山市" />
   <School Code="801M03" Name="上海台商子女學校（設有高中、國中、國小、幼兒園）" County="上海市" />
