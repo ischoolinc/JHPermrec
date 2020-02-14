@@ -10,7 +10,7 @@ using JHPermrec.UpdateRecord.DAL;
 namespace JHPermrec.UpdateRecord.GovernmentalDocument.NameList
 {
     // 休學名冊
-    class SuspensionStudentUpdateRecordList:ReportBuilder 
+    class SuspensionStudentUpdateRecordList : ReportBuilder
     {
         protected override void Build(XmlElement source, string location)
         {
@@ -57,42 +57,42 @@ namespace JHPermrec.UpdateRecord.GovernmentalDocument.NameList
             rowj = 4;
             wb.Worksheets[0].Cells[rowi, 3].PutValue(StudBatchUpdateRecEntity.GetContentSchoolName() + "  " + StudBatchUpdateRecEntity.GetContentSchoolYear() + "學年度第" + StudBatchUpdateRecEntity.GetContentSemester() + "學期");
 
-                //將xml資料填入至excel
-                foreach (StudBatchUpdateRecContentEntity sburce in data.Values)
-                {
-                    recCount++;
+            //將xml資料填入至excel
+            foreach (StudBatchUpdateRecContentEntity sburce in data.Values)
+            {
+                recCount++;
 
-                    #region 填入學生資料
+                #region 填入學生資料
 
-                    wb.Worksheets[0].Cells[rowj, 0].PutValue(sburce.GetStudentNumber());
-                    wb.Worksheets[0].Cells[rowj, 1].PutValue(sburce.GetClassName());
-                    wb.Worksheets[0].Cells[rowj, 2].PutValue(sburce.GetGender ());
-                    wb.Worksheets[0].Cells[rowj, 3].PutValue(sburce.GetName ());
-                    wb.Worksheets[0].Cells[rowj, 4].PutValue(sburce.GetIDNumber ());
-                    if (sburce.GetGender() == "男")
-                        peoBoyCount++;
-                    if (sburce.GetGender() == "女")
-                        peoGirlCount++;
+                wb.Worksheets[0].Cells[rowj, 0].PutValue(sburce.GetStudentNumber());
+                wb.Worksheets[0].Cells[rowj, 1].PutValue(sburce.GetClassName());
+                wb.Worksheets[0].Cells[rowj, 2].PutValue(sburce.GetGender());
+                wb.Worksheets[0].Cells[rowj, 3].PutValue(sburce.GetName());
+                wb.Worksheets[0].Cells[rowj, 4].PutValue(sburce.GetIDNumber());
+                if (sburce.GetGender() == "男")
+                    peoBoyCount++;
+                if (sburce.GetGender() == "女")
+                    peoGirlCount++;
 
-                    peoTotalCount++;
+                peoTotalCount++;
 
-                    if (!string.IsNullOrEmpty(sburce.GetBirthday ()))
-                        wb.Worksheets[0].Cells[rowj, 5].PutValue(UpdateRecordUtil.ChangeDate1911(sburce.GetBirthday()));
+                if (!string.IsNullOrEmpty(sburce.GetBirthday()))
+                    wb.Worksheets[0].Cells[rowj, 5].PutValue(UpdateRecordUtil.ChangeDate1911(sburce.GetBirthday()));
 
-                    if (!string.IsNullOrEmpty(sburce.GetUpdateDate()))
-                        wb.Worksheets[0].Cells[rowj, 6].PutValue(UpdateRecordUtil.ChangeDate1911(sburce.GetUpdateDate ()));
-                    
-                    wb.Worksheets[0].Cells[rowj, 7].PutValue(sburce.GetAddress ());
-                    wb.Worksheets[0].Cells[rowj, 8].PutValue(sburce.GetLastADNumber());
-                    wb.Worksheets[0].Cells[rowj, 9].PutValue(sburce.GetUpdateDescription());
+                if (!string.IsNullOrEmpty(sburce.GetUpdateDate()))
+                    wb.Worksheets[0].Cells[rowj, 6].PutValue(UpdateRecordUtil.ChangeDate1911(sburce.GetUpdateDate()));
 
-                    #endregion
-                    
-                    rowj++;
+                wb.Worksheets[0].Cells[rowj, 7].PutValue(sburce.GetAddress());
+                wb.Worksheets[0].Cells[rowj, 8].PutValue(sburce.GetLastADNumber());
+                wb.Worksheets[0].Cells[rowj, 9].PutValue(sburce.GetUpdateDescription());
 
-                    //回報進度
-                    ReportProgress((int)(((double)recCount * 100.0) / ((double)totalRec)));
-                }
+                #endregion
+
+                rowj++;
+
+                //回報進度
+                ReportProgress((int)(((double)recCount * 100.0) / ((double)totalRec)));
+            }
 
             // 畫表
             Style st2 = wb.Styles[wb.Styles.Add()];
@@ -119,12 +119,12 @@ namespace JHPermrec.UpdateRecord.GovernmentalDocument.NameList
             wb.Worksheets[0].Cells[rowj, 4].PutValue("女：" + peoGirlCount.ToString());
             wb.Worksheets[0].Cells[rowj, 8].PutValue("總計：" + peoTotalCount.ToString());
             wb.Worksheets[0].Cells.CreateRange(rowj + 1, 0, 1, 10).Merge();
-//            wb.Worksheets[0].Cells[rowj + 1, 0].PutValue("校長                                                          教務主任                                                          註冊組長                                                          核對員");
+            //            wb.Worksheets[0].Cells[rowj + 1, 0].PutValue("校長                                                          教務主任                                                          註冊組長                                                          核對員");
             wb.Worksheets[0].Cells[rowj + 1, 0].PutValue("核對員                                                          註冊組長                                                          教務主任                                                          校長");
 
 
             //儲存
-            wb.Save(location, FileFormatType.Excel2003);        
+            wb.Save(location, FileFormatType.Excel2003);
         }
 
         public override string Description

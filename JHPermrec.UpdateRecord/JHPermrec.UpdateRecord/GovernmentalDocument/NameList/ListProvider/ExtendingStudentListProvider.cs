@@ -145,6 +145,7 @@ namespace JHPermrec.UpdateRecord.GovernmentalDocument.NameList
                 dataElement.SetAttribute("性別代號", (helper.GetText("Gender") == "男" ? "1" : (helper.GetText("Gender") == "女" ? "2" : "")));
                 dataElement.SetAttribute("出生年月日", CDATE(helper.GetText("Birthdate")));
                 dataElement.SetAttribute("入學資格代號", helper.GetText("UpdateCode"));
+                dataElement.SetAttribute("異動原因或事項", helper.GetText("UpdateDescription"));
 
                 // new 
                 dataElement.SetAttribute("班別", helper.GetText("ContextInfo/ContextInfo/OriginClassName"));

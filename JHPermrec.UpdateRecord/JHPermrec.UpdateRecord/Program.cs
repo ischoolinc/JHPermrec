@@ -82,14 +82,16 @@ namespace JHPermrec.UpdateRecord
                 DAL.DALTransfer2.CheckCanInputUpdateType.Add(JHPermrec.UpdateRecord.DAL.DALTransfer2.UpdateType.轉入);
                 DAL.DALTransfer2.CheckCanInputUpdateType.Add(JHPermrec.UpdateRecord.DAL.DALTransfer2.UpdateType.轉出);                
                 DAL.DALTransfer2.CheckCanInputUpdateType.Add(JHPermrec.UpdateRecord.DAL.DALTransfer2.UpdateType.復學);
-                DAL.DALTransfer2.CheckCanInputUpdateType.Add(JHPermrec.UpdateRecord.DAL.DALTransfer2.UpdateType.中輟);
-                
+                DAL.DALTransfer2.CheckCanInputUpdateType.Add(JHPermrec.UpdateRecord.DAL.DALTransfer2.UpdateType.中輟);                
                 DAL.DALTransfer2.CheckCanInputUpdateType.Add(JHPermrec.UpdateRecord.DAL.DALTransfer2.UpdateType.新生);
-                DAL.DALTransfer2.CheckCanInputUpdateType.Add(JHPermrec.UpdateRecord.DAL.DALTransfer2.UpdateType.畢業);
+                DAL.DALTransfer2.CheckCanInputUpdateType.Add(JHPermrec.UpdateRecord.DAL.DALTransfer2.UpdateType.畢業);                
+                DAL.DALTransfer2.CheckCanInputUpdateType.Add(JHPermrec.UpdateRecord.DAL.DALTransfer2.UpdateType.更正學籍);
 
                 // 異動匯入匯出
                 CanUseUpRecIE01 = CanUseUpRecIE02 = CanUseUpRecIE03 = CanUseUpRecIE04 = CanUseUpRecIE06 = CanUseUpRecIE07 =  true;
 
+                // 更正學籍異動精靈
+                CanUseWizardUpCode09 = true;
             }
 
             //// 學生異動資料

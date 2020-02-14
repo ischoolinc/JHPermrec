@@ -178,4 +178,16 @@
   <data name="JDeadStudentListTemplate" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>gdresources\jdeadstudentlisttemplate.xls;System.Byte[], mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
+  <data name="JResumeListTemplate_TaiChung" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>GDResources\TaiChung\JResumeListTemplate_TaiChung.xls;System.Byte[], mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="JTransfer01ListTemplate_TaiChung" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>GDResources\TaiChung\JTransfer01ListTemplate_TaiChung.xls;System.Byte[], mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="JExtendListTemplate_TaiChung" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>GDResources\TaiChung\JExtendListTemplate_TaiChung.xls;System.Byte[], mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="JUpdateStudentPermrecListTemplate_TaiChung" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>GDResources\TaiChung\JUpdateStudentPermrecListTemplate_TaiChung.xls;System.Byte[], mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
 </root>

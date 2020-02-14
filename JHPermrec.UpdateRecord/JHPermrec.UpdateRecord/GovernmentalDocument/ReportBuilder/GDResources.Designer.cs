@@ -196,5 +196,41 @@ namespace JHPermrec.UpdateRecord.GovernmentalDocument {
                 return ((byte[])(obj));
             }
         }
+
+        internal static byte[] JResumeListTemplate_TaiChung
+        {
+            get
+            {
+                object obj = ResourceManager.GetObject("JResumeListTemplate_TaiChung", resourceCulture);
+                return ((byte[])(obj));
+            }
+        }
+
+        internal static byte[] JTransfer01ListTemplate_TaiChung
+        {
+            get
+            {
+                object obj = ResourceManager.GetObject("JTransfer01ListTemplate_TaiChung", resourceCulture);
+                return ((byte[])(obj));
+            }
+        }
+
+        internal static byte[] JExtendListTemplate_TaiChung
+        {
+            get
+            {
+                object obj = ResourceManager.GetObject("JExtendListTemplate_TaiChung", resourceCulture);
+                return ((byte[])(obj));
+            }
+        }
+
+        internal static byte[] JUpdateStudentPermrecListTemplate_TaiChung
+        {
+            get
+            {
+                object obj = ResourceManager.GetObject("JUpdateStudentPermrecListTemplate_TaiChung", resourceCulture);
+                return ((byte[])(obj));
+            }
+        }
     }
 }

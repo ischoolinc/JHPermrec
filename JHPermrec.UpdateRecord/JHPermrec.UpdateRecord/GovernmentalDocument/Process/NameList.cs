@@ -100,9 +100,17 @@ namespace JHPermrec.UpdateRecord.GovernmentalDocument.Process
                 if (ReportBuilderManager.Items["轉入學生名冊"].Count == 0)
                     ReportBuilderManager.Items["轉入學生名冊"].Add(new TransferringStudentUpdateRecordList());
 
-
                 if (ReportBuilderManager.Items["轉出學生名冊"].Count == 0)
-                    ReportBuilderManager.Items["轉出學生名冊"].Add(new Transferring01StudentUpdateRecordList());            
+                    ReportBuilderManager.Items["轉出學生名冊"].Add(new Transferring01StudentUpdateRecordList());
+
+                if (ReportBuilderManager.Items["復學學生名冊"].Count == 0)
+                    ReportBuilderManager.Items["復學學生名冊"].Add(new ResumeStudentUpdateRecordList());
+
+                if (ReportBuilderManager.Items["中輟學生名冊"].Count == 0)
+                    ReportBuilderManager.Items["中輟學生名冊"].Add(new ExtendingStudentList());
+
+                if (ReportBuilderManager.Items["更正學籍學生名冊"].Count == 0)
+                    ReportBuilderManager.Items["更正學籍學生名冊"].Add(new UpdateStudentPermrecList());
             }
         }
     }

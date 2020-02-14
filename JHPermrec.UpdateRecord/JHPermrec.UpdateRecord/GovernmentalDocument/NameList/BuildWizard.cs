@@ -51,7 +51,7 @@ namespace JHPermrec.UpdateRecord.GovernmentalDocument.NameList
                 AddProvider(new GraduatingStudentListProvider());
                 // 轉入
                 AddProvider(new TransferringStudentUpdateRecordListProvider());
-                //// 中輟
+                // 中輟
                 AddProvider(new ExtendingStudentListProvider());
                 // 轉出
                 AddProvider(new Transferring01StudentUpdateRecordListProvider());
@@ -78,8 +78,14 @@ namespace JHPermrec.UpdateRecord.GovernmentalDocument.NameList
                 AddProvider(new GraduatingStudentListProvider());
                 // 轉入
                 AddProvider(new TransferringStudentUpdateRecordListProvider());
+                // 復學
+                AddProvider(new ResumeStudentUpdateRecordListProvider());
                 // 轉出
-                AddProvider(new Transferring01StudentUpdateRecordListProvider());            
+                AddProvider(new Transferring01StudentUpdateRecordListProvider());
+                // 中輟
+                AddProvider(new ExtendingStudentListProvider());
+                // 更正學籍
+                AddProvider(new UpdateStudentPermrecListProvider());
             }
 
 
