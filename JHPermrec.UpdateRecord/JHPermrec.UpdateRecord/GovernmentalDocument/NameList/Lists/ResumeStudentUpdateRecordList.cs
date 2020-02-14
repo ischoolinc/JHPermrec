@@ -199,9 +199,6 @@ namespace JHPermrec.UpdateRecord.GovernmentalDocument.NameList
                     wb.Worksheets[0].Cells[rowj, 8].PutValue(UpdateRecordUtil.getMonthStr(sburce.GetEnrollmentSchoolYear(), false));
                 }
 
-                //輟學年月、年級及學期
-
-
                 //復學年月
                 if (DateTime.TryParse(sburce.GetUpdateDate(), out dt))
                 {

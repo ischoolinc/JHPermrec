@@ -336,6 +336,7 @@ namespace JHPermrec.UpdateRecord.GovernmentalDocument.NameList
                 wb.Worksheets[0].Cells[rowj, 1].PutValue(sburce.GetName());
                 wb.Worksheets[0].Cells[rowj, 2].PutValue(sburce.GetGender());
                 wb.Worksheets[0].Cells[rowj, 3].PutValue(sburce.GetIDNumber());
+
                 //入學資格
                 wb.Worksheets[0].Cells[rowj, 9].PutValue(sburce.GetImportExportSchool());
                 wb.Worksheets[0].Cells[rowj, 10].PutValue(sburce.GetPermanentAddress());

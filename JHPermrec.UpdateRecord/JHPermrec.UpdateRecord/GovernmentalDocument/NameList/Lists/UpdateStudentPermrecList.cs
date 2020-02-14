@@ -402,6 +402,12 @@ namespace JHPermrec.UpdateRecord.GovernmentalDocument.NameList
                 LastUpdateInfo += sburce.GetLastADNumber();
                 wb.Worksheets[0].Cells[rowj, 6].PutValue(LastUpdateInfo);
 
+                //申請更正事項
+                if (!string.IsNullOrEmpty(sburce.GetNewName()))
+                    wb.Worksheets[0].Cells[rowj, 9].PutValue(sburce.GetNewName());
+
+                if (!string.IsNullOrEmpty(sburce.GetNewGender()))
+                    wb.Worksheets[0].Cells[rowj, 10].PutValue(sburce.GetNewGender());
 
                 if (!string.IsNullOrEmpty(sburce.GetNewBirthday()))
                 {
@@ -412,13 +418,6 @@ namespace JHPermrec.UpdateRecord.GovernmentalDocument.NameList
                         wb.Worksheets[0].Cells[rowj, 13].PutValue(Birthday.Day.ToString());
                     }
                 }
-
-
-                if (!string.IsNullOrEmpty(sburce.GetNewName()))
-                    wb.Worksheets[0].Cells[rowj, 9].PutValue(sburce.GetNewName());
-
-                if (!string.IsNullOrEmpty(sburce.GetNewGender()))
-                    wb.Worksheets[0].Cells[rowj, 10].PutValue(sburce.GetNewGender());
 
                 if (!string.IsNullOrEmpty(sburce.GetNewIDNumber()))
                     wb.Worksheets[0].Cells[rowj, 14].PutValue(sburce.GetNewIDNumber());
