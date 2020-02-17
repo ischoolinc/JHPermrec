@@ -435,12 +435,6 @@ namespace JHPermrec.UpdateRecord.GovernmentalDocument.NameList
 
             #endregion
 
-            //合計人數
-            wb.Worksheets[0].Cells[rowj, 0].Style.HorizontalAlignment = TextAlignmentType.Center;
-            wb.Worksheets[0].Cells[rowj, 0].PutValue("合計");
-            wb.Worksheets[0].Cells[rowj, 1].Style.HorizontalAlignment = TextAlignmentType.Center;
-            wb.Worksheets[0].Cells[rowj, 1].PutValue(data.Count + " 名");
-
             // 畫表
             Style st2 = wb.Styles[wb.Styles.Add()];
             StyleFlag sf2 = new StyleFlag();
@@ -457,6 +451,14 @@ namespace JHPermrec.UpdateRecord.GovernmentalDocument.NameList
                 tmpMaxCol = wb.Worksheets[wbIdx1].Cells.MaxDataColumn + 1;
                 wb.Worksheets[wbIdx1].Cells.CreateRange(1, 0, tmpMaxRow, tmpMaxCol).ApplyStyle(st2, sf2);
             }
+
+            //合計人數
+            wb.Worksheets[0].Cells[rowj, 0].Style.HorizontalAlignment = TextAlignmentType.Center;
+            wb.Worksheets[0].Cells[rowj, 0].PutValue("合計");
+            wb.Worksheets[0].Cells[rowj, 1].Style.HorizontalAlignment = TextAlignmentType.Center;
+            wb.Worksheets[0].Cells[rowj, 1].PutValue(data.Count + " 名");
+            wb.Worksheets[0].Cells[rowj, 6].Style.HorizontalAlignment = TextAlignmentType.Center;
+            wb.Worksheets[0].Cells[rowj, 6].PutValue("以下空白");
 
             //儲存
             wb.Save(location, FileFormatType.Excel2003);

@@ -363,6 +363,14 @@ namespace JHPermrec.UpdateRecord.GovernmentalDocument.NameList
                 wb.Worksheets[wbIdx1].Cells.CreateRange(4, 0, tmpMaxRow, tmpMaxCol).ApplyStyle(st2, sf2);
             }
 
+            //合計人數
+            wb.Worksheets[0].Cells[rowj, 0].Style.HorizontalAlignment = TextAlignmentType.Center;
+            wb.Worksheets[0].Cells[rowj, 0].PutValue("合計");
+            wb.Worksheets[0].Cells[rowj, 1].Style.HorizontalAlignment = TextAlignmentType.Center;
+            wb.Worksheets[0].Cells[rowj, 1].PutValue("" + data.Count + " 名");
+            wb.Worksheets[0].Cells[rowj, 3].Style.HorizontalAlignment = TextAlignmentType.Center;
+            wb.Worksheets[0].Cells[rowj, 3].PutValue("以下空白");
+
             //儲存 Excel
             wb.Save(location, FileFormatType.Excel2003);
 

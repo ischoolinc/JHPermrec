@@ -318,7 +318,7 @@ namespace JHPermrec.UpdateRecord.GovernmentalDocument.NameList
             //wb.Worksheets[0].Cells[0, 0].PutValue(StudBatchUpdateRecEntity.GetContentSchoolName () + "  國民中學入學學生名冊");
             //wb.Worksheets[0].Cells[1, 10].PutValue(tmpRptY + "年" + tmpM + "月填製");
 
-            Range templateRow = template.Worksheets[0].Cells.CreateRange(4, 11, false);
+            Range templateRow = template.Worksheets[0].Cells.CreateRange(4, 7, false);
 
             //string strGradeYear="";
             rowj = 4;
@@ -326,7 +326,7 @@ namespace JHPermrec.UpdateRecord.GovernmentalDocument.NameList
             foreach (StudBatchUpdateRecContentEntity sburce in data.Values)
             {
                 //填入前先複製格式
-                wb.Worksheets[0].Cells.CreateRange(rowj, 11, false).Copy(templateRow);
+                wb.Worksheets[0].Cells.CreateRange(rowj, 7, false).Copy(templateRow);
                 //if (rowj == 4)
                 //strGradeYear = sburce.GetClassYear ();
 
@@ -334,29 +334,22 @@ namespace JHPermrec.UpdateRecord.GovernmentalDocument.NameList
                 //將學生資料填入適當的位置內
                 wb.Worksheets[0].Cells[rowj, 0].PutValue(sburce.GetStudentNumber());
                 wb.Worksheets[0].Cells[rowj, 1].PutValue(sburce.GetName());
-                wb.Worksheets[0].Cells[rowj, 2].PutValue(sburce.GetGender());
-                wb.Worksheets[0].Cells[rowj, 3].PutValue(sburce.GetIDNumber());
+                wb.Worksheets[0].Cells[rowj, 2].PutValue(sburce.GetGradeYear());
+                wb.Worksheets[0].Cells[rowj, 3].PutValue(StudBatchUpdateRecEntity.GetContentSemester());
 
-                //入學資格
-                wb.Worksheets[0].Cells[rowj, 9].PutValue(sburce.GetImportExportSchool());
-                wb.Worksheets[0].Cells[rowj, 10].PutValue(sburce.GetPermanentAddress());
-
-                //填入生日年月日
+                //異動年月
                 DateTime dt;
-                if (DateTime.TryParse(sburce.GetBirthday(), out dt))
+                if (DateTime.TryParse(sburce.GetUpdateDate(), out dt))
                 {
                     wb.Worksheets[0].Cells[rowj, 4].PutValue("" + (dt.Year - 1911));
                     wb.Worksheets[0].Cells[rowj, 5].PutValue("" + dt.Month);
-                    wb.Worksheets[0].Cells[rowj, 6].PutValue("" + dt.Day);
                 }
 
-                //填入入學年月
-                if (!string.IsNullOrEmpty(sburce.GetEnrollmentSchoolYear()))
-                {
-                    wb.Worksheets[0].Cells[rowj, 7].PutValue(UpdateRecordUtil.getChineseYearStr(sburce.GetEnrollmentSchoolYear()));
-                    wb.Worksheets[0].Cells[rowj, 8].PutValue(UpdateRecordUtil.getMonthStr(sburce.GetEnrollmentSchoolYear(), false));
-                }
+                //異動情形
+                wb.Worksheets[0].Cells[rowj, 6].PutValue(sburce.GetImportExportSchool());
 
+                //原因
+                wb.Worksheets[0].Cells[rowj, 7].PutValue(sburce.GetUpdateDescription());
 
                 rowj++;
 
@@ -367,7 +360,7 @@ namespace JHPermrec.UpdateRecord.GovernmentalDocument.NameList
 
             // Title
             //wb.Worksheets[0].Cells[1, 0].PutValue(StudBatchUpdateRecEntity.GetContentSchoolYear() + "學年度第" + StudBatchUpdateRecEntity.GetContentSemester () + "學期 "+strGradeYear +"年級");
-            wb.Worksheets[0].Cells[1, 0].PutValue(StudBatchUpdateRecEntity.GetContentSchoolYear() + "學年度第" + StudBatchUpdateRecEntity.GetContentSemester() + "學期");
+            wb.Worksheets[0].Cells[1, 0].PutValue(StudBatchUpdateRecEntity.GetContentSchoolYear() + "學年度第" + StudBatchUpdateRecEntity.GetContentSemester() + "學期 異動：轉入");
 
             //合計人數
             wb.Worksheets[0].Cells[rowj, 0].Style.HorizontalAlignment = TextAlignmentType.Center;

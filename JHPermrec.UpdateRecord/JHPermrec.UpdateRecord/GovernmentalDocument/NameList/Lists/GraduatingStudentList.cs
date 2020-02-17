@@ -387,7 +387,8 @@ namespace JHPermrec.UpdateRecord.GovernmentalDocument.NameList
                     //回報進度
                     ReportProgress((int)(((double)recCount * 100.0) / ((double)totalRec)));
                 }
-                
+
+
             // 畫表
             Style st2 = wb.Styles[wb.Styles.Add()];
             StyleFlag sf2 = new StyleFlag();
@@ -404,6 +405,15 @@ namespace JHPermrec.UpdateRecord.GovernmentalDocument.NameList
                 tmpMaxCol = wb.Worksheets[wbIdx1].Cells.MaxDataColumn + 1;
                 wb.Worksheets[wbIdx1].Cells.CreateRange(4, 0, tmpMaxRow, tmpMaxCol).ApplyStyle(st2, sf2);
             }
+
+            // 合計人數
+            wb.Worksheets[0].Cells[rowj, 0].Style.HorizontalAlignment = TextAlignmentType.Center;
+            wb.Worksheets[0].Cells[rowj, 0].PutValue("合計");
+            wb.Worksheets[0].Cells[rowj, 1].Style.HorizontalAlignment = TextAlignmentType.Center;
+            wb.Worksheets[0].Cells[rowj, 1].PutValue("" + data.Values.Count + "名");
+            wb.Worksheets[0].Cells[rowj, 3].Style.HorizontalAlignment = TextAlignmentType.Center;
+            wb.Worksheets[0].Cells[rowj, 3].PutValue("以下空白");
+
             //儲存
             wb.Save(location, FileFormatType.Excel2003);
             

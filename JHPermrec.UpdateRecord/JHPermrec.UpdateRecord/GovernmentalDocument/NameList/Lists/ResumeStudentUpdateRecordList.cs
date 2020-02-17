@@ -166,46 +166,36 @@ namespace JHPermrec.UpdateRecord.GovernmentalDocument.NameList
             wb.Worksheets[0].Cells[0, 0].PutValue(StudBatchUpdateRecEntity.GetContentSchoolName() + "  復學學生名冊");
             wb.Worksheets[0].Cells[1, 7].PutValue(tmpRptY + "年" + tmpRptM + "月填報");
 
-            Range templateRow = template.Worksheets[0].Cells.CreateRange(4, 16, false);
+            Range templateRow = template.Worksheets[0].Cells.CreateRange(4, 7, false);
 
             rowj = 4;
             //將xml資料填入至excel
             foreach (StudBatchUpdateRecContentEntity sburce in data.Values)
             {
                 //填入前先複製格式
-                wb.Worksheets[0].Cells.CreateRange(rowj, 16, false).Copy(templateRow);
+                wb.Worksheets[0].Cells.CreateRange(rowj, 7, false).Copy(templateRow);
 
                 recCount++;
                 //將學生資料填入適當的位置內
                 wb.Worksheets[0].Cells[rowj, 0].PutValue(sburce.GetStudentNumber());
                 wb.Worksheets[0].Cells[rowj, 1].PutValue(sburce.GetName());
-                wb.Worksheets[0].Cells[rowj, 2].PutValue(sburce.GetGender());
-                wb.Worksheets[0].Cells[rowj, 3].PutValue(sburce.GetBirthPlace());
-                wb.Worksheets[0].Cells[rowj, 15].PutValue(sburce.GetComment());
+                wb.Worksheets[0].Cells[rowj, 2].PutValue(sburce.GetGradeYear());
+                wb.Worksheets[0].Cells[rowj, 3].PutValue(StudBatchUpdateRecEntity.GetContentSemester());
 
-                //出生年月日
+                //異動年月
                 DateTime dt;
-                if (DateTime.TryParse(sburce.GetBirthday(), out dt))
+                if (DateTime.TryParse(sburce.GetUpdateDate(), out dt))
                 {
                     wb.Worksheets[0].Cells[rowj, 4].PutValue("" + (dt.Year - 1911));
                     wb.Worksheets[0].Cells[rowj, 5].PutValue("" + dt.Month);
-                    wb.Worksheets[0].Cells[rowj, 6].PutValue("" + dt.Day);
                 }
 
-                //入學年月
-                if (!string.IsNullOrEmpty(sburce.GetEnrollmentSchoolYear()))
-                {
-                    wb.Worksheets[0].Cells[rowj, 7].PutValue(UpdateRecordUtil.getChineseYearStr(sburce.GetEnrollmentSchoolYear()));
-                    wb.Worksheets[0].Cells[rowj, 8].PutValue(UpdateRecordUtil.getMonthStr(sburce.GetEnrollmentSchoolYear(), false));
-                }
+                //2020/2/17 俊緯更新 與佳樺、靜妤討論後決定異動情形帶入該該校務系統的學校名稱
+                ////異動情形
+                wb.Worksheets[0].Cells[rowj, 6].PutValue(StudBatchUpdateRecEntity.GetContentSchoolName());
 
-                //復學年月
-                if (DateTime.TryParse(sburce.GetUpdateDate(), out dt))
-                {
-                    wb.Worksheets[0].Cells[rowj, 13].PutValue("" + (dt.Year - 1911));
-                    wb.Worksheets[0].Cells[rowj, 14].PutValue("" + dt.Month);
-                }
-
+                //備註
+                wb.Worksheets[0].Cells[rowj, 7].PutValue(sburce.GetComment());
 
                 rowj++;
 
@@ -216,20 +206,17 @@ namespace JHPermrec.UpdateRecord.GovernmentalDocument.NameList
 
             // Title
             //wb.Worksheets[0].Cells[1, 0].PutValue(StudBatchUpdateRecEntity.GetContentSchoolYear() + "學年度第" + StudBatchUpdateRecEntity.GetContentSemester () + "學期 "+strGradeYear +"年級");
-            ////學期的數字轉國字
+
             string numSemester = StudBatchUpdateRecEntity.GetContentSemester();
-            string chineseSemester = "";
-            if (numSemester == "1")
-                chineseSemester = "一";
-            else if (numSemester == "2")
-                chineseSemester = "二";
-            wb.Worksheets[0].Cells[1, 0].PutValue(StudBatchUpdateRecEntity.GetContentSchoolYear() + "學年度第" + chineseSemester + "學期");
+            wb.Worksheets[0].Cells[1, 0].PutValue(StudBatchUpdateRecEntity.GetContentSchoolYear() + "學年度第" + numSemester + "學期 異動：復學");
 
             // 合計人數
             wb.Worksheets[0].Cells[rowj, 0].Style.HorizontalAlignment = TextAlignmentType.Center;
             wb.Worksheets[0].Cells[rowj, 0].PutValue("合計");
             wb.Worksheets[0].Cells[rowj, 1].Style.HorizontalAlignment = TextAlignmentType.Center;
             wb.Worksheets[0].Cells[rowj, 1].PutValue("" + data.Values.Count + "名");
+            wb.Worksheets[0].Cells[rowj, 3].Style.HorizontalAlignment = TextAlignmentType.Center;
+            wb.Worksheets[0].Cells[rowj, 3].PutValue("以下空白");
 
             //儲存 Excel
             wb.Save(location, FileFormatType.Excel2003);
