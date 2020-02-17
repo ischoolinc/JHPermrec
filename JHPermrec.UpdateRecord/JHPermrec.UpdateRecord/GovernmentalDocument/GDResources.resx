@@ -187,4 +187,7 @@
   <data name="JResumeListTemplate_TaiChung" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>GDResources\TaiChung\JResumeListTemplate_TaiChung.xls;System.Byte[], mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
+  <data name="JContinueStudentUpdateRecordListTemplate" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>GDResources\JContinueStudentUpdateRecordListTemplate.xls;System.Byte[], mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
 </root>
