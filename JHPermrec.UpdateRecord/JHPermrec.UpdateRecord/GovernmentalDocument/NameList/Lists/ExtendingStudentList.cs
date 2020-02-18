@@ -211,7 +211,7 @@ namespace JHPermrec.UpdateRecord.GovernmentalDocument.NameList
                 }
 
                 wb.Worksheets[0].Cells[rowj, 6].PutValue(sburce.GetUpdateDescription());
-                wb.Worksheets[0].Cells[rowj, 8].PutValue(sburce.GetComment());
+                wb.Worksheets[0].Cells[rowj, 7].PutValue(sburce.GetComment());
 
                 rowj++;
 
