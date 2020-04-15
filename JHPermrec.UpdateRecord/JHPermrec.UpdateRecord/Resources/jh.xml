@@ -1131,6 +1131,9 @@
   <School Code="801M01" Name="東莞台商子弟學校(設有高中、高職、國中、國小、幼兒園)" County="廣東省東莞市" />
   <School Code="801M02" Name="華東臺商子女學校(設有高中、國中、國小、幼兒園)" County="江蘇省昆山市" />
   <School Code="801M03" Name="上海台商子女學校（設有高中、國中、國小、幼兒園）" County="上海市" />
-  <School Code="901S02" Name="印尼 泗水臺灣學校&#xA;" County="印尼" />
-  <School Code="901S07" Name="馬來西亞 檳吉臺灣學校" County="馬來西亞" />
+  <School Code="901S01" Name="雅加達臺灣學校" County="印尼" />
+  <School Code="901S02" Name="泗水臺灣學校" County="印尼" />
+  <School Code="901S03" Name="吉隆坡臺灣學校" County="馬來西亞" />
+  <School Code="901S06" Name="胡志明市臺灣學校" County="越南" />
+  <School Code="901S07" Name="檳吉臺灣學校" County="馬來西亞" />
 </SchoolList>
