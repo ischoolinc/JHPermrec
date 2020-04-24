@@ -582,13 +582,14 @@ namespace JHSchool.Permrec
             //};
 
             RibbonBarItem rbStudBatchAddressLatitude = Student.Instance.RibbonBarItems["其它"];
-            rbStudBatchAddressLatitude["查詢經緯度"].Image = Properties.Resources.world_zoom_64;
-            rbStudBatchAddressLatitude["查詢經緯度"].Enable = User.Acl["JHSchool.Student.RibbonBatchAddressLatitude"].Executable;
-            rbStudBatchAddressLatitude["查詢經緯度"].Click += delegate
-            {
-                JHSchool.Permrec.StudentExtendControls.Ribbon.BatchAddressLatitudeForm balf = new JHSchool.Permrec.StudentExtendControls.Ribbon.BatchAddressLatitudeForm();
-                balf.ShowDialog();
-            };
+            // 不使用
+            //rbStudBatchAddressLatitude["查詢經緯度"].Image = Properties.Resources.world_zoom_64;
+            //rbStudBatchAddressLatitude["查詢經緯度"].Enable = User.Acl["JHSchool.Student.RibbonBatchAddressLatitude"].Executable;
+            //rbStudBatchAddressLatitude["查詢經緯度"].Click += delegate
+            //{
+            //    JHSchool.Permrec.StudentExtendControls.Ribbon.BatchAddressLatitudeForm balf = new JHSchool.Permrec.StudentExtendControls.Ribbon.BatchAddressLatitudeForm();
+            //    balf.ShowDialog();
+            //};
 
             // 匯出匯入畢業資訊
             RibbonBarButton rbGraduateInfoExport = Student.Instance.RibbonBarItems["資料統計"]["匯出"];
