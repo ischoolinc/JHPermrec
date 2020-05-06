@@ -50,7 +50,7 @@
             this.btnExit.BackColor = System.Drawing.Color.Transparent;
             this.btnExit.ColorTable = DevComponents.DotNetBar.eButtonColor.OrangeWithBackground;
             this.btnExit.Font = new System.Drawing.Font("微軟正黑體", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
-            this.btnExit.Location = new System.Drawing.Point(272, 143);
+            this.btnExit.Location = new System.Drawing.Point(272, 146);
             this.btnExit.Name = "btnExit";
             this.btnExit.Size = new System.Drawing.Size(61, 23);
             this.btnExit.TabIndex = 6;
@@ -91,7 +91,7 @@
             this.lnkUpload.BackColor = System.Drawing.Color.Transparent;
             this.lnkUpload.Location = new System.Drawing.Point(141, 72);
             this.lnkUpload.Name = "lnkUpload";
-            this.lnkUpload.Size = new System.Drawing.Size(39, 19);
+            this.lnkUpload.Size = new System.Drawing.Size(32, 16);
             this.lnkUpload.TabIndex = 2;
             this.lnkUpload.TabStop = true;
             this.lnkUpload.Text = "上傳";
@@ -103,7 +103,7 @@
             this.lnkUserDefine.BackColor = System.Drawing.Color.Transparent;
             this.lnkUserDefine.Location = new System.Drawing.Point(37, 72);
             this.lnkUserDefine.Name = "lnkUserDefine";
-            this.lnkUserDefine.Size = new System.Drawing.Size(99, 19);
+            this.lnkUserDefine.Size = new System.Drawing.Size(80, 16);
             this.lnkUserDefine.TabIndex = 1;
             this.lnkUserDefine.TabStop = true;
             this.lnkUserDefine.Text = "檢視自訂範本";
@@ -116,7 +116,7 @@
             this.lnkDefault_ChiEng.Font = new System.Drawing.Font("微軟正黑體", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
             this.lnkDefault_ChiEng.Location = new System.Drawing.Point(37, 42);
             this.lnkDefault_ChiEng.Name = "lnkDefault_ChiEng";
-            this.lnkDefault_ChiEng.Size = new System.Drawing.Size(154, 19);
+            this.lnkDefault_ChiEng.Size = new System.Drawing.Size(124, 16);
             this.lnkDefault_ChiEng.TabIndex = 0;
             this.lnkDefault_ChiEng.TabStop = true;
             this.lnkDefault_ChiEng.Text = "檢視預設範本(中英文)";
@@ -128,7 +128,7 @@
             this.cmdPrint.BackColor = System.Drawing.Color.Transparent;
             this.cmdPrint.ColorTable = DevComponents.DotNetBar.eButtonColor.OrangeWithBackground;
             this.cmdPrint.Font = new System.Drawing.Font("微軟正黑體", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
-            this.cmdPrint.Location = new System.Drawing.Point(199, 143);
+            this.cmdPrint.Location = new System.Drawing.Point(199, 146);
             this.cmdPrint.Name = "cmdPrint";
             this.cmdPrint.Size = new System.Drawing.Size(61, 23);
             this.cmdPrint.TabIndex = 4;
@@ -156,9 +156,9 @@
             // 
             this.txtCertDoc.Border.Class = "TextBoxBorder";
             this.txtCertDoc.Border.CornerType = DevComponents.DotNetBar.eCornerType.Square;
-            this.txtCertDoc.Location = new System.Drawing.Point(81, 102);
+            this.txtCertDoc.Location = new System.Drawing.Point(81, 107);
             this.txtCertDoc.Name = "txtCertDoc";
-            this.txtCertDoc.Size = new System.Drawing.Size(102, 32);
+            this.txtCertDoc.Size = new System.Drawing.Size(102, 23);
             this.txtCertDoc.TabIndex = 8;
             // 
             // labelX2
@@ -196,9 +196,9 @@
             // 
             this.txtCertNo.Border.Class = "TextBoxBorder";
             this.txtCertNo.Border.CornerType = DevComponents.DotNetBar.eCornerType.Square;
-            this.txtCertNo.Location = new System.Drawing.Point(228, 102);
+            this.txtCertNo.Location = new System.Drawing.Point(228, 107);
             this.txtCertNo.Name = "txtCertNo";
-            this.txtCertNo.Size = new System.Drawing.Size(102, 32);
+            this.txtCertNo.Size = new System.Drawing.Size(102, 23);
             this.txtCertNo.TabIndex = 11;
             // 
             // cbxDefault_Chi
@@ -222,7 +222,7 @@
             this.lnkDefault_Chi.Font = new System.Drawing.Font("微軟正黑體", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
             this.lnkDefault_Chi.Location = new System.Drawing.Point(37, 13);
             this.lnkDefault_Chi.Name = "lnkDefault_Chi";
-            this.lnkDefault_Chi.Size = new System.Drawing.Size(139, 19);
+            this.lnkDefault_Chi.Size = new System.Drawing.Size(112, 16);
             this.lnkDefault_Chi.TabIndex = 12;
             this.lnkDefault_Chi.TabStop = true;
             this.lnkDefault_Chi.Text = "檢視預設範本(中文)";
@@ -231,7 +231,7 @@
             // StudentAtSchoolCertificateForm
             // 
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.None;
-            this.ClientSize = new System.Drawing.Size(362, 173);
+            this.ClientSize = new System.Drawing.Size(364, 181);
             this.Controls.Add(this.cbxDefault_Chi);
             this.Controls.Add(this.lnkDefault_Chi);
             this.Controls.Add(this.cbxUserDefine);
@@ -252,6 +252,7 @@
             this.MinimumSize = new System.Drawing.Size(380, 220);
             this.Name = "StudentAtSchoolCertificateForm";
             this.Text = "在學證明書(無成績) 範本設定與列印";
+            this.Load += new System.EventHandler(this.StudentAtSchoolCertificateForm_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
 

@@ -82,5 +82,10 @@ namespace JHSchool.Permrec.StudentExtendControls.Reports
             cmdPrint.Enabled = true;
 
         }
+
+        private void StudentAtSchoolCertificateForm_Load(object sender, EventArgs e)
+        {
+
+        }
     }
 }

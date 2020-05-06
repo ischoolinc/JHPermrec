@@ -357,7 +357,7 @@ namespace JHSchool.Permrec.StudentExtendControls.Reports
                 baseData.Add("校長英文姓名", se.ChancellorEnglishName);
                 baseData.Add("教務主任姓名", se.EduDirectorName);
                 baseData.Add("新生照片", se.GetPhotoImage());
-
+                baseData.Add("學號", se.StudentNumber);
 
                 List<string> rptKeys = new List<string>();
                 List<object> rptValues = new List<object>();
