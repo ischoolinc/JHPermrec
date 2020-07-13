@@ -70,6 +70,10 @@
       <HintPath>Library\Aspose.Words_201402.dll</HintPath>
       <Private>False</Private>
     </Reference>
+    <Reference Include="Campus.Windows, Version=1.0.4.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>Library\Campus.Windows.dll</HintPath>
+    </Reference>
     <Reference Include="DevComponents.DotNetBar2, Version=7.9.0.5, Culture=neutral, PublicKeyToken=7eb7c3a35b91de04, processorArchitecture=MSIL">
       <SpecificVersion>False</SpecificVersion>
       <HintPath>..\LibraryProject\DevComponents.DotNetBar2.dll</HintPath>
@@ -331,6 +335,7 @@
     <Compile Include="Legacy\SMSForm.designer.cs">
       <DependentUpon>SMSForm.cs</DependentUpon>
     </Compile>
+    <Compile Include="Model\ParentExtentionInfo.cs" />
     <Compile Include="Parent.cs" />
     <Compile Include="ParentRecord.cs" />
     <Compile Include="Phone.cs" />
