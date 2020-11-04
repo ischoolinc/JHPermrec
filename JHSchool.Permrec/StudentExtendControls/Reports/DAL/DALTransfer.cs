@@ -16,7 +16,7 @@ namespace JHSchool.Permrec.StudentExtendControls.Reports.DAL
         /// <returns></returns>        /// 
         public static List<StudentEntity> GetStudentEntityList(List<string> StudentIDList)
         {
-            string SchoolName = JHSchool.Data.JHSchoolInfo.ChineseName;            
+            string SchoolName = JHSchool.Data.JHSchoolInfo.ChineseName;
             // [ischoolkingdom] Vicky新增，[11-04][02]在學證明書(英文)，新增學校英文名、校長英文名，把校長跟教務主任姓名搬移至此。
             string schoolEngName = JHSchool.Data.JHSchoolInfo.EnglishName;
             string SchoolAddress = JHSchool.Data.JHSchoolInfo.Address;
@@ -33,13 +33,13 @@ namespace JHSchool.Permrec.StudentExtendControls.Reports.DAL
             Dictionary<string, JHLeaveInfoRecord> StudLIR = GetStudentLeaveInfoDic(StudentIDList);
 
             //監護人 Index
-            Dictionary <string, string> Parent1Dic = new Dictionary<string, string>();
+            Dictionary<string, string> Parent1Dic = new Dictionary<string, string>();
             List<JHSchool.Data.JHParentRecord> PRecords = JHSchool.Data.JHParent.SelectByStudentIDs(StudentIDList);
             foreach (JHSchool.Data.JHParentRecord pr in PRecords)
             {
-                Parent1Dic.Add(pr.RefStudentID, pr.Custodian.Name);            
-            }            
-            
+                Parent1Dic.Add(pr.RefStudentID, pr.Custodian.Name);
+            }
+
 
             List<StudentEntity> StudentList = new List<StudentEntity>();
             List<JHSchool.Data.JHStudentRecord> StudRecs = JHSchool.Data.JHStudent.SelectByIDs(StudentIDList);
@@ -70,7 +70,7 @@ namespace JHSchool.Permrec.StudentExtendControls.Reports.DAL
                 if (studRec.Birthday.HasValue)
                     se.Birthday = studRec.Birthday.Value;
                 // 座號
-                if(studRec.SeatNo.HasValue)
+                if (studRec.SeatNo.HasValue)
                     se.SeatNo = studRec.SeatNo.Value.ToString();
                 // 學號
                 se.StudentNumber = studRec.StudentNumber;
@@ -104,9 +104,9 @@ namespace JHSchool.Permrec.StudentExtendControls.Reports.DAL
                     // 畢修業
                     se.Reason = StudLIR[se.StudentID].Reason;
                     // 畢業證書字號
-                    se.DiplomaNumber = StudLIR[se.StudentID].DiplomaNumber;                
+                    se.DiplomaNumber = StudLIR[se.StudentID].DiplomaNumber;
                 }
-                
+
                 StudentList.Add(se);
                 // 排序
                 StudentList.Sort(new Comparison<StudentEntity>(Sort2));
@@ -115,7 +115,7 @@ namespace JHSchool.Permrec.StudentExtendControls.Reports.DAL
         }
 
         // 學號排序
-        public static int Sort1(StudentEntity x,StudentEntity y)
+        public static int Sort1(StudentEntity x, StudentEntity y)
         {
             return x.StudentNumber.CompareTo(y.StudentNumber);
         }
@@ -191,13 +191,13 @@ namespace JHSchool.Permrec.StudentExtendControls.Reports.DAL
                         UpdateRecDic03.Add(rec.StudentID, rec);
                     }
                     else
-                    { 
-                        DateTime dta,dtb;
+                    {
+                        DateTime dta, dtb;
 
                         DateTime.TryParse(UpdateRecDic03[rec.StudentID].UpdateDate, out dta);
                         DateTime.TryParse(rec.UpdateDate, out dtb);
                         if (dtb > dta)
-                            UpdateRecDic03[rec.StudentID] = rec;                    
+                            UpdateRecDic03[rec.StudentID] = rec;
                     }
                 }
 
@@ -218,14 +218,14 @@ namespace JHSchool.Permrec.StudentExtendControls.Reports.DAL
                 StudTransExportEntity stee = new StudTransExportEntity();
                 stee.SchoolName = SchoolName;
                 stee.Name = studRec.Name;
-                if(studRec.Birthday.HasValue )
+                if (studRec.Birthday.HasValue)
                     stee.Birthday = studRec.Birthday.Value;
                 if (studRec.Class != null)
-                    if(studRec.Class.GradeYear.HasValue )
-                        stee.ClassGradeYear = ""+studRec.Class.GradeYear.Value;
+                    if (studRec.Class.GradeYear.HasValue)
+                        stee.ClassGradeYear = "" + studRec.Class.GradeYear.Value;
 
                 // 新生異動
-                if(UpdateRecDic.ContainsKey(studRec.ID ))
+                if (UpdateRecDic.ContainsKey(studRec.ID))
                 {
                     // 沒有核准日期
                     if (string.IsNullOrEmpty(UpdateRecDic[studRec.ID].ADDate))
@@ -238,8 +238,8 @@ namespace JHSchool.Permrec.StudentExtendControls.Reports.DAL
                     {
                         stee.UR01Date = "";
                         stee.UR01CertDate = UpdateRecDic[studRec.ID].ADDate;
-                        stee.UR01CertDocNo = UpdateRecDic[studRec.ID].ADNumber;                    
-                    }                
+                        stee.UR01CertDocNo = UpdateRecDic[studRec.ID].ADNumber;
+                    }
                 }
 
 
@@ -287,7 +287,7 @@ namespace JHSchool.Permrec.StudentExtendControls.Reports.DAL
         {
             List<StudGraduateCertficateEntity> retValue = new List<StudGraduateCertficateEntity>();
             // 取得畢業照片
-            Dictionary<string,string> GraduatePhotoDic = K12.Data.Photo.SelectGraduatePhoto(StudentIDList);
+            Dictionary<string, string> GraduatePhotoDic = K12.Data.Photo.SelectGraduatePhoto(StudentIDList);
             Dictionary<string, string> GraduateSchoolYearDic = GetGradeSchoolYear(StudentIDList);
             Dictionary<string, string> CertDocNoDic = GetCertDocNoDic(StudentIDList);
 
@@ -301,16 +301,16 @@ namespace JHSchool.Permrec.StudentExtendControls.Reports.DAL
             foreach (JHSchool.Data.JHStudentRecord studRec in JHSchool.Data.JHStudent.SelectByIDs(StudentIDList))
             {
                 StudGraduateCertficateEntity sgce = new StudGraduateCertficateEntity();
-                if(studRec.Birthday.HasValue )
+                if (studRec.Birthday.HasValue)
                     sgce.Birthday = studRec.Birthday.Value;
                 sgce.ChancellorEngName = ChancellorEngName;
                 sgce.ChancellorName = ChancellorName;
                 sgce.EngName = studRec.EnglishName;
                 sgce.Name = studRec.Name;
-                sgce.SchoolEngName =SchoolEngName ;
-                
+                sgce.SchoolEngName = SchoolEngName;
+
                 // 照片
-                if(GraduatePhotoDic.ContainsKey(studRec.ID))
+                if (GraduatePhotoDic.ContainsKey(studRec.ID))
                     sgce.PhotoStr = GraduatePhotoDic[studRec.ID];
 
                 // 畢業證書字號
@@ -318,7 +318,7 @@ namespace JHSchool.Permrec.StudentExtendControls.Reports.DAL
                     sgce.CertDocNo = CertDocNoDic[studRec.ID];
 
                 sgce.SchoolName = SchoolName;
-                
+
                 // 畢業年月
                 if (GraduateSchoolYearDic.ContainsKey(studRec.ID))
                     sgce.GraduateSchoolYear = GraduateSchoolYearDic[studRec.ID];
@@ -334,7 +334,7 @@ namespace JHSchool.Permrec.StudentExtendControls.Reports.DAL
         /// </summary>
         /// <param name="StudentIDList"></param>
         /// <returns></returns>
-        public static Dictionary<string,string> GetGradeSchoolYear(List<string> StudentIDList)
+        public static Dictionary<string, string> GetGradeSchoolYear(List<string> StudentIDList)
         {
             Dictionary<string, string> retValue = new Dictionary<string, string>();
             foreach (JHSchool.Data.JHUpdateRecordRecord updRec in JHSchool.Data.JHUpdateRecord.SelectByStudentIDs(StudentIDList))
@@ -380,11 +380,12 @@ namespace JHSchool.Permrec.StudentExtendControls.Reports.DAL
             Dictionary<string, JHSchool.Data.JHAddressRecord> StudAddressRecDic = new Dictionary<string, JHSchool.Data.JHAddressRecord>();
 
             foreach (JHSchool.Data.JHAddressRecord addRec in JHSchool.Data.JHAddress.SelectByStudentIDs(StudentIDList))
-                StudAddressRecDic.Add(addRec.RefStudentID, addRec);            
+                StudAddressRecDic.Add(addRec.RefStudentID, addRec);
 
             // 取得學生異動
             List<JHSchool.Data.JHUpdateRecordRecord> StudUpdateRecList = JHSchool.Data.JHUpdateRecord.SelectByStudentIDs(StudentIDList);
             Dictionary<string, JHSchool.Data.JHUpdateRecordRecord> UpdateRecDic = new Dictionary<string, JHSchool.Data.JHUpdateRecordRecord>();
+            Dictionary<string, JHSchool.Data.JHUpdateRecordRecord> DicTransferRecords = new Dictionary<string, JHSchool.Data.JHUpdateRecordRecord>();
             Dictionary<string, string> UpdateRecDesc05Dic = new Dictionary<string, string>();
             Dictionary<string, DateTime> UpdateRecUpdateDate05Dic = new Dictionary<string, DateTime>();
             Dictionary<string, string> CertDocNoDic = new Dictionary<string, string>();
@@ -405,7 +406,7 @@ namespace JHSchool.Permrec.StudentExtendControls.Reports.DAL
                     {
                         UpdateRecDesc05Dic.Add(rec.StudentID, rec.UpdateDescription);
                         DateTime dt;
-                        if(DateTime.TryParse(rec.UpdateDate ,out dt))
+                        if (DateTime.TryParse(rec.UpdateDate, out dt))
                             UpdateRecUpdateDate05Dic.Add(rec.StudentID, dt);
                     }
                 }
@@ -414,6 +415,12 @@ namespace JHSchool.Permrec.StudentExtendControls.Reports.DAL
                 {
                     if (!CertDocNoDic.ContainsKey(rec.StudentID))
                         CertDocNoDic.Add(rec.StudentID, rec.GraduateCertificateNumber);
+                }
+                // 處理轉入異動
+                if (rec.UpdateCode == "3")
+                {
+                    if (!DicTransferRecords.ContainsKey(rec.StudentID))
+                        DicTransferRecords.Add(rec.StudentID, rec);
                 }
 
             }
@@ -452,6 +459,16 @@ namespace JHSchool.Permrec.StudentExtendControls.Reports.DAL
                         stee.UR01CertDocNo = UpdateRecDic[studRec.ID].ADNumber;
                     }
                 }
+                // 如果沒有新生異動  採用轉入異動
+                if (string.IsNullOrEmpty(stee.UR01Date))
+                {
+                    if (DicTransferRecords.ContainsKey(studRec.ID))
+                    {
+                        stee.UR01Date = DicTransferRecords[studRec.ID].UpdateDate;
+                        stee.UR01CertDate = DicTransferRecords[studRec.ID].ADDate;
+                        stee.UR01CertDocNo = DicTransferRecords[studRec.ID].ADNumber;
+                    }
+                }
 
                 // 照片
                 if (FreshmanPhotoDic.ContainsKey(studRec.ID))
@@ -466,19 +483,19 @@ namespace JHSchool.Permrec.StudentExtendControls.Reports.DAL
                     stee.CertDocNo = CertDocNoDic[studRec.ID];
 
                 if (StudAddressRecDic.ContainsKey(studRec.ID))
-                    stee.ContactAddress = StudAddressRecDic[studRec.ID].Mailing.County + StudAddressRecDic[studRec.ID].Mailing.Town +StudAddressRecDic[studRec.ID].Mailing.District + StudAddressRecDic[studRec.ID].Mailing.Area + StudAddressRecDic[studRec.ID].Mailing.Detail;
-                if(UpdateRecDesc05Dic.ContainsKey(studRec.ID ))
+                    stee.ContactAddress = StudAddressRecDic[studRec.ID].Mailing.County + StudAddressRecDic[studRec.ID].Mailing.Town + StudAddressRecDic[studRec.ID].Mailing.District + StudAddressRecDic[studRec.ID].Mailing.Area + StudAddressRecDic[studRec.ID].Mailing.Detail;
+                if (UpdateRecDesc05Dic.ContainsKey(studRec.ID))
                 {
-                    stee.LeaveUpdateDateC = (UpdateRecUpdateDate05Dic[studRec.ID].Year - 1911) + "年" + UpdateRecUpdateDate05Dic[studRec.ID].Month + "月" + UpdateRecUpdateDate05Dic[studRec.ID].Day+"日";
+                    stee.LeaveUpdateDateC = (UpdateRecUpdateDate05Dic[studRec.ID].Year - 1911) + "年" + UpdateRecUpdateDate05Dic[studRec.ID].Month + "月" + UpdateRecUpdateDate05Dic[studRec.ID].Day + "日";
                     stee.LeaveEndDateC = (UpdateRecUpdateDate05Dic[studRec.ID].Year - 1910) + "年" + UpdateRecUpdateDate05Dic[studRec.ID].Month + "月" + UpdateRecUpdateDate05Dic[studRec.ID].Day + "日";
-                    
-                    int SchoolYear =UpdateRecUpdateDate05Dic[studRec.ID].Year - 1911;
-                    int semester=2;
+
+                    int SchoolYear = UpdateRecUpdateDate05Dic[studRec.ID].Year - 1911;
+                    int semester = 2;
                     if (UpdateRecUpdateDate05Dic[studRec.ID].Month >= 9)
                         semester = 1;
                     else
                         SchoolYear--;
-                    stee.LeavePeriodString = SchoolYear + "學年度第" + semester + "學期至" + (SchoolYear + 1) + "學年度第" + semester + "學期";                    
+                    stee.LeavePeriodString = SchoolYear + "學年度第" + semester + "學期至" + (SchoolYear + 1) + "學年度第" + semester + "學期";
 
                 }
                 stee.ChancellorName = ChancellorName;

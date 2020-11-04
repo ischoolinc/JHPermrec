@@ -59,6 +59,12 @@ namespace JHSchool.Permrec.StudentExtendControls.Reports.DAL
         public string UR01Date { get; set; }
 
         /// <summary>
+        /// 轉入異動日期
+        /// </summary>
+        public string TransferDate { get; set; }
+
+
+        /// <summary>
         /// 新生異動日期 (民國)
         /// </summary>
         public string GetChineseUR01Date()

@@ -41,6 +41,7 @@ namespace JHSchool.Permrec
                 else if (File.Exists(pathTaiChung))
                     return ModuleFlag.TaiChung;
                 else return ModuleFlag.NULL;
+
             }
         }
 
