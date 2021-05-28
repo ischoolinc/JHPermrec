@@ -58,7 +58,9 @@ namespace JHSchool.Permrec.EduAdminExtendCotnrols.EducationDataCreator
                 try
                 {
                     // 需要轉換成 Big5
-                    StreamWriter sw = new StreamWriter(sfd.FileName,false,Encoding.GetEncoding(950));
+                    //StreamWriter sw = new StreamWriter(sfd.FileName,false,Encoding.GetEncoding(950));
+                    StreamWriter sw = new StreamWriter(sfd.FileName, false, Encoding.UTF8);
+
                     foreach (string str in _ExportText)
                     {
                         sw.WriteLine(str);
