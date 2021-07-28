@@ -4,6 +4,8 @@ using System.Linq;
 using System.Text;
 using System.Windows.Forms;
 using Framework;
+using System.Xml.Linq;
+using FISCA.DSAClient;
 
 namespace JHPermrec.UpdateRecord
 {
@@ -80,5 +82,47 @@ namespace JHPermrec.UpdateRecord
             }
             return strValue;
         }
+
+        /// 上傳檔案到局端 - 2020/7/30參考班級鎖定功能
+        /// </summary>
+        public static string UploadFile(string ID, string Data, string FileName)
+        {
+            string DSNS = FISCA.Authentication.DSAServices.AccessPoint;
+            string AccessPoint = @"j.kh.edu.tw";
+
+            if (FISCA.RTContext.IsDiagMode)
+            {
+                string accPoint = FISCA.RTContext.GetConstant("KH_AccessPoint");
+                if (!string.IsNullOrEmpty(accPoint))
+                    AccessPoint = accPoint;
+            }
+
+            string Contract = "log";
+            string ServiceName = "_.Upload";
+
+            string errMsg = "";
+            try
+            {
+                XElement xmlRoot = new XElement("Request");
+                xmlRoot.SetElementValue("ID", ID);
+                xmlRoot.SetElementValue("Data", Data);
+                xmlRoot.SetElementValue("FileName", FileName);
+                xmlRoot.SetElementValue("DSNS", DSNS);
+                xmlRoot.SetElementValue("Type", "student");
+                FISCA.DSAClient.XmlHelper reqXML = new FISCA.DSAClient.XmlHelper(xmlRoot.ToString());
+                FISCA.DSAClient.Connection cn = new FISCA.DSAClient.Connection();
+                cn.Connect(AccessPoint, Contract, DSNS, DSNS);
+                Envelope rsp = cn.SendRequest(ServiceName, new Envelope(reqXML));
+                XElement rspXML = XElement.Parse(rsp.XmlString);
+
+            }
+            catch (Exception ex)
+            {
+
+                errMsg = ex.Message;
+            }
+            return errMsg;
+        }
+
     }
 }

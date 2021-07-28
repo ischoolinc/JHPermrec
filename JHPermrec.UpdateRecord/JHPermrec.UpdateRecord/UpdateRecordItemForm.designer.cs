@@ -39,6 +39,7 @@
             this.integerInput2 = new DevComponents.Editors.IntegerInput();
             this.lablex11 = new DevComponents.DotNetBar.LabelX();
             this.intGradeYear = new DevComponents.Editors.IntegerInput();
+            this.btnUpload = new DevComponents.DotNetBar.ButtonX();
             ((System.ComponentModel.ISupportInitialize)(this.intSchoolYear)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.intSemester)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.integerInput2)).BeginInit();
@@ -84,6 +85,7 @@
             this.btnExit.Size = new System.Drawing.Size(65, 23);
             this.btnExit.TabIndex = 4;
             this.btnExit.Text = "離開";
+            this.btnExit.Click += new System.EventHandler(this.btnExit_Click);
             // 
             // btnConfirm
             // 
@@ -214,12 +216,27 @@
             this.intGradeYear.TabIndex = 9;
             this.intGradeYear.Value = 1;
             // 
+            // btnUpload
+            // 
+            this.btnUpload.AccessibleRole = System.Windows.Forms.AccessibleRole.PushButton;
+            this.btnUpload.AutoSize = true;
+            this.btnUpload.BackColor = System.Drawing.Color.Transparent;
+            this.btnUpload.ColorTable = DevComponents.DotNetBar.eButtonColor.OrangeWithBackground;
+            this.btnUpload.Location = new System.Drawing.Point(13, 537);
+            this.btnUpload.Name = "btnUpload";
+            this.btnUpload.Size = new System.Drawing.Size(75, 24);
+            this.btnUpload.Style = DevComponents.DotNetBar.eDotNetBarStyle.StyleManagerControlled;
+            this.btnUpload.TabIndex = 11;
+            this.btnUpload.Text = "上傳檔案";
+            this.btnUpload.Click += new System.EventHandler(this.btnUpload_Click);
+            // 
             // UpdateRecordItemForm
             // 
             this.AcceptButton = this.btnConfirm;
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.None;
             this.CancelButton = this.btnExit;
             this.ClientSize = new System.Drawing.Size(480, 569);
+            this.Controls.Add(this.btnUpload);
             this.Controls.Add(this.lablex11);
             this.Controls.Add(this.intGradeYear);
             this.Controls.Add(this.labelX2);
@@ -240,6 +257,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.integerInput2)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.intGradeYear)).EndInit();
             this.ResumeLayout(false);
+            this.PerformLayout();
 
         }
 
@@ -257,5 +275,6 @@
         private DevComponents.Editors.IntegerInput integerInput2;
         private DevComponents.DotNetBar.LabelX lablex11;
         private DevComponents.Editors.IntegerInput intGradeYear;
+        private DevComponents.DotNetBar.ButtonX btnUpload;
     }
 }
