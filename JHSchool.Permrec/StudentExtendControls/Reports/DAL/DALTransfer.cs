@@ -40,6 +40,16 @@ namespace JHSchool.Permrec.StudentExtendControls.Reports.DAL
                 Parent1Dic.Add(pr.RefStudentID, pr.Custodian.Name);
             }
 
+            // 戶籍電話
+            Dictionary<string, string> PermanentPhoneRecDict = new Dictionary<string, string>();
+            // 聯絡電話
+            Dictionary<string, string> ContactPhoneRecDict = new Dictionary<string, string>();
+            foreach (JHPhoneRecord phoneRrec in JHPhone.SelectByStudentIDs(StudentIDList))
+            {
+                PermanentPhoneRecDict.Add(phoneRrec.RefStudentID, phoneRrec.Permanent);
+                ContactPhoneRecDict.Add(phoneRrec.RefStudentID, phoneRrec.Contact);
+            }
+
 
             List<StudentEntity> StudentList = new List<StudentEntity>();
             List<JHSchool.Data.JHStudentRecord> StudRecs = JHSchool.Data.JHStudent.SelectByIDs(StudentIDList);
@@ -95,6 +105,13 @@ namespace JHSchool.Permrec.StudentExtendControls.Reports.DAL
                 // 取得監護人
                 if (Parent1Dic.ContainsKey(studRec.ID))
                     se.Parent1 = Parent1Dic[studRec.ID];
+
+                // 取得戶籍電話
+                if (PermanentPhoneRecDict.ContainsKey(studRec.ID))
+                    se.PermanentPhone = PermanentPhoneRecDict[studRec.ID];
+                // 取得戶籍電話
+                if (ContactPhoneRecDict.ContainsKey(studRec.ID))
+                    se.ContactPhone = ContactPhoneRecDict[studRec.ID];
 
                 // 取得出生地
                 se.BirthPlace = studRec.BirthPlace;

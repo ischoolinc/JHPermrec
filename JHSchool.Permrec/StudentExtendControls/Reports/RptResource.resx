@@ -121,6 +121,9 @@
   <data name="入學回覆單樣版_高雄_" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>rpttemplate\入學回覆單樣版(高雄).doc;System.Byte[], mscorlib, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
+  <data name="國中學生證合併欄位總表" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\..\Resources\國中學生證合併欄位總表.doc;System.Byte[], mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
   <data name="在學證明書_無成績_新竹" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>rpttemplate\在學證明書(無成績)新竹.doc;System.Byte[], mscorlib, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>

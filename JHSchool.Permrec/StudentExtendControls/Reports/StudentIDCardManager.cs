@@ -167,6 +167,37 @@ namespace JHSchool.Permrec.StudentExtendControls.Reports
         }
 
         /// <summary>
+        /// 儲存合併欄位總表
+        /// </summary>
+        public void SaveTemplate()
+        {
+
+            SaveFileDialog sfd = new SaveFileDialog();
+            sfd.Title = "另存新檔";
+            sfd.FileName = "國中學生證合併欄位總表.doc";
+            sfd.Filter = "Word檔案 (*.doc)|*.doc|所有檔案 (*.*)|*.*";
+            byte[] mergeTemplate = JHSchool.Permrec.StudentExtendControls.Reports.RptResource.國中學生證合併欄位總表;
+
+            if (sfd.ShowDialog() == DialogResult.OK)
+            {
+                try
+                {
+
+                    FileStream fs = new FileStream(sfd.FileName, FileMode.Create);
+                    
+                    fs.Write(mergeTemplate, 0, mergeTemplate.Length);
+                    fs.Close();
+                    System.Diagnostics.Process.Start(sfd.FileName);
+                }
+                catch
+                {
+                    FISCA.Presentation.Controls.MsgBox.Show("指定路徑無法存取。", "另存檔案失敗", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    return;
+                }
+            }
+        }
+
+        /// <summary>
         /// 儲存使用者定義
         /// </summary>
         public void SaveTemplateToSystem()
@@ -242,7 +273,7 @@ namespace JHSchool.Permrec.StudentExtendControls.Reports
         /// 列印資料
         /// </summary>
         /// <param name="StudentIDList"></param>        
-        public bool PrintData(List<string> StudentIDList, bool isDefaultTemplate, bool isUseSystemPhoto, int StudentCount,int Photo_inch)
+        public bool PrintData(List<string> StudentIDList, bool isDefaultTemplate, bool isUseSystemPhoto, int StudentCount, int Photo_inch)
         {
             FISCA.Presentation.MotherForm.SetStatusBarMessage("開始產生資料..");
             GetUserDefineTemplateFromSystem();
@@ -330,16 +361,20 @@ namespace JHSchool.Permrec.StudentExtendControls.Reports
                 dt.Columns.Add("身分證號", typeof(string));
                 dt.Columns.Add("條碼", typeof(string));
                 dt.Columns.Add("生日", typeof(string));
+                dt.Columns.Add("座號", typeof(string));
+                dt.Columns.Add("戶籍電話", typeof(string));
+                dt.Columns.Add("聯絡電話", typeof(string));
+                dt.Columns.Add("班級", typeof(string));
 
                 foreach (DAL.StudentEntity se in _StudentList)
                 {
                     if (_isUseSystemPhoto == true)
                     {
-                        dt.Rows.Add(se.StudentName, se.SchoolChineseName, se.StudentNumber, se.GetChineseBirthday(), se.BirthPlace, se.Parent1, se.Gender, se.GetPhotoImage(),se.IDNumber,se.StudentNumber,se.Birthday.ToShortDateString ());
+                        dt.Rows.Add(se.StudentName, se.SchoolChineseName, se.StudentNumber, se.GetChineseBirthday(), se.BirthPlace, se.Parent1, se.Gender, se.GetPhotoImage(), se.IDNumber, se.StudentNumber, se.Birthday.ToShortDateString(), se.SeatNo, se.PermanentPhone, se.ContactPhone, se.ClassName);
                     }
                     else
                     {
-                        dt.Rows.Add(se.StudentName, se.SchoolChineseName, se.StudentNumber, se.GetChineseBirthday(), se.BirthPlace, se.Parent1, se.Gender, "脫帽半身正面一吋照片",se.IDNumber,se.StudentNumber,se.Birthday.ToShortDateString ());
+                        dt.Rows.Add(se.StudentName, se.SchoolChineseName, se.StudentNumber, se.GetChineseBirthday(), se.BirthPlace, se.Parent1, se.Gender, "脫帽半身正面一吋照片", se.IDNumber, se.StudentNumber, se.Birthday.ToShortDateString(), se.SeatNo, se.PermanentPhone, se.ContactPhone, se.ClassName);
                     }
                 }
             }
@@ -361,15 +396,20 @@ namespace JHSchool.Permrec.StudentExtendControls.Reports
                 dt.Columns.Add("身分證號", typeof(string));
                 dt.Columns.Add("條碼", typeof(string));
                 dt.Columns.Add("民國生日", typeof(string));
+                dt.Columns.Add("座號", typeof(string));
+                dt.Columns.Add("戶籍電話", typeof(string));
+                dt.Columns.Add("聯絡電話", typeof(string));
+                dt.Columns.Add("班級", typeof(string));
+
                 foreach (DAL.StudentEntity se in _StudentList)
                 {
                     if (_isUseSystemPhoto == true)
                     {
-                        dt.Rows.Add(se.SchoolChineseName, se.StudentNumber, se.StudentName, se.Gender, se.Birthday.ToShortDateString(), se.Parent1, se.BirthPlace, se.GetPhotoImage(), se.IDNumber, se.StudentNumber, se.GetChineseBirthday());
+                        dt.Rows.Add(se.SchoolChineseName, se.StudentNumber, se.StudentName, se.Gender, se.Birthday.ToShortDateString(), se.Parent1, se.BirthPlace, se.GetPhotoImage(), se.IDNumber, se.StudentNumber, se.GetChineseBirthday(), se.SeatNo, se.PermanentPhone, se.ContactPhone, se.ClassName);
                     }
                     else
                     {
-                        dt.Rows.Add(se.SchoolChineseName, se.StudentNumber, se.StudentName, se.Gender, se.Birthday.ToShortDateString(), se.Parent1, se.BirthPlace, "", se.IDNumber, se.StudentNumber, se.GetChineseBirthday());
+                        dt.Rows.Add(se.SchoolChineseName, se.StudentNumber, se.StudentName, se.Gender, se.Birthday.ToShortDateString(), se.Parent1, se.BirthPlace, "", se.IDNumber, se.StudentNumber, se.GetChineseBirthday(), se.SeatNo, se.PermanentPhone, se.ContactPhone, se.ClassName);
 
                     }
                 }
@@ -391,7 +431,7 @@ namespace JHSchool.Permrec.StudentExtendControls.Reports
             docTemplate.MailMerge.FieldMergingCallback = new InsertDocumentAtMailMergeHandler();
             //docTemplate.MailMerge.RemoveEmptyParagraphs = true;
             docTemplate.MailMerge.CleanupOptions = MailMergeCleanupOptions.RemoveEmptyParagraphs;
-            
+
             docTemplate.MailMerge.Execute(dt);
             DocumentBuilder bulider = new DocumentBuilder(docTemplate);
 
@@ -441,7 +481,7 @@ namespace JHSchool.Permrec.StudentExtendControls.Reports
             //     could be useful if your mail merge operation does not always need to populate
             //     all fields in the document. Use this method to remove all remaining mail merge
             //     fields.
-            docTemplate.MailMerge.DeleteFields(); 
+            docTemplate.MailMerge.DeleteFields();
 
             e.Result = docTemplate;
         }
@@ -449,9 +489,9 @@ namespace JHSchool.Permrec.StudentExtendControls.Reports
 
         private class InsertDocumentAtMailMergeHandler : IFieldMergingCallback
         {
-                        
+
             void IFieldMergingCallback.FieldMerging(FieldMergingArgs e)
-            {               
+            {
                 if (e.FieldName == "照片")
                 {
                     byte[] photo = e.FieldValue as byte[];
@@ -464,7 +504,7 @@ namespace JHSchool.Permrec.StudentExtendControls.Reports
                     Shape photoShape = new Shape(e.Document, ShapeType.Image);
                     //photoShape.ImageData.SetImage(photo);
                     photoShape.ImageData.ImageBytes = photo;
-     
+
                     double shapeHeight = 0;
                     double shapeWidth = 0;
                     if (UseCountyType == CountyType.高雄)
@@ -585,6 +625,6 @@ namespace JHSchool.Permrec.StudentExtendControls.Reports
                 // Do nothing.
             }
 
-        }        
+        }
     }
 }

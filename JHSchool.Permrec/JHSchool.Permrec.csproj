@@ -73,6 +73,7 @@
     <Reference Include="Campus.Windows, Version=1.0.4.0, Culture=neutral, processorArchitecture=MSIL">
       <SpecificVersion>False</SpecificVersion>
       <HintPath>Library\Campus.Windows.dll</HintPath>
+      <Private>False</Private>
     </Reference>
     <Reference Include="DevComponents.DotNetBar2, Version=7.9.0.5, Culture=neutral, PublicKeyToken=7eb7c3a35b91de04, processorArchitecture=MSIL">
       <SpecificVersion>False</SpecificVersion>
@@ -733,6 +734,7 @@
     <None Include="Resources\loading.gif" />
     <None Include="Resources\People.jpg" />
     <None Include="Resources\Template.doc" />
+    <None Include="Resources\國中學生證合併欄位總表.doc" />
     <None Include="Resources\學生證樣本.doc" />
     <None Include="Resources\學生證樣板.doc" />
     <None Include="Resources\班級學期科目成績一覽表.xls" />

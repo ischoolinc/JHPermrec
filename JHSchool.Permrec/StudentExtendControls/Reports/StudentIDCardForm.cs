@@ -158,5 +158,10 @@ namespace JHSchool.Permrec.StudentExtendControls.Reports
                 chkUseSystemPhotoAuto.Checked = false;                
             }
         }
+
+        private void linkLabel1_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
+        {
+            sidm.SaveTemplate();
+        }
     }
 }

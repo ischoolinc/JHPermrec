@@ -38,6 +38,7 @@
             this.chkUseSystemPhotoAuto = new DevComponents.DotNetBar.Controls.CheckBoxX();
             this.chkUseSystemPhoto_1_Inch = new DevComponents.DotNetBar.Controls.CheckBoxX();
             this.chkUseSystemPhoto_2_Inch = new DevComponents.DotNetBar.Controls.CheckBoxX();
+            this.linkLabel1 = new System.Windows.Forms.LinkLabel();
             this.SuspendLayout();
             // 
             // cbxUserDefine
@@ -57,10 +58,11 @@
             // btnExit
             // 
             this.btnExit.AccessibleRole = System.Windows.Forms.AccessibleRole.PushButton;
+            this.btnExit.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
             this.btnExit.BackColor = System.Drawing.Color.Transparent;
             this.btnExit.ColorTable = DevComponents.DotNetBar.eButtonColor.OrangeWithBackground;
             this.btnExit.Font = new System.Drawing.Font("微軟正黑體", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
-            this.btnExit.Location = new System.Drawing.Point(106, 155);
+            this.btnExit.Location = new System.Drawing.Point(106, 183);
             this.btnExit.Name = "btnExit";
             this.btnExit.Size = new System.Drawing.Size(61, 23);
             this.btnExit.TabIndex = 9;
@@ -108,10 +110,11 @@
             // cmdPrint
             // 
             this.cmdPrint.AccessibleRole = System.Windows.Forms.AccessibleRole.PushButton;
+            this.cmdPrint.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
             this.cmdPrint.BackColor = System.Drawing.Color.Transparent;
             this.cmdPrint.ColorTable = DevComponents.DotNetBar.eButtonColor.OrangeWithBackground;
             this.cmdPrint.Font = new System.Drawing.Font("微軟正黑體", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
-            this.cmdPrint.Location = new System.Drawing.Point(33, 155);
+            this.cmdPrint.Location = new System.Drawing.Point(33, 183);
             this.cmdPrint.Name = "cmdPrint";
             this.cmdPrint.Size = new System.Drawing.Size(61, 23);
             this.cmdPrint.TabIndex = 7;
@@ -179,11 +182,24 @@
             this.chkUseSystemPhoto_2_Inch.Text = "使用系統內照片(二吋)";
             this.chkUseSystemPhoto_2_Inch.CheckedChanged += new System.EventHandler(this.chkUseSystemPhoto_2_Inch_CheckedChanged);
             // 
+            // linkLabel1
+            // 
+            this.linkLabel1.AutoSize = true;
+            this.linkLabel1.BackColor = System.Drawing.Color.Transparent;
+            this.linkLabel1.Location = new System.Drawing.Point(30, 154);
+            this.linkLabel1.Name = "linkLabel1";
+            this.linkLabel1.Size = new System.Drawing.Size(86, 17);
+            this.linkLabel1.TabIndex = 15;
+            this.linkLabel1.TabStop = true;
+            this.linkLabel1.Text = "合併欄位總表";
+            this.linkLabel1.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.linkLabel1_LinkClicked);
+            // 
             // StudentIDCardForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 17F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(190, 190);
+            this.ClientSize = new System.Drawing.Size(190, 218);
+            this.Controls.Add(this.linkLabel1);
             this.Controls.Add(this.chkUseSystemPhoto_2_Inch);
             this.Controls.Add(this.chkUseSystemPhoto_1_Inch);
             this.Controls.Add(this.chkUseSystemPhotoAuto);
@@ -214,5 +230,6 @@
         private DevComponents.DotNetBar.Controls.CheckBoxX chkUseSystemPhotoAuto;
         private DevComponents.DotNetBar.Controls.CheckBoxX chkUseSystemPhoto_1_Inch;
         private DevComponents.DotNetBar.Controls.CheckBoxX chkUseSystemPhoto_2_Inch;
+        private System.Windows.Forms.LinkLabel linkLabel1;
     }
 }

@@ -193,5 +193,15 @@ namespace JHSchool.Permrec.StudentExtendControls.Reports.DAL
         /// 畢業證書字號
         /// </summary>
         public string DiplomaNumber { get; set;}
+
+        /// <summary>
+        /// 戶籍電話
+        /// </summary>
+        public string PermanentPhone { get; set; }
+
+        /// <summary>
+        /// 聯絡電話
+        /// </summary>
+        public string ContactPhone { get; set; }
     }
 }
