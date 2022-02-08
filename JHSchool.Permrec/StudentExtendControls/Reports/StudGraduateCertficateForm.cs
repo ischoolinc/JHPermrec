@@ -12,21 +12,27 @@ namespace JHSchool.Permrec.StudentExtendControls.Reports
     public partial class StudGraduateCertficateForm : FISCA.Presentation.Controls.BaseForm
     {
         StudGraduateCertficateManager sgcm;
-        bool isDefalutTemplate = true;
+        string isDefalutTemplate = "true";
 
         public StudGraduateCertficateForm()
         {
             InitializeComponent();
             sgcm = new StudGraduateCertficateManager();
-            if (sgcm.GetisDefaultTemplate())
+            if (sgcm.GetisDefaultTemplate()=="true") //畢業證書預設樣板
                 cbxDefault.Checked = true;
-            else
+            else if (sgcm.GetisDefaultTemplate() == "false")
                 cbxUserDefine.Checked = true;
+            else if (sgcm.GetisDefaultTemplate() == "true2")//修業證書預設樣板
+                cbxDefault2.Checked = true;
+            else if (sgcm.GetisDefaultTemplate() == "false2")
+                cbxUserDefine2.Checked = true;
         }
 
         private void cmdPrint_Click(object sender, EventArgs e)
         {
-            if (cbxDefault.Checked == false && cbxUserDefine.Checked == false && Student.Instance.SelectedKeys.Count < 1)
+            if (cbxDefault.Checked == false && cbxUserDefine.Checked == false
+                &&  cbxDefault2.Checked == false && cbxUserDefine2.Checked == false
+                && Student.Instance.SelectedKeys.Count < 1)
                 return;
 
             //if (txtCertDoc.Text.Trim() == "" || txtCertNo.Text.Trim() == "")
@@ -34,9 +40,13 @@ namespace JHSchool.Permrec.StudentExtendControls.Reports
             //        return;
 
             if (cbxDefault.Checked)
-                isDefalutTemplate = true;
-            else
-                isDefalutTemplate = false;
+                isDefalutTemplate = "true";
+            else if (cbxUserDefine.Checked)
+                isDefalutTemplate = "false";
+            else if (cbxDefault2.Checked)
+                isDefalutTemplate = "true2";
+            else if (cbxUserDefine2.Checked)
+                isDefalutTemplate = "false2";
 
             cmdPrint.Enabled = false;
             sgcm.SetCertDoc(txtCertDoc.Text);
@@ -45,7 +55,7 @@ namespace JHSchool.Permrec.StudentExtendControls.Reports
 
             sgcm.PrintData(Student.Instance.SelectedKeys, isDefalutTemplate);
             PermRecLogProcess prlp = new PermRecLogProcess();
-            prlp.SaveLog("學生.報表", "列印", "列印" + Student.Instance.SelectedKeys.Count + "筆轉學證明書。");
+            prlp.SaveLog("學生.報表", "列印", "列印" + Student.Instance.SelectedKeys.Count + "筆證書。");
             cmdPrint.Enabled = true;
         }
 
@@ -67,6 +77,21 @@ namespace JHSchool.Permrec.StudentExtendControls.Reports
         private void lnkUpload_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
         {
             sgcm.SetUserDefineTemplateToSystem();
+        }
+
+        private void lnkUpload2_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
+        {
+            sgcm.SetUserDefineSecondTemplateToSystem();
+        }
+
+        private void lnkUserDefine2_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
+        {
+            sgcm.SaveUserDefineSecondTemplate();
+        }
+
+        private void lnkDefault2_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
+        {
+            sgcm.SaveDefaulSecondTemplate();
         }
     }
 }

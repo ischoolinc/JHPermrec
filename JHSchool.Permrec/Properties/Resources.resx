@@ -181,4 +181,7 @@
   <data name="CountyTownBelong" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\resources\countytownbelong.xml;System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089;utf-8</value>
   </data>
+  <data name="修業證書_預設樣板" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\修業證書_預設樣板.doc;System.Byte[], mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
 </root>

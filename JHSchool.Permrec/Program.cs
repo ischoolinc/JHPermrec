@@ -313,9 +313,9 @@ namespace JHSchool.Permrec
                     MsgBox.Show("請選擇學生");
             };
 
-            // 畢業證書
-            rbStudentReports["畢業證書"].Enable = User.Acl["JHSchool.Permrec.StudentExtendControls.Reports.StudGraduateCertficateForm"].Executable;
-            rbStudentReports["畢業證書"].Click += delegate
+            // 畢業證書  //2022.01 改名畢修業證書
+            rbStudentReports["畢修業證書"].Enable = User.Acl["JHSchool.Permrec.StudentExtendControls.Reports.StudGraduateCertficateForm"].Executable;
+            rbStudentReports["畢修業證書"].Click += delegate
             {
                 if (Student.Instance.SelectedList.Count >= 1)
                 {

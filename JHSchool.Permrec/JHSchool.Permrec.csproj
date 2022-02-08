@@ -734,6 +734,7 @@
     <None Include="Resources\loading.gif" />
     <None Include="Resources\People.jpg" />
     <None Include="Resources\Template.doc" />
+    <None Include="Resources\修業證書_預設樣板.doc" />
     <None Include="Resources\國中學生證合併欄位總表.doc" />
     <None Include="Resources\學生證樣本.doc" />
     <None Include="Resources\學生證樣板.doc" />

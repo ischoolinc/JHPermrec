@@ -17,10 +17,36 @@ namespace JHSchool.Permrec.StudentExtendControls.Reports
     {
         List<DAL.StudGraduateCertficateEntity> StudGraduateCertficateEntityList;
         private BackgroundWorker bkWorkPrint;
-        private bool _isDefaultTemplate = true;
+
+        /// 2022-01-26 Cynthia 要求增加 修業證書預設樣板 及 修業證書自訂樣板 的選項
+        ///https://3.basecamp.com/4399967/buckets/15765350/todos/4553326796
+        /// 原先是bool，因增加修業證書預設樣板及自訂修業證書，故改為string下去判斷
+        /// true: 畢業證書預設樣板
+        /// false: 畢業證書自訂樣板
+        /// true2: 修業證書預設樣板
+        ///  false2: 修業證書自訂樣板
+        private string _isDefaultTemplate = "true";
+
+        /// <summary>
+        /// 使用者自訂範本_畢業證書
+        /// </summary>
         private byte[] _buffer = null;
 
+        /// <summary>
+        /// 畢業證書預設樣板
+        /// </summary>
         private byte[] defalutTemplate;
+
+        /// <summary>
+        /// 修業證書樣板
+        /// </summary>
+        private byte[] defalutStudyCertificateTemplate;
+
+        /// <summary>
+        /// 使用者自訂範本_修業證書
+        /// </summary>
+        private byte[] _bufferStudyCertificate = null;
+
         private string base64 = "";
         private string _Semester = "";
         private string _CertDoc = "";
@@ -34,15 +60,15 @@ namespace JHSchool.Permrec.StudentExtendControls.Reports
             //// 判斷使用高雄樣版
             //if (Program.ModuleType == Program.ModuleFlag.KaoHsiung)
             defalutTemplate = JHSchool.Permrec.StudentExtendControls.Reports.RptResource.高雄畢業證書樣版;
-
+            defalutStudyCertificateTemplate = Properties.Resources.修業證書_預設樣板;
         }
 
         /// <summary>
         /// 取得是否讀取設樣版
         /// </summary>
-        public bool GetisDefaultTemplate()
+        public string GetisDefaultTemplate()
         {
-            return _isDefaultTemplate;
+            return _isDefaultTemplate.ToLower();
         }
 
         /// <summary>
@@ -97,7 +123,7 @@ namespace JHSchool.Permrec.StudentExtendControls.Reports
             School.Configuration.Sync("畢業證書_無成績");
             ConfigData cd = School.Configuration["畢業證書_無成績"];
 
-            bool.TryParse(cd["Default"], out _isDefaultTemplate);
+            cd["Default"] = _isDefaultTemplate.ToLower();
 
             if (cd.Contains("CustomizeTemplate"))
             {
@@ -113,11 +139,24 @@ namespace JHSchool.Permrec.StudentExtendControls.Reports
                 #endregion
             }
 
+            if (cd.Contains("CustomizeTemplate2"))
+            {
+                string templateBase64 = cd["CustomizeTemplate2"];
+                _bufferStudyCertificate = Convert.FromBase64String(templateBase64);
+            }
+            else
+            {
+                #region 產生空白設定檔
+                //cd["Default"] = "true";
+                cd["CustomizeTemplate2"] = "";
+                cd.Save();
+                #endregion
+            }
         }
 
 
         /// <summary>
-        /// 儲存預設樣版
+        /// 檢視預設樣版
         /// </summary>
         public void SaveDefaulTemplate()
         {
@@ -144,7 +183,34 @@ namespace JHSchool.Permrec.StudentExtendControls.Reports
         }
 
         /// <summary>
-        /// 設定使用者自訂範本
+        /// 檢視修業證書預設樣版
+        /// </summary>
+        public void SaveDefaulSecondTemplate()
+        {
+            SaveFileDialog sfd = new SaveFileDialog();
+            sfd.Title = "另存新檔";
+            sfd.FileName = "修業證書(無成績).doc";
+            sfd.Filter = "Word檔案 (*.doc)|*.doc|所有檔案 (*.*)|*.*";
+            if (sfd.ShowDialog() == DialogResult.OK)
+            {
+                try
+                {
+
+                    FileStream fs = new FileStream(sfd.FileName, FileMode.Create);
+                    fs.Write(defalutStudyCertificateTemplate, 0, defalutStudyCertificateTemplate.Length);
+                    fs.Close();
+                    System.Diagnostics.Process.Start(sfd.FileName);
+                }
+                catch
+                {
+                    MsgBox.Show("指定路徑無法存取。", "另存檔案失敗", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    return;
+                }
+            }
+        }
+
+        /// <summary>
+        /// 設定使用者自訂範本_畢業證書
         /// </summary>
         public void SetUserDefineTemplateToSystem()
         {
@@ -183,22 +249,72 @@ namespace JHSchool.Permrec.StudentExtendControls.Reports
         }
 
         /// <summary>
+        /// 設定第二個使用者自訂範本_修業證書
+        /// </summary>
+        public void SetUserDefineSecondTemplateToSystem()
+        {
+
+            OpenFileDialog ofd = new OpenFileDialog();
+            ofd.Title = "選擇自訂的修業證書範本";
+            ofd.Filter = "Word檔案 (*.doc)|*.doc";
+            if (ofd.ShowDialog() == DialogResult.OK)
+            {
+                try
+                {
+                    if (FileFormatUtil.DetectFileFormat(ofd.FileName).LoadFormat == LoadFormat.Doc)
+                    {
+                        FileStream fs = new FileStream(ofd.FileName, FileMode.Open);
+
+                        byte[] tempBuffer = new byte[fs.Length];
+                        fs.Read(tempBuffer, 0, tempBuffer.Length);
+                        base64 = Convert.ToBase64String(tempBuffer);
+                        fs.Close();
+                        SaveSecondTemplateToSystem();
+                        PermRecLogProcess prlp = new PermRecLogProcess();
+                        prlp.SaveLog("學生.報表", "上傳", "上傳修業證書樣版.");
+
+                        MsgBox.Show("上傳成功。");
+                    }
+                    else
+                        MsgBox.Show("上傳檔案格式不符");
+                }
+                catch
+                {
+                    MsgBox.Show("指定路徑無法存取。", "開啟檔案失敗", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    return;
+                }
+            }
+
+        }
+
+        /// <summary>
         /// 儲存使用者定義
         /// </summary>
         public void SaveTemplateToSystem()
         {
             ConfigData cd = School.Configuration["畢業證書_無成績"];
 
-            cd["Default"] = _isDefaultTemplate.ToString();
+            cd["Default"] = _isDefaultTemplate.ToLower();
             cd["CustomizeTemplate"] = base64;
             cd.Save();
         }
-
         /// <summary>
-        /// 儲存使用者自訂樣版
+        /// 儲存使用者定義
+        /// </summary>
+        public void SaveSecondTemplateToSystem()
+        {
+            ConfigData cd = School.Configuration["畢業證書_無成績"];
+
+            cd["Default"] = _isDefaultTemplate.ToLower();
+            cd["CustomizeTemplate2"] = base64;
+            cd.Save();
+        }
+        /// <summary>
+        /// 檢視使用者自訂樣版
         /// </summary>
         public void SaveUserDefineTemplate()
         {
+            GetUserDefineTemplateFromSystem();
             SaveFileDialog sfd = new SaveFileDialog();
             sfd.Title = "另存新檔";
             sfd.FileName = "自訂畢業證書(無成績).doc";
@@ -226,14 +342,47 @@ namespace JHSchool.Permrec.StudentExtendControls.Reports
         }
 
         /// <summary>
+        /// 檢視使用者自訂樣版(修業)
+        /// </summary>
+        public void SaveUserDefineSecondTemplate()
+        {
+            GetUserDefineTemplateFromSystem();
+            SaveFileDialog sfd = new SaveFileDialog();
+            sfd.Title = "另存新檔";
+            sfd.FileName = "自訂修業證書(無成績).doc";
+            sfd.Filter = "Word檔案 (*.doc)|*.doc|所有檔案 (*.*)|*.*";
+            if (sfd.ShowDialog() == DialogResult.OK)
+            {
+                try
+                {
+                    FileStream fs = new FileStream(sfd.FileName, FileMode.Create);
+                    if (_bufferStudyCertificate != null && Aspose.Words.FileFormatUtil.DetectFileFormat(new MemoryStream(_bufferStudyCertificate)).LoadFormat == Aspose.Words.LoadFormat.Doc)
+                        fs.Write(_bufferStudyCertificate, 0, _bufferStudyCertificate.Length);
+                    else
+                        fs.Write(defalutStudyCertificateTemplate, 0, defalutStudyCertificateTemplate.Length);
+                    fs.Close();
+                    System.Diagnostics.Process.Start(sfd.FileName);
+                }
+                catch
+                {
+                    MsgBox.Show("指定路徑無法存取。", "另存檔案失敗", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    return;
+                }
+            }
+
+
+        }
+
+
+        /// <summary>
         /// 列印資料
         /// </summary>
         /// <param name="StudentIDList"></param>        
-        public void PrintData(List<string> StudentIDList, bool isDefaultTemplate)
+        public void PrintData(List<string> StudentIDList, string isDefaultTemplate)
         {
             GetUserDefineTemplateFromSystem();
             StudGraduateCertficateEntityList = DAL.DALTransfer.GetStudGraduateCertficateEntityList(StudentIDList);
-            _isDefaultTemplate = isDefaultTemplate;
+            _isDefaultTemplate = isDefaultTemplate.ToLower();
             bkWorkPrint = new BackgroundWorker();
             bkWorkPrint.DoWork += new DoWorkEventHandler(bkWorkPrint_DoWork);
             bkWorkPrint.RunWorkerCompleted += new RunWorkerCompletedEventHandler(bkWorkPrint_RunWorkerCompleted);
@@ -251,7 +400,7 @@ namespace JHSchool.Permrec.StudentExtendControls.Reports
         {
             ConfigData cd = School.Configuration["畢業證書_無成績"];
 
-            cd["Default"] = _isDefaultTemplate.ToString();
+            cd["Default"] = _isDefaultTemplate.ToLower();
             cd.Save();
         }
 
@@ -261,6 +410,10 @@ namespace JHSchool.Permrec.StudentExtendControls.Reports
 
             string filePath = Application.StartupPath + "\\Reports\\";
             string fileName = "畢業證書(無成績).doc";
+
+            if (_isDefaultTemplate.Contains("2"))
+                fileName = "修業證書(無成績).doc";
+
             try
             {
                 doc.Save(filePath + fileName, SaveFormat.Doc);
@@ -302,18 +455,18 @@ namespace JHSchool.Permrec.StudentExtendControls.Reports
                 baseData.Add("姓名", sgce.Name);
                 baseData.Add("英文姓名", sgce.EngName);
                 baseData.Add("學校名稱", sgce.SchoolName);
-                baseData.Add("學校英文名稱",sgce.SchoolEngName);
+                baseData.Add("學校英文名稱", sgce.SchoolEngName);
                 baseData.Add("校長姓名", sgce.ChancellorName);
                 baseData.Add("校長英文姓名", sgce.ChancellorEngName);
                 baseData.Add("畢業照片", sgce.GetPhotoImage());
                 baseData.Add("民國生日", sgce.GetChineseBirthday());
-                baseData.Add("英文生日", sgce.GetEngBirthday ());
+                baseData.Add("英文生日", sgce.GetEngBirthday());
                 baseData.Add("學期", _Semester);
                 baseData.Add("今天民國日期", GetSystemTodayChineseDate());
                 //baseData.Add("文號", _CertDoc);
                 //baseData.Add("第號", _CertNo);
                 baseData.Add("文號", sgce.GetCertDoc());
-                baseData.Add("第號", sgce.GetCertNo ());
+                baseData.Add("第號", sgce.GetCertNo());
 
                 baseData.Add("民國畢業年月", sgce.GetChinGraduateSchoolYear());
                 baseData.Add("證書字號", sgce.CertDocNo);
@@ -327,16 +480,25 @@ namespace JHSchool.Permrec.StudentExtendControls.Reports
                     rptValues.Add(item.Value);
                 }
 
-                Document docTemplate;
+                Document docTemplate = new Document(new MemoryStream(defalutTemplate));
 
-                if (_isDefaultTemplate)
+                if (_isDefaultTemplate.ToLower() == "true")
                     docTemplate = new Document(new MemoryStream(defalutTemplate));
-                else
+                else if (_isDefaultTemplate.ToLower() == "true2")
+                    docTemplate = new Document(new MemoryStream(defalutStudyCertificateTemplate));
+                else if (_isDefaultTemplate.ToLower() == "false")
                 {
                     if (_buffer.Length < 1)
                         docTemplate = new Document(new MemoryStream(defalutTemplate));
                     else
                         docTemplate = new Document(new MemoryStream(_buffer));
+                }
+                else if (_isDefaultTemplate.ToLower() == "false2")
+                {
+                    if (_bufferStudyCertificate.Length < 1)
+                        docTemplate = new Document(new MemoryStream(defalutStudyCertificateTemplate));
+                    else
+                        docTemplate = new Document(new MemoryStream(_bufferStudyCertificate));
                 }
 
                 docTemplate.MailMerge.FieldMergingCallback = new InsertDocumentAtMailMergeHandler();
@@ -387,6 +549,6 @@ namespace JHSchool.Permrec.StudentExtendControls.Reports
             }
         }
 
-        
+
     }
 }
