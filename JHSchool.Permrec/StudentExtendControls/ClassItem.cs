@@ -86,7 +86,7 @@ namespace JHSchool.Permrec.StudentExtendControls
 
         private void ValueManager_StatusChanged(object sender, ChangeEventArgs e)
         {
-            if (Framework.User.Acl[GetType()].Editable)                
+            if (Framework.User.Acl[GetType()].Editable)
                 SaveButtonVisible = (e.Status == ValueStatus.Dirty);
             else
                 SaveButtonVisible = false;
@@ -183,7 +183,7 @@ namespace JHSchool.Permrec.StudentExtendControls
             List<string> ClassNameItems = new List<string>();
             foreach (JHSchool.Data.JHClassRecord cr in _AllClassRecs)
             {
-                ClassNameItems.Add(cr.Name);                
+                ClassNameItems.Add(cr.Name);
                 _ClassNameIDDic.Add(cr.Name, cr.ID);
             }
             ClassNameItems.Sort();
@@ -276,10 +276,12 @@ namespace JHSchool.Permrec.StudentExtendControls
             }
 
             // 檢查學號是否重複
-            if (txtStudentNumber.Text != this._DefaultStudNum)
+            if (txtStudentNumber.Text.Trim() != this._DefaultStudNum)
+            //if (txtStudentNumber.Text != this._DefaultStudNum)
             {
                 // 判斷是否是空
-                if (string.IsNullOrEmpty(txtStudentNumber.Text))
+                if (string.IsNullOrEmpty(txtStudentNumber.Text.Trim()))
+                    //if (string.IsNullOrEmpty(txtStudentNumber.Text))
                     objStudent.StudentNumber = "";
                 else
                 {
@@ -290,14 +292,17 @@ namespace JHSchool.Permrec.StudentExtendControls
                     // 同狀態下學號不能重複
                     foreach (JHSchool.Data.JHStudentRecord studRec in JHSchool.Data.JHStudent.SelectAll())
                         if (studRec.Status == studtStatus)
-                            checkData.Add(studRec.StudentNumber);
+                            //checkData.Add(studRec.StudentNumber);
+                            checkData.Add(studRec.StudentNumber.Trim());
 
-                    if (checkData.Contains(txtStudentNumber.Text))
+                     if (checkData.Contains(txtStudentNumber.Text.Trim()))
+                    //if (checkData.Contains(txtStudentNumber.Text))
                     {
                         Errors.SetError(txtStudentNumber, "學號重複!");
                         return;
                     }
-                    objStudent.StudentNumber = txtStudentNumber.Text;
+                    //objStudent.StudentNumber = txtStudentNumber.Text;
+                    objStudent.StudentNumber = txtStudentNumber.Text.Trim();
                 }
             }
 
@@ -312,7 +317,8 @@ namespace JHSchool.Permrec.StudentExtendControls
 
             prlp.SetAfterSaveText("班級", cboClass.Text);
             prlp.SetAfterSaveText("座號", cboSeatNo.Text);
-            prlp.SetAfterSaveText("學號", txtStudentNumber.Text);
+            //prlp.SetAfterSaveText("學號", txtStudentNumber.Text);
+            prlp.SetAfterSaveText("學號", txtStudentNumber.Text.Trim());
             prlp.SetActionBy("學籍", "學生班級資訊");
             prlp.SetAction("修改學生班級資訊");
             prlp.SetDescTitle("學生姓名:" + objStudent.Name + ",學號:" + objStudent.StudentNumber + ",");
