@@ -14,7 +14,7 @@ namespace JHSchool.Permrec.EduAdminExtendCotnrols.ClassUpgrade
     public partial class ClassUpgradeForm : BaseForm
     {
         Dictionary<string, int> selCot = new Dictionary<string, int>();
-        Dictionary <string ,int> setUpgradeCot = new Dictionary<string,int> ();
+        Dictionary<string, int> setUpgradeCot = new Dictionary<string, int>();
         Dictionary<string, int> setGraduateCot = new Dictionary<string, int>();
         List<ClassItem> ClassItems;
         BackgroundWorker bkWork;
@@ -24,7 +24,7 @@ namespace JHSchool.Permrec.EduAdminExtendCotnrols.ClassUpgrade
         {
             InitializeComponent();
         }
-        private enum UpgradeType { 升級, 畢業,恢復};
+        private enum UpgradeType { 升級, 畢業, 恢復 };
         private void btnExit_Click(object sender, EventArgs e)
         {
             this.Close();
@@ -37,7 +37,7 @@ namespace JHSchool.Permrec.EduAdminExtendCotnrols.ClassUpgrade
             bkWork.DoWork += new DoWorkEventHandler(bkWork_DoWork);
             bkWork.RunWorkerAsync();
             bkWork.RunWorkerCompleted += new RunWorkerCompletedEventHandler(bkWork_RunWorkerCompleted);
-           
+
         }
 
         void bkWork_RunWorkerCompleted(object sender, RunWorkerCompletedEventArgs e)
@@ -66,8 +66,8 @@ namespace JHSchool.Permrec.EduAdminExtendCotnrols.ClassUpgrade
 
         // 設定班級項目
         private void SetClassItems()
-        { 
-        
+        {
+
         }
 
         private void LoadCots()
@@ -85,34 +85,34 @@ namespace JHSchool.Permrec.EduAdminExtendCotnrols.ClassUpgrade
                     setUpgradeCot.Add(ci.GradeYear, 0);
                 }
             }
-        
+
         }
 
         private void ClassUpgradeForm_Load(object sender, EventArgs e)
         {
             //載入預設學年度
-            txtSchoolYear.Text = School.DefaultSchoolYear.ToString ();
-            
-            
+            txtSchoolYear.Text = School.DefaultSchoolYear.ToString();
+
+
             // 載入班級項目
             LoadClassItems();
-        }        
+        }
 
         private void dgClassUpgrade_SelectionChanged(object sender, EventArgs e)
         {
             LoadCots();
             labelX1.Text = "";
 
-            foreach (DataGridViewRow dgv in dgClassUpgrade.SelectedRows )
+            foreach (DataGridViewRow dgv in dgClassUpgrade.SelectedRows)
             {
                 string str = "" + dgv.Cells[1].Value;
-                if(selCot.ContainsKey(str))
+                if (selCot.ContainsKey(str))
                     selCot[str]++;
-            }   
+            }
 
-            foreach (KeyValuePair<string,int> var in selCot)
-                labelX1.Text += "原"+ var.Key+ "年級選取" + selCot[var.Key] + "班\n";
-            
+            foreach (KeyValuePair<string, int> var in selCot)
+                labelX1.Text += "原" + var.Key + "年級選取" + selCot[var.Key] + "班\n";
+
 
             getUpgardeGraguateCot();
         }
@@ -121,7 +121,7 @@ namespace JHSchool.Permrec.EduAdminExtendCotnrols.ClassUpgrade
         {
             foreach (KeyValuePair<string, int> var in selCot)
                 selCot[var.Key] = 0;
-            
+
         }
 
         private void getUpgardeGraguateCot()
@@ -142,7 +142,7 @@ namespace JHSchool.Permrec.EduAdminExtendCotnrols.ClassUpgrade
 
             foreach (string str in items)
                 setUpgradeCot[str] = 0;
-                
+
 
             foreach (DataGridViewRow dgv in dgClassUpgrade.Rows)
             {
@@ -152,28 +152,28 @@ namespace JHSchool.Permrec.EduAdminExtendCotnrols.ClassUpgrade
                         setUpgradeCot[dgv.Cells[1].Value.ToString()]++;
                     if (dgv.Cells[5].Value.ToString() == "畢業")
                         setGraduateCot[dgv.Cells[1].Value.ToString()]++;
-                        
+
                 }
             }
 
             lblMsg.Text = "";
             foreach (KeyValuePair<string, int> var in setGraduateCot)
-                lblMsg.Text += "原"+var.Key +"年級升級班級數:" + setUpgradeCot[var.Key] + " ,原"+var.Key +"年級畢業班級數:" + setGraduateCot[var.Key]+"\n";
+                lblMsg.Text += "原" + var.Key + "年級升級班級數:" + setUpgradeCot[var.Key] + " ,原" + var.Key + "年級畢業班級數:" + setGraduateCot[var.Key] + "\n";
         }
-        
+
         // 班級升級
         private void UpgradeDGClassItem(UpgradeType ut)
         {
             // 對所選擇的 Row 判斷
             foreach (DataGridViewRow dgv in dgClassUpgrade.SelectedRows)
             {
-                int defGrYear,upgradeGrYear,defClassYear;
+                int defGrYear, upgradeGrYear, defClassYear;
 
-                string ClassName="",newClassName="",ClassNamingRule="";
+                string ClassName = "", newClassName = "", ClassNamingRule = "";
                 ClassName = dgv.Cells[2].Value.ToString();
                 ClassNamingRule = "" + dgv.Cells[6].Value;
 
-                if (ut==UpgradeType.升級 )
+                if (ut == UpgradeType.升級)
                 {
                     bool checkNew = true;
 
@@ -187,7 +187,7 @@ namespace JHSchool.Permrec.EduAdminExtendCotnrols.ClassUpgrade
                             foreach (DataGridViewCell dd in dgv.Cells)
                                 dd.Style.BackColor = Color.White;
                             checkNew = false;
-                        }                        
+                        }
                     }
 
                     if (checkNew == true)
@@ -195,8 +195,8 @@ namespace JHSchool.Permrec.EduAdminExtendCotnrols.ClassUpgrade
                         int.TryParse(dgv.Cells[1].Value.ToString(), out defGrYear);
                         string strUpgradeGrYear;
                         upgradeGrYear = defGrYear + 1;
-                        dgv.Cells[3].Value = strUpgradeGrYear=upgradeGrYear.ToString();
-                        
+                        dgv.Cells[3].Value = strUpgradeGrYear = upgradeGrYear.ToString();
+
                         // 檢查是否有命名規則
                         bool checkClassNamingRule = DAL.UpgradeClassDAL.ValidateNamingRule(ClassNamingRule);
 
@@ -213,7 +213,7 @@ namespace JHSchool.Permrec.EduAdminExtendCotnrols.ClassUpgrade
                             newClassName = ClassName;
                             if (upgradeGrYear > 10)
                             {
-                                    newClassName = strUpgradeGrYear + ClassName.Substring(2, (ClassName.Length - 2));
+                                newClassName = strUpgradeGrYear + ClassName.Substring(2, (ClassName.Length - 2));
                             }
                             else
                                 newClassName = strUpgradeGrYear + ClassName.Substring(1, (ClassName.Length - 1));
@@ -224,15 +224,15 @@ namespace JHSchool.Permrec.EduAdminExtendCotnrols.ClassUpgrade
                         dgv.Cells[5].Value = "升級";
                         foreach (DataGridViewCell dd in dgv.Cells)
                             dd.Style.BackColor = Color.Yellow;
-                    }                    
+                    }
                 }
-                
-                if(ut==UpgradeType.畢業 )
+
+                if (ut == UpgradeType.畢業)
                 {
                     bool checkNew = true;
 
                     if (dgv.Cells[5].Value != null)
-                        if(dgv.Cells[5].Value.ToString ()=="畢業")
+                        if (dgv.Cells[5].Value.ToString() == "畢業")
                         {
                             dgv.Cells[3].Value = "";
                             dgv.Cells[4].Value = "";
@@ -263,32 +263,32 @@ namespace JHSchool.Permrec.EduAdminExtendCotnrols.ClassUpgrade
                     foreach (DataGridViewCell dd in dgv.Cells)
                         dd.Style.BackColor = Color.White;
                 }
-            }        
+            }
         }
 
         // 儲存升級班級項目
         private void SaveClassItems(List<ClassItem> ClassItems)
-        { 
+        {
             DAL.UpgradeClassDAL.UpdateClassNameGradeYear(ClassItems);
         }
 
         // 更改學生狀態
-        private void UpdateStudentStatus(List<ClassItem> ClassItems, string oldStatus,string newStatus)
+        private void UpdateStudentStatus(List<ClassItem> ClassItems, string oldStatus, string newStatus)
         {
             Dictionary<string, List<StudentItem>> StudentItems = new Dictionary<string, List<StudentItem>>();
             List<StudentItem> GraduateStudentItems = new List<StudentItem>();
-            
-           
+
+
             StudentItems = DAL.UpgradeClassDAL.getStudentItems(ClassItems, oldStatus);
-           foreach (KeyValuePair<string ,List<StudentItem >> si in StudentItems )
-           {
-            foreach (StudentItem sii in si.Value )
+            foreach (KeyValuePair<string, List<StudentItem>> si in StudentItems)
             {
-                sii.Status = newStatus;
-                GraduateStudentItems.Add(sii);
+                foreach (StudentItem sii in si.Value)
+                {
+                    sii.Status = newStatus;
+                    GraduateStudentItems.Add(sii);
+                }
             }
-           }
-           DAL.UpgradeClassDAL.setStudentStatus(GraduateStudentItems);
+            DAL.UpgradeClassDAL.setStudentStatus(GraduateStudentItems);
 
         }
 
@@ -302,12 +302,12 @@ namespace JHSchool.Permrec.EduAdminExtendCotnrols.ClassUpgrade
         private bool checkNewClassName()
         {
             bool checksameClassName = false;
-            string strName = "", classname="" ;
+            string strName = "", classname = "";
             foreach (DataGridViewRow drv in dgClassUpgrade.Rows)
             {
                 if (drv.Cells[4].Value != null)
                 {
-                    classname =drv.Cells[4].Value.ToString();
+                    classname = drv.Cells[4].Value.ToString();
                     if (!string.IsNullOrEmpty(classname))
                     {
                         if (strName == classname)
@@ -316,17 +316,17 @@ namespace JHSchool.Permrec.EduAdminExtendCotnrols.ClassUpgrade
                             drv.Cells[4].ErrorText = "調整後班級名稱重複!";
                         }
                         strName = classname;
-                    }                    
+                    }
                 }
             }
             return checksameClassName;
         }
 
         // 清空 Datagridviewrow cell error text
-        private void ClearDGRowCellErrorText(DataGridViewRowCollection dgRows,int RowCellIdx)        
+        private void ClearDGRowCellErrorText(DataGridViewRowCollection dgRows, int RowCellIdx)
         {
             foreach (DataGridViewRow drv in dgRows)
-                drv.Cells[RowCellIdx].ErrorText = "";        
+                drv.Cells[RowCellIdx].ErrorText = "";
         }
 
 
@@ -344,7 +344,7 @@ namespace JHSchool.Permrec.EduAdminExtendCotnrols.ClassUpgrade
             bool checkSaveGrauate = true;
             bool checkSaveUpgrade = true;
             // 調整後班級
-            ClearDGRowCellErrorText(dgClassUpgrade.Rows ,4);
+            ClearDGRowCellErrorText(dgClassUpgrade.Rows, 4);
 
             if (checkNewClassName() == true)
                 return;
@@ -363,12 +363,12 @@ namespace JHSchool.Permrec.EduAdminExtendCotnrols.ClassUpgrade
                     if (dgv.Cells[5].Value.ToString() == "升級")
                         UpgradeClassItems.Add(ciClassItem);
                 }
-            
+
             }
 
 
-            
-            
+
+
             checkClassItems = DAL.UpgradeClassDAL.checkUpdateClassName(GraduateClassItems);
             if (checkClassItems.Count > 0)
             {
@@ -380,10 +380,10 @@ namespace JHSchool.Permrec.EduAdminExtendCotnrols.ClassUpgrade
                             drv.Cells[4].ErrorText = "畢業班級名稱與系統內有重覆!";
                             break;
                         }
-                
+
             }
 
-            checkClassItems.Clear();            
+            checkClassItems.Clear();
             checkClassItems = DAL.UpgradeClassDAL.checkUpdateClassName(UpgradeClassItems);
             if (checkClassItems.Count > 0)
             {
@@ -391,50 +391,51 @@ namespace JHSchool.Permrec.EduAdminExtendCotnrols.ClassUpgrade
                 foreach (ClassItem ci in GraduateClassItems)
                     classname.Add(ci.ClassName);
                 foreach (ClassItem ci in UpgradeClassItems)
-                    classname.Add(ci.ClassName);                    
+                    classname.Add(ci.ClassName);
 
                 List<ClassItem> rmClassItems = new List<ClassItem>();
-                
-                    foreach (ClassItem cic in checkClassItems)
-                        if(classname.Contains(cic.newClassName ))
-                            rmClassItems.Add(cic);
+
+                foreach (ClassItem cic in checkClassItems)
+                    if (classname.Contains(cic.newClassName))
+                        rmClassItems.Add(cic);
                 foreach (ClassItem ci in rmClassItems)
                     checkClassItems.Remove(ci);
-            }                            
+            }
 
-                if (checkClassItems.Count > 0)
-                {
-                    checkSaveUpgrade = false;
-                    foreach (ClassItem ci in checkClassItems)
-                        foreach (DataGridViewRow drv in dgClassUpgrade.Rows)
-                            if (drv.Cells[0].Value.ToString() == ci.ClassID)
-                            {
-                                drv.Cells[4].ErrorText = "調整後班級名稱與系統內有重覆!";
-                                break;
-                            }
-                }
-
-
-
-                if (GraduateClassItems.Count == 0 && UpgradeClassItems.Count == 0)
-                {
-                    MessageBox.Show("請先設定升級或畢業");
-                    return;
-                
-                }
+            if (checkClassItems.Count > 0)
+            {
+                checkSaveUpgrade = false;
+                foreach (ClassItem ci in checkClassItems)
+                    foreach (DataGridViewRow drv in dgClassUpgrade.Rows)
+                        if (drv.Cells[0].Value.ToString() == ci.ClassID)
+                        {
+                            drv.Cells[4].ErrorText = "調整後班級名稱與系統內有重覆!";
+                            break;
+                        }
+            }
 
 
-                if (checkSaveGrauate == true && checkSaveUpgrade == true)
-                {
-                    // 使用 bk
 
-                    bkWorkUpgrd = new BackgroundWorker();
-                    bkWorkUpgrd.DoWork += new DoWorkEventHandler(bkWorkUpgrd_DoWork);
-                    bkWorkUpgrd.RunWorkerCompleted += new RunWorkerCompletedEventHandler(bkWorkUpgrd_RunWorkerCompleted);
-                    bkWorkUpgrd.RunWorkerAsync();
-                }
-                else
-                    btnSave.Enabled = true;
+            if (GraduateClassItems.Count == 0 && UpgradeClassItems.Count == 0)
+            {
+                MessageBox.Show("請先設定升級或畢業。");
+                btnSave.Enabled = true;
+                return;
+
+            }
+
+
+            if (checkSaveGrauate == true && checkSaveUpgrade == true)
+            {
+                // 使用 bk
+
+                bkWorkUpgrd = new BackgroundWorker();
+                bkWorkUpgrd.DoWork += new DoWorkEventHandler(bkWorkUpgrd_DoWork);
+                bkWorkUpgrd.RunWorkerCompleted += new RunWorkerCompletedEventHandler(bkWorkUpgrd_RunWorkerCompleted);
+                bkWorkUpgrd.RunWorkerAsync();
+            }
+            else
+                btnSave.Enabled = true;
         }
 
         void bkWorkUpgrd_RunWorkerCompleted(object sender, RunWorkerCompletedEventArgs e)
@@ -479,7 +480,7 @@ namespace JHSchool.Permrec.EduAdminExtendCotnrols.ClassUpgrade
         }
 
         private void btnGraduate_Click(object sender, EventArgs e)
-        {            
+        {
             UpgradeDGClassItem(UpgradeType.畢業);
             getUpgardeGraguateCot();
         }

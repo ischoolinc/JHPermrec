@@ -335,6 +335,7 @@ namespace JHSchool.Permrec
             rbItemClassUpgrade.Enable = User.Acl["JHSchool.EduAdmin.Ribbon0110"].Executable;
             rbItemClassUpgrade.Click += delegate
             {
+                MsgBox.Show("注意：請確定已完成系統學年度升級，再進行班級升級。","提示");
                 JHSchool.Permrec.EduAdminExtendCotnrols.ClassUpgrade.ClassUpgradeForm CUF = new JHSchool.Permrec.EduAdminExtendCotnrols.ClassUpgrade.ClassUpgradeForm();
                 CUF.ShowDialog();
             };
