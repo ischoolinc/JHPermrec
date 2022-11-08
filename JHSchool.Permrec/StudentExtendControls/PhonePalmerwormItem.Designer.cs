@@ -58,6 +58,7 @@
             // 
             // 
             this.txtContactPhone.Border.Class = "TextBoxBorder";
+            this.txtContactPhone.Border.CornerType = DevComponents.DotNetBar.eCornerType.Square;
             this.txtContactPhone.Location = new System.Drawing.Point(365, 17);
             this.txtContactPhone.Margin = new System.Windows.Forms.Padding(4);
             this.txtContactPhone.Name = "txtContactPhone";
@@ -71,6 +72,7 @@
             // 
             // 
             this.txtOtherPhone.Border.Class = "TextBoxBorder";
+            this.txtOtherPhone.Border.CornerType = DevComponents.DotNetBar.eCornerType.Square;
             this.txtOtherPhone.Location = new System.Drawing.Point(131, 47);
             this.txtOtherPhone.Margin = new System.Windows.Forms.Padding(4);
             this.txtOtherPhone.Name = "txtOtherPhone";
@@ -84,6 +86,7 @@
             // 
             // 
             this.txtEverPhone.Border.Class = "TextBoxBorder";
+            this.txtEverPhone.Border.CornerType = DevComponents.DotNetBar.eCornerType.Square;
             this.txtEverPhone.Location = new System.Drawing.Point(131, 17);
             this.txtEverPhone.Margin = new System.Windows.Forms.Padding(4);
             this.txtEverPhone.Name = "txtEverPhone";
@@ -121,6 +124,7 @@
             // 
             this.btnOthers.AccessibleRole = System.Windows.Forms.AccessibleRole.PushButton;
             this.btnOthers.AutoExpandOnClick = true;
+            this.btnOthers.ColorTable = DevComponents.DotNetBar.eButtonColor.OrangeWithBackground;
             this.btnOthers.Location = new System.Drawing.Point(33, 47);
             this.btnOthers.Margin = new System.Windows.Forms.Padding(4);
             this.btnOthers.Name = "btnOthers";
@@ -130,31 +134,30 @@
             this.btnOther2,
             this.btnOther3});
             this.btnOthers.TabIndex = 5;
-            this.btnOthers.ColorTable = DevComponents.DotNetBar.eButtonColor.OrangeWithBackground;
             // 
             // btnOther1
             // 
+            this.btnOther1.ColorTable = DevComponents.DotNetBar.eButtonColor.OrangeWithBackground;
             this.btnOther1.GlobalItem = false;
             this.btnOther1.Name = "btnOther1";
             this.btnOther1.Text = "其它電話1";
             this.btnOther1.Click += new System.EventHandler(this.btnOther1_Click);
-            this.btnOther1.ColorTable = DevComponents.DotNetBar.eButtonColor.OrangeWithBackground;
             // 
             // btnOther2
             // 
+            this.btnOther2.ColorTable = DevComponents.DotNetBar.eButtonColor.OrangeWithBackground;
             this.btnOther2.GlobalItem = false;
             this.btnOther2.Name = "btnOther2";
             this.btnOther2.Text = "其它電話2";
             this.btnOther2.Click += new System.EventHandler(this.btnOther2_Click);
-            this.btnOther2.ColorTable = DevComponents.DotNetBar.eButtonColor.OrangeWithBackground;
             // 
             // btnOther3
             // 
+            this.btnOther3.ColorTable = DevComponents.DotNetBar.eButtonColor.OrangeWithBackground;
             this.btnOther3.GlobalItem = false;
             this.btnOther3.Name = "btnOther3";
             this.btnOther3.Text = "其它電話3";
             this.btnOther3.Click += new System.EventHandler(this.btnOther3_Click);
-            this.btnOther3.ColorTable = DevComponents.DotNetBar.eButtonColor.OrangeWithBackground;
             // 
             // buttonX1
             // 
@@ -173,11 +176,11 @@
             // 
             // btnItem4
             // 
+            this.btnItem4.ColorTable = DevComponents.DotNetBar.eButtonColor.OrangeWithBackground;
             this.btnItem4.GlobalItem = false;
             this.btnItem4.Name = "btnItem4";
             this.btnItem4.Text = "SMS簡訊";
             this.btnItem4.Click += new System.EventHandler(this.btnCSMS_Click);
-            this.btnItem4.ColorTable = DevComponents.DotNetBar.eButtonColor.OrangeWithBackground;
             // 
             // controlContainerItem1
             // 
@@ -204,19 +207,19 @@
             // 
             // buttonItem3
             // 
+            this.buttonItem3.ColorTable = DevComponents.DotNetBar.eButtonColor.OrangeWithBackground;
             this.buttonItem3.GlobalItem = false;
             this.buttonItem3.Name = "buttonItem3";
             this.buttonItem3.Text = "SkypeOut";
-            this.buttonItem3.ColorTable = DevComponents.DotNetBar.eButtonColor.OrangeWithBackground;
             // 
             // btnPSMS
             // 
+            this.btnPSMS.ColorTable = DevComponents.DotNetBar.eButtonColor.OrangeWithBackground;
             this.btnPSMS.GlobalItem = false;
             this.btnPSMS.Name = "btnPSMS";
             this.btnPSMS.Text = "SMS簡訊";
             this.btnPSMS.Visible = false;
             this.btnPSMS.Click += new System.EventHandler(this.btnPSMS_Click);
-            this.btnPSMS.ColorTable = DevComponents.DotNetBar.eButtonColor.OrangeWithBackground;
             // 
             // buttonX3
             // 
@@ -232,23 +235,23 @@
             this.btnOSMS});
             this.buttonX3.SubItemsExpandWidth = 15;
             this.buttonX3.TabIndex = 7;
-            this.buttonX3.Visible = false;            
+            this.buttonX3.Visible = false;
             // 
             // buttonItem5
             // 
+            this.buttonItem5.ColorTable = DevComponents.DotNetBar.eButtonColor.OrangeWithBackground;
             this.buttonItem5.GlobalItem = false;
             this.buttonItem5.Name = "buttonItem5";
             this.buttonItem5.Text = "SkypeOut";
-            this.buttonItem5.ColorTable = DevComponents.DotNetBar.eButtonColor.OrangeWithBackground;
             // 
             // btnOSMS
             // 
+            this.btnOSMS.ColorTable = DevComponents.DotNetBar.eButtonColor.OrangeWithBackground;
             this.btnOSMS.GlobalItem = false;
             this.btnOSMS.Name = "btnOSMS";
             this.btnOSMS.Text = "SMS簡訊";
             this.btnOSMS.Visible = false;
             this.btnOSMS.Click += new System.EventHandler(this.btnOSMS_Click);
-            this.btnOSMS.ColorTable = DevComponents.DotNetBar.eButtonColor.OrangeWithBackground;
             // 
             // txtSMS
             // 
@@ -256,6 +259,7 @@
             // 
             // 
             this.txtSMS.Border.Class = "TextBoxBorder";
+            this.txtSMS.Border.CornerType = DevComponents.DotNetBar.eCornerType.Square;
             this.txtSMS.Location = new System.Drawing.Point(365, 47);
             this.txtSMS.Margin = new System.Windows.Forms.Padding(4);
             this.txtSMS.Name = "txtSMS";
@@ -281,6 +285,7 @@
             this.buttonX4.AccessibleRole = System.Windows.Forms.AccessibleRole.PushButton;
             this.buttonX4.AutoExpandOnClick = true;
             this.buttonX4.ColorTable = DevComponents.DotNetBar.eButtonColor.OrangeWithBackground;
+            this.buttonX4.Enabled = false;
             this.buttonX4.Location = new System.Drawing.Point(491, 49);
             this.buttonX4.Margin = new System.Windows.Forms.Padding(4);
             this.buttonX4.Name = "buttonX4";
@@ -289,14 +294,17 @@
             this.buttonItem4});
             this.buttonX4.SubItemsExpandWidth = 15;
             this.buttonX4.TabIndex = 9;
+            this.buttonX4.Visible = false;
             // 
             // buttonItem4
             // 
+            this.buttonItem4.ColorTable = DevComponents.DotNetBar.eButtonColor.OrangeWithBackground;
+            this.buttonItem4.Enabled = false;
             this.buttonItem4.GlobalItem = false;
             this.buttonItem4.Name = "buttonItem4";
             this.buttonItem4.Text = "SMS簡訊";
+            this.buttonItem4.Visible = false;
             this.buttonItem4.Click += new System.EventHandler(this.buttonItem4_Click);
-            this.buttonItem4.ColorTable = DevComponents.DotNetBar.eButtonColor.OrangeWithBackground;
             // 
             // PhonePalmerwormItem
             // 
