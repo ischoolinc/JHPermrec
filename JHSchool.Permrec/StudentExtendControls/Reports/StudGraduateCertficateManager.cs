@@ -378,10 +378,10 @@ namespace JHSchool.Permrec.StudentExtendControls.Reports
         /// 列印資料
         /// </summary>
         /// <param name="StudentIDList"></param>        
-        public void PrintData(List<string> StudentIDList, string isDefaultTemplate)
+        public void PrintData(List<string> StudentIDList, string isDefaultTemplate,bool IsPointByUpdateRecord)
         {
             GetUserDefineTemplateFromSystem();
-            StudGraduateCertficateEntityList = DAL.DALTransfer.GetStudGraduateCertficateEntityList(StudentIDList);
+            StudGraduateCertficateEntityList = DAL.DALTransfer.GetStudGraduateCertficateEntityList(StudentIDList, IsPointByUpdateRecord);
             _isDefaultTemplate = isDefaultTemplate.ToLower();
             bkWorkPrint = new BackgroundWorker();
             bkWorkPrint.DoWork += new DoWorkEventHandler(bkWorkPrint_DoWork);

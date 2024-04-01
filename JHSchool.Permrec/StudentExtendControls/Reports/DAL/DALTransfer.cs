@@ -300,13 +300,13 @@ namespace JHSchool.Permrec.StudentExtendControls.Reports.DAL
         /// </summary>
         /// <param name="StudentList"></param>
         /// <returns></returns>
-        public static List<StudGraduateCertficateEntity> GetStudGraduateCertficateEntityList(List<string> StudentIDList)
+        public static List<StudGraduateCertficateEntity> GetStudGraduateCertficateEntityList(List<string> StudentIDList, bool IsPointByUpdateRecord)
         {
             List<StudGraduateCertficateEntity> retValue = new List<StudGraduateCertficateEntity>();
             // 取得畢業照片
             Dictionary<string, string> GraduatePhotoDic = K12.Data.Photo.SelectGraduatePhoto(StudentIDList);
             Dictionary<string, string> GraduateSchoolYearDic = GetGradeSchoolYear(StudentIDList);
-            Dictionary<string, string> CertDocNoDic = GetCertDocNoDic(StudentIDList);
+            Dictionary<string, string> CertDocNoDic = GetCertDocNoDic(StudentIDList, IsPointByUpdateRecord);
 
             // 取得學校資訊
             string SchoolName = JHSchool.Data.JHSchoolInfo.ChineseName;
@@ -317,7 +317,7 @@ namespace JHSchool.Permrec.StudentExtendControls.Reports.DAL
             // 學生基本資料
             foreach (JHSchool.Data.JHStudentRecord studRec in JHSchool.Data.JHStudent.SelectByIDs(StudentIDList))
             {
-                StudGraduateCertficateEntity sgce = new StudGraduateCertficateEntity();
+                JHSchool.Permrec.StudentExtendControls.Reports.DAL.StudGraduateCertficateEntity sgce = new JHSchool.Permrec.StudentExtendControls.Reports.DAL.StudGraduateCertficateEntity();
                 if (studRec.Birthday.HasValue)
                     sgce.Birthday = studRec.Birthday.Value;
                 sgce.ChancellorEngName = ChancellorEngName;
@@ -365,17 +365,32 @@ namespace JHSchool.Permrec.StudentExtendControls.Reports.DAL
 
         /// <summary>
         /// 取得畢業證書字號
+        /// 2024/4/1 - 高雄國中需求/改為使用畢業資訊中的[畢業證書字號]
         /// </summary>
-        /// <param name="StudentIDList"></param>
-        /// <returns></returns>
-        public static Dictionary<string, string> GetCertDocNoDic(List<string> StudentIDList)
+        public static Dictionary<string, string> GetCertDocNoDic(List<string> StudentIDList, bool IsPointByUpdateRecord)
         {
             Dictionary<string, string> retValue = new Dictionary<string, string>();
-            foreach (JHSchool.Data.JHUpdateRecordRecord updRec in JHSchool.Data.JHUpdateRecord.SelectByStudentIDs(StudentIDList))
+            if (IsPointByUpdateRecord)
             {
-                if (updRec.UpdateCode == "2")
-                    if (!retValue.ContainsKey(updRec.StudentID))
-                        retValue.Add(updRec.StudentID, updRec.GraduateCertificateNumber);
+                //透過異動取得資料
+                foreach (JHSchool.Data.JHUpdateRecordRecord updRec in JHSchool.Data.JHUpdateRecord.SelectByStudentIDs(StudentIDList))
+                {
+                    if (IsPointByUpdateRecord)
+                    {
+                        if (updRec.UpdateCode == "2")
+                            if (!retValue.ContainsKey(updRec.StudentID))
+                                retValue.Add(updRec.StudentID, updRec.GraduateCertificateNumber);
+                    }
+                }
+            }
+            else
+            {
+                //透過畢業資訊取得資料
+                foreach (JHSchool.Data.JHLeaveInfoRecord updRec in JHSchool.Data.JHLeaveIfno.SelectByStudentIDs(StudentIDList))
+                {
+                    if (!retValue.ContainsKey(updRec.RefStudentID))
+                        retValue.Add(updRec.RefStudentID, updRec.DiplomaNumber);
+                }
             }
             return retValue;
         }

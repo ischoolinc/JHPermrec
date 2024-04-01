@@ -24,13 +24,13 @@ namespace JHSchool.Permrec.StudentExtendControls.Reports
         private byte[] defalutTemplate;
         private string base64 = "";
         private bool _isUpload = false;
-        
+
         /// <summary>
         /// 取得是否讀取設樣版
         /// </summary>
         public bool GetisDefaultTemplate()
         {
-            return _isDefaultTemplate;        
+            return _isDefaultTemplate;
         }
 
         public StudentBackToArticleManager()
@@ -82,8 +82,8 @@ namespace JHSchool.Permrec.StudentExtendControls.Reports
             if (sfd.ShowDialog() == DialogResult.OK)
             {
                 try
-                {                    
-                    
+                {
+
                     FileStream fs = new FileStream(sfd.FileName, FileMode.Create);
                     fs.Write(defalutTemplate, 0, defalutTemplate.Length);
                     fs.Close();
@@ -94,7 +94,7 @@ namespace JHSchool.Permrec.StudentExtendControls.Reports
                     MsgBox.Show("指定路徑無法存取。", "另存檔案失敗", MessageBoxButtons.OK, MessageBoxIcon.Error);
                     return;
                 }
-            }        
+            }
         }
 
         /// <summary>
@@ -102,7 +102,7 @@ namespace JHSchool.Permrec.StudentExtendControls.Reports
         /// </summary>
         public void SetUserDefineTemplateToSystem()
         {
-            
+
             OpenFileDialog ofd = new OpenFileDialog();
             ofd.Title = "選擇自訂的轉出回條範本";
             ofd.Filter = "Word檔案 (*.doc)|*.doc";
@@ -133,7 +133,7 @@ namespace JHSchool.Permrec.StudentExtendControls.Reports
                     return;
                 }
             }
-        
+
         }
 
         /// <summary>
@@ -176,14 +176,14 @@ namespace JHSchool.Permrec.StudentExtendControls.Reports
                 }
             }
 
-        
+
         }
 
         /// <summary>
         /// 列印資料
         /// </summary>
         /// <param name="StudentIDList"></param>        
-        public void PrintData(List<string> StudentIDList,bool isDefaultTemplate)
+        public void PrintData(List<string> StudentIDList, bool isDefaultTemplate)
         {
             FISCA.Presentation.MotherForm.SetStatusBarMessage("開始產生資料..");
             GetUserDefineTemplateFromSystem();
@@ -248,8 +248,8 @@ namespace JHSchool.Permrec.StudentExtendControls.Reports
 
         void bkWorkPrint_DoWork(object sender, DoWorkEventArgs e)
         {
-            Document doc = new Document ();
-            doc.Sections.Clear ();
+            Document doc = new Document();
+            doc.Sections.Clear();
             int cot = 0;
             foreach (DAL.StudentEntity se in _StudentList)
             {
@@ -257,7 +257,7 @@ namespace JHSchool.Permrec.StudentExtendControls.Reports
                 baseData.Add("學生姓名", se.StudentName);
                 baseData.Add("學校中文名稱", se.SchoolChineseName);
                 baseData.Add("學校地址", se.SchoolAddress);
-                baseData.Add("學校電話", se.SchoolTelephone );
+                baseData.Add("學校電話", se.SchoolTelephone);
                 baseData.Add("學校傳真", se.SchoolFax);
                 baseData.Add("班級年級", se.GradeYear);
                 baseData.Add("班級名稱", se.ClassName);
@@ -271,14 +271,14 @@ namespace JHSchool.Permrec.StudentExtendControls.Reports
                     rptKeys.Add(item.Key);
                     rptValues.Add(item.Value);
                 }
-                
+
                 Document docTemplate;
 
                 if (_isDefaultTemplate)
                     docTemplate = new Document(new MemoryStream(defalutTemplate));
                 else
                 {
-                    if(_buffer.Length <1)
+                    if (_buffer.Length < 1)
                         docTemplate = new Document(new MemoryStream(defalutTemplate));
                     else
                         docTemplate = new Document(new MemoryStream(_buffer));
@@ -286,7 +286,7 @@ namespace JHSchool.Permrec.StudentExtendControls.Reports
                 docTemplate.MailMerge.FieldMergingCallback = new InsertDocumentAtMailMergeHandler();
                 docTemplate.MailMerge.RemoveEmptyParagraphs = true;
                 docTemplate.MailMerge.Execute(rptKeys.ToArray(), rptValues.ToArray());
-                doc.Sections.Add(doc.ImportNode(docTemplate.Sections[0],true ));
+                doc.Sections.Add(doc.ImportNode(docTemplate.Sections[0], true));
                 bkWorkPrint.ReportProgress((int)(((double)cot++ * 100.0) / (double)_StudentList.Count));
             }
             e.Result = doc;

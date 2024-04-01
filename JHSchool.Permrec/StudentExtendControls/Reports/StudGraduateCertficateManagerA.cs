@@ -32,7 +32,7 @@ namespace JHSchool.Permrec.StudentExtendControls.Reports
 
             //// 判斷使用高雄樣版
             //if (Program.ModuleType == Program.ModuleFlag.KaoHsiung)
-                defalutTemplate = JHSchool.Permrec.StudentExtendControls.Reports.RptResource.高雄畢業證明書樣版;
+            defalutTemplate = JHSchool.Permrec.StudentExtendControls.Reports.RptResource.高雄畢業證明書樣版;
 
         }
 
@@ -239,7 +239,10 @@ namespace JHSchool.Permrec.StudentExtendControls.Reports
         public void PrintData(List<string> StudentIDList, bool isDefaultTemplate)
         {
             GetUserDefineTemplateFromSystem();
-            StudGraduateCertficateEntityList = DAL.DALTransfer.GetStudGraduateCertficateEntityList(StudentIDList);
+
+            //畢業證書 , 預設列印還是維持異動紀錄
+            StudGraduateCertficateEntityList = DAL.DALTransfer.GetStudGraduateCertficateEntityList(StudentIDList, true);
+            
             _isDefaultTemplate = isDefaultTemplate;
             bkWorkPrint = new BackgroundWorker();
             bkWorkPrint.DoWork += new DoWorkEventHandler(bkWorkPrint_DoWork);
@@ -304,7 +307,7 @@ namespace JHSchool.Permrec.StudentExtendControls.Reports
                 baseData.Add("校長姓名", sgce.ChancellorName);
                 baseData.Add("校長英文姓名", sgce.ChancellorEngName);
                 baseData.Add("畢業照片", sgce.GetPhotoImage());
-                baseData.Add("民國生日", sgce.GetChineseBirthday());                
+                baseData.Add("民國生日", sgce.GetChineseBirthday());
                 baseData.Add("學期", _Semester);
                 baseData.Add("今天民國日期", GetSystemTodayChineseDate());
                 baseData.Add("文號", _CertDoc);
@@ -384,6 +387,6 @@ namespace JHSchool.Permrec.StudentExtendControls.Reports
         }
 
 
-        
-    }    
+
+    }
 }

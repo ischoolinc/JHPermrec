@@ -18,7 +18,7 @@ namespace JHSchool.Permrec.StudentExtendControls.Reports
         {
             InitializeComponent();
             sgcm = new StudGraduateCertficateManager();
-            if (sgcm.GetisDefaultTemplate()=="true") //畢業證書預設樣板
+            if (sgcm.GetisDefaultTemplate() == "true") //畢業證書預設樣板
                 cbxDefault.Checked = true;
             else if (sgcm.GetisDefaultTemplate() == "false")
                 cbxUserDefine.Checked = true;
@@ -31,9 +31,16 @@ namespace JHSchool.Permrec.StudentExtendControls.Reports
         private void cmdPrint_Click(object sender, EventArgs e)
         {
             if (cbxDefault.Checked == false && cbxUserDefine.Checked == false
-                &&  cbxDefault2.Checked == false && cbxUserDefine2.Checked == false
+                && cbxDefault2.Checked == false && cbxUserDefine2.Checked == false
                 && Student.Instance.SelectedKeys.Count < 1)
                 return;
+
+            //設定列印來源
+            bool IsPointByUpdateRecord = true;
+            if (cbIsPointByUpdateRecord.Checked)
+                IsPointByUpdateRecord = true;
+            else
+                IsPointByUpdateRecord = false;
 
             //if (txtCertDoc.Text.Trim() == "" || txtCertNo.Text.Trim() == "")
             //    if (MessageBox.Show("校內文號輸入不完整，請問是否繼續列印 ?", "", MessageBoxButtons.YesNo, MessageBoxIcon.Warning, MessageBoxDefaultButton.Button2) == DialogResult.No)
@@ -53,7 +60,7 @@ namespace JHSchool.Permrec.StudentExtendControls.Reports
             sgcm.SetCertNo(txtCertNo.Text);
             sgcm.SetSemester(School.DefaultSemester, true);
 
-            sgcm.PrintData(Student.Instance.SelectedKeys, isDefalutTemplate);
+            sgcm.PrintData(Student.Instance.SelectedKeys, isDefalutTemplate, IsPointByUpdateRecord);
             PermRecLogProcess prlp = new PermRecLogProcess();
             prlp.SaveLog("學生.報表", "列印", "列印" + Student.Instance.SelectedKeys.Count + "筆證書。");
             cmdPrint.Enabled = true;
