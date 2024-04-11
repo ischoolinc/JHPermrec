@@ -142,7 +142,14 @@ namespace JHSchool.Permrec.StudentExtendControls.Reports
             {
                 try
                 {
-                    defalutTemplate_Chi = JHSchool.Permrec.StudentExtendControls.Reports.RptResource.在學證明書中文_高雄_;
+                    if (Program.ModuleType == Program.ModuleFlag.HsinChu)
+                    {
+                        defalutTemplate_Chi = RptResource.在學證明書_無成績_新竹;
+                    }
+                    else
+                    {
+                        defalutTemplate_Chi = RptResource.在學證明書中文_高雄_;
+                    }
                     FileStream fs = new FileStream(sfd.FileName, FileMode.Create);
                     fs.Write(defalutTemplate_Chi, 0, defalutTemplate_Chi.Length);
                     fs.Close();
