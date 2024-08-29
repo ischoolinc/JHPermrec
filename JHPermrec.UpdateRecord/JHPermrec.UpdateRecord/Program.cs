@@ -297,31 +297,32 @@ namespace JHPermrec.UpdateRecord
 
             }
 
-            if (CanUseUpRecIE05)
-            {
-                // 匯出休學異動
-                rbUpdateRecordExport["異動相關匯出"]["匯出休學異動"].Enable = User.Acl["JHSchool.Student.RibbonExportUpdateRecCode05"].Executable;
-                rbUpdateRecordExport["異動相關匯出"]["匯出休學異動"].Click += delegate
-                {
-                    SmartSchool.API.PlugIn.Export.Exporter exporter = new JHPermrec.UpdateRecord.ImportExport.ExportUpdateRecCode05();
-                    ImportExport.ExportStudentV2 wizard = new ImportExport.ExportStudentV2(exporter.Text, exporter.Image);
-                    exporter.InitializeExport(wizard);
-                    wizard.ShowDialog();
-                };
+            //  檢查目前只有高雄使用，高雄小組會議決議移除休學相關功能，先註解掉
+            //if (CanUseUpRecIE05)
+            //{
+            //    // 匯出休學異動
+            //    rbUpdateRecordExport["異動相關匯出"]["匯出休學異動"].Enable = User.Acl["JHSchool.Student.RibbonExportUpdateRecCode05"].Executable;
+            //    rbUpdateRecordExport["異動相關匯出"]["匯出休學異動"].Click += delegate
+            //    {
+            //        SmartSchool.API.PlugIn.Export.Exporter exporter = new JHPermrec.UpdateRecord.ImportExport.ExportUpdateRecCode05();
+            //        ImportExport.ExportStudentV2 wizard = new ImportExport.ExportStudentV2(exporter.Text, exporter.Image);
+            //        exporter.InitializeExport(wizard);
+            //        wizard.ShowDialog();
+            //    };
 
-                // 匯入休學異動
-                rbUpdateRecordImport["異動相關匯入"]["匯入休學異動"].Enable = User.Acl["JHSchool.Student.RibbonImportUpdateRecCode05"].Executable;
-                rbUpdateRecordImport["異動相關匯入"]["匯入休學異動"].Click += delegate
-                {
-                    SmartSchool.API.PlugIn.Import.Importer importer = new JHPermrec.UpdateRecord.ImportExport.ImportUpdateRecCode05();
-                    ImportExport.ImportStudentV2 wizard = new ImportExport.ImportStudentV2(importer.Text, importer.Image);
-                    importer.InitializeImport(wizard);
-                    wizard.ShowDialog();
-                };
+            //    // 匯入休學異動
+            //    rbUpdateRecordImport["異動相關匯入"]["匯入休學異動"].Enable = User.Acl["JHSchool.Student.RibbonImportUpdateRecCode05"].Executable;
+            //    rbUpdateRecordImport["異動相關匯入"]["匯入休學異動"].Click += delegate
+            //    {
+            //        SmartSchool.API.PlugIn.Import.Importer importer = new JHPermrec.UpdateRecord.ImportExport.ImportUpdateRecCode05();
+            //        ImportExport.ImportStudentV2 wizard = new ImportExport.ImportStudentV2(importer.Text, importer.Image);
+            //        importer.InitializeImport(wizard);
+            //        wizard.ShowDialog();
+            //    };
 
-                StudUpdateRecFuncButtonRoleAcl.Add(new RibbonFeature("JHSchool.Student.RibbonExportUpdateRecCode05", "匯出休學異動"));
-                StudUpdateRecFuncButtonRoleAcl.Add(new RibbonFeature("JHSchool.Student.RibbonImportUpdateRecCode05", "匯入休學異動"));
-            }
+            //    StudUpdateRecFuncButtonRoleAcl.Add(new RibbonFeature("JHSchool.Student.RibbonExportUpdateRecCode05", "匯出休學異動"));
+            //    StudUpdateRecFuncButtonRoleAcl.Add(new RibbonFeature("JHSchool.Student.RibbonImportUpdateRecCode05", "匯入休學異動"));
+            //}
 
             if (CanUseUpRecIE06)
             {

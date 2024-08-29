@@ -47,7 +47,7 @@ namespace JHPermrec.UpdateRecord.UpdateRecordItemControls
             UpdateRecordItemForm.prlp.SetAfterSaveText("學籍核准文號", txtLastADNumber.Text);
             UpdateRecordItemForm.prlp.SetAfterSaveText("座號", txtSeatNo.Text);
 
-
+            
         }
 
 

@@ -284,21 +284,22 @@ namespace JHSchool.Permrec
                     MsgBox.Show("請選擇學生");
             });
 
-            if (ModuleType == ModuleFlag.KaoHsiung)
-            {
-                // 休學證明書
-                rbStudentReports["休學證明書"].Enable = User.Acl["JHSchool.Permrec.StudentExtendControls.Reports.StudentLeaveForm"].Executable;
-                rbStudentReports["休學證明書"].Click += delegate
-                {
-                    if (Student.Instance.SelectedList.Count >= 1)
-                    {
-                        JHSchool.Permrec.StudentExtendControls.Reports.StudentLeaveForm slf = new JHSchool.Permrec.StudentExtendControls.Reports.StudentLeaveForm();
-                        slf.ShowDialog();
-                    }
-                    else
-                        MsgBox.Show("請選擇學生");
-                };
-            }
+            // 高雄國中不使用這功能，先註解
+            //if (ModuleType == ModuleFlag.KaoHsiung)
+            //{
+            //    // 休學證明書
+            //    rbStudentReports["休學證明書"].Enable = User.Acl["JHSchool.Permrec.StudentExtendControls.Reports.StudentLeaveForm"].Executable;
+            //    rbStudentReports["休學證明書"].Click += delegate
+            //    {
+            //        if (Student.Instance.SelectedList.Count >= 1)
+            //        {
+            //            JHSchool.Permrec.StudentExtendControls.Reports.StudentLeaveForm slf = new JHSchool.Permrec.StudentExtendControls.Reports.StudentLeaveForm();
+            //            slf.ShowDialog();
+            //        }
+            //        else
+            //            MsgBox.Show("請選擇學生");
+            //    };
+            //}
 
             // 畢業證明書
             rbStudentReports["畢業證明書"].Enable = User.Acl["JHSchool.Permrec.StudentExtendControls.Reports.StudGraduateCertficateFormA"].Executable;

@@ -109,7 +109,7 @@ namespace JHPermrec.UpdateRecord.GovernmentalDocument.NameList
             // 高雄特別移除無法新增中輟與續讀名冊
             if (JHSchool.Permrec.Program.ModuleType == JHSchool.Permrec.Program.ModuleFlag.KaoHsiung)
             {
-                if (nameListProvider.Title != "中輟學生名冊" && nameListProvider.Title != "續讀學生名冊")
+                if (nameListProvider.Title != "中輟學生名冊" && nameListProvider.Title != "續讀學生名冊" && nameListProvider.Title != "休學學生名冊")
                 {
                     System.Windows.Forms.ListViewItem listViewItem = new System.Windows.Forms.ListViewItem(nameListProvider.Title, 0);
                     listViewItem.Tag = nameListProvider;

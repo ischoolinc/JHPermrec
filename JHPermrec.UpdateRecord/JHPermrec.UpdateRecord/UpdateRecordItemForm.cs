@@ -63,7 +63,9 @@ namespace JHPermrec.UpdateRecord
                 cbxSel.Enabled = true;
 
                 foreach (DAL.DALTransfer2.UpdateType ut in DAL.DALTransfer2.CheckCanInputUpdateType)
-                    cbxSel.Items.Add(ut.ToString());
+                    // 高雄國中不能新增休學
+                    if (ut.ToString() != "休學")
+                        cbxSel.Items.Add(ut.ToString());
 
                 cbxSel.SelectedIndex = 0;
                 SetDefaultSchoolYearSemester();
@@ -75,6 +77,12 @@ namespace JHPermrec.UpdateRecord
             if (mode == actMode.修改)
             {
                 cbxSel.Enabled = false;
+
+                if (cbxSel.Text == "休學")
+                    btnUpload.Enabled = btnConfirm.Enabled = false;
+                else
+                    btnUpload.Enabled = btnConfirm.Enabled = true;
+                
                 UpdateRecordEditorPanle.Controls.Clear();
                 UpdateRecordEditorPanle.Controls.Add(CreateByUpdateCode());
 
@@ -153,6 +161,8 @@ namespace JHPermrec.UpdateRecord
         {
             SetLoadUpdateSchoolYearSemester(_StudUpdateRecordEntity.SchoolYear + "", _StudUpdateRecordEntity.Semester + "", _StudUpdateRecordEntity.GetGradeYear());
 
+            btnUpload.Enabled = btnConfirm.Enabled = true;
+
             if (_StudUpdateRecordEntity.GetUpdateCode() == "1")
             {
                 cbxSel.Text = "新生";
@@ -176,6 +186,7 @@ namespace JHPermrec.UpdateRecord
             else if (_StudUpdateRecordEntity.GetUpdateCode() == "5")
             {
                 cbxSel.Text = "休學";
+                btnUpload.Enabled = btnConfirm.Enabled = false;
                 return new UpdateRecordInfo05(_StudUpdateRecordEntity);
             }
             else if (_StudUpdateRecordEntity.GetUpdateCode() == "6")
@@ -215,7 +226,15 @@ namespace JHPermrec.UpdateRecord
         {
             UpdateRecordEditorPanle.Controls.Clear();
             UpdateRecordEditorPanle.Controls.Add(CreateByUpdateType(cbxSel.Text));
-
+            // 休學異動只能檢視無法新增修改儲存
+            if (cbxSel.Text == "休學")
+            {
+                btnUpload.Enabled = btnConfirm.Enabled = false;
+            }
+            else
+            {
+                btnUpload.Enabled = btnConfirm.Enabled = true;
+            }
         }
 
         private void btnConfirm_Click(object sender, EventArgs e)
@@ -664,7 +683,7 @@ namespace JHPermrec.UpdateRecord
                     _base64Data = Convert.ToBase64String(ms.ToArray());
                     if (_FileName != "" && _base64Data != "")
                     {
-                       UpdateRecordUtil.UploadFile(_StudUpdateRecordEntity.StudentID, _base64Data, _FileName);
+                        UpdateRecordUtil.UploadFile(_StudUpdateRecordEntity.StudentID, _base64Data, _FileName);
                     }
 
                     //  上傳後儲存
@@ -675,7 +694,7 @@ namespace JHPermrec.UpdateRecord
                 catch (Exception ex)
                 {
                     FISCA.Presentation.Controls.MsgBox.Show("讀取上傳檔案失敗," + ex.Message);
-                }               
+                }
 
             }
         }
