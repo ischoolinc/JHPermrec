@@ -199,7 +199,7 @@
             this.btnFather.ColorTable = DevComponents.DotNetBar.eButtonColor.OrangeWithBackground;
             this.btnFather.GlobalItem = false;
             this.btnFather.Name = "btnFather";
-            this.btnFather.Text = "父/母";
+            this.btnFather.Text = "家長1";
             this.btnFather.Click += new System.EventHandler(this.btnFather_Click);
             // 
             // btnMother
@@ -207,7 +207,7 @@
             this.btnMother.ColorTable = DevComponents.DotNetBar.eButtonColor.OrangeWithBackground;
             this.btnMother.GlobalItem = false;
             this.btnMother.Name = "btnMother";
-            this.btnMother.Text = "母/父";
+            this.btnMother.Text = "家長2";
             this.btnMother.Click += new System.EventHandler(this.btnMother_Click);
             // 
             // lnkCopyGuardian
@@ -233,7 +233,7 @@
             this.lnkCopyFather.Size = new System.Drawing.Size(85, 16);
             this.lnkCopyFather.TabIndex = 8;
             this.lnkCopyFather.TabStop = true;
-            this.lnkCopyFather.Text = "複製父/母資料";
+            this.lnkCopyFather.Text = "複製家長1資料";
             this.lnkCopyFather.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.lnkCopyFather_LinkClicked);
             // 
             // lnkCopyMother
@@ -246,7 +246,7 @@
             this.lnkCopyMother.Size = new System.Drawing.Size(80, 16);
             this.lnkCopyMother.TabIndex = 9;
             this.lnkCopyMother.TabStop = true;
-            this.lnkCopyMother.Text = "複製母/父資料";
+            this.lnkCopyMother.Text = "複製家長2資料";
             this.lnkCopyMother.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.lnkCopyMother_LinkClicked);
             // 
             // cboNationality
