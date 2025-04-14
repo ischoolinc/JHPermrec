@@ -143,7 +143,7 @@ namespace JHSchool.Permrec.StudentExtendControls.Reports.DAL
 
             int BeginIdx=CertDocNo.IndexOf("第");
 
-            if (BeginIdx == 0)
+            if (BeginIdx == -1)
                 return string.Empty;
 
             int EndIdx = CertDocNo.Length;
