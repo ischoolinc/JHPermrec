@@ -206,8 +206,11 @@ namespace JHPermrec.UpdateRecord.GovernmentalDocument.NameList
                         wb.Worksheets[0].Cells[rowj, 7].PutValue(UpdateRecordUtil.getMonthStr(sburce.GetEnrollmentSchoolYear(), false));
                     }
                     wb.Worksheets[0].Cells[rowj, 8].PutValue(sburce.GetPrimarySchoolName ());
-                    wb.Worksheets[0].Cells[rowj, 9].PutValue(sburce.GetPermanentAddress());
-                    wb.Worksheets[0].Cells[rowj, 10].PutValue(sburce.GetComment ());
+                //wb.Worksheets[0].Cells[rowj, 9].PutValue(sburce.GetPermanentAddress());
+
+                wb.Worksheets[0].Cells[rowj, 9].PutValue(sburce.GetAddress());
+
+                wb.Worksheets[0].Cells[rowj, 10].PutValue(sburce.GetComment ());
 
                     peoTotalCount++;
                     rowj++;
