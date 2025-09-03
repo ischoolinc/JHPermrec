@@ -1,1139 +1,1339 @@
 <SchoolList>
-  <School Code="010301" Name="國立華僑高級中等學校附設國中" County="新北市" />
-  <School Code="011301" Name="私立淡江高中附設國中" County="新北市" />
-  <School Code="011302" Name="私立康橋高中附設國中" County="新北市" />
-  <School Code="011306" Name="私立金陵女中附設國中" County="新北市" />
-  <School Code="011307" Name="新北市裕德高級中等學校附設國中" County="新北市" />
-  <School Code="011309" Name="財團法人南山高中附設國中" County="新北市" />
-  <School Code="011310" Name="財團法人恆毅高中附設國中" County="新北市" />
-  <School Code="011311" Name="私立聖心女中附設國中" County="新北市" />
-  <School Code="011312" Name="私立崇義高中附設國中" County="新北市" />
-  <School Code="011314" Name="財團法人中華高中附設國中" County="新北市" />
-  <School Code="011316" Name="私立格致高中附設國中" County="新北市" />
-  <School Code="011317" Name="私立醒吾高中附設國中" County="新北市" />
-  <School Code="011318" Name="私立徐匯高中附設國中" County="新北市" />
-  <School Code="011322" Name="財團法人崇光女中附設國中" County="新北市" />
-  <School Code="011323" Name="私立光仁高中附設國中" County="新北市" />
-  <School Code="011324" Name="私立竹林高中附設國中" County="新北市" />
-  <School Code="011325" Name="私立及人高中附設國中" County="新北市" />
-  <School Code="011329" Name="財團法人辭修高中附設國中" County="新北市" />
-  <School Code="011330" Name="新北市林口康橋高中附設國中" County="新北市" />
-  <School Code="011399" Name="私立時雨高中附設國中" County="新北市" />
-  <School Code="014302" Name="市立海山高中附設國中" County="新北市" />
-  <School Code="014311" Name="市立三重高中附設國中" County="新北市" />
-  <School Code="014315" Name="市立永平高中附設國中" County="新北市" />
-  <School Code="014322" Name="市立樹林高中附設國中" County="新北市" />
-  <School Code="014326" Name="市立明德高中附設國中" County="新北市" />
-  <School Code="014332" Name="市立秀峰高中附設國中" County="新北市" />
-  <School Code="014338" Name="市立金山高中附設國中" County="新北市" />
-  <School Code="014343" Name="市立安康高中附設國中" County="新北市" />
-  <School Code="014347" Name="市立雙溪高中附設國中" County="新北市" />
-  <School Code="014348" Name="市立石碇高中附設國中" County="新北市" />
-  <School Code="014353" Name="市立丹鳳高中附設國中" County="新北市" />
-  <School Code="014356" Name="市立清水高中附設國中" County="新北市" />
-  <School Code="014357" Name="市立三民高中附設國中" County="新北市" />
-  <School Code="014362" Name="市立錦和高中附設國中" County="新北市" />
-  <School Code="014363" Name="市立光復高中附設國中" County="新北市" />
-  <School Code="014364" Name="市立竹圍高中附設國中" County="新北市" />
-  <School Code="014381" Name="市立北大高級中學附設國中" County="新北市" />
-  <School Code="014468" Name="市立樟樹國際實中附設國中" County="新北市" />
-  <School Code="014501" Name="市立板橋國中" County="新北市" />
-  <School Code="014503" Name="市立重慶國中" County="新北市" />
-  <School Code="014504" Name="市立江翠國中" County="新北市" />
-  <School Code="014505" Name="市立中山國中" County="新北市" />
-  <School Code="014506" Name="市立新埔國中" County="新北市" />
-  <School Code="014507" Name="市立新莊國中" County="新北市" />
-  <School Code="014508" Name="市立新泰國中" County="新北市" />
-  <School Code="014509" Name="市立福營國中" County="新北市" />
-  <School Code="014510" Name="市立頭前國中" County="新北市" />
-  <School Code="014512" Name="市立光榮國中" County="新北市" />
-  <School Code="014513" Name="市立明志國中" County="新北市" />
-  <School Code="014514" Name="市立碧華國中" County="新北市" />
-  <School Code="014516" Name="市立永和國中" County="新北市" />
-  <School Code="014517" Name="市立福和國中" County="新北市" />
-  <School Code="014518" Name="市立中和國中" County="新北市" />
-  <School Code="014519" Name="市立積穗國中" County="新北市" />
-  <School Code="014520" Name="市立漳和國中" County="新北市" />
-  <School Code="014521" Name="市立鶯歌國中" County="新北市" />
-  <School Code="014523" Name="市立柑園國中" County="新北市" />
-  <School Code="014524" Name="市立土城國中" County="新北市" />
-  <School Code="014525" Name="市立三峽國中" County="新北市" />
-  <School Code="014527" Name="市立八里國中" County="新北市" />
-  <School Code="014528" Name="市立泰山國中" County="新北市" />
-  <School Code="014529" Name="市立五股國中" County="新北市" />
-  <School Code="014530" Name="市立蘆洲國中" County="新北市" />
-  <School Code="014531" Name="市立林口國中" County="新北市" />
-  <School Code="014533" Name="市立汐止國中" County="新北市" />
-  <School Code="014534" Name="市立淡水國中" County="新北市" />
-  <School Code="014536" Name="市立三芝國中" County="新北市" />
-  <School Code="014537" Name="市立石門國中" County="新北市" />
-  <School Code="014539" Name="市立萬里國中" County="新北市" />
-  <School Code="014540" Name="市立坪林國中" County="新北市" />
-  <School Code="014541" Name="市立文山國中" County="新北市" />
-  <School Code="014542" Name="市立五峰國中" County="新北市" />
-  <School Code="014544" Name="市立瑞芳國中" County="新北市" />
-  <School Code="014545" Name="市立欽賢國中" County="新北市" />
-  <School Code="014546" Name="市立貢寮國中" County="新北市" />
-  <School Code="014549" Name="市立深坑國中" County="新北市" />
-  <School Code="014550" Name="市立平溪國中" County="新北市" />
-  <School Code="014551" Name="市立烏來國中(小)" County="新北市" />
-  <School Code="014552" Name="市立溪崑國中" County="新北市" />
-  <School Code="014554" Name="市立自強國中" County="新北市" />
-  <School Code="014555" Name="市立中正國中" County="新北市" />
-  <School Code="014558" Name="市立義學國中" County="新北市" />
-  <School Code="014559" Name="市立中平國中" County="新北市" />
-  <School Code="014560" Name="市立鳳鳴國中" County="新北市" />
-  <School Code="014561" Name="市立三和國中" County="新北市" />
-  <School Code="014565" Name="市立尖山國中" County="新北市" />
-  <School Code="014566" Name="市立正德國中" County="新北市" />
-  <School Code="014567" Name="市立安溪國中" County="新北市" />
-  <School Code="014569" Name="市立育林國中" County="新北市" />
-  <School Code="014570" Name="市立青山國中(小)" County="新北市" />
-  <School Code="014571" Name="市立崇林國中" County="新北市" />
-  <School Code="014572" Name="市立二重國中" County="新北市" />
-  <School Code="014573" Name="市立大觀國中" County="新北市" />
-  <School Code="014574" Name="市立三多國中" County="新北市" />
-  <School Code="014575" Name="市立忠孝國中" County="新北市" />
-  <School Code="014576" Name="市立鷺江國中" County="新北市" />
-  <School Code="014577" Name="市立桃子腳國中(小)" County="新北市" />
-  <School Code="014578" Name="市立豐珠國中(小)" County="新北市" />
-  <School Code="014579" Name="市立佳林國中" County="新北市" />
-  <School Code="014580" Name="市立達觀國中(小)" County="新北市" />
-  <School Code="014D01" Name="市立新莊國中補校" County="新北市" />
-  <School Code="014D02" Name="市立積穗國中補校" County="新北市" />
-  <School Code="014D03" Name="市立明志國中補校" County="新北市" />
-  <School Code="014D04" Name="市立中和國中補校" County="新北市" />
-  <School Code="014D05" Name="市立蘆洲國中補校" County="新北市" />
-  <School Code="014D06" Name="市立文山國中補校" County="新北市" />
-  <School Code="014D07" Name="市立光榮國中補校" County="新北市" />
-  <School Code="014D08" Name="市立瑞芳國中補校" County="新北市" />
-  <School Code="014D09" Name="市立淡水國中補校" County="新北市" />
-  <School Code="014D10" Name="市立鶯歌國中補校" County="新北市" />
-  <School Code="014D12" Name="市立三峽國中補校" County="新北市" />
-  <School Code="014D13" Name="市立褔和國中補校" County="新北市" />
-  <School Code="014D14" Name="市立樹林高中附國中補校" County="新北市" />
-  <School Code="014D18" Name="市立林口國中補校" County="新北市" />
-  <School Code="014D19" Name="市立新泰國中補校" County="新北市" />
-  <School Code="014D20" Name="市立海山高中附設國中補校" County="新北市" />
-  <School Code="014D25" Name="市立新埔國中補校" County="新北市" />
-  <School Code="014D30" Name="市立五股國中補校" County="新北市" />
-  <School Code="014D32" Name="市立碧華國中補校" County="新北市" />
-  <School Code="014D37" Name="市立福營國中補校" County="新北市" />
-  <School Code="014D39" Name="市立八里國中補校" County="新北市" />
-  <School Code="014D42" Name="市立丹鳳高中附設國中補校" County="新北市" />
-  <School Code="014D44" Name="市立中正國中補校" County="新北市" />
-  <School Code="014D45" Name="市立漳和國中補校" County="新北市" />
-  <School Code="014D48" Name="市立中平國中補校" County="新北市" />
-  <School Code="014D49" Name="市立二重國中補校" County="新北市" />
-  <School Code="014D50" Name="市立樟樹國中補校" County="新北市" />
-  <School Code="021301" Name="私立慧燈高中附設國中" County="宜蘭縣" />
-  <School Code="021310" Name="私立中道高中附設國中" County="宜蘭縣" />
-  <School Code="024322" Name="縣立南澳高中附設國中" County="宜蘭縣" />
-  <School Code="024325" Name="縣立慈心華德福實中附設國中" County="宜蘭縣" />
-  <School Code="024501" Name="縣立宜蘭國中" County="宜蘭縣" />
-  <School Code="024502" Name="縣立中華國中" County="宜蘭縣" />
-  <School Code="024503" Name="縣立復興國中" County="宜蘭縣" />
-  <School Code="024504" Name="縣立羅東國中" County="宜蘭縣" />
-  <School Code="024505" Name="縣立東光國中" County="宜蘭縣" />
-  <School Code="024506" Name="縣立國華國中" County="宜蘭縣" />
-  <School Code="024507" Name="縣立頭城國中" County="宜蘭縣" />
-  <School Code="024508" Name="縣立蘇澳國中" County="宜蘭縣" />
-  <School Code="024509" Name="縣立文化國中" County="宜蘭縣" />
-  <School Code="024510" Name="縣立南安國中" County="宜蘭縣" />
-  <School Code="024511" Name="縣立三星國中" County="宜蘭縣" />
-  <School Code="024512" Name="縣立礁溪國中" County="宜蘭縣" />
-  <School Code="024513" Name="縣立吳沙國中" County="宜蘭縣" />
-  <School Code="024514" Name="縣立冬山國中" County="宜蘭縣" />
-  <School Code="024515" Name="縣立順安國中" County="宜蘭縣" />
-  <School Code="024516" Name="縣立五結國中" County="宜蘭縣" />
-  <School Code="024517" Name="縣立興中國中" County="宜蘭縣" />
-  <School Code="024518" Name="縣立利澤國中" County="宜蘭縣" />
-  <School Code="024519" Name="縣立員山國中" County="宜蘭縣" />
-  <School Code="024520" Name="縣立內城國中(小)" County="宜蘭縣" />
-  <School Code="024521" Name="縣立壯圍國中" County="宜蘭縣" />
-  <School Code="024523" Name="縣立大同國中" County="宜蘭縣" />
-  <School Code="024524" Name="縣立凱旋國中" County="宜蘭縣" />
-  <School Code="024526" Name="縣立人文國中(小)" County="宜蘭縣" />
-  <School Code="024D01" Name="縣立蘇澳國中補校" County="宜蘭縣" />
-  <School Code="024D02" Name="縣立頭城國中補校" County="宜蘭縣" />
-  <School Code="024D03" Name="縣立復興國中補校" County="宜蘭縣" />
-  <School Code="024D04" Name="縣立東光國中補校" County="宜蘭縣" />
-  <School Code="031301" Name="私立漢英高中附設國中" County="桃園市" />
-  <School Code="031310" Name="私立六和高中附設國中" County="桃園市" />
-  <School Code="031311" Name="桃園市復旦高中附設國中" County="桃園市" />
-  <School Code="031312" Name="桃園市治平高中附設國中" County="桃園市" />
-  <School Code="031313" Name="桃園市振聲高中附設國中" County="桃園市" />
-  <School Code="031319" Name="桃園市清華高中附設國中" County="桃園市" />
-  <School Code="031320" Name="桃園市新興高中附設國中" County="桃園市" />
-  <School Code="031326" Name="私立大華高中附設國中" County="桃園市" />
-  <School Code="031502" Name="私立有得國中(小)" County="桃園市" />
-  <School Code="031503" Name="私立康萊爾國中(小)" County="桃園市" />
-  <School Code="033501" Name="市立文青國中(小)(籌備處)" County="桃園市" />
-  <School Code="033D01" Name="市立同德國中補校" County="桃園市" />
-  <School Code="034332" Name="市立觀音高中附設國中" County="桃園市" />
-  <School Code="034335" Name="市立新屋高級中等學校附設國中" County="桃園市" />
-  <School Code="034347" Name="市立永豐高中附設國中" County="桃園市" />
-  <School Code="034501" Name="市立桃園國中" County="桃園市" />
-  <School Code="034502" Name="市立青溪國中" County="桃園市" />
-  <School Code="034503" Name="市立文昌國中" County="桃園市" />
-  <School Code="034504" Name="市立建國國中" County="桃園市" />
-  <School Code="034505" Name="市立中興國中" County="桃園市" />
-  <School Code="034506" Name="市立南崁國中" County="桃園市" />
-  <School Code="034507" Name="市立山腳國中" County="桃園市" />
-  <School Code="034508" Name="市立大竹國中" County="桃園市" />
-  <School Code="034509" Name="市立大園國中" County="桃園市" />
-  <School Code="034510" Name="市立竹圍國中" County="桃園市" />
-  <School Code="034511" Name="市立大溪國中" County="桃園市" />
-  <School Code="034513" Name="市立仁和國中" County="桃園市" />
-  <School Code="034515" Name="市立大崗國中" County="桃園市" />
-  <School Code="034516" Name="市立八德國中" County="桃園市" />
-  <School Code="034517" Name="市立大成國中" County="桃園市" />
-  <School Code="034518" Name="市立中壢國中" County="桃園市" />
-  <School Code="034520" Name="市立平南國中" County="桃園市" />
-  <School Code="034521" Name="市立新明國中" County="桃園市" />
-  <School Code="034522" Name="市立內壢國中" County="桃園市" />
-  <School Code="034523" Name="市立大崙國中" County="桃園市" />
-  <School Code="034524" Name="市立龍岡國中" County="桃園市" />
-  <School Code="034525" Name="市立興南國中" County="桃園市" />
-  <School Code="034526" Name="市立自強國中" County="桃園市" />
-  <School Code="034527" Name="市立東興國中" County="桃園市" />
-  <School Code="034528" Name="市立楊梅國中" County="桃園市" />
-  <School Code="034529" Name="市立仁美國中" County="桃園市" />
-  <School Code="034530" Name="市立富岡國中" County="桃園市" />
-  <School Code="034531" Name="市立瑞原國中" County="桃園市" />
-  <School Code="034533" Name="市立觀音國中" County="桃園市" />
-  <School Code="034534" Name="市立草漯國中" County="桃園市" />
-  <School Code="034536" Name="市立大坡國中" County="桃園市" />
-  <School Code="034537" Name="市立永安國中" County="桃園市" />
-  <School Code="034538" Name="市立龍潭國中" County="桃園市" />
-  <School Code="034539" Name="市立凌雲國中" County="桃園市" />
-  <School Code="034540" Name="市立石門國中" County="桃園市" />
-  <School Code="034541" Name="市立介壽國中" County="桃園市" />
-  <School Code="034542" Name="市立慈文國中" County="桃園市" />
-  <School Code="034543" Name="市立平興國中" County="桃園市" />
-  <School Code="034544" Name="市立楊明國中" County="桃園市" />
-  <School Code="034545" Name="市立龍興國中" County="桃園市" />
-  <School Code="034546" Name="市立福豐國中" County="桃園市" />
-  <School Code="034549" Name="市立東安國中" County="桃園市" />
-  <School Code="034550" Name="市立光明國中" County="桃園市" />
-  <School Code="034551" Name="市立同德國中" County="桃園市" />
-  <School Code="034552" Name="市立幸福國中" County="桃園市" />
-  <School Code="034554" Name="市立大有國中" County="桃園市" />
-  <School Code="034555" Name="市立龜山國中" County="桃園市" />
-  <School Code="034556" Name="市立會稽國中" County="桃園市" />
-  <School Code="034557" Name="市立楊光國中(小)" County="桃園市" />
-  <School Code="034559" Name="市立迴龍國中(小)" County="桃園市" />
-  <School Code="034560" Name="市立平鎮國中" County="桃園市" />
-  <School Code="034561" Name="市立武漢國中" County="桃園市" />
-  <School Code="034562" Name="市立經國國中" County="桃園市" />
-  <School Code="034563" Name="市立過嶺國中" County="桃園市" />
-  <School Code="034564" Name="市立瑞坪國中" County="桃園市" />
-  <School Code="034565" Name="市立青埔國中" County="桃園市" />
-  <School Code="034D01" Name="市立桃園國中補校" County="桃園市" />
-  <School Code="034D02" Name="市立青溪國中補校" County="桃園市" />
-  <School Code="034D04" Name="市立大成國中補校" County="桃園市" />
-  <School Code="034D05" Name="市立內壢國中補校" County="桃園市" />
-  <School Code="034D06" Name="市立中壢國中補校" County="桃園市" />
-  <School Code="034D07" Name="市立龍潭國中補校" County="桃園市" />
-  <School Code="034D08" Name="市立仁美國中補校" County="桃園市" />
-  <School Code="034D09" Name="市立楊梅國中補校" County="桃園市" />
-  <School Code="034D10" Name="市立東興國中補校" County="桃園市" />
-  <School Code="034D12" Name="市立大園國中補校" County="桃園市" />
-  <School Code="034D13" Name="市立南崁國中補校" County="桃園市" />
-  <School Code="034D16" Name="市立龍岡國中補校" County="桃園市" />
-  <School Code="034D19" Name="市立觀音國中補校" County="桃園市" />
-  <School Code="034D20" Name="市立八德國中補校" County="桃園市" />
-  <School Code="034D21" Name="市立大竹國中補校" County="桃園市" />
-  <School Code="034D92" Name="市立文昌國中補校分校" County="桃園市" />
-  <School Code="041303" Name="私立義民高中附設國中" County="新竹縣" />
-  <School Code="041305" Name="私立忠信高中附設國中" County="新竹縣" />
-  <School Code="041306" Name="私立東泰高中附設國中" County="新竹縣" />
-  <School Code="041307" Name="私立仰德高中附設國中" County="新竹縣" />
-  <School Code="041501" Name="私立康乃薾國中(小)" County="新竹縣" />
-  <School Code="044311" Name="縣立六家高級中學附設國中" County="新竹縣" />
-  <School Code="044320" Name="縣立湖口高中附設國中" County="新竹縣" />
-  <School Code="044501" Name="縣立竹東國中" County="新竹縣" />
-  <School Code="044502" Name="縣立二重國中" County="新竹縣" />
-  <School Code="044503" Name="縣立員東國中" County="新竹縣" />
-  <School Code="044504" Name="縣立關西國中" County="新竹縣" />
-  <School Code="044505" Name="縣立石光國中" County="新竹縣" />
-  <School Code="044506" Name="縣立富光國中" County="新竹縣" />
-  <School Code="044507" Name="縣立新埔國中" County="新竹縣" />
-  <School Code="044508" Name="縣立照門國中" County="新竹縣" />
-  <School Code="044509" Name="縣立竹北國中" County="新竹縣" />
-  <School Code="044510" Name="縣立鳳岡國中" County="新竹縣" />
-  <School Code="044512" Name="縣立芎林國中" County="新竹縣" />
-  <School Code="044513" Name="縣立新豐國中" County="新竹縣" />
-  <School Code="044514" Name="縣立精華國中" County="新竹縣" />
-  <School Code="044515" Name="縣立橫山國中" County="新竹縣" />
-  <School Code="044516" Name="縣立華山國中" County="新竹縣" />
-  <School Code="044517" Name="縣立寶山國中" County="新竹縣" />
-  <School Code="044518" Name="縣立北埔國中" County="新竹縣" />
-  <School Code="044519" Name="縣立峨眉國中" County="新竹縣" />
-  <School Code="044521" Name="縣立新湖國中" County="新竹縣" />
-  <School Code="044522" Name="縣立中正國中" County="新竹縣" />
-  <School Code="044523" Name="縣立五峰國中" County="新竹縣" />
-  <School Code="044524" Name="縣立尖石國中" County="新竹縣" />
-  <School Code="044525" Name="縣立忠孝國中" County="新竹縣" />
-  <School Code="044526" Name="縣立博愛國中" County="新竹縣" />
-  <School Code="044527" Name="縣立仁愛國中" County="新竹縣" />
-  <School Code="044528" Name="縣立自強國中" County="新竹縣" />
-  <School Code="044529" Name="縣立成功國中" County="新竹縣" />
-  <School Code="044530" Name="縣立東興國中" County="新竹縣" />
-  <School Code="044531" Name="縣立北平華德福實驗學校(國中)" County="新竹縣" />
-  <School Code="044D02" Name="縣立竹北國中補校" County="新竹縣" />
-  <School Code="044D03" Name="縣立竹東國中補校" County="新竹縣" />
-  <School Code="050314" Name="國立卓蘭高中附設國中" County="苗栗縣" />
-  <School Code="051302" Name="私立君毅高中附設國中" County="苗栗縣" />
-  <School Code="051306" Name="私立建臺高中附設國中" County="苗栗縣" />
-  <School Code="051307" Name="私立全人實驗高中附設國中" County="苗栗縣" />
-  <School Code="054308" Name="縣立三義高中附設國中" County="苗栗縣" />
-  <School Code="054309" Name="縣立苑裡高中附設國中" County="苗栗縣" />
-  <School Code="054317" Name="縣立興華高中附設國中" County="苗栗縣" />
-  <School Code="054333" Name="縣立大同高中附設國中" County="苗栗縣" />
-  <School Code="054501" Name="縣立苗栗國中" County="苗栗縣" />
-  <School Code="054502" Name="縣立大倫國中" County="苗栗縣" />
-  <School Code="054503" Name="縣立明仁國中" County="苗栗縣" />
-  <School Code="054504" Name="縣立頭屋國中" County="苗栗縣" />
-  <School Code="054505" Name="縣立公館國中" County="苗栗縣" />
-  <School Code="054506" Name="縣立鶴岡國中" County="苗栗縣" />
-  <School Code="054507" Name="縣立文林國中" County="苗栗縣" />
-  <School Code="054510" Name="縣立致民國中" County="苗栗縣" />
-  <School Code="054511" Name="縣立通霄國中" County="苗栗縣" />
-  <School Code="054512" Name="縣立南和國中" County="苗栗縣" />
-  <School Code="054513" Name="縣立烏眉國中" County="苗栗縣" />
-  <School Code="054514" Name="縣立啟新國中" County="苗栗縣" />
-  <School Code="054515" Name="縣立西湖國中" County="苗栗縣" />
-  <School Code="054516" Name="縣立頭份國中" County="苗栗縣" />
-  <School Code="054518" Name="縣立文英國中" County="苗栗縣" />
-  <School Code="054519" Name="縣立竹南國中" County="苗栗縣" />
-  <School Code="054520" Name="縣立照南國中" County="苗栗縣" />
-  <School Code="054521" Name="縣立三灣國中" County="苗栗縣" />
-  <School Code="054522" Name="縣立南庄國中" County="苗栗縣" />
-  <School Code="054523" Name="縣立造橋國中" County="苗栗縣" />
-  <School Code="054524" Name="縣立大西國中" County="苗栗縣" />
-  <School Code="054525" Name="縣立後龍國中" County="苗栗縣" />
-  <School Code="054526" Name="縣立維真國中" County="苗栗縣" />
-  <School Code="054527" Name="縣立大湖國中" County="苗栗縣" />
-  <School Code="054528" Name="縣立南湖國中" County="苗栗縣" />
-  <School Code="054529" Name="縣立獅潭國中" County="苗栗縣" />
-  <School Code="054531" Name="縣立泰安國中(小)" County="苗栗縣" />
-  <School Code="054532" Name="縣立建國國中" County="苗栗縣" />
-  <School Code="054534" Name="縣立福興武術國中(小)" County="苗栗縣" />
-  <School Code="054535" Name="縣立新港國中(小)" County="苗栗縣" />
-  <School Code="054D01" Name="縣立竹南國中補校" County="苗栗縣" />
-  <School Code="060323" Name="國立中科實驗高級中學附設國中" County="臺中市" />
-  <School Code="061301" Name="財團法人常春藤高中附設國中" County="臺中市" />
-  <School Code="061310" Name="私立大明高中附設國中" County="臺中市" />
-  <School Code="061313" Name="私立明道高中附設國中" County="臺中市" />
-  <School Code="061314" Name="私立僑泰高中附設國中" County="臺中市" />
-  <School Code="061315" Name="私立華盛頓高中附設國中" County="臺中市" />
-  <School Code="061317" Name="私立弘文高中附設國中" County="臺中市" />
-  <School Code="061318" Name="私立立人高中附設國中" County="臺中市" />
-  <School Code="061322" Name="華德福大地實驗學校附設國中" County="臺中市" />
-  <School Code="063501" Name="市立善水國中(小)" County="臺中市" />
-  <School Code="064308" Name="市立后綜高中附設國中" County="臺中市" />
-  <School Code="064324" Name="市立大里高中附設國中" County="臺中市" />
-  <School Code="064328" Name="市立新社高中附設國中" County="臺中市" />
-  <School Code="064336" Name="市立長億高中附設國中" County="臺中市" />
-  <School Code="064342" Name="市立中港高中附設國中" County="臺中市" />
-  <School Code="064350" Name="市立龍津高中附設國中" County="臺中市" />
-  <School Code="064501" Name="市立豐原國中" County="臺中市" />
-  <School Code="064502" Name="市立豐東國中" County="臺中市" />
-  <School Code="064503" Name="市立豐南國中" County="臺中市" />
-  <School Code="064504" Name="市立潭子國中" County="臺中市" />
-  <School Code="064505" Name="市立大雅國中" County="臺中市" />
-  <School Code="064506" Name="市立神岡國中" County="臺中市" />
-  <School Code="064507" Name="市立后里國中" County="臺中市" />
-  <School Code="064509" Name="市立外埔國中" County="臺中市" />
-  <School Code="064510" Name="市立大甲國中" County="臺中市" />
-  <School Code="064511" Name="市立日南國中" County="臺中市" />
-  <School Code="064512" Name="市立大安國中" County="臺中市" />
-  <School Code="064513" Name="市立清水國中" County="臺中市" />
-  <School Code="064514" Name="市立清泉國中" County="臺中市" />
-  <School Code="064515" Name="市立沙鹿國中" County="臺中市" />
-  <School Code="064516" Name="市立梧棲國中" County="臺中市" />
-  <School Code="064517" Name="市立龍井國中" County="臺中市" />
-  <School Code="064518" Name="市立四箴國中" County="臺中市" />
-  <School Code="064519" Name="市立大道國中" County="臺中市" />
-  <School Code="064520" Name="市立烏日國中" County="臺中市" />
-  <School Code="064521" Name="市立溪南國中" County="臺中市" />
-  <School Code="064522" Name="市立霧峰國中" County="臺中市" />
-  <School Code="064523" Name="市立光復國中(小)" County="臺中市" />
-  <School Code="064525" Name="市立太平國中" County="臺中市" />
-  <School Code="064526" Name="市立中平國中" County="臺中市" />
-  <School Code="064527" Name="市立石岡國中" County="臺中市" />
-  <School Code="064529" Name="市立東勢國中" County="臺中市" />
-  <School Code="064530" Name="市立東華國中" County="臺中市" />
-  <School Code="064531" Name="市立東新國中" County="臺中市" />
-  <School Code="064532" Name="市立成功國中" County="臺中市" />
-  <School Code="064533" Name="市立和平國中" County="臺中市" />
-  <School Code="064534" Name="市立北勢國中" County="臺中市" />
-  <School Code="064535" Name="市立鹿寮國中" County="臺中市" />
-  <School Code="064537" Name="市立光榮國中" County="臺中市" />
-  <School Code="064538" Name="市立潭秀國中" County="臺中市" />
-  <School Code="064539" Name="市立順天國中" County="臺中市" />
-  <School Code="064540" Name="市立清海國中" County="臺中市" />
-  <School Code="064541" Name="市立大華國中" County="臺中市" />
-  <School Code="064543" Name="市立新光國中" County="臺中市" />
-  <School Code="064544" Name="市立光正國中" County="臺中市" />
-  <School Code="064545" Name="市立豐陽國中" County="臺中市" />
-  <School Code="064546" Name="市立光德國中" County="臺中市" />
-  <School Code="064547" Name="市立立新國中" County="臺中市" />
-  <School Code="064548" Name="市立爽文國中" County="臺中市" />
-  <School Code="064549" Name="市立公明國中" County="臺中市" />
-  <School Code="064551" Name="市立神圳國中" County="臺中市" />
-  <School Code="064552" Name="市立梨山國中(小)" County="臺中市" />
-  <School Code="064D01" Name="市立東勢國中補校" County="臺中市" />
-  <School Code="064D02" Name="市立潭子國中補校" County="臺中市" />
-  <School Code="064D03" Name="市立大道國中補校" County="臺中市" />
-  <School Code="064D04" Name="市立大甲國中補校" County="臺中市" />
-  <School Code="064D05" Name="市立清水國中補校" County="臺中市" />
-  <School Code="064D06" Name="市立沙鹿國中補校" County="臺中市" />
-  <School Code="064D08" Name="市立后綜高中附設國中補校" County="臺中市" />
-  <School Code="064D09" Name="市立豐原國中補校" County="臺中市" />
-  <School Code="064D10" Name="市立大雅國中補校" County="臺中市" />
-  <School Code="064D11" Name="市立光復國中(小)補校" County="臺中市" />
-  <School Code="064D12" Name="市立四箴國中補校" County="臺中市" />
-  <School Code="064D13" Name="市立成功國中補校" County="臺中市" />
-  <School Code="064D14" Name="市立中平國中補校" County="臺中市" />
-  <School Code="064D16" Name="市立梧棲國中補校" County="臺中市" />
-  <School Code="071311" Name="私立精誠高中附設國中" County="彰化縣" />
-  <School Code="071317" Name="私立文興高中附設國中" County="彰化縣" />
-  <School Code="071318" Name="財團法人正德高中附設國中" County="彰化縣" />
-  <School Code="074308" Name="縣立彰化藝術高中附設國中" County="彰化縣" />
-  <School Code="074313" Name="縣立二林高中附設國中" County="彰化縣" />
-  <School Code="074323" Name="縣立和美高中附設國中" County="彰化縣" />
-  <School Code="074328" Name="縣立田中高中附設國中" County="彰化縣" />
-  <School Code="074339" Name="縣立成功高中附設國中" County="彰化縣" />
-  <School Code="074501" Name="縣立北斗國中" County="彰化縣" />
-  <School Code="074502" Name="縣立鹿港國中" County="彰化縣" />
-  <School Code="074503" Name="縣立鹿鳴國中" County="彰化縣" />
-  <School Code="074504" Name="縣立線西國中" County="彰化縣" />
-  <School Code="074505" Name="縣立陽明國中" County="彰化縣" />
-  <School Code="074506" Name="縣立彰安國中" County="彰化縣" />
-  <School Code="074507" Name="縣立彰德國中" County="彰化縣" />
-  <School Code="074509" Name="縣立芬園國中" County="彰化縣" />
-  <School Code="074510" Name="縣立員林國中" County="彰化縣" />
-  <School Code="074511" Name="縣立明倫國中" County="彰化縣" />
-  <School Code="074512" Name="縣立萬興國中" County="彰化縣" />
-  <School Code="074514" Name="縣立竹塘國中" County="彰化縣" />
-  <School Code="074515" Name="縣立大城國中" County="彰化縣" />
-  <School Code="074516" Name="縣立草湖國中" County="彰化縣" />
-  <School Code="074517" Name="縣立芳苑國中" County="彰化縣" />
-  <School Code="074518" Name="縣立溪湖國中" County="彰化縣" />
-  <School Code="074519" Name="縣立埔鹽國中" County="彰化縣" />
-  <School Code="074520" Name="縣立埔心國中" County="彰化縣" />
-  <School Code="074521" Name="縣立福興國中" County="彰化縣" />
-  <School Code="074522" Name="縣立秀水國中" County="彰化縣" />
-  <School Code="074524" Name="縣立伸港國中" County="彰化縣" />
-  <School Code="074525" Name="縣立大村國中" County="彰化縣" />
-  <School Code="074526" Name="縣立花壇國中" County="彰化縣" />
-  <School Code="074527" Name="縣立永靖國中" County="彰化縣" />
-  <School Code="074529" Name="縣立二水國中" County="彰化縣" />
-  <School Code="074530" Name="縣立社頭國中" County="彰化縣" />
-  <School Code="074531" Name="縣立田尾國中" County="彰化縣" />
-  <School Code="074532" Name="縣立溪州國中" County="彰化縣" />
-  <School Code="074533" Name="縣立溪陽國中" County="彰化縣" />
-  <School Code="074534" Name="縣立埤頭國中" County="彰化縣" />
-  <School Code="074535" Name="縣立和群國中" County="彰化縣" />
-  <School Code="074536" Name="縣立大同國中" County="彰化縣" />
-  <School Code="074537" Name="縣立原斗國中(小)" County="彰化縣" />
-  <School Code="074538" Name="縣立彰興國中" County="彰化縣" />
-  <School Code="074540" Name="縣立彰泰國中" County="彰化縣" />
-  <School Code="074541" Name="縣立信義國中(小)" County="彰化縣" />
-  <School Code="074542" Name="縣立鹿江國際國中(小)(籌備處)" County="彰化縣" />
-  <School Code="074D01" Name="縣立和美高中附設國中補校" County="彰化縣" />
-  <School Code="074D02" Name="縣立彰安國中補校" County="彰化縣" />
-  <School Code="074D03" Name="縣立鹿港國中補校" County="彰化縣" />
-  <School Code="074D05" Name="縣立明倫國中補校" County="彰化縣" />
-  <School Code="074D07" Name="縣立秀水國中補校" County="彰化縣" />
-  <School Code="074D14" Name="縣立北斗國中補校" County="彰化縣" />
-  <School Code="074D91" Name="縣立田中國中補校分校" County="彰化縣" />
-  <School Code="074D92" Name="縣立伸港國中補校" County="彰化縣" />
-  <School Code="074D93" Name="縣立社頭國中補校" County="彰化縣" />
-  <School Code="081312" Name="私立三育高中附設國中" County="南投縣" />
-  <School Code="081313" Name="私立弘明實驗高中附設國中" County="南投縣" />
-  <School Code="081314" Name="私立普台高中附設國中" County="南投縣" />
-  <School Code="081502" Name="私立均頭國中(小)" County="南投縣" />
-  <School Code="084309" Name="縣立旭光高中附設國中" County="南投縣" />
-  <School Code="084501" Name="縣立南投國中" County="南投縣" />
-  <School Code="084502" Name="縣立南崗國中" County="南投縣" />
-  <School Code="084503" Name="縣立中興國中" County="南投縣" />
-  <School Code="084504" Name="縣立鳳鳴國中" County="南投縣" />
-  <School Code="084505" Name="縣立埔里國中" County="南投縣" />
-  <School Code="084506" Name="縣立大成國中" County="南投縣" />
-  <School Code="084507" Name="縣立宏仁國中" County="南投縣" />
-  <School Code="084508" Name="縣立草屯國中" County="南投縣" />
-  <School Code="084510" Name="縣立日新國中" County="南投縣" />
-  <School Code="084511" Name="縣立竹山國中" County="南投縣" />
-  <School Code="084512" Name="縣立延和國中" County="南投縣" />
-  <School Code="084513" Name="縣立社寮國中" County="南投縣" />
-  <School Code="084514" Name="縣立瑞竹國中" County="南投縣" />
-  <School Code="084515" Name="縣立集集國中" County="南投縣" />
-  <School Code="084516" Name="縣立名間國中" County="南投縣" />
-  <School Code="084517" Name="縣立三光國中" County="南投縣" />
-  <School Code="084518" Name="縣立鹿谷國中" County="南投縣" />
-  <School Code="084519" Name="縣立瑞峰國中" County="南投縣" />
-  <School Code="084520" Name="縣立中寮國中" County="南投縣" />
-  <School Code="084521" Name="縣立爽文國中" County="南投縣" />
-  <School Code="084522" Name="縣立魚池國中" County="南投縣" />
-  <School Code="084523" Name="縣立明潭國中" County="南投縣" />
-  <School Code="084524" Name="縣立國姓國中" County="南投縣" />
-  <School Code="084525" Name="縣立北梅國中" County="南投縣" />
-  <School Code="084526" Name="縣立北山國中" County="南投縣" />
-  <School Code="084527" Name="縣立水里國中" County="南投縣" />
-  <School Code="084528" Name="縣立民和國中" County="南投縣" />
-  <School Code="084529" Name="縣立信義國中" County="南投縣" />
-  <School Code="084530" Name="縣立同富國中" County="南投縣" />
-  <School Code="084531" Name="縣立仁愛國中" County="南投縣" />
-  <School Code="084532" Name="縣立營北國中" County="南投縣" />
-  <School Code="084D01" Name="縣立南投國中補校" County="南投縣" />
-  <School Code="084D02" Name="縣立草屯國中補校" County="南投縣" />
-  <School Code="084D03" Name="縣立埔里國中補校" County="南投縣" />
-  <School Code="084D05" Name="縣立集集國中補校" County="南投縣" />
-  <School Code="091307" Name="私立永年高中附設國中" County="雲林縣" />
-  <School Code="091308" Name="私立正心高中附設國中" County="雲林縣" />
-  <School Code="091311" Name="私立文生高中附設國中" County="雲林縣" />
-  <School Code="091316" Name="私立揚子高中附設國中" County="雲林縣" />
-  <School Code="091320" Name="雲林縣維多利亞實驗高中附設國中" County="雲林縣" />
-  <School Code="091502" Name="私立淵明國中" County="雲林縣" />
-  <School Code="091503" Name="私立東南國中(代用)" County="雲林縣" />
-  <School Code="091505" Name="私立福智國中" County="雲林縣" />
-  <School Code="094301" Name="縣立斗南高中附設國中" County="雲林縣" />
-  <School Code="094307" Name="縣立麥寮高中附設國中" County="雲林縣" />
-  <School Code="094308" Name="縣立古坑華德福實驗高級中學附設國中" County="雲林縣" />
-  <School Code="094502" Name="縣立東明國中" County="雲林縣" />
-  <School Code="094503" Name="縣立大埤國中" County="雲林縣" />
-  <School Code="094504" Name="縣立飛沙國中" County="雲林縣" />
-  <School Code="094505" Name="縣立四湖國中" County="雲林縣" />
-  <School Code="094506" Name="縣立水林國中" County="雲林縣" />
-  <School Code="094508" Name="縣立二崙國中" County="雲林縣" />
-  <School Code="094509" Name="縣立褒忠國中" County="雲林縣" />
-  <School Code="094510" Name="縣立莿桐國中" County="雲林縣" />
-  <School Code="094511" Name="縣立崙背國中" County="雲林縣" />
-  <School Code="094512" Name="縣立古坑國中(小)" County="雲林縣" />
-  <School Code="094513" Name="縣立東勢國中" County="雲林縣" />
-  <School Code="094514" Name="縣立元長國中" County="雲林縣" />
-  <School Code="094515" Name="縣立斗六國中" County="雲林縣" />
-  <School Code="094516" Name="縣立雲林國中" County="雲林縣" />
-  <School Code="094517" Name="縣立虎尾國中" County="雲林縣" />
-  <School Code="094518" Name="縣立崇德國中" County="雲林縣" />
-  <School Code="094519" Name="縣立西螺國中" County="雲林縣" />
-  <School Code="094520" Name="縣立北港國中" County="雲林縣" />
-  <School Code="094521" Name="縣立建國國中" County="雲林縣" />
-  <School Code="094522" Name="縣立宜梧國中" County="雲林縣" />
-  <School Code="094523" Name="縣立口湖國中" County="雲林縣" />
-  <School Code="094524" Name="縣立臺西國中" County="雲林縣" />
-  <School Code="094525" Name="縣立土庫國中" County="雲林縣" />
-  <School Code="094526" Name="縣立蔦松國中" County="雲林縣" />
-  <School Code="094527" Name="縣立東和國中" County="雲林縣" />
-  <School Code="094528" Name="縣立馬光國中" County="雲林縣" />
-  <School Code="094529" Name="縣立石榴國中" County="雲林縣" />
-  <School Code="094530" Name="縣立林內國中" County="雲林縣" />
-  <School Code="094543" Name="縣立東仁國中" County="雲林縣" />
-  <School Code="094544" Name="縣立樟湖生態國中(小)" County="雲林縣" />
-  <School Code="094D01" Name="縣立北港國中補校" County="雲林縣" />
-  <School Code="094D02" Name="縣立斗六國中補校" County="雲林縣" />
-  <School Code="094D03" Name="縣立雲林國中補校" County="雲林縣" />
-  <School Code="094D04" Name="縣立東明國中補校" County="雲林縣" />
-  <School Code="094D09" Name="縣立崇德國中補校" County="雲林縣" />
-  <School Code="094D12" Name="縣立二崙國中補校" County="雲林縣" />
-  <School Code="094D16" Name="縣立崙背國中補校" County="雲林縣" />
-  <School Code="094D17" Name="縣立馬光國中補校" County="雲林縣" />
-  <School Code="101303" Name="私立同濟高中附設國中" County="嘉義縣" />
-  <School Code="101304" Name="私立協同高中附設國中" County="嘉義縣" />
-  <School Code="104319" Name="縣立竹崎高中附設國中" County="嘉義縣" />
-  <School Code="104326" Name="縣立永慶高中附設國中" County="嘉義縣" />
-  <School Code="104501" Name="縣立朴子國中" County="嘉義縣" />
-  <School Code="104502" Name="縣立東石國中" County="嘉義縣" />
-  <School Code="104503" Name="縣立布袋國中" County="嘉義縣" />
-  <School Code="104504" Name="縣立過溝國中" County="嘉義縣" />
-  <School Code="104505" Name="縣立大林國中" County="嘉義縣" />
-  <School Code="104506" Name="縣立新港國中" County="嘉義縣" />
-  <School Code="104507" Name="縣立民雄國中" County="嘉義縣" />
-  <School Code="104508" Name="縣立大吉國中" County="嘉義縣" />
-  <School Code="104509" Name="縣立六嘉國中" County="嘉義縣" />
-  <School Code="104511" Name="縣立太保國中" County="嘉義縣" />
-  <School Code="104512" Name="縣立嘉新國中" County="嘉義縣" />
-  <School Code="104513" Name="縣立溪口國中" County="嘉義縣" />
-  <School Code="104514" Name="縣立鹿草國中" County="嘉義縣" />
-  <School Code="104515" Name="縣立東榮國中" County="嘉義縣" />
-  <School Code="104516" Name="縣立水上國中" County="嘉義縣" />
-  <School Code="104517" Name="縣立忠和國中" County="嘉義縣" />
-  <School Code="104518" Name="縣立中埔國中" County="嘉義縣" />
-  <School Code="104520" Name="縣立昇平國中" County="嘉義縣" />
-  <School Code="104521" Name="縣立義竹國中" County="嘉義縣" />
-  <School Code="104522" Name="縣立民和國中" County="嘉義縣" />
-  <School Code="104523" Name="縣立梅山國中" County="嘉義縣" />
-  <School Code="104524" Name="縣立大埔國中(小)" County="嘉義縣" />
-  <School Code="104526" Name="縣立阿里山國中(小)" County="嘉義縣" />
-  <School Code="104527" Name="縣立豐山實驗國中(小)" County="嘉義縣" />
-  <School Code="104D01" Name="縣立東石國中補校" County="嘉義縣" />
-  <School Code="104D04" Name="縣立水上國中補校" County="嘉義縣" />
-  <School Code="104D10" Name="縣立民雄國中補校" County="嘉義縣" />
-  <School Code="104D13" Name="縣立中埔國中補校" County="嘉義縣" />
-  <School Code="110328" Name="國立南科國際實驗高中附設國中" County="臺南市" />
-  <School Code="111313" Name="私立南光高中附設國中" County="臺南市" />
-  <School Code="111318" Name="私立鳳和高中附設國中" County="臺南市" />
-  <School Code="111320" Name="私立港明高中附設國中" County="臺南市" />
-  <School Code="111321" Name="臺南市興國高中附設國中" County="臺南市" />
-  <School Code="111322" Name="私立明達高中附設國中" County="臺南市" />
-  <School Code="111323" Name="私立黎明高中附設國中" County="臺南市" />
-  <School Code="111502" Name="私立昭明國中" County="臺南市" />
-  <School Code="113501" Name="市立鹽行國中(籌備處)" County="臺南市" />
-  <School Code="114306" Name="市立大灣高中附設國中" County="臺南市" />
-  <School Code="114307" Name="市立永仁高中附設國中" County="臺南市" />
-  <School Code="114501" Name="市立仁德國中" County="臺南市" />
-  <School Code="114502" Name="市立仁德文賢國中" County="臺南市" />
-  <School Code="114503" Name="市立歸仁國中" County="臺南市" />
-  <School Code="114504" Name="市立關廟國中" County="臺南市" />
-  <School Code="114505" Name="市立永康國中" County="臺南市" />
-  <School Code="114508" Name="市立龍崎國中" County="臺南市" />
-  <School Code="114509" Name="市立新化國中" County="臺南市" />
-  <School Code="114510" Name="市立善化國中" County="臺南市" />
-  <School Code="114511" Name="市立玉井國中" County="臺南市" />
-  <School Code="114512" Name="市立山上國中" County="臺南市" />
-  <School Code="114513" Name="市立安定國中" County="臺南市" />
-  <School Code="114514" Name="市立楠西國中" County="臺南市" />
-  <School Code="114515" Name="市立新市國中" County="臺南市" />
-  <School Code="114516" Name="市立南化國中" County="臺南市" />
-  <School Code="114517" Name="市立左鎮國中" County="臺南市" />
-  <School Code="114518" Name="市立麻豆國中" County="臺南市" />
-  <School Code="114519" Name="市立下營國中" County="臺南市" />
-  <School Code="114520" Name="市立六甲國中" County="臺南市" />
-  <School Code="114521" Name="市立官田國中" County="臺南市" />
-  <School Code="114522" Name="市立大內國中" County="臺南市" />
-  <School Code="114523" Name="市立佳里國中" County="臺南市" />
-  <School Code="114524" Name="市立佳興國中" County="臺南市" />
-  <School Code="114525" Name="市立學甲國中" County="臺南市" />
-  <School Code="114526" Name="市立西港國中" County="臺南市" />
-  <School Code="114527" Name="市立將軍國中" County="臺南市" />
-  <School Code="114528" Name="市立後港國中" County="臺南市" />
-  <School Code="114529" Name="市立竹橋國中" County="臺南市" />
-  <School Code="114530" Name="市立北門國中" County="臺南市" />
-  <School Code="114531" Name="市立南新國中" County="臺南市" />
-  <School Code="114532" Name="市立太子國中" County="臺南市" />
-  <School Code="114533" Name="市立新東國中" County="臺南市" />
-  <School Code="114534" Name="市立鹽水國中" County="臺南市" />
-  <School Code="114535" Name="市立白河國中" County="臺南市" />
-  <School Code="114536" Name="市立柳營國中" County="臺南市" />
-  <School Code="114537" Name="市立東山國中" County="臺南市" />
-  <School Code="114538" Name="市立東原國中" County="臺南市" />
-  <School Code="114539" Name="市立後壁國中" County="臺南市" />
-  <School Code="114540" Name="市立菁寮國中" County="臺南市" />
-  <School Code="114543" Name="市立大橋國中" County="臺南市" />
-  <School Code="114544" Name="市立沙崙國中" County="臺南市" />
-  <School Code="114D04" Name="市立新化國中補校" County="臺南市" />
-  <School Code="114D06" Name="市立麻豆國中補校" County="臺南市" />
-  <School Code="114D08" Name="市立南新國中補校" County="臺南市" />
-  <School Code="114D09" Name="市立大灣高中附設國中補校" County="臺南市" />
-  <School Code="121307" Name="財團法人普門中學附設國中" County="高雄市" />
-  <School Code="121318" Name="私立正義高中附設國中" County="高雄市" />
-  <School Code="121320" Name="私立義大國際高中附設國中" County="高雄市" />
-  <School Code="121502" Name="私立光禾華德福實驗學校(國中)" County="高雄市" />
-  <School Code="123D01" Name="市立美濃國中補校" County="高雄市" />
-  <School Code="124302" Name="市立文山高中附設國中" County="高雄市" />
-  <School Code="124311" Name="市立林園高中附設國中" County="高雄市" />
-  <School Code="124313" Name="市立仁武高中附設國中" County="高雄市" />
-  <School Code="124322" Name="市立路竹高中附設國中" County="高雄市" />
-  <School Code="124333" Name="市立六龜高中附設國中" County="高雄市" />
-  <School Code="124340" Name="市立福誠高中附設國中" County="高雄市" />
-  <School Code="124501" Name="市立鳳山國中" County="高雄市" />
-  <School Code="124503" Name="市立鳳西國中" County="高雄市" />
-  <School Code="124504" Name="市立五甲國中" County="高雄市" />
-  <School Code="124505" Name="市立鳳甲國中" County="高雄市" />
-  <School Code="124506" Name="市立忠孝國中" County="高雄市" />
-  <School Code="124507" Name="市立大寮國中" County="高雄市" />
-  <School Code="124508" Name="市立潮寮國中" County="高雄市" />
-  <School Code="124509" Name="市立大樹國中" County="高雄市" />
-  <School Code="124510" Name="市立溪埔國中" County="高雄市" />
-  <School Code="124512" Name="市立鳥松國中" County="高雄市" />
-  <School Code="124514" Name="市立大社國中" County="高雄市" />
-  <School Code="124515" Name="市立岡山國中" County="高雄市" />
-  <School Code="124516" Name="市立前峰國中" County="高雄市" />
-  <School Code="124517" Name="市立永安國中" County="高雄市" />
-  <School Code="124518" Name="市立橋頭國中" County="高雄市" />
-  <School Code="124519" Name="市立梓官國中" County="高雄市" />
-  <School Code="124520" Name="市立燕巢國中" County="高雄市" />
-  <School Code="124521" Name="市立阿蓮國中" County="高雄市" />
-  <School Code="124523" Name="市立湖內國中" County="高雄市" />
-  <School Code="124524" Name="市立茄萣國中" County="高雄市" />
-  <School Code="124525" Name="市立田寮國中" County="高雄市" />
-  <School Code="124526" Name="市立彌陀國中" County="高雄市" />
-  <School Code="124527" Name="市立旗山國中" County="高雄市" />
-  <School Code="124528" Name="市立圓富國中" County="高雄市" />
-  <School Code="124529" Name="市立大洲國中" County="高雄市" />
-  <School Code="124530" Name="市立美濃國中" County="高雄市" />
-  <School Code="124531" Name="市立南隆國中" County="高雄市" />
-  <School Code="124532" Name="市立龍肚國中" County="高雄市" />
-  <School Code="124534" Name="市立寶來國中" County="高雄市" />
-  <School Code="124535" Name="市立杉林國中" County="高雄市" />
-  <School Code="124536" Name="市立內門國中" County="高雄市" />
-  <School Code="124537" Name="市立甲仙國中" County="高雄市" />
-  <School Code="124538" Name="市立中芸國中" County="高雄市" />
-  <School Code="124539" Name="市立中庄國中" County="高雄市" />
-  <School Code="124541" Name="市立蚵寮國中" County="高雄市" />
-  <School Code="124542" Name="市立那瑪夏國中" County="高雄市" />
-  <School Code="124543" Name="市立青年國中" County="高雄市" />
-  <School Code="124544" Name="市立一甲國中" County="高雄市" />
-  <School Code="124545" Name="市立大灣國中" County="高雄市" />
-  <School Code="124546" Name="市立嘉興國中" County="高雄市" />
-  <School Code="124547" Name="市立茂林國中" County="高雄市" />
-  <School Code="124548" Name="市立桃源國中" County="高雄市" />
-  <School Code="124549" Name="市立中崙國中" County="高雄市" />
-  <School Code="124550" Name="市立鳳翔國中" County="高雄市" />
-  <School Code="124D01" Name="市立鳳山國中補校" County="高雄市" />
-  <School Code="124D02" Name="市立林園國中補校" County="高雄市" />
-  <School Code="124D04" Name="市立岡山國中補校" County="高雄市" />
-  <School Code="124D08" Name="市立大社國中補校" County="高雄市" />
-  <School Code="124D10" Name="市立大寮國中補校" County="高雄市" />
-  <School Code="124D14" Name="市立六龜高中附設國中補校" County="高雄市" />
-  <School Code="124D15" Name="市立湖內國中補校" County="高雄市" />
-  <School Code="124D18" Name="市立中庄國中補校" County="高雄市" />
-  <School Code="124D19" Name="市立鳥松國中補校" County="高雄市" />
-  <School Code="124D24" Name="市立仁武國中補校" County="高雄市" />
-  <School Code="124D29" Name="市立五甲國中補校" County="高雄市" />
-  <School Code="124D31" Name="市立福誠國中補校" County="高雄市" />
-  <School Code="124D34" Name="市立忠孝國中補校" County="高雄市" />
-  <School Code="124D35" Name="市立中崙國中補校" County="高雄市" />
-  <School Code="131308" Name="私立陸興高中附設國中" County="屏東縣" />
-  <School Code="131311" Name="私立美和高中附設國中" County="屏東縣" />
-  <School Code="131501" Name="私立南榮國中" County="屏東縣" />
-  <School Code="131502" Name="私立崇華國中" County="屏東縣" />
-  <School Code="134304" Name="縣立大同高中附設國中" County="屏東縣" />
-  <School Code="134321" Name="縣立枋寮高中附設國中" County="屏東縣" />
-  <School Code="134324" Name="縣立東港高中附設國中" County="屏東縣" />
-  <School Code="134334" Name="縣立來義高中附設國中" County="屏東縣" />
-  <School Code="134501" Name="縣立明正國中" County="屏東縣" />
-  <School Code="134502" Name="縣立中正國中" County="屏東縣" />
-  <School Code="134503" Name="縣立公正國中" County="屏東縣" />
-  <School Code="134505" Name="縣立鶴聲國中" County="屏東縣" />
-  <School Code="134506" Name="縣立至正國中" County="屏東縣" />
-  <School Code="134507" Name="縣立長治國中" County="屏東縣" />
-  <School Code="134508" Name="縣立麟洛國中" County="屏東縣" />
-  <School Code="134509" Name="縣立九如國中" County="屏東縣" />
-  <School Code="134510" Name="縣立里港國中" County="屏東縣" />
-  <School Code="134511" Name="縣立鹽埔國中" County="屏東縣" />
-  <School Code="134512" Name="縣立高樹國中" County="屏東縣" />
-  <School Code="134513" Name="縣立高泰國中" County="屏東縣" />
-  <School Code="134514" Name="縣立內埔國中" County="屏東縣" />
-  <School Code="134515" Name="縣立崇文國中" County="屏東縣" />
-  <School Code="134516" Name="縣立竹田國中" County="屏東縣" />
-  <School Code="134517" Name="縣立潮州國中" County="屏東縣" />
-  <School Code="134518" Name="縣立光春國中" County="屏東縣" />
-  <School Code="134519" Name="縣立萬巒國中" County="屏東縣" />
-  <School Code="134520" Name="縣立新埤國中" County="屏東縣" />
-  <School Code="134522" Name="縣立萬丹國中" County="屏東縣" />
-  <School Code="134523" Name="縣立新園國中" County="屏東縣" />
-  <School Code="134525" Name="縣立林邊國中" County="屏東縣" />
-  <School Code="134526" Name="縣立南州國中" County="屏東縣" />
-  <School Code="134527" Name="縣立佳冬國中" County="屏東縣" />
-  <School Code="134528" Name="縣立琉球國中" County="屏東縣" />
-  <School Code="134530" Name="縣立車城國中" County="屏東縣" />
-  <School Code="134531" Name="縣立恆春國中" County="屏東縣" />
-  <School Code="134532" Name="縣立滿州國中" County="屏東縣" />
-  <School Code="134533" Name="縣立瑪家國中" County="屏東縣" />
-  <School Code="134535" Name="縣立泰武國中" County="屏東縣" />
-  <School Code="134536" Name="縣立牡丹國中" County="屏東縣" />
-  <School Code="134537" Name="縣立獅子國中" County="屏東縣" />
-  <School Code="134538" Name="縣立東新國中" County="屏東縣" />
-  <School Code="134542" Name="縣立萬新國中" County="屏東縣" />
-  <School Code="134543" Name="縣立大路關國中(小)" County="屏東縣" />
-  <School Code="134D01" Name="縣立明正國中補校" County="屏東縣" />
-  <School Code="134D03" Name="縣立恆春國中補校" County="屏東縣" />
-  <School Code="134D05" Name="縣立新埤國中補校" County="屏東縣" />
-  <School Code="134D06" Name="縣立公正國中補校" County="屏東縣" />
-  <School Code="134D08" Name="縣立琉球國中補校" County="屏東縣" />
-  <School Code="134D10" Name="縣立潮州國中補校" County="屏東縣" />
-  <School Code="134D12" Name="縣立東港國中補校" County="屏東縣" />
-  <School Code="134D16" Name="縣立崇文國中補校" County="屏東縣" />
-  <School Code="134D17" Name="縣立林邊國中補校" County="屏東縣" />
-  <School Code="134D18" Name="縣立新園國中補校" County="屏東縣" />
-  <School Code="134D22" Name="縣立南州國中補校" County="屏東縣" />
-  <School Code="134D24" Name="縣立佳冬國中補校" County="屏東縣" />
-  <School Code="134D26" Name="縣立萬巒國中補校" County="屏東縣" />
-  <School Code="140301" Name="國立臺東大學附屬體育高中附設國中" County="臺東縣" />
-  <School Code="141301" Name="臺東縣均一高中附設國中" County="臺東縣" />
-  <School Code="141307" Name="私立育仁高中附設國中" County="臺東縣" />
-  <School Code="144322" Name="縣立蘭嶼高中附設國中" County="臺東縣" />
-  <School Code="144501" Name="縣立新生國中" County="臺東縣" />
-  <School Code="144502" Name="縣立東海國中" County="臺東縣" />
-  <School Code="144503" Name="縣立寶桑國中" County="臺東縣" />
-  <School Code="144504" Name="縣立卑南國中" County="臺東縣" />
-  <School Code="144505" Name="縣立豐田國中" County="臺東縣" />
-  <School Code="144506" Name="縣立知本國中" County="臺東縣" />
-  <School Code="144507" Name="縣立初鹿國中" County="臺東縣" />
-  <School Code="144508" Name="縣立鹿野國中" County="臺東縣" />
-  <School Code="144509" Name="縣立瑞源國中" County="臺東縣" />
-  <School Code="144510" Name="縣立關山國中" County="臺東縣" />
-  <School Code="144511" Name="縣立池上國中" County="臺東縣" />
-  <School Code="144512" Name="縣立大王國中" County="臺東縣" />
-  <School Code="144513" Name="縣立賓茂國中" County="臺東縣" />
-  <School Code="144514" Name="縣立大武國中" County="臺東縣" />
-  <School Code="144515" Name="縣立都蘭國中" County="臺東縣" />
-  <School Code="144516" Name="縣立泰源國中" County="臺東縣" />
-  <School Code="144517" Name="縣立新港國中" County="臺東縣" />
-  <School Code="144518" Name="縣立長濱國中" County="臺東縣" />
-  <School Code="144519" Name="縣立桃源國中" County="臺東縣" />
-  <School Code="144520" Name="縣立海端國中" County="臺東縣" />
-  <School Code="144521" Name="縣立綠島國中" County="臺東縣" />
-  <School Code="144D01" Name="縣立新生國中補校" County="臺東縣" />
-  <School Code="144D03" Name="縣立新港國中補校" County="臺東縣" />
-  <School Code="151306" Name="私立海星高中附設國中" County="花蓮縣" />
-  <School Code="151312" Name="財團法人慈濟大學附中附設國中" County="花蓮縣" />
-  <School Code="154399" Name="縣立南平中學附設國中" County="花蓮縣" />
-  <School Code="154501" Name="縣立玉里國中" County="花蓮縣" />
-  <School Code="154502" Name="縣立玉東國中" County="花蓮縣" />
-  <School Code="154503" Name="縣立三民國中" County="花蓮縣" />
-  <School Code="154504" Name="縣立美崙國中" County="花蓮縣" />
-  <School Code="154505" Name="縣立花崗國中" County="花蓮縣" />
-  <School Code="154506" Name="縣立國風國中" County="花蓮縣" />
-  <School Code="154507" Name="縣立秀林國中" County="花蓮縣" />
-  <School Code="154508" Name="縣立新城國中" County="花蓮縣" />
-  <School Code="154509" Name="縣立吉安國中" County="花蓮縣" />
-  <School Code="154510" Name="縣立宜昌國中" County="花蓮縣" />
-  <School Code="154511" Name="縣立壽豐國中" County="花蓮縣" />
-  <School Code="154512" Name="縣立平和國中" County="花蓮縣" />
-  <School Code="154513" Name="縣立光復國中" County="花蓮縣" />
-  <School Code="154514" Name="縣立富源國中" County="花蓮縣" />
-  <School Code="154515" Name="縣立鳳林國中" County="花蓮縣" />
-  <School Code="154516" Name="縣立萬榮國中" County="花蓮縣" />
-  <School Code="154517" Name="縣立富里國中" County="花蓮縣" />
-  <School Code="154518" Name="縣立富北國中" County="花蓮縣" />
-  <School Code="154519" Name="縣立豐濱國中" County="花蓮縣" />
-  <School Code="154520" Name="縣立瑞穗國中" County="花蓮縣" />
-  <School Code="154521" Name="縣立東里國中" County="花蓮縣" />
-  <School Code="154522" Name="縣立自強國中" County="花蓮縣" />
-  <School Code="154523" Name="縣立化仁國中" County="花蓮縣" />
-  <School Code="154D01" Name="縣立宜昌國中補校" County="花蓮縣" />
-  <School Code="154D02" Name="縣立玉里國中補校" County="花蓮縣" />
-  <School Code="154D06" Name="縣立花崗國中補校" County="花蓮縣" />
-  <School Code="154D09" Name="縣立壽豐國中補校" County="花蓮縣" />
-  <School Code="164501" Name="縣立馬公國中" County="澎湖縣" />
-  <School Code="164502" Name="縣立中正國中" County="澎湖縣" />
-  <School Code="164503" Name="縣立澎南國中" County="澎湖縣" />
-  <School Code="164504" Name="縣立湖西國中" County="澎湖縣" />
-  <School Code="164505" Name="縣立志清國中" County="澎湖縣" />
-  <School Code="164506" Name="縣立鎮海國中" County="澎湖縣" />
-  <School Code="164507" Name="縣立白沙國中" County="澎湖縣" />
-  <School Code="164508" Name="縣立吉貝國中" County="澎湖縣" />
-  <School Code="164509" Name="縣立西嶼國中" County="澎湖縣" />
-  <School Code="164510" Name="縣立望安國中" County="澎湖縣" />
-  <School Code="164511" Name="縣立將澳國中" County="澎湖縣" />
-  <School Code="164512" Name="縣立七美國中" County="澎湖縣" />
-  <School Code="164513" Name="縣立文光國中" County="澎湖縣" />
-  <School Code="164514" Name="縣立鳥嶼國中" County="澎湖縣" />
-  <School Code="164D01" Name="縣立馬公國中補校" County="澎湖縣" />
-  <School Code="171306" Name="私立二信高中附設國中" County="基隆市" />
-  <School Code="171308" Name="輔大聖心高中附設國中" County="基隆市" />
-  <School Code="173304" Name="市立中山高中附設國中" County="基隆市" />
-  <School Code="173306" Name="市立安樂高中附設國中" County="基隆市" />
-  <School Code="173307" Name="市立暖暖高中附設國中" County="基隆市" />
-  <School Code="173314" Name="市立八斗高中附設國中" County="基隆市" />
-  <School Code="173501" Name="市立明德國中" County="基隆市" />
-  <School Code="173502" Name="市立銘傳國中" County="基隆市" />
-  <School Code="173503" Name="市立信義國中" County="基隆市" />
-  <School Code="173505" Name="市立中正國中" County="基隆市" />
-  <School Code="173508" Name="市立南榮國中" County="基隆市" />
-  <School Code="173509" Name="市立成功國中" County="基隆市" />
-  <School Code="173510" Name="市立正濱國中" County="基隆市" />
-  <School Code="173512" Name="市立建德國中" County="基隆市" />
-  <School Code="173513" Name="市立百福國中" County="基隆市" />
-  <School Code="173515" Name="市立碇內國中" County="基隆市" />
-  <School Code="173516" Name="市立武崙國中" County="基隆市" />
-  <School Code="173D01" Name="市立銘傳國中補校" County="基隆市" />
-  <School Code="173D02" Name="市立明德國中補校" County="基隆市" />
-  <School Code="173D03" Name="市立安樂國中補校" County="基隆市" />
-  <School Code="173D05" Name="市立建德國中補校" County="基隆市" />
-  <School Code="173D10" Name="市立八斗國中補校" County="基隆市" />
-  <School Code="180301" Name="國立科學工業園區實驗高中附設國中" County="新竹市" />
-  <School Code="181305" Name="私立光復高中附設國中" County="新竹市" />
-  <School Code="181306" Name="私立曙光女中附設國中" County="新竹市" />
-  <School Code="181307" Name="私立磐石高中附設國中" County="新竹市" />
-  <School Code="181502" Name="私立新竹市康橋國中(小)" County="新竹市" />
-  <School Code="183306" Name="市立成德高中附設國中" County="新竹市" />
-  <School Code="183307" Name="市立香山高中附設國中" County="新竹市" />
-  <School Code="183313" Name="市立建功高中附設國中" County="新竹市" />
-  <School Code="183501" Name="市立建華國中" County="新竹市" />
-  <School Code="183502" Name="市立培英國中" County="新竹市" />
-  <School Code="183503" Name="市立光華國中" County="新竹市" />
-  <School Code="183504" Name="市立育賢國中" County="新竹市" />
-  <School Code="183505" Name="市立光武國中" County="新竹市" />
-  <School Code="183508" Name="市立南華國中" County="新竹市" />
-  <School Code="183509" Name="市立富禮國中" County="新竹市" />
-  <School Code="183510" Name="市立三民國中" County="新竹市" />
-  <School Code="183511" Name="市立內湖國中" County="新竹市" />
-  <School Code="183512" Name="市立虎林國中" County="新竹市" />
-  <School Code="183514" Name="市立新科國中" County="新竹市" />
-  <School Code="183515" Name="市立竹光國中" County="新竹市" />
-  <School Code="183D01" Name="市立建華國中補校" County="新竹市" />
-  <School Code="191301" Name="私立東大附中附設國中" County="臺中市" />
-  <School Code="191302" Name="私立葳格高中附設國中" County="臺中市" />
-  <School Code="191305" Name="私立新民高中附設國中" County="臺中市" />
-  <School Code="191309" Name="私立明德高中附設國中" County="臺中市" />
-  <School Code="191311" Name="私立衛道高中附設國中" County="臺中市" />
-  <School Code="191313" Name="私立曉明女中附設國中" County="臺中市" />
-  <School Code="191314" Name="私立嶺東高中附設國中" County="臺中市" />
-  <School Code="191315" Name="私立磊川華德福實驗教育學校附設國中" County="臺中市" />
-  <School Code="191503" Name="私立麗喆國中(小)" County="臺中市" />
-  <School Code="193303" Name="市立忠明高中附設國中" County="臺中市" />
-  <School Code="193313" Name="市立西苑高中附設國中" County="臺中市" />
-  <School Code="193315" Name="市立東山高中附設國中" County="臺中市" />
-  <School Code="193316" Name="市立惠文高中附設國中" County="臺中市" />
-  <School Code="193501" Name="市立居仁國中" County="臺中市" />
-  <School Code="193502" Name="市立雙十國中" County="臺中市" />
-  <School Code="193504" Name="市立崇倫國中" County="臺中市" />
-  <School Code="193505" Name="市立大德國中" County="臺中市" />
-  <School Code="193506" Name="市立北新國中" County="臺中市" />
-  <School Code="193507" Name="市立東峰國中" County="臺中市" />
-  <School Code="193508" Name="市立黎明國中" County="臺中市" />
-  <School Code="193509" Name="市立光明國中" County="臺中市" />
-  <School Code="193510" Name="市立向上國中" County="臺中市" />
-  <School Code="193511" Name="市立育英國中" County="臺中市" />
-  <School Code="193512" Name="市立四育國中" County="臺中市" />
-  <School Code="193514" Name="市立五權國中" County="臺中市" />
-  <School Code="193516" Name="市立中山國中" County="臺中市" />
-  <School Code="193517" Name="市立崇德國中" County="臺中市" />
-  <School Code="193518" Name="市立立人國中" County="臺中市" />
-  <School Code="193519" Name="市立漢口國中" County="臺中市" />
-  <School Code="193520" Name="市立安和國中" County="臺中市" />
-  <School Code="193521" Name="市立至善國中" County="臺中市" />
-  <School Code="193522" Name="市立萬和國中" County="臺中市" />
-  <School Code="193523" Name="市立大業國中" County="臺中市" />
-  <School Code="193524" Name="市立三光國中" County="臺中市" />
-  <School Code="193525" Name="市立四張犁國中" County="臺中市" />
-  <School Code="193526" Name="市立福科國中" County="臺中市" />
-  <School Code="193527" Name="市立大墩國中" County="臺中市" />
-  <School Code="193D01" Name="市立居仁國中補校" County="臺中市" />
-  <School Code="193D02" Name="市立忠明高中附設國中補校" County="臺中市" />
-  <School Code="193D03" Name="市立東峰國中補校" County="臺中市" />
-  <School Code="193D04" Name="市立育英國中補校" County="臺中市" />
-  <School Code="193D05" Name="市立四育國中補校" County="臺中市" />
-  <School Code="193D06" Name="市立西苑高中附設國中補校" County="臺中市" />
-  <School Code="193D07" Name="市立五權國中補校" County="臺中市" />
-  <School Code="193D08" Name="市立黎明國中補校" County="臺中市" />
-  <School Code="193D09" Name="市立安和國中補校" County="臺中市" />
-  <School Code="193D10" Name="市立北新國中補校" County="臺中市" />
-  <School Code="201304" Name="私立興華高中附設國中" County="嘉義市" />
-  <School Code="201310" Name="私立嘉華高中附設國中" County="嘉義市" />
-  <School Code="201312" Name="私立輔仁高中附設國中" County="嘉義市" />
-  <School Code="201313" Name="私立宏仁女中附設國中" County="嘉義市" />
-  <School Code="203501" Name="市立大業國中" County="嘉義市" />
-  <School Code="203502" Name="市立北興國中" County="嘉義市" />
-  <School Code="203503" Name="市立嘉義國中" County="嘉義市" />
-  <School Code="203504" Name="市立南興國中" County="嘉義市" />
-  <School Code="203505" Name="市立民生國中" County="嘉義市" />
-  <School Code="203506" Name="市立玉山國中" County="嘉義市" />
-  <School Code="203507" Name="市立蘭潭國中" County="嘉義市" />
-  <School Code="203508" Name="市立北園國中" County="嘉義市" />
-  <School Code="203D01" Name="市立玉山國中補校" County="嘉義市" />
-  <School Code="203D02" Name="市立民生國中補校" County="嘉義市" />
-  <School Code="203D03" Name="市立嘉義國中補校" County="嘉義市" />
-  <School Code="211301" Name="私立長榮高中附設國中" County="臺南市" />
-  <School Code="211304" Name="財團法人聖功女中附設國中" County="臺南市" />
-  <School Code="211310" Name="臺南市光華高中附設國中" County="臺南市" />
-  <School Code="211315" Name="私立瀛海高中附設國中" County="臺南市" />
-  <School Code="211317" Name="私立崑山高中附設國中" County="臺南市" />
-  <School Code="211318" Name="私立德光高中附設國中" County="臺南市" />
-  <School Code="211320" Name="財團法人慈濟高中附設國中" County="臺南市" />
-  <School Code="213303" Name="市立南寧高中附設國中" County="臺南市" />
-  <School Code="213316" Name="市立土城高中附設國中" County="臺南市" />
-  <School Code="213501" Name="市立後甲國中" County="臺南市" />
-  <School Code="213502" Name="市立忠孝國中" County="臺南市" />
-  <School Code="213504" Name="市立大成國中" County="臺南市" />
-  <School Code="213505" Name="市立金城國中" County="臺南市" />
-  <School Code="213506" Name="市立民德國中" County="臺南市" />
-  <School Code="213507" Name="市立成功國中" County="臺南市" />
-  <School Code="213508" Name="市立延平國中" County="臺南市" />
-  <School Code="213509" Name="市立建興國中" County="臺南市" />
-  <School Code="213510" Name="市立中山國中" County="臺南市" />
-  <School Code="213511" Name="市立安平國中" County="臺南市" />
-  <School Code="213512" Name="市立安南國中" County="臺南市" />
-  <School Code="213513" Name="市立安順國中" County="臺南市" />
-  <School Code="213514" Name="市立復興國中" County="臺南市" />
-  <School Code="213515" Name="市立新興國中" County="臺南市" />
-  <School Code="213517" Name="市立文賢國中" County="臺南市" />
-  <School Code="213518" Name="市立崇明國中" County="臺南市" />
-  <School Code="213519" Name="市立和順國中" County="臺南市" />
-  <School Code="213520" Name="市立海佃國中" County="臺南市" />
-  <School Code="213521" Name="市立九份子國中(小)(籌備處)" County="臺南市" />
-  <School Code="213D01" Name="市立安南國中補校" County="臺南市" />
-  <School Code="213D02" Name="市立安平國中補校" County="臺南市" />
-  <School Code="213D03" Name="市立南寧高中附設國中補校" County="臺南市" />
-  <School Code="213D05" Name="市立復興國中補校" County="臺南市" />
-  <School Code="313301" Name="市立西松高中附設國中" County="臺北市" />
-  <School Code="313302" Name="市立中崙高中附設國中" County="臺北市" />
-  <School Code="313501" Name="市立介壽國中" County="臺北市" />
-  <School Code="313502" Name="市立民生國中" County="臺北市" />
-  <School Code="313504" Name="市立中山國中" County="臺北市" />
-  <School Code="313505" Name="市立敦化國中" County="臺北市" />
-  <School Code="313D04" Name="市立中山國中補校" County="臺北市" />
-  <School Code="323502" Name="市立興雅國中" County="臺北市" />
-  <School Code="323503" Name="市立永吉國中" County="臺北市" />
-  <School Code="323504" Name="市立瑠公國中" County="臺北市" />
-  <School Code="323505" Name="市立信義國中" County="臺北市" />
-  <School Code="323D02" Name="市立興雅國中補校" County="臺北市" />
-  <School Code="330301" Name="國立師大附中附設國中" County="臺北市" />
-  <School Code="331301" Name="私立延平中學附設國中" County="臺北市" />
-  <School Code="331304" Name="私立復興實驗高中附設國中" County="臺北市" />
-  <School Code="331502" Name="私立立人國中(小)" County="臺北市" />
-  <School Code="333301" Name="市立和平高中附設國中" County="臺北市" />
-  <School Code="333501" Name="市立仁愛國中" County="臺北市" />
-  <School Code="333502" Name="市立大安國中" County="臺北市" />
-  <School Code="333504" Name="市立芳和實驗國中" County="臺北市" />
-  <School Code="333505" Name="市立金華國中" County="臺北市" />
-  <School Code="333506" Name="市立懷生國中" County="臺北市" />
-  <School Code="333507" Name="市立民族國中" County="臺北市" />
-  <School Code="333508" Name="市立龍門國中" County="臺北市" />
-  <School Code="333D02" Name="市立大安國中補校" County="臺北市" />
-  <School Code="343302" Name="市立大同高中附設國中" County="臺北市" />
-  <School Code="343303" Name="市立大直高中附設國中" County="臺北市" />
-  <School Code="343502" Name="市立長安國中" County="臺北市" />
-  <School Code="343504" Name="市立北安國中" County="臺北市" />
-  <School Code="343505" Name="市立新興國中" County="臺北市" />
-  <School Code="343506" Name="市立五常國中" County="臺北市" />
-  <School Code="343507" Name="市立濱江國中" County="臺北市" />
-  <School Code="343D04" Name="市立北安國中補校" County="臺北市" />
-  <School Code="353501" Name="市立螢橋國中" County="臺北市" />
-  <School Code="353502" Name="市立古亭國中" County="臺北市" />
-  <School Code="353503" Name="市立南門國中" County="臺北市" />
-  <School Code="353504" Name="市立弘道國中" County="臺北市" />
-  <School Code="353505" Name="市立中正國中" County="臺北市" />
-  <School Code="353D04" Name="市立弘道國中補校" County="臺北市" />
-  <School Code="361301" Name="私立靜修女中附設國中" County="臺北市" />
-  <School Code="363302" Name="市立成淵高中附設國中" County="臺北市" />
-  <School Code="363501" Name="市立建成國中" County="臺北市" />
-  <School Code="363502" Name="市立忠孝國中" County="臺北市" />
-  <School Code="363504" Name="市立民權國中" County="臺北市" />
-  <School Code="363506" Name="市立蘭州國中" County="臺北市" />
-  <School Code="363507" Name="市立重慶國中" County="臺北市" />
-  <School Code="363D04" Name="市立民權國中補校" County="臺北市" />
-  <School Code="373302" Name="市立大理高中附設國中" County="臺北市" />
-  <School Code="373501" Name="市立萬華國中" County="臺北市" />
-  <School Code="373503" Name="市立雙園國中" County="臺北市" />
-  <School Code="373505" Name="市立龍山國中" County="臺北市" />
-  <School Code="373D01" Name="市立萬華國中補校" County="臺北市" />
-  <School Code="380301" Name="國立政大附中附設國中" County="臺北市" />
-  <School Code="381301" Name="私立東山高中附設國中" County="臺北市" />
-  <School Code="381304" Name="私立再興中學附設國中" County="臺北市" />
-  <School Code="381305" Name="私立景文高中附設國中" County="臺北市" />
-  <School Code="381501" Name="私立靜心國中" County="臺北市" />
-  <School Code="383302" Name="市立萬芳高中附設國中" County="臺北市" />
-  <School Code="383501" Name="市立木柵國中" County="臺北市" />
-  <School Code="383502" Name="市立實踐國中" County="臺北市" />
-  <School Code="383503" Name="市立北政國中" County="臺北市" />
-  <School Code="383504" Name="市立景美國中" County="臺北市" />
-  <School Code="383505" Name="市立興福國中" County="臺北市" />
-  <School Code="383507" Name="市立景興國中" County="臺北市" />
-  <School Code="383D01" Name="市立木柵國中補校" County="臺北市" />
-  <School Code="393301" Name="市立南港高中附設國中" County="臺北市" />
-  <School Code="393501" Name="市立誠正國中" County="臺北市" />
-  <School Code="393503" Name="市立成德國中" County="臺北市" />
-  <School Code="393D02" Name="市立南港高中附國中補校" County="臺北市" />
-  <School Code="400144" Name="國立臺灣戲曲學院附設國中" County="臺北市" />
-  <School Code="401302" Name="私立方濟中學附設國中" County="臺北市" />
-  <School Code="401303" Name="私立達人女中附設國中" County="臺北市" />
-  <School Code="403501" Name="市立內湖國中" County="臺北市" />
-  <School Code="403502" Name="市立麗山國中" County="臺北市" />
-  <School Code="403503" Name="市立三民國中" County="臺北市" />
-  <School Code="403504" Name="市立西湖國中" County="臺北市" />
-  <School Code="403505" Name="市立東湖國中" County="臺北市" />
-  <School Code="403506" Name="市立明湖國中" County="臺北市" />
-  <School Code="403D01" Name="市立內湖國中補校" County="臺北市" />
-  <School Code="411301" Name="私立泰北高中附設國中" County="臺北市" />
-  <School Code="411302" Name="私立衛理女中附設國中" County="臺北市" />
-  <School Code="411303" Name="私立華興中學附設國中" County="臺北市" />
-  <School Code="413301" Name="市立陽明高中附設國中" County="臺北市" />
-  <School Code="413302" Name="市立百齡高中附設國中" County="臺北市" />
-  <School Code="413501" Name="市立士林國中" County="臺北市" />
-  <School Code="413502" Name="市立蘭雅國中" County="臺北市" />
-  <School Code="413504" Name="市立至善國中" County="臺北市" />
-  <School Code="413505" Name="市立格致國中" County="臺北市" />
-  <School Code="413506" Name="市立福安國中" County="臺北市" />
-  <School Code="413508" Name="市立天母國中" County="臺北市" />
-  <School Code="413D01" Name="市立士林國中補校" County="臺北市" />
-  <School Code="421301" Name="私立薇閣高中附設國中" County="臺北市" />
-  <School Code="421303" Name="臺北市私立奎山實驗高級中學附設國中" County="臺北市" />
-  <School Code="423501" Name="市立北投國中" County="臺北市" />
-  <School Code="423502" Name="市立新民國中" County="臺北市" />
-  <School Code="423503" Name="市立明德國中" County="臺北市" />
-  <School Code="423504" Name="市立桃源國中" County="臺北市" />
-  <School Code="423505" Name="市立石牌國中" County="臺北市" />
-  <School Code="423506" Name="市立關渡國中" County="臺北市" />
-  <School Code="423D01" Name="市立北投國中補校" County="臺北市" />
-  <School Code="513501" Name="市立鹽埕國中" County="高雄市" />
-  <School Code="521301" Name="私立明誠高中附設國中" County="高雄市" />
-  <School Code="521303" Name="私立大榮高中附設國中" County="高雄市" />
-  <School Code="523301" Name="市立鼓山高中附設國中" County="高雄市" />
-  <School Code="523502" Name="市立壽山國中" County="高雄市" />
-  <School Code="523503" Name="市立明華國中" County="高雄市" />
-  <School Code="523504" Name="市立七賢國中" County="高雄市" />
-  <School Code="523D01" Name="市立七賢國中補校" County="高雄市" />
-  <School Code="533501" Name="市立左營國中" County="高雄市" />
-  <School Code="533502" Name="市立大義國中" County="高雄市" />
-  <School Code="533503" Name="市立立德國中" County="高雄市" />
-  <School Code="533504" Name="市立龍華國中" County="高雄市" />
-  <School Code="533505" Name="市立福山國中" County="高雄市" />
-  <School Code="533506" Name="市立文府國中" County="高雄市" />
-  <School Code="533D01" Name="市立左營國中補校" County="高雄市" />
-  <School Code="540301" Name="國立中山大學附屬國光高中附設國中" County="高雄市" />
-  <School Code="543501" Name="市立楠梓國中" County="高雄市" />
-  <School Code="543502" Name="市立右昌國中" County="高雄市" />
-  <School Code="543503" Name="市立後勁國中" County="高雄市" />
-  <School Code="543504" Name="市立國昌國中" County="高雄市" />
-  <School Code="543505" Name="市立翠屏國中(小)" County="高雄市" />
-  <School Code="543D01" Name="市立楠梓國中補校" County="高雄市" />
-  <School Code="543D02" Name="市立右昌國中補校" County="高雄市" />
-  <School Code="551301" Name="私立立志高中附設國中" County="高雄市" />
-  <School Code="551303" Name="南海月光實驗學校附設國中" County="高雄市" />
-  <School Code="553501" Name="市立鼎金國中" County="高雄市" />
-  <School Code="553502" Name="市立三民國中" County="高雄市" />
-  <School Code="553503" Name="市立民族國中" County="高雄市" />
-  <School Code="553504" Name="市立陽明國中" County="高雄市" />
-  <School Code="553505" Name="市立正興國中" County="高雄市" />
-  <School Code="553D01" Name="市立鼎金國中補校" County="高雄市" />
-  <School Code="563301" Name="市立新興高中附設國中" County="高雄市" />
-  <School Code="573501" Name="市立前金國中" County="高雄市" />
-  <School Code="580301" Name="國立高師大附中附設國中" County="高雄市" />
-  <School Code="581301" Name="私立復華高中附設國中" County="高雄市" />
-  <School Code="581302" Name="天主教道明中學附設國中" County="高雄市" />
-  <School Code="583301" Name="市立中正高中附設國中" County="高雄市" />
-  <School Code="583501" Name="市立苓雅國中" County="高雄市" />
-  <School Code="583502" Name="市立五福國中" County="高雄市" />
-  <School Code="583503" Name="市立大仁國中" County="高雄市" />
-  <School Code="583505" Name="市立英明國中" County="高雄市" />
-  <School Code="593302" Name="市立瑞祥高中附設國中" County="高雄市" />
-  <School Code="593501" Name="市立獅甲國中" County="高雄市" />
-  <School Code="593502" Name="市立前鎮國中" County="高雄市" />
-  <School Code="593503" Name="市立瑞豐國中" County="高雄市" />
-  <School Code="593504" Name="市立光華國中" County="高雄市" />
-  <School Code="593505" Name="市立興仁國中" County="高雄市" />
-  <School Code="593D01" Name="市立獅甲國中補校" County="高雄市" />
-  <School Code="593D02" Name="市立前鎮國中補校" County="高雄市" />
-  <School Code="603501" Name="市立旗津國中" County="高雄市" />
-  <School Code="610405" Name="國立高餐大附屬餐旅中學附設國中" County="高雄市" />
-  <School Code="613501" Name="市立小港國中" County="高雄市" />
-  <School Code="613502" Name="市立鳳林國中" County="高雄市" />
-  <School Code="613503" Name="市立中山國中" County="高雄市" />
-  <School Code="613504" Name="市立明義國中" County="高雄市" />
-  <School Code="613D01" Name="市立小港國中補校" County="高雄市" />
-  <School Code="714501" Name="縣立金城國中" County="金門縣" />
-  <School Code="714502" Name="縣立金湖國中" County="金門縣" />
-  <School Code="714503" Name="縣立金寧國中(小)" County="金門縣" />
-  <School Code="714504" Name="縣立金沙國中" County="金門縣" />
-  <School Code="714505" Name="縣立烈嶼國中" County="金門縣" />
-  <School Code="724501" Name="縣立介壽國中(小)" County="連江縣" />
-  <School Code="724502" Name="縣立中正國中(小)" County="連江縣" />
-  <School Code="724503" Name="縣立中山國中" County="連江縣" />
-  <School Code="724504" Name="縣立敬恆國中(小)" County="連江縣" />
-  <School Code="724505" Name="縣立東引國中(小)" County="連江縣" />
-  <School Code="801M01" Name="東莞台商子弟學校(設有高中、高職、國中、國小、幼兒園)" County="廣東省東莞市" />
-  <School Code="801M02" Name="華東臺商子女學校(設有高中、國中、國小、幼兒園)" County="江蘇省昆山市" />
-  <School Code="801M03" Name="上海台商子女學校（設有高中、國中、國小、幼兒園）" County="上海市" />
-  <School Code="901S01" Name="雅加達臺灣學校" County="印尼" />
-  <School Code="901S02" Name="泗水臺灣學校" County="印尼" />
-  <School Code="901S03" Name="吉隆坡臺灣學校" County="馬來西亞" />
-  <School Code="901S06" Name="胡志明市臺灣學校" County="越南" />
-  <School Code="901S07" Name="檳吉臺灣學校" County="馬來西亞" />
+	<School Code="013E01" Name="市立柑園國小補校" County="新北市"/>
+	<School Code="014D01" Name="市立新莊國中補校" County="新北市"/>
+	<School Code="014D02" Name="市立積穗國中補校" County="新北市"/>
+	<School Code="014D03" Name="市立明志國中補校" County="新北市"/>
+	<School Code="014D04" Name="市立中和國中補校" County="新北市"/>
+	<School Code="014D05" Name="市立蘆洲國中補校" County="新北市"/>
+	<School Code="014D06" Name="市立文山國中補校" County="新北市"/>
+	<School Code="014D07" Name="市立光榮國中補校" County="新北市"/>
+	<School Code="014D08" Name="市立瑞芳國中補校" County="新北市"/>
+	<School Code="014D09" Name="市立淡水國中補校" County="新北市"/>
+	<School Code="014D10" Name="市立鶯歌國中補校" County="新北市"/>
+	<School Code="014D12" Name="市立三峽國中補校" County="新北市"/>
+	<School Code="014D13" Name="市立褔和國中補校" County="新北市"/>
+	<School Code="014D14" Name="市立樹林高中附設國中補校" County="新北市"/>
+	<School Code="014D18" Name="市立林口國中補校" County="新北市"/>
+	<School Code="014D19" Name="市立新泰國中補校" County="新北市"/>
+	<School Code="014D20" Name="市立海山高中附設國中補校" County="新北市"/>
+	<School Code="014D25" Name="市立新埔國中補校" County="新北市"/>
+	<School Code="014D30" Name="市立五股國中補校" County="新北市"/>
+	<School Code="014D32" Name="市立碧華國中補校" County="新北市"/>
+	<School Code="014D37" Name="市立福營國中補校" County="新北市"/>
+	<School Code="014D39" Name="市立八里國中補校" County="新北市"/>
+	<School Code="014D42" Name="市立丹鳳高中附設國中補校" County="新北市"/>
+	<School Code="014D44" Name="市立中正國中補校" County="新北市"/>
+	<School Code="014D45" Name="市立漳和國中補校" County="新北市"/>
+	<School Code="014D47" Name="市立中山國中補校" County="新北市"/>
+	<School Code="014D48" Name="市立中平國中補校" County="新北市"/>
+	<School Code="014D49" Name="市立二重國中補校" County="新北市"/>
+	<School Code="014D50" Name="市立樟樹國中補校" County="新北市"/>
+	<School Code="014E01" Name="市立網溪國小補校" County="新北市"/>
+	<School Code="014E02" Name="市立正義國小補校" County="新北市"/>
+	<School Code="014E03" Name="市立積穗國小補校" County="新北市"/>
+	<School Code="014E04" Name="市立後埔國小補校" County="新北市"/>
+	<School Code="014E05" Name="市立民安國小補校" County="新北市"/>
+	<School Code="014E06" Name="市立淡水國小補校" County="新北市"/>
+	<School Code="014E07" Name="市立沙崙國小補校" County="新北市"/>
+	<School Code="014E08" Name="市立大豐國小補校" County="新北市"/>
+	<School Code="014E09" Name="市立鷺江國小補校" County="新北市"/>
+	<School Code="014E10" Name="市立泰山國小補校" County="新北市"/>
+	<School Code="014E11" Name="市立思賢國小補校" County="新北市"/>
+	<School Code="014E14" Name="市立新埔國小補校" County="新北市"/>
+	<School Code="014E16" Name="市立復興國小補校" County="新北市"/>
+	<School Code="014E17" Name="市立碧華國小補校" County="新北市"/>
+	<School Code="014E18" Name="市立厚德國小補校" County="新北市"/>
+	<School Code="014E19" Name="市立永福國小補校" County="新北市"/>
+	<School Code="014E20" Name="市立安坑國小補校" County="新北市"/>
+	<School Code="014E21" Name="市立瑞芳國小補校" County="新北市"/>
+	<School Code="014E24" Name="市立三芝國小補校" County="新北市"/>
+	<School Code="014E25" Name="市立五股國小補校" County="新北市"/>
+	<School Code="014E29" Name="市立鳳鳴國小補校" County="新北市"/>
+	<School Code="014E31" Name="市立文德國小補校" County="新北市"/>
+	<School Code="014E32" Name="市立土城國小補校" County="新北市"/>
+	<School Code="014E34" Name="市立光華國小補校" County="新北市"/>
+	<School Code="014E35" Name="市立秀朗國小補校" County="新北市"/>
+	<School Code="014E36" Name="市立鄧公國小補校" County="新北市"/>
+	<School Code="014E40" Name="市立林口國小補校" County="新北市"/>
+	<School Code="014E42" Name="市立澳底國小補校" County="新北市"/>
+	<School Code="014E45" Name="市立文聖國小補校" County="新北市"/>
+	<School Code="014E47" Name="市立清水國小補校" County="新北市"/>
+	<School Code="014E50" Name="市立建國國小補校" County="新北市"/>
+	<School Code="014E51" Name="市立中和國小補校" County="新北市"/>
+	<School Code="014E52" Name="市立豐年國小補校" County="新北市"/>
+	<School Code="014E53" Name="市立丹鳳國小補校" County="新北市"/>
+	<School Code="014E62" Name="市立八里國小補校" County="新北市"/>
+	<School Code="014E64" Name="市立蘆洲國小補校" County="新北市"/>
+	<School Code="014E66" Name="市立埔墘國小補校" County="新北市"/>
+	<School Code="014E72" Name="市立大同國小附設補校" County="新北市"/>
+	<School Code="014E79" Name="市立金龍國小補校" County="新北市"/>
+	<School Code="014E80" Name="市立成功國小補校" County="新北市"/>
+	<School Code="014E83" Name="市立三重國小補校" County="新北市"/>
+	<School Code="014E86" Name="市立大觀國小補校" County="新北市"/>
+	<School Code="014E87" Name="市立中園國小補校" County="新北市"/>
+	<School Code="313D04" Name="市立中山國中補校" County="臺北市"/>
+	<School Code="313E01" Name="市立西松國小補校" County="臺北市"/>
+	<School Code="323D02" Name="市立興雅國中補校" County="臺北市"/>
+	<School Code="323E02" Name="市立吳興國小補校" County="臺北市"/>
+	<School Code="323E03" Name="市立雙永國小補校" County="臺北市"/>
+	<School Code="333D02" Name="市立大安國中補校" County="臺北市"/>
+	<School Code="333E01" Name="市立建安國小補校" County="臺北市"/>
+	<School Code="343D04" Name="市立北安國中補校" County="臺北市"/>
+	<School Code="343E01" Name="市立中山國小補校" County="臺北市"/>
+	<School Code="353D04" Name="市立弘道國中補校" County="臺北市"/>
+	<School Code="353E01" Name="市立河堤國小補校" County="臺北市"/>
+	<School Code="363D04" Name="市立民權國中補校" County="臺北市"/>
+	<School Code="363E01" Name="市立永樂國小補校" County="臺北市"/>
+	<School Code="363E02" Name="市立大龍國小補校" County="臺北市"/>
+	<School Code="373D01" Name="市立萬華國中補校" County="臺北市"/>
+	<School Code="373E01" Name="市立雙園國小補校" County="臺北市"/>
+	<School Code="373E02" Name="市立老松國小補校" County="臺北市"/>
+	<School Code="383D01" Name="市立木柵國中補校" County="臺北市"/>
+	<School Code="383E01" Name="市立木柵國小補校" County="臺北市"/>
+	<School Code="393D02" Name="市立南港高中附設國中補校" County="臺北市"/>
+	<School Code="393E01" Name="市立南港國小補校" County="臺北市"/>
+	<School Code="403D01" Name="市立內湖國中補校" County="臺北市"/>
+	<School Code="403E01" Name="市立內湖國小補校" County="臺北市"/>
+	<School Code="413D01" Name="市立士林國中補校" County="臺北市"/>
+	<School Code="413E01" Name="市立士東國小補校" County="臺北市"/>
+	<School Code="413E02" Name="市立社子國小補校" County="臺北市"/>
+	<School Code="423D01" Name="市立北投國中補校" County="臺北市"/>
+	<School Code="423E01" Name="市立北投國小補校" County="臺北市"/>
+	<School Code="033D01" Name="市立同德國中補校" County="桃園市"/>
+	<School Code="033E01" Name="市立光明國小補校" County="桃園市"/>
+	<School Code="034D01" Name="市立桃園國中補校" County="桃園市"/>
+	<School Code="034D02" Name="市立青溪國中補校" County="桃園市"/>
+	<School Code="034D04" Name="市立大成國中補校" County="桃園市"/>
+	<School Code="034D05" Name="市立內壢國中補校" County="桃園市"/>
+	<School Code="034D06" Name="市立中壢國中補校" County="桃園市"/>
+	<School Code="034D07" Name="市立龍潭國中補校" County="桃園市"/>
+	<School Code="034D08" Name="市立仁美國中補校" County="桃園市"/>
+	<School Code="034D09" Name="市立楊梅國中補校" County="桃園市"/>
+	<School Code="034D10" Name="市立東興國中補校" County="桃園市"/>
+	<School Code="034D12" Name="市立大園國中補校" County="桃園市"/>
+	<School Code="034D13" Name="市立南崁國中補校" County="桃園市"/>
+	<School Code="034D16" Name="市立龍岡國中補校" County="桃園市"/>
+	<School Code="034D20" Name="市立八德國中補校" County="桃園市"/>
+	<School Code="034D21" Name="市立大竹國中補校" County="桃園市"/>
+	<School Code="034E01" Name="市立桃園國小補校" County="桃園市"/>
+	<School Code="034E02" Name="市立東門國小補校" County="桃園市"/>
+	<School Code="034E04" Name="市立大成國小補校" County="桃園市"/>
+	<School Code="034E05" Name="市立龍潭國小補校" County="桃園市"/>
+	<School Code="034E06" Name="市立內壢國小補校" County="桃園市"/>
+	<School Code="034E08" Name="市立新明國小補校" County="桃園市"/>
+	<School Code="034E09" Name="市立楊梅國小補校" County="桃園市"/>
+	<School Code="034E11" Name="市立大園國小補校" County="桃園市"/>
+	<School Code="034E12" Name="市立菓林國小補校" County="桃園市"/>
+	<School Code="034E13" Name="市立忠貞國小補校" County="桃園市"/>
+	<School Code="034E15" Name="市立草漯國小補校" County="桃園市"/>
+	<School Code="034E17" Name="市立南崁國小補校" County="桃園市"/>
+	<School Code="034E19" Name="市立新屋國小補校" County="桃園市"/>
+	<School Code="034E20" Name="市立瑞埔國小補校" County="桃園市"/>
+	<School Code="034E21" Name="市立西門國小補校" County="桃園市"/>
+	<School Code="034E23" Name="市立富台國小補校" County="桃園市"/>
+	<School Code="034E25" Name="市立大竹國小補校" County="桃園市"/>
+	<School Code="034E30" Name="市立建國國小補校" County="桃園市"/>
+	<School Code="063E01" Name="市立太平區中華國小補校" County="臺中市"/>
+	<School Code="064D01" Name="市立東勢國中補校" County="臺中市"/>
+	<School Code="064D02" Name="市立潭子國中補校" County="臺中市"/>
+	<School Code="064D03" Name="市立大道國中補校" County="臺中市"/>
+	<School Code="064D04" Name="市立大甲國中補校" County="臺中市"/>
+	<School Code="064D05" Name="市立清水國中補校" County="臺中市"/>
+	<School Code="064D06" Name="市立沙鹿國中補校" County="臺中市"/>
+	<School Code="064D08" Name="市立后綜高中附設國中補校" County="臺中市"/>
+	<School Code="064D09" Name="市立豐原國中補校" County="臺中市"/>
+	<School Code="064D10" Name="市立大雅國中補校" County="臺中市"/>
+	<School Code="064D11" Name="市立光復國中(小)補校" County="臺中市"/>
+	<School Code="064D12" Name="市立四箴國中補校" County="臺中市"/>
+	<School Code="064D13" Name="市立成功國中補校" County="臺中市"/>
+	<School Code="064D14" Name="市立中平國中補校" County="臺中市"/>
+	<School Code="064D16" Name="市立梧棲國中補校" County="臺中市"/>
+	<School Code="064E01" Name="市立南陽國小補校" County="臺中市"/>
+	<School Code="064E02" Name="市立富春國小補校" County="臺中市"/>
+	<School Code="064E04" Name="市立清水國小補校" County="臺中市"/>
+	<School Code="064E05" Name="市立內新國小補校" County="臺中市"/>
+	<School Code="064E07" Name="市立后里國小補校" County="臺中市"/>
+	<School Code="064E08" Name="市立神岡國小補校" County="臺中市"/>
+	<School Code="064E09" Name="市立潭子國小補校" County="臺中市"/>
+	<School Code="064E10" Name="市立東勢國小補校" County="臺中市"/>
+	<School Code="064E12" Name="市立龍峰國小補校" County="臺中市"/>
+	<School Code="064E13" Name="市立大肚國小補校" County="臺中市"/>
+	<School Code="064E14" Name="市立坪林國小補校" County="臺中市"/>
+	<School Code="064E16" Name="市立大安國小補校" County="臺中市"/>
+	<School Code="064E17" Name="市立大甲國小補校" County="臺中市"/>
+	<School Code="064E19" Name="市立霧峰國小補校" County="臺中市"/>
+	<School Code="064E22" Name="市立梧棲國小補校" County="臺中市"/>
+	<School Code="064E24" Name="市立追分國小補校" County="臺中市"/>
+	<School Code="064E25" Name="市立烏日國小補校" County="臺中市"/>
+	<School Code="064E26" Name="市立永寧國小補校" County="臺中市"/>
+	<School Code="064E28" Name="市立龍泉國小補校" County="臺中市"/>
+	<School Code="064E30" Name="市立大安區永安國小補校" County="臺中市"/>
+	<School Code="064E31" Name="市立沙鹿國小補校" County="臺中市"/>
+	<School Code="064E32" Name="市立大雅國小補校" County="臺中市"/>
+	<School Code="193D01" Name="市立居仁國中補校" County="臺中市"/>
+	<School Code="193D02" Name="市立忠明高中附設國中補校" County="臺中市"/>
+	<School Code="193D03" Name="市立東峰國中補校" County="臺中市"/>
+	<School Code="193D04" Name="市立育英國中補校" County="臺中市"/>
+	<School Code="193D05" Name="市立四育國中補校" County="臺中市"/>
+	<School Code="193D06" Name="市立西苑高中附設國中補校" County="臺中市"/>
+	<School Code="193D07" Name="市立五權國中補校" County="臺中市"/>
+	<School Code="193D08" Name="市立黎明國中補校" County="臺中市"/>
+	<School Code="193D09" Name="市立安和國中補校" County="臺中市"/>
+	<School Code="193D10" Name="市立北新國中補校" County="臺中市"/>
+	<School Code="193E01" Name="市立健行國小補校" County="臺中市"/>
+	<School Code="193E02" Name="市立忠信國小補校" County="臺中市"/>
+	<School Code="193E03" Name="市立信義國小補校" County="臺中市"/>
+	<School Code="193E04" Name="市立北屯國小補校" County="臺中市"/>
+	<School Code="193E05" Name="市立大鵬國小補校" County="臺中市"/>
+	<School Code="193E06" Name="市立西屯區永安國小補校" County="臺中市"/>
+	<School Code="193E07" Name="市立春安國小補校" County="臺中市"/>
+	<School Code="193E09" Name="市立成功國小補校" County="臺中市"/>
+	<School Code="193E12" Name="市立文心國小補校" County="臺中市"/>
+	<School Code="193E13" Name="市立建功國小補校" County="臺中市"/>
+	<School Code="114D06" Name="市立麻豆國中補校" County="臺南市"/>
+	<School Code="114D08" Name="市立南新國中補校" County="臺南市"/>
+	<School Code="114D09" Name="市立大灣高中附設國中補校" County="臺南市"/>
+	<School Code="114E02" Name="市立麻豆國小補校" County="臺南市"/>
+	<School Code="114E04" Name="市立新化國小補校" County="臺南市"/>
+	<School Code="114E06" Name="市立永康國小補校" County="臺南市"/>
+	<School Code="114E07" Name="市立大灣國小補校" County="臺南市"/>
+	<School Code="114E12" Name="市立學甲國小補校" County="臺南市"/>
+	<School Code="114E13" Name="市立東山國小補校" County="臺南市"/>
+	<School Code="114E14" Name="市立六甲國小補校" County="臺南市"/>
+	<School Code="114E15" Name="市立新興國小補校" County="臺南市"/>
+	<School Code="114E17" Name="市立復興國小補校" County="臺南市"/>
+	<School Code="114E20" Name="市立新進國小補校" County="臺南市"/>
+	<School Code="114E24" Name="市立玉井國小補校" County="臺南市"/>
+	<School Code="114E25" Name="市立仁德國小補校" County="臺南市"/>
+	<School Code="114E26" Name="市立隆田國小補校" County="臺南市"/>
+	<School Code="114E33" Name="市立歸南國小補校" County="臺南市"/>
+	<School Code="114E37" Name="市立鹽水國小補校" County="臺南市"/>
+	<School Code="213D01" Name="市立安南國中補校" County="臺南市"/>
+	<School Code="213D02" Name="市立安平國中補校" County="臺南市"/>
+	<School Code="213E01" Name="市立公園國小補校" County="臺南市"/>
+	<School Code="213E04" Name="市立海東國小補校" County="臺南市"/>
+	<School Code="213E05" Name="市立崇學國小補校" County="臺南市"/>
+	<School Code="213E06" Name="市立和順國小補校" County="臺南市"/>
+	<School Code="124D01" Name="市立鳳山國中補校" County="高雄市"/>
+	<School Code="124D02" Name="市立林園國中補校" County="高雄市"/>
+	<School Code="124D10" Name="市立大寮國中補校" County="高雄市"/>
+	<School Code="124D14" Name="市立六龜高中附設國中補校" County="高雄市"/>
+	<School Code="124D15" Name="市立湖內國中補校" County="高雄市"/>
+	<School Code="124D18" Name="市立中庄國中補校" County="高雄市"/>
+	<School Code="124D24" Name="市立仁武國中補校" County="高雄市"/>
+	<School Code="124D31" Name="市立福誠國中補校" County="高雄市"/>
+	<School Code="124D34" Name="市立忠孝國中補校" County="高雄市"/>
+	<School Code="124E18" Name="市立仁武國小補校" County="高雄市"/>
+	<School Code="124E19" Name="市立林園國小補校" County="高雄市"/>
+	<School Code="124E45" Name="市立永芳國小補校" County="高雄市"/>
+	<School Code="124E49" Name="市立六龜國小補校" County="高雄市"/>
+	<School Code="124E93" Name="市立文德國小補校" County="高雄市"/>
+	<School Code="124E94" Name="市立新甲國小補校" County="高雄市"/>
+	<School Code="120320" Name="國立高科實中附設國中" County="高雄市"/>
+	<School Code="523D01" Name="市立七賢國中補校" County="高雄市"/>
+	<School Code="523E05" Name="市立龍華國小補校" County="高雄市"/>
+	<School Code="533D01" Name="市立左營國中補校" County="高雄市"/>
+	<School Code="543D01" Name="市立楠梓國中補校" County="高雄市"/>
+	<School Code="543D02" Name="市立右昌國中補校" County="高雄市"/>
+	<School Code="543E01" Name="市立楠梓國小補校" County="高雄市"/>
+	<School Code="553D01" Name="市立鼎金國中補校" County="高雄市"/>
+	<School Code="553E03" Name="市立愛國國小補校" County="高雄市"/>
+	<School Code="553E11" Name="市立民族國小補校" County="高雄市"/>
+	<School Code="583E10" Name="市立苓洲國小補校" County="高雄市"/>
+	<School Code="593D02" Name="市立前鎮國中補校" County="高雄市"/>
+	<School Code="593E01" Name="市立前鎮國小補校" County="高雄市"/>
+	<School Code="613D01" Name="市立小港國中補校" County="高雄市"/>
+	<School Code="613E08" Name="市立二苓國小補校" County="高雄市"/>
+	<School Code="024D01" Name="縣立蘇澳國中補校" County="宜蘭縣"/>
+	<School Code="024D02" Name="縣立頭城國中補校" County="宜蘭縣"/>
+	<School Code="024D03" Name="縣立復興國中補校" County="宜蘭縣"/>
+	<School Code="024D04" Name="縣立東光國中補校" County="宜蘭縣"/>
+	<School Code="024E01" Name="縣立中山國小補校" County="宜蘭縣"/>
+	<School Code="024E02" Name="縣立羅東國小補校" County="宜蘭縣"/>
+	<School Code="024E03" Name="縣立南安國小補校" County="宜蘭縣"/>
+	<School Code="024E04" Name="縣立二城國小補校" County="宜蘭縣"/>
+	<School Code="024E05" Name="縣立大隱國小補校" County="宜蘭縣"/>
+	<School Code="024E07" Name="縣立學進國小補校" County="宜蘭縣"/>
+	<School Code="024E08" Name="縣立古亭國小補校" County="宜蘭縣"/>
+	<School Code="024E09" Name="縣立礁溪國小補校" County="宜蘭縣"/>
+	<School Code="024E10" Name="縣立同樂國小補校" County="宜蘭縣"/>
+	<School Code="024E11" Name="縣立冬山國小補校" County="宜蘭縣"/>
+	<School Code="044D02" Name="縣立竹北國中補校" County="新竹縣"/>
+	<School Code="044D03" Name="縣立竹東國中補校" County="新竹縣"/>
+	<School Code="044E05" Name="縣立中興國小補校" County="新竹縣"/>
+	<School Code="044E06" Name="縣立竹東國小補校" County="新竹縣"/>
+	<School Code="044E07" Name="縣立中正國小補校" County="新竹縣"/>
+	<School Code="054D01" Name="縣立竹南國中補校" County="苗栗縣"/>
+	<School Code="054E01" Name="縣立大同國小補校" County="苗栗縣"/>
+	<School Code="054E09" Name="縣立後龍國小補校" County="苗栗縣"/>
+	<School Code="054E11" Name="縣立卓蘭國小補校" County="苗栗縣"/>
+	<School Code="054E17" Name="縣立錦水國小補校" County="苗栗縣"/>
+	<School Code="054E21" Name="縣立建中國小補校" County="苗栗縣"/>
+	<School Code="054E23" Name="縣立啟文國小補校" County="苗栗縣"/>
+	<School Code="054E29" Name="縣立照南國小補校" County="苗栗縣"/>
+	<School Code="054E34" Name="縣立新港國小補校" County="苗栗縣"/>
+	<School Code="074D01" Name="縣立和美高中附設國中補校" County="彰化縣"/>
+	<School Code="074D02" Name="縣立彰安國中補校" County="彰化縣"/>
+	<School Code="074D03" Name="縣立鹿港國中補校" County="彰化縣"/>
+	<School Code="074D05" Name="縣立明倫國中補校" County="彰化縣"/>
+	<School Code="074D07" Name="縣立秀水國中補校" County="彰化縣"/>
+	<School Code="074D14" Name="縣立北斗國中補校" County="彰化縣"/>
+	<School Code="074D92" Name="縣立伸港國中補校" County="彰化縣"/>
+	<School Code="074D93" Name="縣立社頭國中補校" County="彰化縣"/>
+	<School Code="074E06" Name="縣立僑信國小補校" County="彰化縣"/>
+	<School Code="074E09" Name="縣立秀水國小補校" County="彰化縣"/>
+	<School Code="074E16" Name="縣立和美國小補校" County="彰化縣"/>
+	<School Code="074E20" Name="縣立埔心國小補校" County="彰化縣"/>
+	<School Code="074E39" Name="縣立忠孝國小補校" County="彰化縣"/>
+	<School Code="074E96" Name="縣立花壇國小補校" County="彰化縣"/>
+	<School Code="074E98" Name="縣立德興國小補校" County="彰化縣"/>
+	<School Code="074E99" Name="縣立湖南國小補校" County="彰化縣"/>
+	<School Code="084D01" Name="縣立南投國中補校" County="南投縣"/>
+	<School Code="084D02" Name="縣立草屯國中補校" County="南投縣"/>
+	<School Code="084D03" Name="縣立埔里國中補校" County="南投縣"/>
+	<School Code="084D05" Name="縣立集集國中補校" County="南投縣"/>
+	<School Code="084D07" Name="縣立國姓國中補校" County="南投縣"/>
+	<School Code="084E02" Name="縣立育英國小補校" County="南投縣"/>
+	<School Code="084E06" Name="縣立平和國小補校" County="南投縣"/>
+	<School Code="084E10" Name="縣立國姓國小補校" County="南投縣"/>
+	<School Code="084E11" Name="縣立雙冬國小補校" County="南投縣"/>
+	<School Code="084E12" Name="縣立炎峰國小補校" County="南投縣"/>
+	<School Code="094D01" Name="縣立北港國中補校" County="雲林縣"/>
+	<School Code="094D02" Name="縣立斗六國中補校" County="雲林縣"/>
+	<School Code="094D03" Name="縣立雲林國中補校" County="雲林縣"/>
+	<School Code="094D04" Name="縣立東明國中補校" County="雲林縣"/>
+	<School Code="094D09" Name="縣立崇德國中補校" County="雲林縣"/>
+	<School Code="094D12" Name="縣立二崙國中補校" County="雲林縣"/>
+	<School Code="094D16" Name="縣立崙背國中補校" County="雲林縣"/>
+	<School Code="094D17" Name="縣立馬光國中補校" County="雲林縣"/>
+	<School Code="094E02" Name="縣立麥寮國小補校" County="雲林縣"/>
+	<School Code="094E05" Name="縣立僑真國小補校" County="雲林縣"/>
+	<School Code="094E07" Name="縣立鎮東國小補校" County="雲林縣"/>
+	<School Code="094E09" Name="縣立中山國小補校" County="雲林縣"/>
+	<School Code="094E10" Name="縣立北辰國小補校" County="雲林縣"/>
+	<School Code="094E12" Name="縣立土庫國小補校" County="雲林縣"/>
+	<School Code="094E20" Name="縣立林內國小補校" County="雲林縣"/>
+	<School Code="094E28" Name="縣立文光國小補校" County="雲林縣"/>
+	<School Code="104D01" Name="縣立東石國中補校" County="嘉義縣"/>
+	<School Code="104D04" Name="縣立水上國中補校" County="嘉義縣"/>
+	<School Code="104D10" Name="縣立民雄國中補校" County="嘉義縣"/>
+	<School Code="104D13" Name="縣立中埔國中補校" County="嘉義縣"/>
+	<School Code="104E03" Name="縣立民雄國小補校" County="嘉義縣"/>
+	<School Code="104E10" Name="縣立大林國小補校" County="嘉義縣"/>
+	<School Code="104E12" Name="縣立水上國小補校" County="嘉義縣"/>
+	<School Code="104E13" Name="縣立朴子國小補校" County="嘉義縣"/>
+	<School Code="134D01" Name="縣立明正國中補校" County="屏東縣"/>
+	<School Code="134D05" Name="縣立新埤國中補校" County="屏東縣"/>
+	<School Code="134D08" Name="縣立琉球國中補校" County="屏東縣"/>
+	<School Code="134D10" Name="縣立潮州國中補校" County="屏東縣"/>
+	<School Code="134D12" Name="縣立東港國中補校" County="屏東縣"/>
+	<School Code="134D16" Name="縣立崇文國中補校" County="屏東縣"/>
+	<School Code="134D17" Name="縣立林邊國中補校" County="屏東縣"/>
+	<School Code="134D22" Name="縣立南州國中補校" County="屏東縣"/>
+	<School Code="134D24" Name="縣立佳冬國中補校" County="屏東縣"/>
+	<School Code="134D26" Name="縣立萬巒國中補校" County="屏東縣"/>
+	<School Code="134E04" Name="縣立東隆國小補校" County="屏東縣"/>
+	<School Code="134E09" Name="縣立新圍國小補校" County="屏東縣"/>
+	<School Code="134E14" Name="縣立高樹國小補校" County="屏東縣"/>
+	<School Code="134E15" Name="縣立內埔國小補校" County="屏東縣"/>
+	<School Code="134E25" Name="縣立琉球國小補校" County="屏東縣"/>
+	<School Code="134E27" Name="縣立林邊國小補校" County="屏東縣"/>
+	<School Code="134E28" Name="縣立佳冬國小補校" County="屏東縣"/>
+	<School Code="134E31" Name="縣立潮州國小補校" County="屏東縣"/>
+	<School Code="134E38" Name="縣立鶴聲國小補校" County="屏東縣"/>
+	<School Code="144D01" Name="縣立新生國中補校" County="臺東縣"/>
+	<School Code="144E19" Name="縣立寶桑國小補校" County="臺東縣"/>
+	<School Code="154D01" Name="縣立宜昌國中補校" County="花蓮縣"/>
+	<School Code="154D02" Name="縣立玉里國中補校" County="花蓮縣"/>
+	<School Code="154D06" Name="縣立花崗國中補校" County="花蓮縣"/>
+	<School Code="154E01" Name="縣立宜昌國小補校" County="花蓮縣"/>
+	<School Code="154E02" Name="縣立明義國小補校" County="花蓮縣"/>
+	<School Code="154E03" Name="縣立玉里國小補校" County="花蓮縣"/>
+	<School Code="164D01" Name="縣立馬公國中補校" County="澎湖縣"/>
+	<School Code="164E13" Name="縣立馬公國小補校" County="澎湖縣"/>
+	<School Code="173D01" Name="市立銘傳國中補校" County="基隆市"/>
+	<School Code="173D05" Name="市立建德國中補校" County="基隆市"/>
+	<School Code="173D10" Name="市立八斗國中補校" County="基隆市"/>
+	<School Code="173E01" Name="市立仁愛國小補校" County="基隆市"/>
+	<School Code="173E09" Name="市立建德國小補校" County="基隆市"/>
+	<School Code="173E12" Name="市立五堵國小補校" County="基隆市"/>
+	<School Code="173E16" Name="市立深澳國小補校" County="基隆市"/>
+	<School Code="173E18" Name="市立中和國小補校" County="基隆市"/>
+	<School Code="183D01" Name="市立建華國中補校" County="新竹市"/>
+	<School Code="183E01" Name="市立北門國小補校" County="新竹市"/>
+	<School Code="183E02" Name="市立民富國小補校" County="新竹市"/>
+	<School Code="183E05" Name="市立大庄國小補校" County="新竹市"/>
+	<School Code="203D01" Name="市立玉山國中補校" County="嘉義市"/>
+	<School Code="203D02" Name="市立民生國中補校" County="嘉義市"/>
+	<School Code="203D03" Name="市立嘉義國中補校" County="嘉義市"/>
+	<School Code="203E01" Name="市立志航國小補校" County="嘉義市"/>
+	<School Code="010301" Name="國立華僑高級中等學校附設國中" County="新北市"/>
+	<School Code="011301" Name="私立淡江高中附設國中" County="新北市"/>
+	<School Code="011302" Name="私立康橋高中附設國中" County="新北市"/>
+	<School Code="011306" Name="私立金陵女中附設國中" County="新北市"/>
+	<School Code="011307" Name="新北市裕德高級中等學校附設國中" County="新北市"/>
+	<School Code="011309" Name="財團法人南山高中附設國中" County="新北市"/>
+	<School Code="011310" Name="財團法人恆毅高中附設國中" County="新北市"/>
+	<School Code="011311" Name="私立聖心女中附設國中" County="新北市"/>
+	<School Code="011312" Name="私立崇義高中附設國中" County="新北市"/>
+	<School Code="011314" Name="財團法人福瑞斯特高中附設國中" County="新北市"/>
+	<School Code="011316" Name="私立格致高中附設國中" County="新北市"/>
+	<School Code="011317" Name="私立醒吾高中附設國中" County="新北市"/>
+	<School Code="011318" Name="私立徐匯高中附設國中" County="新北市"/>
+	<School Code="011322" Name="財團法人崇光高中附設國中" County="新北市"/>
+	<School Code="011323" Name="私立光仁高中附設國中" County="新北市"/>
+	<School Code="011324" Name="私立竹林高中附設國中" County="新北市"/>
+	<School Code="011325" Name="私立中信高中附設國中" County="新北市"/>
+	<School Code="011329" Name="財團法人辭修高中附設國中" County="新北市"/>
+	<School Code="011330" Name="新北市林口康橋國際高中附設國中" County="新北市"/>
+	<School Code="011399" Name="私立時雨高中附設國中" County="新北市"/>
+	<School Code="014302" Name="市立海山高中附設國中" County="新北市"/>
+	<School Code="014311" Name="市立三重高中附設國中" County="新北市"/>
+	<School Code="014315" Name="市立永平高中附設國中" County="新北市"/>
+	<School Code="014322" Name="市立樹林高中附設國中" County="新北市"/>
+	<School Code="014326" Name="市立明德高中附設國中" County="新北市"/>
+	<School Code="014332" Name="市立秀峰高中附設國中" County="新北市"/>
+	<School Code="014338" Name="市立金山高中附設國中" County="新北市"/>
+	<School Code="014343" Name="市立安康高中附設國中" County="新北市"/>
+	<School Code="014347" Name="市立雙溪高中附設國中" County="新北市"/>
+	<School Code="014348" Name="市立石碇高中附設國中" County="新北市"/>
+	<School Code="014353" Name="市立丹鳳高中附設國中" County="新北市"/>
+	<School Code="014356" Name="市立清水高中附設國中" County="新北市"/>
+	<School Code="014357" Name="市立三民高中附設國中" County="新北市"/>
+	<School Code="014362" Name="市立錦和高中附設國中" County="新北市"/>
+	<School Code="014363" Name="市立光復高中附設國中" County="新北市"/>
+	<School Code="014364" Name="市立竹圍高中附設國中" County="新北市"/>
+	<School Code="014381" Name="市立北大高級中學附設國中" County="新北市"/>
+	<School Code="014468" Name="市立樟樹國際實中附設國中" County="新北市"/>
+	<School Code="311401" Name="私立育達高中附設國中" County="臺北市"/>
+	<School Code="313301" Name="市立西松高中附設國中" County="臺北市"/>
+	<School Code="313302" Name="市立中崙高中附設國中" County="臺北市"/>
+	<School Code="321399" Name="私立協和祐德高中附設國中" County="臺北市"/>
+	<School Code="330301" Name="國立師大附中附設國中" County="臺北市"/>
+	<School Code="331301" Name="私立延平中學附設國中" County="臺北市"/>
+	<School Code="331304" Name="私立復興實驗高中附設國中" County="臺北市"/>
+	<School Code="333301" Name="市立和平高中附設國中" County="臺北市"/>
+	<School Code="333304" Name="市立芳和實驗高中附設國中" County="臺北市"/>
+	<School Code="343302" Name="市立大同高中附設國中" County="臺北市"/>
+	<School Code="343303" Name="市立大直高中附設國中" County="臺北市"/>
+	<School Code="361301" Name="私立靜修高中附設國中" County="臺北市"/>
+	<School Code="363302" Name="市立成淵高中附設國中" County="臺北市"/>
+	<School Code="373302" Name="市立大理高中附設國中" County="臺北市"/>
+	<School Code="380301" Name="國立政大附中附設國中" County="臺北市"/>
+	<School Code="381301" Name="私立東山高中附設國中" County="臺北市"/>
+	<School Code="381304" Name="私立再興中學附設國中" County="臺北市"/>
+	<School Code="381305" Name="私立景文高中附設國中" County="臺北市"/>
+	<School Code="381306" Name="私立靜心高中附設國中" County="臺北市"/>
+	<School Code="383302" Name="市立萬芳高中附設國中" County="臺北市"/>
+	<School Code="393301" Name="市立南港高中附設國中" County="臺北市"/>
+	<School Code="400144" Name="國立臺灣戲曲學院附設國中" County="臺北市"/>
+	<School Code="401303" Name="私立達人高中附設國中" County="臺北市"/>
+	<School Code="411301" Name="私立泰北高中附設國中" County="臺北市"/>
+	<School Code="411302" Name="私立衛理女中附設國中" County="臺北市"/>
+	<School Code="411303" Name="私立華興中學附設國中" County="臺北市"/>
+	<School Code="413301" Name="市立陽明高中附設國中" County="臺北市"/>
+	<School Code="413302" Name="市立百齡高中附設國中" County="臺北市"/>
+	<School Code="421301" Name="私立薇閣高中附設國中" County="臺北市"/>
+	<School Code="421302" Name="臺北市幼華高中附設國中" County="臺北市"/>
+	<School Code="421303" Name="私立奎山實驗高級中學附設國中" County="臺北市"/>
+	<School Code="031301" Name="私立路亞高中附設國中" County="桃園市"/>
+	<School Code="031310" Name="私立六和高中附設國中" County="桃園市"/>
+	<School Code="031311" Name="桃園市復旦高中附設國中" County="桃園市"/>
+	<School Code="031312" Name="桃園市治平高中附設國中" County="桃園市"/>
+	<School Code="031313" Name="桃園市振聲高中附設國中" County="桃園市"/>
+	<School Code="031319" Name="桃園市清華高中附設國中" County="桃園市"/>
+	<School Code="031320" Name="桃園市新興高中附設國中" County="桃園市"/>
+	<School Code="031326" Name="私立大華高中附設國中" County="桃園市"/>
+	<School Code="034332" Name="市立觀音高中附設國中" County="桃園市"/>
+	<School Code="034335" Name="市立新屋高級中等學校附設國中" County="桃園市"/>
+	<School Code="034347" Name="市立永豐高中附設國中" County="桃園市"/>
+	<School Code="034348" Name="市立羅浮高中附設國中" County="桃園市"/>
+	<School Code="060323" Name="國立中科實驗高級中學附設國中" County="臺中市"/>
+	<School Code="061301" Name="財團法人常春藤高中附設國中" County="臺中市"/>
+	<School Code="061310" Name="私立大明高中附設國中" County="臺中市"/>
+	<School Code="061313" Name="私立明道高中附設國中" County="臺中市"/>
+	<School Code="061314" Name="私立僑泰高中附設國中" County="臺中市"/>
+	<School Code="061315" Name="私立華盛頓高中附設國中" County="臺中市"/>
+	<School Code="061317" Name="私立弘文高中附設國中" County="臺中市"/>
+	<School Code="061318" Name="私立立人高中附設國中" County="臺中市"/>
+	<School Code="061322" Name="華德福大地實驗學校附設國中" County="臺中市"/>
+	<School Code="064308" Name="市立后綜高中附設國中" County="臺中市"/>
+	<School Code="064324" Name="市立大里高中附設國中" County="臺中市"/>
+	<School Code="064328" Name="市立新社高中附設國中" County="臺中市"/>
+	<School Code="064336" Name="市立長億高中附設國中" County="臺中市"/>
+	<School Code="064342" Name="市立中港高中附設國中" County="臺中市"/>
+	<School Code="064350" Name="市立龍津高中附設國中" County="臺中市"/>
+	<School Code="064406" Name="市立神岡高工附設國中" County="臺中市"/>
+	<School Code="191301" Name="私立東大附中附設國中" County="臺中市"/>
+	<School Code="191302" Name="私立葳格高中附設國中" County="臺中市"/>
+	<School Code="191305" Name="私立新民高中附設國中" County="臺中市"/>
+	<School Code="191308" Name="私立宜寧高中附設國中" County="臺中市"/>
+	<School Code="191309" Name="私立明德高中附設國中" County="臺中市"/>
+	<School Code="191311" Name="私立衛道高中附設國中" County="臺中市"/>
+	<School Code="191313" Name="私立曉明女中附設國中" County="臺中市"/>
+	<School Code="191314" Name="私立嶺東高中附設國中" County="臺中市"/>
+	<School Code="191315" Name="私立磊川華德福實驗教育學校附設國中" County="臺中市"/>
+	<School Code="193303" Name="市立忠明高中附設國中" County="臺中市"/>
+	<School Code="193313" Name="市立西苑高中附設國中" County="臺中市"/>
+	<School Code="193315" Name="市立東山高中附設國中" County="臺中市"/>
+	<School Code="193316" Name="市立惠文高中附設國中" County="臺中市"/>
+	<School Code="110328" Name="國立南科國際實驗高中附設國中" County="臺南市"/>
+	<School Code="111313" Name="私立南光高中附設國中" County="臺南市"/>
+	<School Code="111320" Name="私立港明高中附設國中" County="臺南市"/>
+	<School Code="111321" Name="臺南市中信國際高中附設國中" County="臺南市"/>
+	<School Code="111322" Name="私立明達高中附設國中" County="臺南市"/>
+	<School Code="111323" Name="私立黎明高中附設國中" County="臺南市"/>
+	<School Code="114306" Name="市立大灣高中附設國中" County="臺南市"/>
+	<School Code="114307" Name="市立永仁高中附設國中" County="臺南市"/>
+	<School Code="114344" Name="市立沙崙國際高中附設國中" County="臺南市"/>
+	<School Code="211301" Name="私立長榮高中附設國中" County="臺南市"/>
+	<School Code="211304" Name="財團法人聖功女中附設國中" County="臺南市"/>
+	<School Code="211310" Name="臺南市光華高中附設國中" County="臺南市"/>
+	<School Code="211315" Name="私立瀛海高中附設國中" County="臺南市"/>
+	<School Code="211317" Name="臺南市崑山高中附設國中" County="臺南市"/>
+	<School Code="211318" Name="私立德光高中附設國中" County="臺南市"/>
+	<School Code="211320" Name="財團法人慈濟高中附設國中" County="臺南市"/>
+	<School Code="213303" Name="市立南寧高中附設國中" County="臺南市"/>
+	<School Code="213316" Name="市立土城高中附設國中" County="臺南市"/>
+	<School Code="121302" Name="私立光禾華德福實驗學校附設國中" County="高雄市"/>
+	<School Code="121307" Name="財團法人普門中學附設國中" County="高雄市"/>
+	<School Code="121318" Name="私立正義高中附設國中" County="高雄市"/>
+	<School Code="121320" Name="私立義大國際高中附設國中" County="高雄市"/>
+	<School Code="121405" Name="私立中山工商附設國中" County="高雄市"/>
+	<School Code="124302" Name="市立文山高中附設國中" County="高雄市"/>
+	<School Code="124311" Name="市立林園高中附設國中" County="高雄市"/>
+	<School Code="124313" Name="市立仁武高中附設國中" County="高雄市"/>
+	<School Code="124322" Name="市立路竹高中附設國中" County="高雄市"/>
+	<School Code="124333" Name="市立六龜高中附設國中" County="高雄市"/>
+	<School Code="124340" Name="市立福誠高中附設國中" County="高雄市"/>
+	<School Code="521301" Name="私立明誠高中附設國中" County="高雄市"/>
+	<School Code="521303" Name="私立大榮高中附設國中" County="高雄市"/>
+	<School Code="523301" Name="市立鼓山高中附設國中" County="高雄市"/>
+	<School Code="540301" Name="國立中山大學附屬國光高中附設國中" County="高雄市"/>
+	<School Code="551301" Name="私立立志高中附設國中" County="高雄市"/>
+	<School Code="563301" Name="市立新興高中附設國中" County="高雄市"/>
+	<School Code="580301" Name="國立高師大附中附設國中" County="高雄市"/>
+	<School Code="581301" Name="私立復華高中附設國中" County="高雄市"/>
+	<School Code="581302" Name="天主教道明中學附設國中" County="高雄市"/>
+	<School Code="583301" Name="市立中正高中附設國中" County="高雄市"/>
+	<School Code="593302" Name="市立瑞祥高中附設國中" County="高雄市"/>
+	<School Code="610405" Name="國立高餐大附屬餐旅中學附設國中" County="高雄市"/>
+	<School Code="021301" Name="私立慧燈高中附設國中" County="宜蘭縣"/>
+	<School Code="021310" Name="私立中道高中附設國中" County="宜蘭縣"/>
+	<School Code="024322" Name="縣立南澳高中附設國中" County="宜蘭縣"/>
+	<School Code="024325" Name="縣立慈心華德福實中附設國中" County="宜蘭縣"/>
+	<School Code="041303" Name="私立義民高中附設國中" County="新竹縣"/>
+	<School Code="041305" Name="私立忠信高中附設國中" County="新竹縣"/>
+	<School Code="041306" Name="私立東泰高中附設國中" County="新竹縣"/>
+	<School Code="041307" Name="私立仰德高中附設國中" County="新竹縣"/>
+	<School Code="041401" Name="私立內思高工附設國中" County="新竹縣"/>
+	<School Code="044311" Name="縣立六家高級中學附設國中" County="新竹縣"/>
+	<School Code="050314" Name="國立卓蘭高中附設國中" County="苗栗縣"/>
+	<School Code="051302" Name="私立君毅高中附設國中" County="苗栗縣"/>
+	<School Code="051306" Name="私立建臺高中附設國中" County="苗栗縣"/>
+	<School Code="051307" Name="私立全人實驗高中附設國中" County="苗栗縣"/>
+	<School Code="054308" Name="縣立三義高中附設國中" County="苗栗縣"/>
+	<School Code="054309" Name="縣立苑裡高中附設國中" County="苗栗縣"/>
+	<School Code="054317" Name="縣立興華高中附設國中" County="苗栗縣"/>
+	<School Code="054333" Name="縣立大同高中附設國中" County="苗栗縣"/>
+	<School Code="071311" Name="私立精誠高中附設國中" County="彰化縣"/>
+	<School Code="071317" Name="私立文興高中附設國中" County="彰化縣"/>
+	<School Code="071318" Name="財團法人正德高中附設國中" County="彰化縣"/>
+	<School Code="074308" Name="縣立彰化藝術高中附設國中" County="彰化縣"/>
+	<School Code="074313" Name="縣立二林高中附設國中" County="彰化縣"/>
+	<School Code="074323" Name="縣立和美高中附設國中" County="彰化縣"/>
+	<School Code="074328" Name="縣立田中高中附設國中" County="彰化縣"/>
+	<School Code="074339" Name="縣立成功高中附設國中" County="彰化縣"/>
+	<School Code="081312" Name="私立三育高中附設國中" County="南投縣"/>
+	<School Code="081313" Name="私立弘明實驗高中附設國中" County="南投縣"/>
+	<School Code="081314" Name="私立普台高中附設國中" County="南投縣"/>
+	<School Code="081409" Name="私立同德高中附設國中" County="南投縣"/>
+	<School Code="084309" Name="縣立旭光高中附設國中" County="南投縣"/>
+	<School Code="091307" Name="私立永年高中附設國中" County="雲林縣"/>
+	<School Code="091308" Name="私立正心高中附設國中" County="雲林縣"/>
+	<School Code="091311" Name="私立文生高中附設國中" County="雲林縣"/>
+	<School Code="091316" Name="私立揚子高中附設國中" County="雲林縣"/>
+	<School Code="091319" Name="私立福智高中附設國中" County="雲林縣"/>
+	<School Code="091320" Name="雲林縣維多利亞實驗高中附設國中" County="雲林縣"/>
+	<School Code="094301" Name="縣立斗南高中附設國中" County="雲林縣"/>
+	<School Code="094307" Name="縣立麥寮高中附設國中" County="雲林縣"/>
+	<School Code="094308" Name="縣立古坑華德福實驗高級中學附設國中" County="雲林縣"/>
+	<School Code="094326" Name="縣立蔦松藝術高中附設國中" County="雲林縣"/>
+	<School Code="100303" Name="國立嘉科實驗高中附設國中部" County="嘉義縣"/>
+	<School Code="101304" Name="私立協同高中附設國中" County="嘉義縣"/>
+	<School Code="104319" Name="縣立竹崎高中附設國中" County="嘉義縣"/>
+	<School Code="104326" Name="縣立永慶高中附設國中" County="嘉義縣"/>
+	<School Code="130307" Name="國立屏科實驗高中附設國中部" County="屏東縣"/>
+	<School Code="131302" Name="私立崇華高中附設國中" County="屏東縣"/>
+	<School Code="131307" Name="私立屏榮高中附設國中" County="屏東縣"/>
+	<School Code="131308" Name="私立陸興高中附設國中" County="屏東縣"/>
+	<School Code="131311" Name="私立美和高中附設國中" County="屏東縣"/>
+	<School Code="134304" Name="縣立大同高中附設國中" County="屏東縣"/>
+	<School Code="134321" Name="縣立枋寮高中附設國中" County="屏東縣"/>
+	<School Code="134324" Name="縣立東港高中附設國中" County="屏東縣"/>
+	<School Code="134334" Name="縣立來義高中附設國中" County="屏東縣"/>
+	<School Code="140301" Name="國立臺東大學附屬體育高中附設國中" County="臺東縣"/>
+	<School Code="141301" Name="臺東縣均一高中附設國中" County="臺東縣"/>
+	<School Code="141307" Name="私立育仁高中附設國中" County="臺東縣"/>
+	<School Code="144322" Name="縣立蘭嶼高中附設國中" County="臺東縣"/>
+	<School Code="151306" Name="私立海星高中附設國中" County="花蓮縣"/>
+	<School Code="151312" Name="財團法人慈濟大學附中附設國中" County="花蓮縣"/>
+	<School Code="171306" Name="私立二信高中附設國中" County="基隆市"/>
+	<School Code="171308" Name="輔大聖心高中附設國中" County="基隆市"/>
+	<School Code="173304" Name="市立中山高中附設國中" County="基隆市"/>
+	<School Code="173306" Name="市立安樂高中附設國中" County="基隆市"/>
+	<School Code="173307" Name="市立暖暖高中附設國中" County="基隆市"/>
+	<School Code="173314" Name="市立八斗高中附設國中" County="基隆市"/>
+	<School Code="180301" Name="國立竹科實驗高級中學附設國中" County="新竹市"/>
+	<School Code="181305" Name="私立光復高中附設國中" County="新竹市"/>
+	<School Code="181306" Name="私立曙光女中附設國中" County="新竹市"/>
+	<School Code="181307" Name="私立磐石高中附設國中" County="新竹市"/>
+	<School Code="183306" Name="市立成德高中附設國中" County="新竹市"/>
+	<School Code="183307" Name="市立香山高中附設國中" County="新竹市"/>
+	<School Code="183313" Name="市立建功高中附設國中" County="新竹市"/>
+	<School Code="201304" Name="私立興華高中附設國中" County="嘉義市"/>
+	<School Code="201310" Name="私立嘉華高中附設國中" County="嘉義市"/>
+	<School Code="201312" Name="私立輔仁高中附設國中" County="嘉義市"/>
+	<School Code="201313" Name="私立宏仁高中附設國中" County="嘉義市"/>
+	<School Code="013501" Name="市立南勢國中" County="新北市"/>
+	<School Code="014501" Name="市立板橋國中" County="新北市"/>
+	<School Code="014503" Name="市立重慶國中" County="新北市"/>
+	<School Code="014504" Name="市立江翠國中" County="新北市"/>
+	<School Code="014505" Name="市立中山國中" County="新北市"/>
+	<School Code="014506" Name="市立新埔國中" County="新北市"/>
+	<School Code="014507" Name="市立新莊國中" County="新北市"/>
+	<School Code="014508" Name="市立新泰國中" County="新北市"/>
+	<School Code="014509" Name="市立福營國中" County="新北市"/>
+	<School Code="014510" Name="市立頭前國中" County="新北市"/>
+	<School Code="014512" Name="市立光榮國中" County="新北市"/>
+	<School Code="014513" Name="市立明志國中" County="新北市"/>
+	<School Code="014514" Name="市立碧華國中" County="新北市"/>
+	<School Code="014516" Name="市立永和國中" County="新北市"/>
+	<School Code="014517" Name="市立福和國中" County="新北市"/>
+	<School Code="014518" Name="市立中和國中" County="新北市"/>
+	<School Code="014519" Name="市立積穗國中" County="新北市"/>
+	<School Code="014520" Name="市立漳和國中" County="新北市"/>
+	<School Code="014521" Name="市立鶯歌國中" County="新北市"/>
+	<School Code="014523" Name="市立柑園國中" County="新北市"/>
+	<School Code="014524" Name="市立土城國中" County="新北市"/>
+	<School Code="014525" Name="市立三峽國中" County="新北市"/>
+	<School Code="014527" Name="市立八里國中" County="新北市"/>
+	<School Code="014528" Name="市立泰山國中" County="新北市"/>
+	<School Code="014529" Name="市立五股國中" County="新北市"/>
+	<School Code="014530" Name="市立蘆洲國中" County="新北市"/>
+	<School Code="014531" Name="市立林口國中" County="新北市"/>
+	<School Code="014533" Name="市立汐止國中" County="新北市"/>
+	<School Code="014534" Name="市立淡水國中" County="新北市"/>
+	<School Code="014536" Name="市立三芝國中" County="新北市"/>
+	<School Code="014537" Name="市立石門實驗國中" County="新北市"/>
+	<School Code="014539" Name="市立萬里國中" County="新北市"/>
+	<School Code="014540" Name="市立坪林實驗國中" County="新北市"/>
+	<School Code="014541" Name="市立文山國中" County="新北市"/>
+	<School Code="014542" Name="市立五峰國中" County="新北市"/>
+	<School Code="014544" Name="市立瑞芳國中" County="新北市"/>
+	<School Code="014545" Name="市立欽賢國中" County="新北市"/>
+	<School Code="014546" Name="市立貢寮實驗國中" County="新北市"/>
+	<School Code="014549" Name="市立深坑國中" County="新北市"/>
+	<School Code="014550" Name="市立平溪國中" County="新北市"/>
+	<School Code="014551" Name="市立烏來國中(小)" County="新北市"/>
+	<School Code="014552" Name="市立溪崑國中" County="新北市"/>
+	<School Code="014554" Name="市立自強國中" County="新北市"/>
+	<School Code="014555" Name="市立中正國中" County="新北市"/>
+	<School Code="014558" Name="市立義學國中" County="新北市"/>
+	<School Code="014559" Name="市立中平國中" County="新北市"/>
+	<School Code="014560" Name="市立鳳鳴國中" County="新北市"/>
+	<School Code="014561" Name="市立三和國中" County="新北市"/>
+	<School Code="014565" Name="市立尖山國中" County="新北市"/>
+	<School Code="014566" Name="市立正德國中" County="新北市"/>
+	<School Code="014567" Name="市立安溪國中" County="新北市"/>
+	<School Code="014569" Name="市立育林國中" County="新北市"/>
+	<School Code="014570" Name="市立青山國中(小)" County="新北市"/>
+	<School Code="014571" Name="市立崇林國中" County="新北市"/>
+	<School Code="014572" Name="市立二重國中" County="新北市"/>
+	<School Code="014573" Name="市立大觀國中" County="新北市"/>
+	<School Code="014574" Name="市立三多國中" County="新北市"/>
+	<School Code="014575" Name="市立忠孝國中" County="新北市"/>
+	<School Code="014576" Name="市立鷺江國中" County="新北市"/>
+	<School Code="014577" Name="市立桃子腳國中(小)" County="新北市"/>
+	<School Code="014579" Name="市立佳林國中" County="新北市"/>
+	<School Code="014580" Name="市立達觀國中(小)" County="新北市"/>
+	<School Code="313501" Name="市立介壽國中" County="臺北市"/>
+	<School Code="313502" Name="市立民生國中" County="臺北市"/>
+	<School Code="313504" Name="市立中山國中" County="臺北市"/>
+	<School Code="313505" Name="市立敦化國中" County="臺北市"/>
+	<School Code="323502" Name="市立興雅國中" County="臺北市"/>
+	<School Code="323503" Name="市立永吉國中" County="臺北市"/>
+	<School Code="323504" Name="市立瑠公國中" County="臺北市"/>
+	<School Code="323505" Name="市立信義國中" County="臺北市"/>
+	<School Code="331502" Name="私立立人國中(小)" County="臺北市"/>
+	<School Code="333501" Name="市立仁愛國中" County="臺北市"/>
+	<School Code="333502" Name="市立大安國中" County="臺北市"/>
+	<School Code="333505" Name="市立金華國中" County="臺北市"/>
+	<School Code="333506" Name="市立懷生國中" County="臺北市"/>
+	<School Code="333507" Name="市立民族實驗國中" County="臺北市"/>
+	<School Code="333508" Name="市立龍門國中" County="臺北市"/>
+	<School Code="343502" Name="市立長安國中" County="臺北市"/>
+	<School Code="343504" Name="市立北安國中" County="臺北市"/>
+	<School Code="343505" Name="市立新興國中" County="臺北市"/>
+	<School Code="343506" Name="市立五常國中" County="臺北市"/>
+	<School Code="343507" Name="市立濱江實驗國中" County="臺北市"/>
+	<School Code="353501" Name="市立螢橋國中" County="臺北市"/>
+	<School Code="353502" Name="市立古亭國中" County="臺北市"/>
+	<School Code="353503" Name="市立南門國中" County="臺北市"/>
+	<School Code="353504" Name="市立弘道國中" County="臺北市"/>
+	<School Code="353505" Name="市立中正國中" County="臺北市"/>
+	<School Code="363501" Name="市立建成國中" County="臺北市"/>
+	<School Code="363502" Name="市立忠孝國中" County="臺北市"/>
+	<School Code="363504" Name="市立民權國中" County="臺北市"/>
+	<School Code="363506" Name="市立蘭州國中" County="臺北市"/>
+	<School Code="363507" Name="市立重慶國中" County="臺北市"/>
+	<School Code="373501" Name="市立萬華國中" County="臺北市"/>
+	<School Code="373503" Name="市立雙園國中" County="臺北市"/>
+	<School Code="373505" Name="市立龍山國中" County="臺北市"/>
+	<School Code="383501" Name="市立木柵國中" County="臺北市"/>
+	<School Code="383502" Name="市立實踐國中" County="臺北市"/>
+	<School Code="383503" Name="市立北政國中" County="臺北市"/>
+	<School Code="383504" Name="市立景美國中" County="臺北市"/>
+	<School Code="383505" Name="市立興福國中" County="臺北市"/>
+	<School Code="383507" Name="市立景興國中" County="臺北市"/>
+	<School Code="393501" Name="市立誠正國中" County="臺北市"/>
+	<School Code="393503" Name="市立成德國中" County="臺北市"/>
+	<School Code="403501" Name="市立內湖國中" County="臺北市"/>
+	<School Code="403502" Name="市立麗山國中" County="臺北市"/>
+	<School Code="403503" Name="市立三民國中" County="臺北市"/>
+	<School Code="403504" Name="市立西湖實驗國中" County="臺北市"/>
+	<School Code="403505" Name="市立東湖國中" County="臺北市"/>
+	<School Code="403506" Name="市立明湖國中" County="臺北市"/>
+	<School Code="413501" Name="市立士林國中" County="臺北市"/>
+	<School Code="413502" Name="市立蘭雅國中" County="臺北市"/>
+	<School Code="413504" Name="市立至善國中" County="臺北市"/>
+	<School Code="413505" Name="市立格致國中" County="臺北市"/>
+	<School Code="413506" Name="市立福安國中" County="臺北市"/>
+	<School Code="413508" Name="市立天母國中" County="臺北市"/>
+	<School Code="423501" Name="市立北投國中" County="臺北市"/>
+	<School Code="423502" Name="市立新民國中" County="臺北市"/>
+	<School Code="423503" Name="市立明德國中" County="臺北市"/>
+	<School Code="423504" Name="市立桃源國中" County="臺北市"/>
+	<School Code="423505" Name="市立石牌國中" County="臺北市"/>
+	<School Code="423506" Name="市立關渡國中" County="臺北市"/>
+	<School Code="031502" Name="私立有得國中(小)" County="桃園市"/>
+	<School Code="031503" Name="私立康萊爾國中(小)" County="桃園市"/>
+	<School Code="034501" Name="市立桃園國中" County="桃園市"/>
+	<School Code="034502" Name="市立青溪國中" County="桃園市"/>
+	<School Code="034503" Name="市立文昌國中" County="桃園市"/>
+	<School Code="034504" Name="市立建國國中" County="桃園市"/>
+	<School Code="034505" Name="市立中興國中" County="桃園市"/>
+	<School Code="034506" Name="市立南崁國中" County="桃園市"/>
+	<School Code="034507" Name="市立山腳國中" County="桃園市"/>
+	<School Code="034508" Name="市立大竹國中" County="桃園市"/>
+	<School Code="034509" Name="市立大園國中" County="桃園市"/>
+	<School Code="034510" Name="市立竹圍國中" County="桃園市"/>
+	<School Code="034511" Name="市立大溪國中" County="桃園市"/>
+	<School Code="034513" Name="市立仁和國中" County="桃園市"/>
+	<School Code="034515" Name="市立大崗國中" County="桃園市"/>
+	<School Code="034516" Name="市立八德國中" County="桃園市"/>
+	<School Code="034517" Name="市立大成國中" County="桃園市"/>
+	<School Code="034518" Name="市立中壢國中" County="桃園市"/>
+	<School Code="034520" Name="市立平南國中" County="桃園市"/>
+	<School Code="034521" Name="市立新明國中" County="桃園市"/>
+	<School Code="034522" Name="市立內壢國中" County="桃園市"/>
+	<School Code="034523" Name="市立大崙國中" County="桃園市"/>
+	<School Code="034524" Name="市立龍岡國中" County="桃園市"/>
+	<School Code="034525" Name="市立興南國中" County="桃園市"/>
+	<School Code="034526" Name="市立自強國中" County="桃園市"/>
+	<School Code="034527" Name="市立東興國中" County="桃園市"/>
+	<School Code="034528" Name="市立楊梅國中" County="桃園市"/>
+	<School Code="034529" Name="市立仁美國中" County="桃園市"/>
+	<School Code="034530" Name="市立富岡國中" County="桃園市"/>
+	<School Code="034531" Name="市立瑞原國中" County="桃園市"/>
+	<School Code="034533" Name="市立觀音國中" County="桃園市"/>
+	<School Code="034534" Name="市立草漯國中" County="桃園市"/>
+	<School Code="034536" Name="市立大坡國中" County="桃園市"/>
+	<School Code="034537" Name="市立永安實驗國中" County="桃園市"/>
+	<School Code="034538" Name="市立龍潭國中" County="桃園市"/>
+	<School Code="034539" Name="市立凌雲國中" County="桃園市"/>
+	<School Code="034540" Name="市立石門國中" County="桃園市"/>
+	<School Code="034542" Name="市立慈文國中" County="桃園市"/>
+	<School Code="034543" Name="市立平興國中" County="桃園市"/>
+	<School Code="034544" Name="市立楊明國中" County="桃園市"/>
+	<School Code="034545" Name="市立龍興國中" County="桃園市"/>
+	<School Code="034546" Name="市立福豐國中" County="桃園市"/>
+	<School Code="034549" Name="市立東安國中" County="桃園市"/>
+	<School Code="034550" Name="市立光明國中" County="桃園市"/>
+	<School Code="034551" Name="市立同德國中" County="桃園市"/>
+	<School Code="034552" Name="市立幸福國中" County="桃園市"/>
+	<School Code="034554" Name="市立大有國中" County="桃園市"/>
+	<School Code="034555" Name="市立龜山國中" County="桃園市"/>
+	<School Code="034556" Name="市立會稽國中" County="桃園市"/>
+	<School Code="034557" Name="市立楊光國中(小)" County="桃園市"/>
+	<School Code="034559" Name="市立迴龍國中(小)" County="桃園市"/>
+	<School Code="034560" Name="市立平鎮國中" County="桃園市"/>
+	<School Code="034561" Name="市立武漢國中" County="桃園市"/>
+	<School Code="034562" Name="市立經國國中" County="桃園市"/>
+	<School Code="034563" Name="市立過嶺國中" County="桃園市"/>
+	<School Code="034564" Name="市立瑞坪國中" County="桃園市"/>
+	<School Code="034565" Name="市立青埔國中" County="桃園市"/>
+	<School Code="063501" Name="市立善水國中(小)" County="臺中市"/>
+	<School Code="064501" Name="市立豐原國中" County="臺中市"/>
+	<School Code="064502" Name="市立豐東國中" County="臺中市"/>
+	<School Code="064503" Name="市立豐南國中" County="臺中市"/>
+	<School Code="064504" Name="市立潭子國中" County="臺中市"/>
+	<School Code="064505" Name="市立大雅國中" County="臺中市"/>
+	<School Code="064507" Name="市立后里國中" County="臺中市"/>
+	<School Code="064509" Name="市立外埔國中" County="臺中市"/>
+	<School Code="064510" Name="市立大甲國中" County="臺中市"/>
+	<School Code="064511" Name="市立日南國中" County="臺中市"/>
+	<School Code="064512" Name="市立大安國中" County="臺中市"/>
+	<School Code="064513" Name="市立清水國中" County="臺中市"/>
+	<School Code="064514" Name="市立清泉國中" County="臺中市"/>
+	<School Code="064515" Name="市立沙鹿國中" County="臺中市"/>
+	<School Code="064516" Name="市立梧棲國中" County="臺中市"/>
+	<School Code="064517" Name="市立龍井國中" County="臺中市"/>
+	<School Code="064518" Name="市立四箴國中" County="臺中市"/>
+	<School Code="064519" Name="市立大道國中" County="臺中市"/>
+	<School Code="064520" Name="市立烏日國中" County="臺中市"/>
+	<School Code="064521" Name="市立溪南國中" County="臺中市"/>
+	<School Code="064522" Name="市立霧峰國中" County="臺中市"/>
+	<School Code="064523" Name="市立光復國中(小)" County="臺中市"/>
+	<School Code="064525" Name="市立太平國中" County="臺中市"/>
+	<School Code="064526" Name="市立中平國中" County="臺中市"/>
+	<School Code="064527" Name="市立石岡國中" County="臺中市"/>
+	<School Code="064529" Name="市立東勢國中" County="臺中市"/>
+	<School Code="064530" Name="市立東華國中" County="臺中市"/>
+	<School Code="064531" Name="市立東新國中" County="臺中市"/>
+	<School Code="064532" Name="市立成功國中" County="臺中市"/>
+	<School Code="064533" Name="市立和平國中" County="臺中市"/>
+	<School Code="064534" Name="市立北勢國中" County="臺中市"/>
+	<School Code="064535" Name="市立鹿寮國中" County="臺中市"/>
+	<School Code="064537" Name="市立光榮國中" County="臺中市"/>
+	<School Code="064538" Name="市立潭秀國中" County="臺中市"/>
+	<School Code="064539" Name="市立順天國中" County="臺中市"/>
+	<School Code="064540" Name="市立清海國中" County="臺中市"/>
+	<School Code="064541" Name="市立大華國中" County="臺中市"/>
+	<School Code="064543" Name="市立新光國中" County="臺中市"/>
+	<School Code="064544" Name="市立光正國中" County="臺中市"/>
+	<School Code="064545" Name="市立豐陽國中" County="臺中市"/>
+	<School Code="064546" Name="市立光德國中" County="臺中市"/>
+	<School Code="064547" Name="市立立新國中" County="臺中市"/>
+	<School Code="064548" Name="市立爽文國中" County="臺中市"/>
+	<School Code="064549" Name="市立公明國中" County="臺中市"/>
+	<School Code="064551" Name="市立神圳國中" County="臺中市"/>
+	<School Code="064552" Name="市立梨山國中(小)" County="臺中市"/>
+	<School Code="191503" Name="私立麗喆國中(小)" County="臺中市"/>
+	<School Code="193501" Name="市立居仁國中" County="臺中市"/>
+	<School Code="193502" Name="市立雙十國中" County="臺中市"/>
+	<School Code="193504" Name="市立崇倫國中" County="臺中市"/>
+	<School Code="193505" Name="市立大德國中" County="臺中市"/>
+	<School Code="193506" Name="市立北新國中" County="臺中市"/>
+	<School Code="193507" Name="市立東峰國中" County="臺中市"/>
+	<School Code="193508" Name="市立黎明國中" County="臺中市"/>
+	<School Code="193509" Name="市立光明國中" County="臺中市"/>
+	<School Code="193510" Name="市立向上國中" County="臺中市"/>
+	<School Code="193511" Name="市立育英國中" County="臺中市"/>
+	<School Code="193512" Name="市立四育國中" County="臺中市"/>
+	<School Code="193514" Name="市立五權國中" County="臺中市"/>
+	<School Code="193516" Name="市立中山國中" County="臺中市"/>
+	<School Code="193517" Name="市立崇德國中" County="臺中市"/>
+	<School Code="193518" Name="市立立人國中" County="臺中市"/>
+	<School Code="193519" Name="市立漢口國中" County="臺中市"/>
+	<School Code="193520" Name="市立安和國中" County="臺中市"/>
+	<School Code="193521" Name="市立至善國中" County="臺中市"/>
+	<School Code="193522" Name="市立萬和國中" County="臺中市"/>
+	<School Code="193523" Name="市立大業國中" County="臺中市"/>
+	<School Code="193524" Name="市立三光國中" County="臺中市"/>
+	<School Code="193525" Name="市立四張犁國中" County="臺中市"/>
+	<School Code="193526" Name="市立福科國中" County="臺中市"/>
+	<School Code="193527" Name="市立大墩國中" County="臺中市"/>
+	<School Code="111502" Name="私立昭明國中(代用)" County="臺南市"/>
+	<School Code="113501" Name="市立鹽行國中" County="臺南市"/>
+	<School Code="113502" Name="市立蓮潭國中(小)" County="臺南市"/>
+	<School Code="114501" Name="市立仁德國中" County="臺南市"/>
+	<School Code="114502" Name="市立仁德文賢國中" County="臺南市"/>
+	<School Code="114503" Name="市立歸仁國中" County="臺南市"/>
+	<School Code="114504" Name="市立關廟國中" County="臺南市"/>
+	<School Code="114505" Name="市立永康國中" County="臺南市"/>
+	<School Code="114508" Name="市立龍崎國中" County="臺南市"/>
+	<School Code="114509" Name="市立新化國中" County="臺南市"/>
+	<School Code="114510" Name="市立善化國中" County="臺南市"/>
+	<School Code="114511" Name="市立玉井國中" County="臺南市"/>
+	<School Code="114512" Name="市立山上國中" County="臺南市"/>
+	<School Code="114513" Name="市立安定國中" County="臺南市"/>
+	<School Code="114514" Name="市立楠西國中" County="臺南市"/>
+	<School Code="114515" Name="市立新市國中" County="臺南市"/>
+	<School Code="114516" Name="市立南化國中" County="臺南市"/>
+	<School Code="114517" Name="市立左鎮國中" County="臺南市"/>
+	<School Code="114518" Name="市立麻豆國中" County="臺南市"/>
+	<School Code="114519" Name="市立下營國中" County="臺南市"/>
+	<School Code="114520" Name="市立六甲國中" County="臺南市"/>
+	<School Code="114521" Name="市立官田國中" County="臺南市"/>
+	<School Code="114522" Name="市立大內國中" County="臺南市"/>
+	<School Code="114523" Name="市立佳里國中" County="臺南市"/>
+	<School Code="114524" Name="市立佳興國中" County="臺南市"/>
+	<School Code="114525" Name="市立學甲國中" County="臺南市"/>
+	<School Code="114526" Name="市立西港國中" County="臺南市"/>
+	<School Code="114527" Name="市立將軍國中" County="臺南市"/>
+	<School Code="114529" Name="市立竹橋國中" County="臺南市"/>
+	<School Code="114530" Name="市立北門國中" County="臺南市"/>
+	<School Code="114531" Name="市立南新國中" County="臺南市"/>
+	<School Code="114532" Name="市立太子國中" County="臺南市"/>
+	<School Code="114533" Name="市立新東國中" County="臺南市"/>
+	<School Code="114534" Name="市立鹽水國中" County="臺南市"/>
+	<School Code="114535" Name="市立白河國中" County="臺南市"/>
+	<School Code="114536" Name="市立柳營國中" County="臺南市"/>
+	<School Code="114537" Name="市立東山國中" County="臺南市"/>
+	<School Code="114538" Name="市立東原國中" County="臺南市"/>
+	<School Code="114539" Name="市立後壁國中" County="臺南市"/>
+	<School Code="114540" Name="市立菁寮國中" County="臺南市"/>
+	<School Code="114543" Name="市立大橋國中" County="臺南市"/>
+	<School Code="213501" Name="市立後甲國中" County="臺南市"/>
+	<School Code="213502" Name="市立忠孝國中" County="臺南市"/>
+	<School Code="213504" Name="市立大成國中" County="臺南市"/>
+	<School Code="213505" Name="市立金城國中" County="臺南市"/>
+	<School Code="213506" Name="市立民德國中" County="臺南市"/>
+	<School Code="213507" Name="市立成功國中" County="臺南市"/>
+	<School Code="213508" Name="市立延平國中" County="臺南市"/>
+	<School Code="213509" Name="市立建興國中" County="臺南市"/>
+	<School Code="213510" Name="市立中山國中" County="臺南市"/>
+	<School Code="213511" Name="市立安平國中" County="臺南市"/>
+	<School Code="213512" Name="市立安南國中" County="臺南市"/>
+	<School Code="213513" Name="市立安順國中" County="臺南市"/>
+	<School Code="213514" Name="市立復興國中" County="臺南市"/>
+	<School Code="213515" Name="市立新興國中" County="臺南市"/>
+	<School Code="213517" Name="市立文賢國中" County="臺南市"/>
+	<School Code="213518" Name="市立崇明國中" County="臺南市"/>
+	<School Code="213519" Name="市立和順國中" County="臺南市"/>
+	<School Code="213520" Name="市立海佃國中" County="臺南市"/>
+	<School Code="213521" Name="市立九份子國中(小)" County="臺南市"/>
+	<School Code="123501" Name="市立巴楠花部落國中(小)" County="高雄市"/>
+	<School Code="124501" Name="市立鳳山國中" County="高雄市"/>
+	<School Code="124503" Name="市立鳳西國中" County="高雄市"/>
+	<School Code="124504" Name="市立五甲國中" County="高雄市"/>
+	<School Code="124505" Name="市立鳳甲國中" County="高雄市"/>
+	<School Code="124506" Name="市立忠孝國中" County="高雄市"/>
+	<School Code="124507" Name="市立大寮國中" County="高雄市"/>
+	<School Code="124508" Name="市立潮寮國中" County="高雄市"/>
+	<School Code="124509" Name="市立大樹國中" County="高雄市"/>
+	<School Code="124510" Name="市立溪埔國中" County="高雄市"/>
+	<School Code="124512" Name="市立鳥松國中" County="高雄市"/>
+	<School Code="124514" Name="市立大社國中" County="高雄市"/>
+	<School Code="124515" Name="市立岡山國中" County="高雄市"/>
+	<School Code="124516" Name="市立前峰國中" County="高雄市"/>
+	<School Code="124517" Name="市立永安國中" County="高雄市"/>
+	<School Code="124518" Name="市立橋頭國中" County="高雄市"/>
+	<School Code="124519" Name="市立梓官國中" County="高雄市"/>
+	<School Code="124520" Name="市立燕巢國中" County="高雄市"/>
+	<School Code="124521" Name="市立阿蓮國中" County="高雄市"/>
+	<School Code="124523" Name="市立湖內國中" County="高雄市"/>
+	<School Code="124524" Name="市立茄萣國中" County="高雄市"/>
+	<School Code="124525" Name="市立田寮國中" County="高雄市"/>
+	<School Code="124526" Name="市立彌陀國中" County="高雄市"/>
+	<School Code="124527" Name="市立旗山國中" County="高雄市"/>
+	<School Code="124528" Name="市立圓富國中" County="高雄市"/>
+	<School Code="124529" Name="市立大洲國中" County="高雄市"/>
+	<School Code="124530" Name="市立美濃國中" County="高雄市"/>
+	<School Code="124531" Name="市立南隆國中" County="高雄市"/>
+	<School Code="124532" Name="市立龍肚國中" County="高雄市"/>
+	<School Code="124534" Name="市立寶來國中" County="高雄市"/>
+	<School Code="124535" Name="市立杉林國中" County="高雄市"/>
+	<School Code="124536" Name="市立內門國中" County="高雄市"/>
+	<School Code="124537" Name="市立甲仙國中" County="高雄市"/>
+	<School Code="124538" Name="市立中芸國中" County="高雄市"/>
+	<School Code="124539" Name="市立中庄國中" County="高雄市"/>
+	<School Code="124541" Name="市立蚵寮國中" County="高雄市"/>
+	<School Code="124542" Name="市立那瑪夏國中" County="高雄市"/>
+	<School Code="124543" Name="市立青年國中" County="高雄市"/>
+	<School Code="124544" Name="市立一甲國中" County="高雄市"/>
+	<School Code="124545" Name="市立大灣國中" County="高雄市"/>
+	<School Code="124546" Name="市立嘉興國中" County="高雄市"/>
+	<School Code="124547" Name="市立茂林國中" County="高雄市"/>
+	<School Code="124548" Name="市立桃源國中" County="高雄市"/>
+	<School Code="124549" Name="市立中崙國中" County="高雄市"/>
+	<School Code="124550" Name="市立鳳翔國中" County="高雄市"/>
+	<School Code="513501" Name="市立鹽埕國中" County="高雄市"/>
+	<School Code="523502" Name="市立壽山國中" County="高雄市"/>
+	<School Code="523503" Name="市立明華國中" County="高雄市"/>
+	<School Code="523504" Name="市立七賢國中" County="高雄市"/>
+	<School Code="533501" Name="市立左營國中" County="高雄市"/>
+	<School Code="533502" Name="市立大義國中" County="高雄市"/>
+	<School Code="533503" Name="市立立德國中" County="高雄市"/>
+	<School Code="533504" Name="市立龍華國中" County="高雄市"/>
+	<School Code="533505" Name="市立福山國中" County="高雄市"/>
+	<School Code="533506" Name="市立文府國中" County="高雄市"/>
+	<School Code="543501" Name="市立楠梓國中" County="高雄市"/>
+	<School Code="543502" Name="市立右昌國中" County="高雄市"/>
+	<School Code="543503" Name="市立後勁國中" County="高雄市"/>
+	<School Code="543504" Name="市立國昌國中" County="高雄市"/>
+	<School Code="543505" Name="市立翠屏國中(小)" County="高雄市"/>
+	<School Code="553501" Name="市立鼎金國中" County="高雄市"/>
+	<School Code="553502" Name="市立三民國中" County="高雄市"/>
+	<School Code="553503" Name="市立民族國中" County="高雄市"/>
+	<School Code="553504" Name="市立陽明國中" County="高雄市"/>
+	<School Code="553505" Name="市立正興國中" County="高雄市"/>
+	<School Code="573501" Name="市立前金國中" County="高雄市"/>
+	<School Code="583501" Name="市立苓雅國中" County="高雄市"/>
+	<School Code="583502" Name="市立五福國中" County="高雄市"/>
+	<School Code="583503" Name="市立大仁國中" County="高雄市"/>
+	<School Code="583505" Name="市立英明國中" County="高雄市"/>
+	<School Code="593501" Name="市立獅甲國中" County="高雄市"/>
+	<School Code="593502" Name="市立前鎮國中" County="高雄市"/>
+	<School Code="593503" Name="市立瑞豐國中" County="高雄市"/>
+	<School Code="593504" Name="市立光華國中" County="高雄市"/>
+	<School Code="593505" Name="市立興仁國中" County="高雄市"/>
+	<School Code="603501" Name="市立旗津國中" County="高雄市"/>
+	<School Code="613501" Name="市立小港國中" County="高雄市"/>
+	<School Code="613502" Name="市立鳳林國中" County="高雄市"/>
+	<School Code="613503" Name="市立中山國中" County="高雄市"/>
+	<School Code="613504" Name="市立明義國中" County="高雄市"/>
+	<School Code="024501" Name="縣立宜蘭國中" County="宜蘭縣"/>
+	<School Code="024502" Name="縣立中華國中" County="宜蘭縣"/>
+	<School Code="024503" Name="縣立復興國中" County="宜蘭縣"/>
+	<School Code="024504" Name="縣立羅東國中" County="宜蘭縣"/>
+	<School Code="024505" Name="縣立東光國中" County="宜蘭縣"/>
+	<School Code="024506" Name="縣立國華國中" County="宜蘭縣"/>
+	<School Code="024507" Name="縣立頭城國中" County="宜蘭縣"/>
+	<School Code="024508" Name="縣立蘇澳國中" County="宜蘭縣"/>
+	<School Code="024509" Name="縣立文化國中" County="宜蘭縣"/>
+	<School Code="024510" Name="縣立南安國中" County="宜蘭縣"/>
+	<School Code="024511" Name="縣立三星國中" County="宜蘭縣"/>
+	<School Code="024512" Name="縣立礁溪國中" County="宜蘭縣"/>
+	<School Code="024513" Name="縣立吳沙國中" County="宜蘭縣"/>
+	<School Code="024514" Name="縣立冬山國中" County="宜蘭縣"/>
+	<School Code="024515" Name="縣立順安國中" County="宜蘭縣"/>
+	<School Code="024516" Name="縣立五結國中" County="宜蘭縣"/>
+	<School Code="024517" Name="縣立興中國中" County="宜蘭縣"/>
+	<School Code="024518" Name="縣立利澤國中" County="宜蘭縣"/>
+	<School Code="024519" Name="縣立員山國中" County="宜蘭縣"/>
+	<School Code="024520" Name="縣立內城國中(小)" County="宜蘭縣"/>
+	<School Code="024521" Name="縣立壯圍國中" County="宜蘭縣"/>
+	<School Code="024523" Name="縣立大同國中" County="宜蘭縣"/>
+	<School Code="024524" Name="縣立凱旋國中" County="宜蘭縣"/>
+	<School Code="024526" Name="縣立人文國中(小)" County="宜蘭縣"/>
+	<School Code="024527" Name="縣立岳明國中(小)" County="宜蘭縣"/>
+	<School Code="041501" Name="私立康乃薾國中(小)" County="新竹縣"/>
+	<School Code="044501" Name="縣立竹東國中" County="新竹縣"/>
+	<School Code="044502" Name="縣立二重國中" County="新竹縣"/>
+	<School Code="044503" Name="縣立員東國中" County="新竹縣"/>
+	<School Code="044504" Name="縣立關西國中" County="新竹縣"/>
+	<School Code="044505" Name="縣立石光國中" County="新竹縣"/>
+	<School Code="044506" Name="縣立富光國中" County="新竹縣"/>
+	<School Code="044507" Name="縣立新埔國中" County="新竹縣"/>
+	<School Code="044508" Name="縣立照門國中" County="新竹縣"/>
+	<School Code="044509" Name="縣立竹北國中" County="新竹縣"/>
+	<School Code="044510" Name="縣立鳳岡國中" County="新竹縣"/>
+	<School Code="044512" Name="縣立芎林國中" County="新竹縣"/>
+	<School Code="044513" Name="縣立新豐國中" County="新竹縣"/>
+	<School Code="044514" Name="縣立精華國中" County="新竹縣"/>
+	<School Code="044515" Name="縣立橫山國中" County="新竹縣"/>
+	<School Code="044516" Name="縣立華山國中" County="新竹縣"/>
+	<School Code="044517" Name="縣立寶山國中" County="新竹縣"/>
+	<School Code="044518" Name="縣立北埔國中" County="新竹縣"/>
+	<School Code="044519" Name="縣立峨眉國中" County="新竹縣"/>
+	<School Code="044521" Name="縣立新湖國中" County="新竹縣"/>
+	<School Code="044522" Name="縣立中正國中" County="新竹縣"/>
+	<School Code="044523" Name="縣立五峰國中" County="新竹縣"/>
+	<School Code="044524" Name="縣立尖石國中" County="新竹縣"/>
+	<School Code="044525" Name="縣立忠孝國中" County="新竹縣"/>
+	<School Code="044526" Name="縣立博愛國中" County="新竹縣"/>
+	<School Code="044527" Name="縣立仁愛國中" County="新竹縣"/>
+	<School Code="044528" Name="縣立自強國中" County="新竹縣"/>
+	<School Code="044529" Name="縣立成功國中" County="新竹縣"/>
+	<School Code="044530" Name="縣立東興國中" County="新竹縣"/>
+	<School Code="044531" Name="縣立北平華德福實驗學校(國中)" County="新竹縣"/>
+	<School Code="044532" Name="縣立勝利國中" County="新竹縣"/>
+	<School Code="044533" Name="縣立文興國中" County="新竹縣"/>
+	<School Code="044534" Name="縣立湖口國中" County="新竹縣"/>
+	<School Code="054501" Name="縣立苗栗國中" County="苗栗縣"/>
+	<School Code="054502" Name="縣立大倫國中" County="苗栗縣"/>
+	<School Code="054503" Name="縣立明仁國中" County="苗栗縣"/>
+	<School Code="054504" Name="縣立頭屋國中" County="苗栗縣"/>
+	<School Code="054505" Name="縣立公館國中" County="苗栗縣"/>
+	<School Code="054506" Name="縣立鶴岡國中" County="苗栗縣"/>
+	<School Code="054507" Name="縣立文林國中" County="苗栗縣"/>
+	<School Code="054510" Name="縣立致民國中" County="苗栗縣"/>
+	<School Code="054511" Name="縣立通霄國中" County="苗栗縣"/>
+	<School Code="054512" Name="縣立南和國中" County="苗栗縣"/>
+	<School Code="054513" Name="縣立烏眉國中" County="苗栗縣"/>
+	<School Code="054514" Name="縣立啟新國中" County="苗栗縣"/>
+	<School Code="054515" Name="縣立西湖國中" County="苗栗縣"/>
+	<School Code="054516" Name="縣立頭份國中" County="苗栗縣"/>
+	<School Code="054518" Name="縣立文英國中" County="苗栗縣"/>
+	<School Code="054519" Name="縣立竹南國中" County="苗栗縣"/>
+	<School Code="054520" Name="縣立照南國中" County="苗栗縣"/>
+	<School Code="054521" Name="縣立三灣國中" County="苗栗縣"/>
+	<School Code="054522" Name="縣立南庄國中" County="苗栗縣"/>
+	<School Code="054523" Name="縣立造橋國中" County="苗栗縣"/>
+	<School Code="054524" Name="縣立大西國中" County="苗栗縣"/>
+	<School Code="054525" Name="縣立後龍國中" County="苗栗縣"/>
+	<School Code="054526" Name="縣立維真國中" County="苗栗縣"/>
+	<School Code="054527" Name="縣立大湖國中" County="苗栗縣"/>
+	<School Code="054528" Name="縣立南湖國中" County="苗栗縣"/>
+	<School Code="054529" Name="縣立獅潭國中" County="苗栗縣"/>
+	<School Code="054531" Name="縣立泰安國中(小)" County="苗栗縣"/>
+	<School Code="054532" Name="縣立建國國中" County="苗栗縣"/>
+	<School Code="054534" Name="縣立福興武術國中(小)" County="苗栗縣"/>
+	<School Code="054535" Name="縣立新港國中(小)" County="苗栗縣"/>
+	<School Code="074501" Name="縣立北斗國中" County="彰化縣"/>
+	<School Code="074502" Name="縣立鹿港國中" County="彰化縣"/>
+	<School Code="074503" Name="縣立鹿鳴國中" County="彰化縣"/>
+	<School Code="074504" Name="縣立線西國中" County="彰化縣"/>
+	<School Code="074505" Name="縣立陽明國中" County="彰化縣"/>
+	<School Code="074506" Name="縣立彰安國中" County="彰化縣"/>
+	<School Code="074507" Name="縣立彰德國中" County="彰化縣"/>
+	<School Code="074509" Name="縣立芬園國中" County="彰化縣"/>
+	<School Code="074510" Name="縣立員林國中" County="彰化縣"/>
+	<School Code="074511" Name="縣立明倫國中" County="彰化縣"/>
+	<School Code="074512" Name="縣立萬興國中" County="彰化縣"/>
+	<School Code="074514" Name="縣立竹塘國中" County="彰化縣"/>
+	<School Code="074515" Name="縣立大城國中" County="彰化縣"/>
+	<School Code="074516" Name="縣立草湖國中" County="彰化縣"/>
+	<School Code="074517" Name="縣立芳苑國中" County="彰化縣"/>
+	<School Code="074518" Name="縣立溪湖國中" County="彰化縣"/>
+	<School Code="074519" Name="縣立埔鹽國中" County="彰化縣"/>
+	<School Code="074520" Name="縣立埔心國中" County="彰化縣"/>
+	<School Code="074521" Name="縣立福興國中" County="彰化縣"/>
+	<School Code="074522" Name="縣立秀水國中" County="彰化縣"/>
+	<School Code="074524" Name="縣立伸港國中" County="彰化縣"/>
+	<School Code="074525" Name="縣立大村國中" County="彰化縣"/>
+	<School Code="074526" Name="縣立花壇國中" County="彰化縣"/>
+	<School Code="074527" Name="縣立永靖國中" County="彰化縣"/>
+	<School Code="074529" Name="縣立二水國中" County="彰化縣"/>
+	<School Code="074530" Name="縣立社頭國中" County="彰化縣"/>
+	<School Code="074531" Name="縣立田尾國中" County="彰化縣"/>
+	<School Code="074532" Name="縣立溪州國中" County="彰化縣"/>
+	<School Code="074533" Name="縣立溪陽國中" County="彰化縣"/>
+	<School Code="074534" Name="縣立埤頭國中" County="彰化縣"/>
+	<School Code="074535" Name="縣立和群國中" County="彰化縣"/>
+	<School Code="074536" Name="縣立大同國中" County="彰化縣"/>
+	<School Code="074537" Name="縣立原斗國中(小)" County="彰化縣"/>
+	<School Code="074538" Name="縣立彰興國中" County="彰化縣"/>
+	<School Code="074540" Name="縣立彰泰國中" County="彰化縣"/>
+	<School Code="074541" Name="縣立信義國中(小)" County="彰化縣"/>
+	<School Code="074542" Name="縣立鹿江國際國中(小)" County="彰化縣"/>
+	<School Code="074543" Name="縣立民權華德福實驗國中(小)" County="彰化縣"/>
+	<School Code="081502" Name="私立均頭國中(小)" County="南投縣"/>
+	<School Code="084501" Name="縣立南投國中" County="南投縣"/>
+	<School Code="084502" Name="縣立南崗國中" County="南投縣"/>
+	<School Code="084503" Name="縣立中興國中" County="南投縣"/>
+	<School Code="084504" Name="縣立鳳鳴國中" County="南投縣"/>
+	<School Code="084505" Name="縣立埔里國中" County="南投縣"/>
+	<School Code="084506" Name="縣立大成國中" County="南投縣"/>
+	<School Code="084507" Name="縣立宏仁國中" County="南投縣"/>
+	<School Code="084508" Name="縣立草屯國中" County="南投縣"/>
+	<School Code="084510" Name="縣立日新國中" County="南投縣"/>
+	<School Code="084511" Name="縣立竹山國中" County="南投縣"/>
+	<School Code="084512" Name="縣立延和國中" County="南投縣"/>
+	<School Code="084513" Name="縣立社寮國中" County="南投縣"/>
+	<School Code="084514" Name="縣立瑞竹國中" County="南投縣"/>
+	<School Code="084515" Name="縣立集集國中" County="南投縣"/>
+	<School Code="084516" Name="縣立名間國中" County="南投縣"/>
+	<School Code="084517" Name="縣立三光國中" County="南投縣"/>
+	<School Code="084518" Name="縣立鹿谷國中" County="南投縣"/>
+	<School Code="084519" Name="縣立瑞峰國中" County="南投縣"/>
+	<School Code="084520" Name="縣立中寮國中" County="南投縣"/>
+	<School Code="084521" Name="縣立爽文國中" County="南投縣"/>
+	<School Code="084522" Name="縣立魚池國中" County="南投縣"/>
+	<School Code="084523" Name="縣立明潭國中" County="南投縣"/>
+	<School Code="084524" Name="縣立國姓國中" County="南投縣"/>
+	<School Code="084525" Name="縣立北梅國中" County="南投縣"/>
+	<School Code="084526" Name="縣立北山國中" County="南投縣"/>
+	<School Code="084527" Name="縣立水里國中" County="南投縣"/>
+	<School Code="084528" Name="縣立民和國中" County="南投縣"/>
+	<School Code="084529" Name="縣立信義國中" County="南投縣"/>
+	<School Code="084530" Name="縣立同富國中" County="南投縣"/>
+	<School Code="084531" Name="縣立仁愛國中" County="南投縣"/>
+	<School Code="084532" Name="縣立營北國中" County="南投縣"/>
+	<School Code="091502" Name="私立淵明國中(代用)" County="雲林縣"/>
+	<School Code="091503" Name="私立東南國中(代用)" County="雲林縣"/>
+	<School Code="091506" Name="私立福智實驗國中" County="雲林縣"/>
+	<School Code="094502" Name="縣立東明國中" County="雲林縣"/>
+	<School Code="094503" Name="縣立大埤國中" County="雲林縣"/>
+	<School Code="094504" Name="縣立飛沙國中" County="雲林縣"/>
+	<School Code="094505" Name="縣立四湖國中" County="雲林縣"/>
+	<School Code="094506" Name="縣立水林國中" County="雲林縣"/>
+	<School Code="094508" Name="縣立二崙國中" County="雲林縣"/>
+	<School Code="094509" Name="縣立褒忠國中" County="雲林縣"/>
+	<School Code="094510" Name="縣立莿桐國中" County="雲林縣"/>
+	<School Code="094511" Name="縣立崙背國中" County="雲林縣"/>
+	<School Code="094512" Name="縣立古坑國中(小)" County="雲林縣"/>
+	<School Code="094513" Name="縣立東勢國中" County="雲林縣"/>
+	<School Code="094514" Name="縣立元長國中" County="雲林縣"/>
+	<School Code="094515" Name="縣立斗六國中" County="雲林縣"/>
+	<School Code="094516" Name="縣立雲林國中" County="雲林縣"/>
+	<School Code="094517" Name="縣立虎尾國中" County="雲林縣"/>
+	<School Code="094518" Name="縣立崇德國中" County="雲林縣"/>
+	<School Code="094519" Name="縣立西螺國中" County="雲林縣"/>
+	<School Code="094520" Name="縣立北港國中" County="雲林縣"/>
+	<School Code="094521" Name="縣立建國國中" County="雲林縣"/>
+	<School Code="094522" Name="縣立宜梧國中" County="雲林縣"/>
+	<School Code="094523" Name="縣立口湖國中" County="雲林縣"/>
+	<School Code="094524" Name="縣立臺西國中" County="雲林縣"/>
+	<School Code="094525" Name="縣立土庫國中" County="雲林縣"/>
+	<School Code="094527" Name="縣立東和國中" County="雲林縣"/>
+	<School Code="094528" Name="縣立馬光國中" County="雲林縣"/>
+	<School Code="094529" Name="縣立石榴國中" County="雲林縣"/>
+	<School Code="094530" Name="縣立林內國中" County="雲林縣"/>
+	<School Code="094543" Name="縣立東仁國中" County="雲林縣"/>
+	<School Code="094544" Name="縣立樟湖生態國中(小)" County="雲林縣"/>
+	<School Code="104501" Name="縣立朴子國中" County="嘉義縣"/>
+	<School Code="104502" Name="縣立東石國中" County="嘉義縣"/>
+	<School Code="104503" Name="縣立布袋國中" County="嘉義縣"/>
+	<School Code="104504" Name="縣立過溝國中" County="嘉義縣"/>
+	<School Code="104505" Name="縣立大林國中" County="嘉義縣"/>
+	<School Code="104506" Name="縣立新港國中" County="嘉義縣"/>
+	<School Code="104507" Name="縣立民雄國中" County="嘉義縣"/>
+	<School Code="104508" Name="縣立大吉國中" County="嘉義縣"/>
+	<School Code="104509" Name="縣立六嘉國中" County="嘉義縣"/>
+	<School Code="104511" Name="縣立太保國中" County="嘉義縣"/>
+	<School Code="104512" Name="縣立嘉新國中" County="嘉義縣"/>
+	<School Code="104513" Name="縣立溪口國中" County="嘉義縣"/>
+	<School Code="104514" Name="縣立鹿草國中" County="嘉義縣"/>
+	<School Code="104515" Name="縣立東榮國中" County="嘉義縣"/>
+	<School Code="104516" Name="縣立水上國中" County="嘉義縣"/>
+	<School Code="104517" Name="縣立忠和國中" County="嘉義縣"/>
+	<School Code="104518" Name="縣立中埔國中" County="嘉義縣"/>
+	<School Code="104520" Name="縣立昇平國中" County="嘉義縣"/>
+	<School Code="104521" Name="縣立義竹國中" County="嘉義縣"/>
+	<School Code="104522" Name="縣立民和國中" County="嘉義縣"/>
+	<School Code="104523" Name="縣立梅山國中" County="嘉義縣"/>
+	<School Code="104524" Name="縣立大埔國中(小)" County="嘉義縣"/>
+	<School Code="104526" Name="縣立阿里山國中(小)" County="嘉義縣"/>
+	<School Code="104527" Name="縣立豐山實驗國中(小)" County="嘉義縣"/>
+	<School Code="131501" Name="私立南榮國中(代用)" County="屏東縣"/>
+	<School Code="134501" Name="縣立明正國中" County="屏東縣"/>
+	<School Code="134502" Name="縣立中正國中" County="屏東縣"/>
+	<School Code="134503" Name="縣立公正國中" County="屏東縣"/>
+	<School Code="134505" Name="縣立鶴聲國中" County="屏東縣"/>
+	<School Code="134506" Name="縣立至正國中" County="屏東縣"/>
+	<School Code="134507" Name="縣立長治國中" County="屏東縣"/>
+	<School Code="134508" Name="縣立麟洛國中" County="屏東縣"/>
+	<School Code="134509" Name="縣立九如國中" County="屏東縣"/>
+	<School Code="134510" Name="縣立里港國中" County="屏東縣"/>
+	<School Code="134511" Name="縣立鹽埔國中" County="屏東縣"/>
+	<School Code="134512" Name="縣立高樹國中" County="屏東縣"/>
+	<School Code="134513" Name="縣立高泰國中" County="屏東縣"/>
+	<School Code="134514" Name="縣立內埔國中" County="屏東縣"/>
+	<School Code="134515" Name="縣立崇文國中" County="屏東縣"/>
+	<School Code="134516" Name="縣立竹田國中" County="屏東縣"/>
+	<School Code="134517" Name="縣立潮州國中" County="屏東縣"/>
+	<School Code="134518" Name="縣立光春國中" County="屏東縣"/>
+	<School Code="134519" Name="縣立萬巒國中" County="屏東縣"/>
+	<School Code="134520" Name="縣立新埤國中" County="屏東縣"/>
+	<School Code="134522" Name="縣立萬丹國中" County="屏東縣"/>
+	<School Code="134523" Name="縣立新園國中" County="屏東縣"/>
+	<School Code="134525" Name="縣立林邊國中" County="屏東縣"/>
+	<School Code="134526" Name="縣立南州國中" County="屏東縣"/>
+	<School Code="134527" Name="縣立佳冬國中" County="屏東縣"/>
+	<School Code="134528" Name="縣立琉球國中" County="屏東縣"/>
+	<School Code="134530" Name="縣立車城國中" County="屏東縣"/>
+	<School Code="134531" Name="縣立恆春國中" County="屏東縣"/>
+	<School Code="134532" Name="縣立滿州國中" County="屏東縣"/>
+	<School Code="134533" Name="縣立瑪家國中" County="屏東縣"/>
+	<School Code="134535" Name="縣立泰武國中" County="屏東縣"/>
+	<School Code="134536" Name="縣立牡丹國中" County="屏東縣"/>
+	<School Code="134537" Name="縣立獅子國中" County="屏東縣"/>
+	<School Code="134538" Name="縣立東新國中" County="屏東縣"/>
+	<School Code="134542" Name="縣立萬新國中" County="屏東縣"/>
+	<School Code="144501" Name="縣立新生國中" County="臺東縣"/>
+	<School Code="144502" Name="縣立東海國中" County="臺東縣"/>
+	<School Code="144503" Name="縣立寶桑國中" County="臺東縣"/>
+	<School Code="144504" Name="縣立卑南國中" County="臺東縣"/>
+	<School Code="144505" Name="縣立豐田國中" County="臺東縣"/>
+	<School Code="144506" Name="縣立知本國中" County="臺東縣"/>
+	<School Code="144507" Name="縣立初鹿國中" County="臺東縣"/>
+	<School Code="144508" Name="縣立鹿野國中" County="臺東縣"/>
+	<School Code="144509" Name="縣立瑞源國中" County="臺東縣"/>
+	<School Code="144510" Name="縣立關山國中" County="臺東縣"/>
+	<School Code="144511" Name="縣立池上國中" County="臺東縣"/>
+	<School Code="144512" Name="縣立大王國中" County="臺東縣"/>
+	<School Code="144513" Name="縣立賓茂國中" County="臺東縣"/>
+	<School Code="144514" Name="縣立大武國中" County="臺東縣"/>
+	<School Code="144515" Name="縣立都蘭國中" County="臺東縣"/>
+	<School Code="144516" Name="縣立泰源國中" County="臺東縣"/>
+	<School Code="144517" Name="縣立新港國中" County="臺東縣"/>
+	<School Code="144518" Name="縣立長濱國中" County="臺東縣"/>
+	<School Code="144519" Name="縣立桃源國中" County="臺東縣"/>
+	<School Code="144520" Name="縣立海端國中" County="臺東縣"/>
+	<School Code="144521" Name="縣立綠島國中" County="臺東縣"/>
+	<School Code="154501" Name="縣立玉里國中" County="花蓮縣"/>
+	<School Code="154502" Name="縣立玉東國中" County="花蓮縣"/>
+	<School Code="154503" Name="縣立三民國中" County="花蓮縣"/>
+	<School Code="154504" Name="縣立美崙國中" County="花蓮縣"/>
+	<School Code="154505" Name="縣立花崗國中" County="花蓮縣"/>
+	<School Code="154506" Name="縣立國風國中" County="花蓮縣"/>
+	<School Code="154507" Name="縣立秀林國中" County="花蓮縣"/>
+	<School Code="154508" Name="縣立新城國中" County="花蓮縣"/>
+	<School Code="154509" Name="縣立吉安國中" County="花蓮縣"/>
+	<School Code="154510" Name="縣立宜昌國中" County="花蓮縣"/>
+	<School Code="154511" Name="縣立壽豐國中" County="花蓮縣"/>
+	<School Code="154512" Name="縣立平和國中" County="花蓮縣"/>
+	<School Code="154513" Name="縣立光復國中" County="花蓮縣"/>
+	<School Code="154514" Name="縣立富源國中" County="花蓮縣"/>
+	<School Code="154515" Name="縣立鳳林國中" County="花蓮縣"/>
+	<School Code="154516" Name="縣立萬榮國中" County="花蓮縣"/>
+	<School Code="154517" Name="縣立富里國中" County="花蓮縣"/>
+	<School Code="154518" Name="縣立富北國中" County="花蓮縣"/>
+	<School Code="154519" Name="縣立豐濱國中" County="花蓮縣"/>
+	<School Code="154520" Name="縣立瑞穗國中" County="花蓮縣"/>
+	<School Code="154521" Name="縣立東里國中" County="花蓮縣"/>
+	<School Code="154522" Name="縣立自強國中" County="花蓮縣"/>
+	<School Code="154523" Name="縣立化仁國中" County="花蓮縣"/>
+	<School Code="164501" Name="縣立馬公國中" County="澎湖縣"/>
+	<School Code="164502" Name="縣立中正國中" County="澎湖縣"/>
+	<School Code="164503" Name="縣立澎南國中" County="澎湖縣"/>
+	<School Code="164504" Name="縣立湖西國中" County="澎湖縣"/>
+	<School Code="164507" Name="縣立白沙國中" County="澎湖縣"/>
+	<School Code="164508" Name="縣立吉貝國中" County="澎湖縣"/>
+	<School Code="164509" Name="縣立西嶼國中" County="澎湖縣"/>
+	<School Code="164510" Name="縣立望安國中" County="澎湖縣"/>
+	<School Code="164511" Name="縣立將澳國中" County="澎湖縣"/>
+	<School Code="164512" Name="縣立七美國中" County="澎湖縣"/>
+	<School Code="164513" Name="縣立文光國中" County="澎湖縣"/>
+	<School Code="164514" Name="縣立鳥嶼國中" County="澎湖縣"/>
+	<School Code="173501" Name="市立明德國中" County="基隆市"/>
+	<School Code="173502" Name="市立銘傳國中" County="基隆市"/>
+	<School Code="173503" Name="市立信義國中" County="基隆市"/>
+	<School Code="173505" Name="市立中正國中" County="基隆市"/>
+	<School Code="173508" Name="市立南榮國中" County="基隆市"/>
+	<School Code="173509" Name="市立成功國中" County="基隆市"/>
+	<School Code="173510" Name="市立正濱國中" County="基隆市"/>
+	<School Code="173512" Name="市立建德國中" County="基隆市"/>
+	<School Code="173513" Name="市立百福國中" County="基隆市"/>
+	<School Code="173515" Name="市立碇內國中" County="基隆市"/>
+	<School Code="173516" Name="市立武崙國中" County="基隆市"/>
+	<School Code="181502" Name="私立新竹市康橋國中(小)" County="新竹市"/>
+	<School Code="183501" Name="市立建華國中" County="新竹市"/>
+	<School Code="183502" Name="市立培英國中" County="新竹市"/>
+	<School Code="183503" Name="市立光華國中" County="新竹市"/>
+	<School Code="183504" Name="市立育賢國中" County="新竹市"/>
+	<School Code="183505" Name="市立光武國中" County="新竹市"/>
+	<School Code="183508" Name="市立南華國中" County="新竹市"/>
+	<School Code="183509" Name="市立富禮國中" County="新竹市"/>
+	<School Code="183510" Name="市立三民國中" County="新竹市"/>
+	<School Code="183511" Name="市立內湖國中" County="新竹市"/>
+	<School Code="183512" Name="市立虎林國中" County="新竹市"/>
+	<School Code="183514" Name="市立新科國中" County="新竹市"/>
+	<School Code="183515" Name="市立竹光國中" County="新竹市"/>
+	<School Code="183516" Name="市立華德福實驗國中(小)" County="新竹市"/>
+	<School Code="203501" Name="市立大業實驗國中" County="嘉義市"/>
+	<School Code="203502" Name="市立北興國中" County="嘉義市"/>
+	<School Code="203503" Name="市立嘉義國中" County="嘉義市"/>
+	<School Code="203504" Name="市立南興國中" County="嘉義市"/>
+	<School Code="203505" Name="市立民生國中" County="嘉義市"/>
+	<School Code="203506" Name="市立玉山國中" County="嘉義市"/>
+	<School Code="203507" Name="市立蘭潭國中" County="嘉義市"/>
+	<School Code="203508" Name="市立北園國中" County="嘉義市"/>
+	<School Code="714501" Name="縣立金城國中" County="金門縣"/>
+	<School Code="714502" Name="縣立金湖國中" County="金門縣"/>
+	<School Code="714503" Name="縣立金寧國中(小)" County="金門縣"/>
+	<School Code="714504" Name="縣立金沙國中" County="金門縣"/>
+	<School Code="714505" Name="縣立烈嶼國中" County="金門縣"/>
+	<School Code="724501" Name="縣立介壽國中(小)" County="連江縣"/>
+	<School Code="724502" Name="縣立中正國中(小)" County="連江縣"/>
+	<School Code="724503" Name="縣立中山國中" County="連江縣"/>
+	<School Code="724504" Name="縣立敬恆國中(小)" County="連江縣"/>
+	<School Code="724505" Name="縣立東引國中(小)" County="連江縣"/>
+	<School Code="033501" Name="市立文青國中(小)" County="桃園市"/>
+	<School Code="193529" Name="市立南興國中" County="臺中市"/>
+	<School Code="193528" Name="市立廍子國中" County="臺中市"/>
+	<School Code="193530" Name="市立文山國中" County="臺中市"/>
 </SchoolList>
