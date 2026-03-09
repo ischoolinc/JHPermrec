@@ -22,10 +22,14 @@ namespace JHSchool.Permrec
             NULL
         }
 
+        private static ModuleFlag? _ModuleType;
         public static ModuleFlag ModuleType
         {
             get
             {
+                if (_ModuleType.HasValue)
+                    return _ModuleType.Value;
+
                 FileInfo asm = new FileInfo(Assembly.GetExecutingAssembly().CodeBase.Replace("file:///", ""));
                 // 新竹
                 string pathHsinChu = Path.Combine(asm.DirectoryName, "HsinChu.txt");
@@ -35,13 +39,15 @@ namespace JHSchool.Permrec
                 string pathTaiChung = Path.Combine(asm.DirectoryName, "TaiChung.txt");
 
                 if (File.Exists(pathHsinChu))
-                    return ModuleFlag.HsinChu;
+                    _ModuleType = ModuleFlag.HsinChu;
                 else if (File.Exists(pathKaoHsiung))
-                    return ModuleFlag.KaoHsiung;
+                    _ModuleType = ModuleFlag.KaoHsiung;
                 else if (File.Exists(pathTaiChung))
-                    return ModuleFlag.TaiChung;
-                else return ModuleFlag.NULL;
+                    _ModuleType = ModuleFlag.TaiChung;
+                else
+                    _ModuleType = ModuleFlag.NULL;
 
+                return _ModuleType.Value;
             }
         }
 
@@ -52,10 +58,10 @@ namespace JHSchool.Permrec
             //Student.Instance.AddDetailBulider(new ContentItemBulider<StudentExtendControls.UpdateRecordItem>());
             //Class.Instance.AddDetailBulider(new DetailBulider<JHSchool.Permrec.ClassExtendControls.ClassStudentItem>());
 
-            System.Threading.ThreadPool.QueueUserWorkItem(x =>
-            {
-                JHSchool.Data.JHStudent.SelectAll();
-            });
+            //System.Threading.ThreadPool.QueueUserWorkItem(x =>
+            //{
+            //    JHSchool.Data.JHStudent.SelectAll();
+            //});
 
           // 班級學生資訊
             Class.Instance.AddDetailBulider(new FISCA.Presentation.DetailBulider<JHSchool.Permrec.ClassExtendControls.ClassStudentItem>());
@@ -702,10 +708,21 @@ namespace JHSchool.Permrec
                         
             PermanentTelField.PreloadVariableBackground += delegate(object sender, PreloadVariableEventArgs e)
             {
-                _PermanentTelDic.Clear();
-                foreach (JHSchool.Data.JHPhoneRecord PhoneRec in JHSchool.Data.JHPhone.SelectByStudentIDs(e.Keys))
-                    if (!_PermanentTelDic.ContainsKey(PhoneRec.RefStudentID))
-                        _PermanentTelDic.Add(PhoneRec.RefStudentID, PhoneRec.Permanent);                
+                List<string> missingKeys = new List<string>();
+                foreach (string key in e.Keys)
+                    if (!_PermanentTelDic.ContainsKey(key))
+                        missingKeys.Add(key);
+
+                if (missingKeys.Count > 0)
+                {
+                    foreach (JHSchool.Data.JHPhoneRecord PhoneRec in JHSchool.Data.JHPhone.SelectByStudentIDs(missingKeys))
+                        if (!_PermanentTelDic.ContainsKey(PhoneRec.RefStudentID))
+                            _PermanentTelDic.Add(PhoneRec.RefStudentID, PhoneRec.Permanent);
+                    
+                    foreach (string key in missingKeys)
+                        if (!_PermanentTelDic.ContainsKey(key))
+                            _PermanentTelDic.Add(key, string.Empty);
+                }
             };
             //Student.Instance.AddListPaneField(PermanentTelField);
             // 加入戶籍電話權限管理
@@ -737,10 +754,21 @@ namespace JHSchool.Permrec
 
             ContactTelField.PreloadVariableBackground += delegate(object sender, PreloadVariableEventArgs e)
             {
-                _ContactTelDic.Clear();
-                foreach (JHSchool.Data.JHPhoneRecord PhoneRec in JHSchool.Data.JHPhone.SelectByStudentIDs(new List<string>(e.Keys)))
-                    if (!_ContactTelDic.ContainsKey(PhoneRec.RefStudentID))
-                        _ContactTelDic.Add(PhoneRec.RefStudentID, PhoneRec.Contact);
+                List<string> missingKeys = new List<string>();
+                foreach (string key in e.Keys)
+                    if (!_ContactTelDic.ContainsKey(key))
+                        missingKeys.Add(key);
+
+                if (missingKeys.Count > 0)
+                {
+                    foreach (JHSchool.Data.JHPhoneRecord PhoneRec in JHSchool.Data.JHPhone.SelectByStudentIDs(missingKeys))
+                        if (!_ContactTelDic.ContainsKey(PhoneRec.RefStudentID))
+                            _ContactTelDic.Add(PhoneRec.RefStudentID, PhoneRec.Contact);
+                    
+                    foreach (string key in missingKeys)
+                        if (!_ContactTelDic.ContainsKey(key))
+                            _ContactTelDic.Add(key, string.Empty);
+                }
             };
             //Student.Instance.AddListPaneField(ContactTelField);
             // 加入聯絡電話權限管理
@@ -775,10 +803,21 @@ namespace JHSchool.Permrec
 
             CustodianField.PreloadVariableBackground += delegate(object sender, PreloadVariableEventArgs e)
             {
-                _CustodianFieldDic.Clear();
-                foreach (JHSchool.Data.JHParentRecord ParentRec in JHSchool.Data.JHParent.SelectByStudentIDs(new List<string>(e.Keys)))
-                    if (!_CustodianFieldDic.ContainsKey(ParentRec.RefStudentID))
-                        _CustodianFieldDic.Add(ParentRec.RefStudentID ,ParentRec.Custodian.Name);
+                List<string> missingKeys = new List<string>();
+                foreach (string key in e.Keys)
+                    if (!_CustodianFieldDic.ContainsKey(key))
+                        missingKeys.Add(key);
+
+                if (missingKeys.Count > 0)
+                {
+                    foreach (JHSchool.Data.JHParentRecord ParentRec in JHSchool.Data.JHParent.SelectByStudentIDs(missingKeys))
+                        if (!_CustodianFieldDic.ContainsKey(ParentRec.RefStudentID))
+                            _CustodianFieldDic.Add(ParentRec.RefStudentID, ParentRec.Custodian != null ? ParentRec.Custodian.Name : string.Empty);
+                    
+                    foreach (string key in missingKeys)
+                        if (!_CustodianFieldDic.ContainsKey(key))
+                            _CustodianFieldDic.Add(key, string.Empty);
+                }
             };
             Student.Instance.AddListPaneField(CustodianField);
             //AsyncFieldLoader<Parent, ParentRecord> parent1 = new AsyncFieldLoader<Parent, ParentRecord>(Parent.Instance, "監護人");
@@ -806,10 +845,21 @@ namespace JHSchool.Permrec
 
             BeforeInfoField.PreloadVariableBackground += delegate(object sender, PreloadVariableEventArgs e)
             {
-                _BeforeInfoFieldDic.Clear();
-                foreach (JHSchool.Data.JHBeforeEnrollmentRecord be in JHSchool.Data.JHBeforeEnrollment.SelectByStudentIDs(e.Keys))
-                    if (!_BeforeInfoFieldDic.ContainsKey(be.RefStudentID))
-                        _BeforeInfoFieldDic.Add(be.RefStudentID, be.School);
+                List<string> missingKeys = new List<string>();
+                foreach (string key in e.Keys)
+                    if (!_BeforeInfoFieldDic.ContainsKey(key))
+                        missingKeys.Add(key);
+
+                if (missingKeys.Count > 0)
+                {
+                    foreach (JHSchool.Data.JHBeforeEnrollmentRecord be in JHSchool.Data.JHBeforeEnrollment.SelectByStudentIDs(missingKeys))
+                        if (!_BeforeInfoFieldDic.ContainsKey(be.RefStudentID))
+                            _BeforeInfoFieldDic.Add(be.RefStudentID, be.School);
+                    
+                    foreach (string key in missingKeys)
+                        if (!_BeforeInfoFieldDic.ContainsKey(key))
+                            _BeforeInfoFieldDic.Add(key, string.Empty);
+                }
             };
 
             Student.Instance.AddListPaneField(BeforeInfoField);
