@@ -168,12 +168,28 @@ namespace JHSchool.Permrec.StudentExtendControls.Reports.DAL
         public string Gender { get; set; }
 
         /// <summary>
-        /// 照片字串
+        /// 畢業照片字串
+        /// </summary>
+        public string PhotoStr2 { get; set; }
+
+        /// <summary>
+        /// 取得畢業照片
+        /// </summary>
+        /// <returns></returns>
+        public byte[] GetPhotoImage2()
+        {
+
+            byte[] bytePhoto = PhotoStr2.Equals(string.Empty) ? null : Convert.FromBase64String(PhotoStr2);
+            return bytePhoto;
+        }
+
+        /// <summary>
+        /// 新生照片字串
         /// </summary>
         public string PhotoStr { get; set; }
 
         /// <summary>
-        /// 取得照片檔
+        /// 取得新生照片
         /// </summary>
         /// <returns></returns>
         public byte[] GetPhotoImage()

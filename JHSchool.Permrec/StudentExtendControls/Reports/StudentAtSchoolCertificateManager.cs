@@ -31,8 +31,10 @@ namespace JHSchool.Permrec.StudentExtendControls.Reports
         private string _Semester = "";
         private string _CertDoc = "";
         private string _CertNo = "";
-        
-        
+
+
+        private byte[] defalutTemplate_VSummary;
+
         /// <summary>
         /// 取得是否讀取設樣版
         /// </summary>
@@ -57,7 +59,9 @@ namespace JHSchool.Permrec.StudentExtendControls.Reports
                 defalutTemplate = JHSchool.Permrec.StudentExtendControls.Reports.RptResource.在學證明書中英文;
                 defalutTemplate_Chi =JHSchool.Permrec.StudentExtendControls.Reports.RptResource.在學證明書中文_高雄_;
             }
-            
+
+            defalutTemplate_VSummary = JHSchool.Permrec.StudentExtendControls.Reports.RptResource.在學成績證明書_功能變數總表;
+
         }
 
         /// <summary>
@@ -188,6 +192,33 @@ namespace JHSchool.Permrec.StudentExtendControls.Reports
                     return;
                 }
             }        
+        }
+
+        /// <summary>
+        /// 功能變數總表
+        /// </summary>
+        public void SaveVariableSummaryTable()
+        {
+            SaveFileDialog sfd = new SaveFileDialog();
+            sfd.Title = "另存新檔";
+            sfd.FileName = "在學證明書(無成績)_功能變數總表.doc";
+            sfd.Filter = "Word檔案 (*.doc)|*.doc|所有檔案 (*.*)|*.*";
+            if (sfd.ShowDialog() == DialogResult.OK)
+            {
+                try
+                {
+
+                    FileStream fs = new FileStream(sfd.FileName, FileMode.Create);
+                    fs.Write(defalutTemplate_VSummary, 0, defalutTemplate_VSummary.Length);
+                    fs.Close();
+                    System.Diagnostics.Process.Start(sfd.FileName);
+                }
+                catch
+                {
+                    MsgBox.Show("指定路徑無法存取。", "另存檔案失敗", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    return;
+                }
+            }
         }
 
         /// <summary>
@@ -364,6 +395,7 @@ namespace JHSchool.Permrec.StudentExtendControls.Reports
                 baseData.Add("校長英文姓名", se.ChancellorEnglishName);
                 baseData.Add("教務主任姓名", se.EduDirectorName);
                 baseData.Add("新生照片", se.GetPhotoImage());
+                baseData.Add("畢業照片", se.GetPhotoImage2());
                 baseData.Add("學號", se.StudentNumber);
 
                 List<string> rptKeys = new List<string>();
@@ -417,7 +449,7 @@ namespace JHSchool.Permrec.StudentExtendControls.Reports
             // [ischoolkingdom] Vicky新增，[11-04][02]在學證明書(英文)，新增照片
             void IFieldMergingCallback.FieldMerging(FieldMergingArgs e)
             {
-                if (e.FieldName == "新生照片")
+                if (e.FieldName == "新生照片" || e.FieldName == "畢業照片")
                 {
                     byte[] photo = e.FieldValue as byte[];
                     if (photo == null)

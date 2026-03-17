@@ -613,9 +613,9 @@
       <SubType>Designer</SubType>
     </EmbeddedResource>
     <EmbeddedResource Include="StudentExtendControls\Reports\RptResource.resx">
+      <SubType>Designer</SubType>
       <Generator>ResXFileCodeGenerator</Generator>
       <LastGenOutput>RptResource.Designer.cs</LastGenOutput>
-      <SubType>Designer</SubType>
     </EmbeddedResource>
     <EmbeddedResource Include="StudentExtendControls\Reports\StudentAtSchoolCertificateForm.resx">
       <DependentUpon>StudentAtSchoolCertificateForm.cs</DependentUpon>
@@ -746,6 +746,7 @@
     <None Include="Resources\班級成績單.xls" />
     <None Include="Resources\男女人數統計表.xls" />
     <None Include="StudentExtendControls\Reports\RptTemplate\入學回覆單樣版%28高雄%29.doc" />
+    <None Include="StudentExtendControls\Reports\RptTemplate\功能變數總表.doc" />
     <None Include="StudentExtendControls\Reports\RptTemplate\在學證明書中文%28高雄%29.doc" />
     <None Include="StudentExtendControls\Reports\RptTemplate\在學證明書%28無成績%29新竹.doc" />
     <None Include="StudentExtendControls\Reports\RptTemplate\在學證明書中英文.doc" />

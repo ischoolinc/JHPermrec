@@ -42,6 +42,7 @@
             this.txtCertNo = new DevComponents.DotNetBar.Controls.TextBoxX();
             this.cbxDefault_Chi = new DevComponents.DotNetBar.Controls.CheckBoxX();
             this.lnkDefault_Chi = new System.Windows.Forms.LinkLabel();
+            this.linkLabel1 = new System.Windows.Forms.LinkLabel();
             this.SuspendLayout();
             // 
             // btnExit
@@ -91,7 +92,7 @@
             this.lnkUpload.BackColor = System.Drawing.Color.Transparent;
             this.lnkUpload.Location = new System.Drawing.Point(141, 72);
             this.lnkUpload.Name = "lnkUpload";
-            this.lnkUpload.Size = new System.Drawing.Size(32, 16);
+            this.lnkUpload.Size = new System.Drawing.Size(31, 16);
             this.lnkUpload.TabIndex = 2;
             this.lnkUpload.TabStop = true;
             this.lnkUpload.Text = "上傳";
@@ -103,7 +104,7 @@
             this.lnkUserDefine.BackColor = System.Drawing.Color.Transparent;
             this.lnkUserDefine.Location = new System.Drawing.Point(37, 72);
             this.lnkUserDefine.Name = "lnkUserDefine";
-            this.lnkUserDefine.Size = new System.Drawing.Size(80, 16);
+            this.lnkUserDefine.Size = new System.Drawing.Size(79, 16);
             this.lnkUserDefine.TabIndex = 1;
             this.lnkUserDefine.TabStop = true;
             this.lnkUserDefine.Text = "檢視自訂範本";
@@ -116,7 +117,7 @@
             this.lnkDefault_ChiEng.Font = new System.Drawing.Font("微軟正黑體", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
             this.lnkDefault_ChiEng.Location = new System.Drawing.Point(37, 42);
             this.lnkDefault_ChiEng.Name = "lnkDefault_ChiEng";
-            this.lnkDefault_ChiEng.Size = new System.Drawing.Size(124, 16);
+            this.lnkDefault_ChiEng.Size = new System.Drawing.Size(123, 16);
             this.lnkDefault_ChiEng.TabIndex = 0;
             this.lnkDefault_ChiEng.TabStop = true;
             this.lnkDefault_ChiEng.Text = "檢視預設範本(中英文)";
@@ -222,16 +223,29 @@
             this.lnkDefault_Chi.Font = new System.Drawing.Font("微軟正黑體", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
             this.lnkDefault_Chi.Location = new System.Drawing.Point(37, 13);
             this.lnkDefault_Chi.Name = "lnkDefault_Chi";
-            this.lnkDefault_Chi.Size = new System.Drawing.Size(112, 16);
+            this.lnkDefault_Chi.Size = new System.Drawing.Size(111, 16);
             this.lnkDefault_Chi.TabIndex = 12;
             this.lnkDefault_Chi.TabStop = true;
             this.lnkDefault_Chi.Text = "檢視預設範本(中文)";
             this.lnkDefault_Chi.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.lnkDefault_Chi_LinkClicked);
             // 
+            // linkLabel1
+            // 
+            this.linkLabel1.AutoSize = true;
+            this.linkLabel1.BackColor = System.Drawing.Color.Transparent;
+            this.linkLabel1.Location = new System.Drawing.Point(37, 153);
+            this.linkLabel1.Name = "linkLabel1";
+            this.linkLabel1.Size = new System.Drawing.Size(79, 16);
+            this.linkLabel1.TabIndex = 14;
+            this.linkLabel1.TabStop = true;
+            this.linkLabel1.Text = "功能變數總表";
+            this.linkLabel1.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.linkLabel1_LinkClicked);
+            // 
             // StudentAtSchoolCertificateForm
             // 
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.None;
             this.ClientSize = new System.Drawing.Size(364, 181);
+            this.Controls.Add(this.linkLabel1);
             this.Controls.Add(this.cbxDefault_Chi);
             this.Controls.Add(this.lnkDefault_Chi);
             this.Controls.Add(this.cbxUserDefine);
@@ -274,5 +288,6 @@
         private DevComponents.DotNetBar.Controls.TextBoxX txtCertNo;
         private DevComponents.DotNetBar.Controls.CheckBoxX cbxDefault_Chi;
         private System.Windows.Forms.LinkLabel lnkDefault_Chi;
+        private System.Windows.Forms.LinkLabel linkLabel1;
     }
 }

@@ -124,6 +124,9 @@
   <data name="國中學生證合併欄位總表" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\..\Resources\國中學生證合併欄位總表.doc;System.Byte[], mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
+  <data name="在學成績證明書_功能變數總表" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>rpttemplate\功能變數總表.doc;System.Byte[], mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
   <data name="在學證明書_無成績_新竹" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>rpttemplate\在學證明書(無成績)新竹.doc;System.Byte[], mscorlib, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
