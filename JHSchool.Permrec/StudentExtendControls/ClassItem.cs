@@ -1,4 +1,4 @@
-﻿using System;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Windows.Forms;
@@ -19,14 +19,18 @@ namespace JHSchool.Permrec.StudentExtendControls
         private EnhancedErrorProvider Errors { get; set; }
         private Dictionary<string, string> _ClassNameIDDic;
         private JHSchool.Data.JHStudentRecord objStudent;
-        private List<JHSchool.Data.JHClassRecord> _AllClassRecs;
         private List<int> _ClassSeatNoList;
         private bool isBwBusy = false;
         private BackgroundWorker BGWork;
-        private List<JHSchool.Data.JHStudentRecord> _AllStudRecList;
-        private List<JHSchool.Data.JHStudentRecord> _studRecList;
         private string tmpClassName = "";
         PermRecLogProcess prlp;
+
+        // Static cache shared across all ClassItem instances.
+        // Populated once per session; invalidated when student or class data changes.
+        private static volatile bool _AllDataDirty = true;
+        private static List<JHSchool.Data.JHClassRecord> _AllClassRecs;
+        private static List<JHSchool.Data.JHStudentRecord> _AllStudRecList;
+        private static List<JHSchool.Data.JHStudentRecord> _studRecList;
 
         public ClassItem()
         {
@@ -38,13 +42,32 @@ namespace JHSchool.Permrec.StudentExtendControls
         void ClassItem_Disposed(object sender, EventArgs e)
         {
             JHSchool.Data.JHStudent.AfterChange -= new EventHandler<K12.Data.DataChangedEventArgs>(JHStudent_AfterChange);
+            JHSchool.Data.JHClass.AfterChange -= new EventHandler<K12.Data.DataChangedEventArgs>(JHClass_AfterChange);
         }
 
         void JHStudent_AfterChange(object sender, K12.Data.DataChangedEventArgs e)
         {
+            _AllDataDirty = true;
             if (InvokeRequired)
             {
                 Invoke(new Action<object, K12.Data.DataChangedEventArgs>(JHStudent_AfterChange), sender, e);
+            }
+            else
+            {
+                if (this.PrimaryKey != "")
+                {
+                    if (!BGWork.IsBusy)
+                        BGWork.RunWorkerAsync();
+                }
+            }
+        }
+
+        void JHClass_AfterChange(object sender, K12.Data.DataChangedEventArgs e)
+        {
+            _AllDataDirty = true;
+            if (InvokeRequired)
+            {
+                Invoke(new Action<object, K12.Data.DataChangedEventArgs>(JHClass_AfterChange), sender, e);
             }
             else
             {
@@ -69,17 +92,21 @@ namespace JHSchool.Permrec.StudentExtendControls
 
         void BGWork_DoWork(object sender, DoWorkEventArgs e)
         {
-            _AllClassRecs.Clear();
-            _AllClassRecs = JHSchool.Data.JHClass.SelectAll();
-            _AllStudRecList.Clear();
-            _AllStudRecList = JHSchool.Data.JHStudent.SelectAll();
-            _studRecList.Clear();
+            if (_AllDataDirty)
+            {
+                _AllClassRecs = JHSchool.Data.JHClass.SelectAll();
+                _AllStudRecList = JHSchool.Data.JHStudent.SelectAll();
 
-            // 有條件加入一般狀態學生與有班級座號學生
-            foreach (JHSchool.Data.JHStudentRecord studRec in _AllStudRecList)
-                if (studRec.Class != null)
-                    if (studRec.Status == K12.Data.StudentRecord.StudentStatus.一般 && studRec.SeatNo.HasValue)
-                        _studRecList.Add(studRec);
+                List<JHSchool.Data.JHStudentRecord> newStudRecList = new List<JHSchool.Data.JHStudentRecord>();
+                // 有條件加入一般狀態學生與有班級座號學生
+                foreach (JHSchool.Data.JHStudentRecord studRec in _AllStudRecList)
+                    if (studRec.Class != null)
+                        if (studRec.Status == K12.Data.StudentRecord.StudentStatus.一般 && studRec.SeatNo.HasValue)
+                            newStudRecList.Add(studRec);
+                _studRecList = newStudRecList;
+
+                _AllDataDirty = false;
+            }
 
             objStudent = JHSchool.Data.JHStudent.SelectByID(PrimaryKey);
         }
@@ -277,11 +304,9 @@ namespace JHSchool.Permrec.StudentExtendControls
 
             // 檢查學號是否重複
             if (txtStudentNumber.Text.Trim() != this._DefaultStudNum)
-            //if (txtStudentNumber.Text != this._DefaultStudNum)
             {
                 // 判斷是否是空
                 if (string.IsNullOrEmpty(txtStudentNumber.Text.Trim()))
-                    //if (string.IsNullOrEmpty(txtStudentNumber.Text))
                     objStudent.StudentNumber = "";
                 else
                 {
@@ -289,19 +314,20 @@ namespace JHSchool.Permrec.StudentExtendControls
                     JHSchool.Data.JHStudentRecord.StudentStatus studtStatus = JHSchool.Data.JHStudent.SelectByID(PrimaryKey).Status;
 
                     List<string> checkData = new List<string>();
-                    // 同狀態下學號不能重複
-                    foreach (JHSchool.Data.JHStudentRecord studRec in JHSchool.Data.JHStudent.SelectAll())
+                    // 同狀態下學號不能重複，使用已快取的學生清單避免額外查詢
+                    List<JHSchool.Data.JHStudentRecord> sourceList = _AllStudRecList;
+                    if (sourceList == null)
+                        sourceList = JHSchool.Data.JHStudent.SelectAll();
+
+                    foreach (JHSchool.Data.JHStudentRecord studRec in sourceList)
                         if (studRec.Status == studtStatus)
-                            //checkData.Add(studRec.StudentNumber);
                             checkData.Add(studRec.StudentNumber.Trim());
 
-                     if (checkData.Contains(txtStudentNumber.Text.Trim()))
-                    //if (checkData.Contains(txtStudentNumber.Text))
+                    if (checkData.Contains(txtStudentNumber.Text.Trim()))
                     {
                         Errors.SetError(txtStudentNumber, "學號重複!");
                         return;
                     }
-                    //objStudent.StudentNumber = txtStudentNumber.Text;
                     objStudent.StudentNumber = txtStudentNumber.Text.Trim();
                 }
             }
@@ -317,7 +343,6 @@ namespace JHSchool.Permrec.StudentExtendControls
 
             prlp.SetAfterSaveText("班級", cboClass.Text);
             prlp.SetAfterSaveText("座號", cboSeatNo.Text);
-            //prlp.SetAfterSaveText("學號", txtStudentNumber.Text);
             prlp.SetAfterSaveText("學號", txtStudentNumber.Text.Trim());
             prlp.SetActionBy("學籍", "學生班級資訊");
             prlp.SetAction("修改學生班級資訊");
@@ -383,11 +408,9 @@ namespace JHSchool.Permrec.StudentExtendControls
             _ClassSeatNoList = new List<int>();
 
             JHSchool.Data.JHStudent.AfterChange += new EventHandler<K12.Data.DataChangedEventArgs>(JHStudent_AfterChange);
+            JHSchool.Data.JHClass.AfterChange += new EventHandler<K12.Data.DataChangedEventArgs>(JHClass_AfterChange);
 
             objStudent = JHSchool.Data.JHStudent.SelectByID(PrimaryKey);
-            _AllClassRecs = JHSchool.Data.JHClass.SelectAll();
-            _AllStudRecList = new List<JHSchool.Data.JHStudentRecord>();
-            _studRecList = new List<JHSchool.Data.JHStudentRecord>();
             BGWork = new BackgroundWorker();
             BGWork.DoWork += new DoWorkEventHandler(BGWork_DoWork);
             BGWork.RunWorkerCompleted += new RunWorkerCompletedEventHandler(BGWork_RunWorkerCompleted);

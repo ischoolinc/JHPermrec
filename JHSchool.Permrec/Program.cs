@@ -58,11 +58,6 @@ namespace JHSchool.Permrec
             //Student.Instance.AddDetailBulider(new ContentItemBulider<StudentExtendControls.UpdateRecordItem>());
             //Class.Instance.AddDetailBulider(new DetailBulider<JHSchool.Permrec.ClassExtendControls.ClassStudentItem>());
 
-            //System.Threading.ThreadPool.QueueUserWorkItem(x =>
-            //{
-            //    JHSchool.Data.JHStudent.SelectAll();
-            //});
-
           // 班級學生資訊
             Class.Instance.AddDetailBulider(new FISCA.Presentation.DetailBulider<JHSchool.Permrec.ClassExtendControls.ClassStudentItem>());
             Student.Instance.AddDetailBulider(new DetailBulider<StudentExtendControls.AddressPalmerwormItem>());
@@ -693,9 +688,38 @@ namespace JHSchool.Permrec
 
             #endregion
                        
+            // 戶籍電話與聯絡電話共用一次 JHPhone 查詢，避免兩欄位各自查詢同一張表
             Dictionary<string, string> _PermanentTelDic = new Dictionary<string, string>();
             Dictionary<string, string> _ContactTelDic = new Dictionary<string, string>();
-            
+
+            // 共用電話查詢輔助方法：將缺失 key 的電話資料一次載入兩個 dict
+            System.Action<IEnumerable<string>> _EnsurePhoneLoaded = delegate(IEnumerable<string> keys)
+            {
+                List<string> missingKeys = new List<string>();
+                foreach (string key in keys)
+                    if (!_PermanentTelDic.ContainsKey(key))
+                        missingKeys.Add(key);
+
+                if (missingKeys.Count > 0)
+                {
+                    foreach (JHSchool.Data.JHPhoneRecord PhoneRec in JHSchool.Data.JHPhone.SelectByStudentIDs(missingKeys))
+                    {
+                        if (!_PermanentTelDic.ContainsKey(PhoneRec.RefStudentID))
+                            _PermanentTelDic.Add(PhoneRec.RefStudentID, PhoneRec.Permanent);
+                        if (!_ContactTelDic.ContainsKey(PhoneRec.RefStudentID))
+                            _ContactTelDic.Add(PhoneRec.RefStudentID, PhoneRec.Contact);
+                    }
+
+                    foreach (string key in missingKeys)
+                    {
+                        if (!_PermanentTelDic.ContainsKey(key))
+                            _PermanentTelDic.Add(key, string.Empty);
+                        if (!_ContactTelDic.ContainsKey(key))
+                            _ContactTelDic.Add(key, string.Empty);
+                    }
+                }
+            };
+
             #region 戶籍電話欄位
             FISCA.Presentation.ListPaneField PermanentTelField = new ListPaneField("戶籍電話");
             PermanentTelField.GetVariable += delegate(object sender, GetVariableEventArgs e)
@@ -703,43 +727,18 @@ namespace JHSchool.Permrec
                 if (_PermanentTelDic.ContainsKey(e.Key))
                     e.Value = _PermanentTelDic[e.Key];
                 else
-                    e.Value = string.Empty;            
+                    e.Value = string.Empty;
             };
-                        
+
             PermanentTelField.PreloadVariableBackground += delegate(object sender, PreloadVariableEventArgs e)
             {
-                List<string> missingKeys = new List<string>();
-                foreach (string key in e.Keys)
-                    if (!_PermanentTelDic.ContainsKey(key))
-                        missingKeys.Add(key);
-
-                if (missingKeys.Count > 0)
-                {
-                    foreach (JHSchool.Data.JHPhoneRecord PhoneRec in JHSchool.Data.JHPhone.SelectByStudentIDs(missingKeys))
-                        if (!_PermanentTelDic.ContainsKey(PhoneRec.RefStudentID))
-                            _PermanentTelDic.Add(PhoneRec.RefStudentID, PhoneRec.Permanent);
-                    
-                    foreach (string key in missingKeys)
-                        if (!_PermanentTelDic.ContainsKey(key))
-                            _PermanentTelDic.Add(key, string.Empty);
-                }
+                _EnsurePhoneLoaded(e.Keys);
             };
-            //Student.Instance.AddListPaneField(PermanentTelField);
             // 加入戶籍電話權限管理
             if (User.Acl["Student.Field.戶籍電話"].Executable)
                 Student.Instance.AddListPaneField(PermanentTelField);
             Catalog ribbonField = RoleAclSource.Instance["學生"]["清單欄位"];
             ribbonField.Add(new RibbonFeature("Student.Field.戶籍電話", "戶籍電話"));
-
-            //AsyncFieldLoader<Phone, PhoneRecord> field = new AsyncFieldLoader<Phone, PhoneRecord>(Phone.Instance, "戶籍電話");
-            //field.GetValue += delegate(object sender, GetValueEventArgs e)
-            //{
-            //    if (Phone.Instance[e.Key] != null)
-            //        e.Value = Phone.Instance[e.Key].Permanent;
-            //    else
-            //        e.Value = string.Empty;
-            //};
-            //Student.Instance.AddListPaneField(field.Field);
             #endregion
 
             #region 聯絡電話
@@ -750,44 +749,18 @@ namespace JHSchool.Permrec
                     e.Value = _ContactTelDic[e.Key];
                 else
                     e.Value = string.Empty;
-            };           
+            };
 
+            // 聯絡電話共用電話查詢：若戶籍電話已載入則直接命中快取，不發出額外查詢
             ContactTelField.PreloadVariableBackground += delegate(object sender, PreloadVariableEventArgs e)
             {
-                List<string> missingKeys = new List<string>();
-                foreach (string key in e.Keys)
-                    if (!_ContactTelDic.ContainsKey(key))
-                        missingKeys.Add(key);
-
-                if (missingKeys.Count > 0)
-                {
-                    foreach (JHSchool.Data.JHPhoneRecord PhoneRec in JHSchool.Data.JHPhone.SelectByStudentIDs(missingKeys))
-                        if (!_ContactTelDic.ContainsKey(PhoneRec.RefStudentID))
-                            _ContactTelDic.Add(PhoneRec.RefStudentID, PhoneRec.Contact);
-                    
-                    foreach (string key in missingKeys)
-                        if (!_ContactTelDic.ContainsKey(key))
-                            _ContactTelDic.Add(key, string.Empty);
-                }
+                _EnsurePhoneLoaded(e.Keys);
             };
-            //Student.Instance.AddListPaneField(ContactTelField);
             // 加入聯絡電話權限管理
             if (User.Acl["Student.Field.聯絡電話"].Executable)
                 Student.Instance.AddListPaneField(ContactTelField);
             ribbonField = RoleAclSource.Instance["學生"]["清單欄位"];
             ribbonField.Add(new RibbonFeature("Student.Field.聯絡電話", "聯絡電話"));
-
-
-            //AsyncFieldLoader<Phone, PhoneRecord> telfield1 = new AsyncFieldLoader<Phone, PhoneRecord>(Phone.Instance, "聯絡電話");
-            //telfield1.GetValue += delegate(object sender, GetValueEventArgs e)
-            //{
-            //    if (Phone.Instance[e.Key] != null)
-            //        e.Value = Phone.Instance[e.Key].Contact;
-            //    else
-            //        e.Value = string.Empty;
-            //};
-            //Student.Instance.AddListPaneField(telfield1.Field);
-
             #endregion
 
             #region 監護人
@@ -915,6 +888,12 @@ namespace JHSchool.Permrec
             //        List<UpdateRecordRecord> r2 = UpdateRecord.Instance[keys[i]];
             //    }
             //};
+
+            // 背景預載學生資料，讓首次開啟班級資訊時不需等待冷載入
+            System.Threading.ThreadPool.QueueUserWorkItem(x =>
+            {
+                JHSchool.Data.JHStudent.SelectAll();
+            });
         }
 
         public static FISCA.Presentation.ListPaneField CustodianField;
