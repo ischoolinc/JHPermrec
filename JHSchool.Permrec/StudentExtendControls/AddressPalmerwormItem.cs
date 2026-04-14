@@ -11,7 +11,7 @@ using FISCA.Presentation;
 
 namespace JHSchool.Permrec.StudentExtendControls
 {
-    [FCode("JHSchool.Student.Detail0070", "¦a§}¸ê®Æ")]
+    [FCode("JHSchool.Student.Detail0070", "åœ°å€è³‡æ–™")]
     internal partial class AddressPalmerwormItem : FISCA.Presentation.DetailContent
     {
         JHAddressRecord _StudAddressRec;
@@ -43,7 +43,7 @@ namespace JHSchool.Permrec.StudentExtendControls
         public AddressPalmerwormItem()
         {
             InitializeComponent();
-            Group = "¦a§}¸ê®Æ";
+            Group = "åœ°å€è³‡æ–™";
 
             _errors = new EnhancedErrorProvider();
             _warnings = new EnhancedErrorProvider();
@@ -62,7 +62,7 @@ namespace JHSchool.Permrec.StudentExtendControls
             _DataListener_Mailing.StatusChanged += new EventHandler<ChangeEventArgs>(_DataListener_Mailing_StatusChanged);
             _DataListener_Other.StatusChanged += new EventHandler<ChangeEventArgs>(_DataListener_Other_StatusChanged);
 
-            // ¥[¤J¤áÄy Listener Data
+            // åŠ å…¥æˆ¶ç± Listener Data
             _DataListener_Permanent.Add(new TextBoxSource(txtZipcode));
             _DataListener_Permanent.Add(new ComboBoxSource(cboCounty, ComboBoxSource.ListenAttribute.Text));
             _DataListener_Permanent.Add(new ComboBoxSource(cboTown, ComboBoxSource.ListenAttribute.Text));
@@ -73,7 +73,7 @@ namespace JHSchool.Permrec.StudentExtendControls
             _DataListener_Permanent.Add(new TextBoxSource(txtLatitude));
 
 
-            // ¥[¤JÁpµ¸ Listener Data
+            // åŠ å…¥è¯çµ¡ Listener Data
             _DataListener_Mailing.Add(new TextBoxSource(txtZipcode));
             _DataListener_Mailing.Add(new ComboBoxSource(cboCounty, ComboBoxSource.ListenAttribute.Text));
             _DataListener_Mailing.Add(new ComboBoxSource(cboTown, ComboBoxSource.ListenAttribute.Text));
@@ -83,7 +83,7 @@ namespace JHSchool.Permrec.StudentExtendControls
             _DataListener_Mailing.Add(new TextBoxSource(txtLongtitude));
             _DataListener_Mailing.Add(new TextBoxSource(txtLatitude));
 
-            // ¥[¤J¨ä¥¦ Listener Data
+            // åŠ å…¥å…¶å®ƒ Listener Data
             _DataListener_Other.Add(new TextBoxSource(txtZipcode));
             _DataListener_Other.Add(new ComboBoxSource(cboCounty, ComboBoxSource.ListenAttribute.Text));
             _DataListener_Other.Add(new ComboBoxSource(cboTown, ComboBoxSource.ListenAttribute.Text));
@@ -164,6 +164,7 @@ namespace JHSchool.Permrec.StudentExtendControls
 
         protected override void OnCancelButtonClick(EventArgs e)
         {
+            BindDataToForm();
             SaveButtonVisible = false;
             CancelButtonVisible = false;
         }
@@ -171,14 +172,14 @@ namespace JHSchool.Permrec.StudentExtendControls
         protected override void OnSaveButtonClick(EventArgs e)
         {
 
-            //// ·í¿é¤J¨S¦³ ¾F¦Û°Ê¸É
+            //// ç•¶è¼¸å…¥æ²’æœ‰ é„°è‡ªå‹•è£œ
             //if (!string.IsNullOrEmpty(txtArea.Text))
             //{
-            //    if (txtArea.Text.IndexOf("¾F") == -1)
-            //        txtArea.Text += "¾F";
+            //    if (txtArea.Text.IndexOf("é„°") == -1)
+            //        txtArea.Text += "é„°";
             //}
 
-            // ÀË¬dµe­±Àx¦s¬Û¹ïÀ³
+            // æª¢æŸ¥ç•«é¢å„²å­˜ç›¸å°æ‡‰
             if (_address_type == AddressType.Permanent)
             {
                 _StudAddressRec.Permanent.ZipCode = txtZipcode.Text;
@@ -217,42 +218,42 @@ namespace JHSchool.Permrec.StudentExtendControls
                 _StudAddressRec.Address1.Latitude = txtLatitude.Text;
             }
 
-            prlp.SetAfterSaveText("¤áÄy¶l»¼°Ï¸¹", _StudAddressRec.Permanent.ZipCode);
-            prlp.SetAfterSaveText("¤áÄy¿¤¥«", _StudAddressRec.Permanent.County);
-            prlp.SetAfterSaveText("¤áÄy¶mÂí¥«°Ï", _StudAddressRec.Permanent.Town);
-            prlp.SetAfterSaveText("¤áÄy§ø¨½", _StudAddressRec.Permanent.District);
-            prlp.SetAfterSaveText("¤áÄy¾F", _StudAddressRec.Permanent.Area);
-            prlp.SetAfterSaveText("¤áÄy¨ä¥¦¦a§}", _StudAddressRec.Permanent.Detail);
-            prlp.SetAfterSaveText("¤áÄy¸g«×", _StudAddressRec.Permanent.Longitude);
-            prlp.SetAfterSaveText("¤áÄy½n«×", _StudAddressRec.Permanent.Latitude);
-            prlp.SetAfterSaveText("Ápµ¸¶l»¼°Ï¸¹", _StudAddressRec.Mailing.ZipCode);
-            prlp.SetAfterSaveText("Ápµ¸¿¤¥«", _StudAddressRec.Mailing.County);
-            prlp.SetAfterSaveText("Ápµ¸¶mÂí¥«°Ï", _StudAddressRec.Mailing.Town);
-            prlp.SetAfterSaveText("Ápµ¸§ø¨½", _StudAddressRec.Mailing.District);
-            prlp.SetAfterSaveText("Ápµ¸¾F", _StudAddressRec.Mailing.Area);
-            prlp.SetAfterSaveText("Ápµ¸¨ä¥¦¦a§}", _StudAddressRec.Mailing.Detail);
-            prlp.SetAfterSaveText("Ápµ¸¸g«×", _StudAddressRec.Mailing.Longitude);
-            prlp.SetAfterSaveText("Ápµ¸½n«×", _StudAddressRec.Mailing.Latitude);
-            prlp.SetAfterSaveText("¨ä¥¦¶l»¼°Ï¸¹", _StudAddressRec.Address1.ZipCode);
-            prlp.SetAfterSaveText("¨ä¥¦¿¤¥«", _StudAddressRec.Address1.County);
-            prlp.SetAfterSaveText("¨ä¥¦¶mÂí¥«°Ï", _StudAddressRec.Address1.Town);
-            prlp.SetAfterSaveText("¨ä¥¦§ø¨½", _StudAddressRec.Address1.District);
-            prlp.SetAfterSaveText("¨ä¥¦¾F", _StudAddressRec.Address1.Area);
-            prlp.SetAfterSaveText("¨ä¥¦¨ä¥¦¦a§}", _StudAddressRec.Address1.Detail);
-            prlp.SetAfterSaveText("¨ä¥¦¸g«×", _StudAddressRec.Address1.Longitude);
-            prlp.SetAfterSaveText("¨ä¥¦½n«×", _StudAddressRec.Address1.Latitude);
+            prlp.SetAfterSaveText("æˆ¶ç±éƒµéå€è™Ÿ", _StudAddressRec.Permanent.ZipCode);
+            prlp.SetAfterSaveText("æˆ¶ç±ç¸£å¸‚", _StudAddressRec.Permanent.County);
+            prlp.SetAfterSaveText("æˆ¶ç±é„‰é®å¸‚å€", _StudAddressRec.Permanent.Town);
+            prlp.SetAfterSaveText("æˆ¶ç±æ‘é‡Œ", _StudAddressRec.Permanent.District);
+            prlp.SetAfterSaveText("æˆ¶ç±é„°", _StudAddressRec.Permanent.Area);
+            prlp.SetAfterSaveText("æˆ¶ç±å…¶å®ƒåœ°å€", _StudAddressRec.Permanent.Detail);
+            prlp.SetAfterSaveText("æˆ¶ç±ç¶“åº¦", _StudAddressRec.Permanent.Longitude);
+            prlp.SetAfterSaveText("æˆ¶ç±ç·¯åº¦", _StudAddressRec.Permanent.Latitude);
+            prlp.SetAfterSaveText("è¯çµ¡éƒµéå€è™Ÿ", _StudAddressRec.Mailing.ZipCode);
+            prlp.SetAfterSaveText("è¯çµ¡ç¸£å¸‚", _StudAddressRec.Mailing.County);
+            prlp.SetAfterSaveText("è¯çµ¡é„‰é®å¸‚å€", _StudAddressRec.Mailing.Town);
+            prlp.SetAfterSaveText("è¯çµ¡æ‘é‡Œ", _StudAddressRec.Mailing.District);
+            prlp.SetAfterSaveText("è¯çµ¡é„°", _StudAddressRec.Mailing.Area);
+            prlp.SetAfterSaveText("è¯çµ¡å…¶å®ƒåœ°å€", _StudAddressRec.Mailing.Detail);
+            prlp.SetAfterSaveText("è¯çµ¡ç¶“åº¦", _StudAddressRec.Mailing.Longitude);
+            prlp.SetAfterSaveText("è¯çµ¡ç·¯åº¦", _StudAddressRec.Mailing.Latitude);
+            prlp.SetAfterSaveText("å…¶å®ƒéƒµéå€è™Ÿ", _StudAddressRec.Address1.ZipCode);
+            prlp.SetAfterSaveText("å…¶å®ƒç¸£å¸‚", _StudAddressRec.Address1.County);
+            prlp.SetAfterSaveText("å…¶å®ƒé„‰é®å¸‚å€", _StudAddressRec.Address1.Town);
+            prlp.SetAfterSaveText("å…¶å®ƒæ‘é‡Œ", _StudAddressRec.Address1.District);
+            prlp.SetAfterSaveText("å…¶å®ƒé„°", _StudAddressRec.Address1.Area);
+            prlp.SetAfterSaveText("å…¶å®ƒå…¶å®ƒåœ°å€", _StudAddressRec.Address1.Detail);
+            prlp.SetAfterSaveText("å…¶å®ƒç¶“åº¦", _StudAddressRec.Address1.Longitude);
+            prlp.SetAfterSaveText("å…¶å®ƒç·¯åº¦", _StudAddressRec.Address1.Latitude);
 
             _errors.Clear();
             JHAddress.Update(_StudAddressRec);
-            prlp.SetActionBy("¾ÇÄy", "¾Ç¥Í¦a§}¸ê°T");
-            prlp.SetAction("­×§ï¾Ç¥Í¦a§}¸ê°T");
+            prlp.SetActionBy("å­¸ç±", "å­¸ç”Ÿåœ°å€è³‡è¨Š");
+            prlp.SetAction("ä¿®æ”¹å­¸ç”Ÿåœ°å€è³‡è¨Š");
             JHStudentRecord studRec = JHStudent.SelectByID(PrimaryKey);
-            prlp.SetDescTitle("¾Ç¥Í©m¦W:" + studRec.Name + ",¾Ç¸¹:" + studRec.StudentNumber + ",");
+            prlp.SetDescTitle("å­¸ç”Ÿå§“å:" + studRec.Name + ",å­¸è™Ÿ:" + studRec.StudentNumber + ",");
             prlp.SaveLog("", "", "student", PrimaryKey);
             BindDataToForm();
         }
 
-        // ·íÅª¨ú¾Ç¥Í¸ê°T§¹¦¨®É
+        // ç•¶è®€å–å­¸ç”Ÿè³‡è¨Šå®Œæˆæ™‚
         void BGWorker_RunWorkerCompleted(object sender, RunWorkerCompletedEventArgs e)
         {
             if (isBGBusy)
@@ -266,103 +267,109 @@ namespace JHSchool.Permrec.StudentExtendControls
 
         }
 
-        // ³z¹LDALÅª¨ú¾Ç¥Í¦a§}¸ê°T
+        // é€éDALè®€å–å­¸ç”Ÿåœ°å€è³‡è¨Š
         void BGWorker_DoWork(object sender, DoWorkEventArgs e)
         {
             _StudAddressRec = JHAddress.SelectByStudentID(PrimaryKey);
         }
 
-        // ¨ú±o¦a§}¹ïÀ³¤¤¤å¦WºÙ
+        // å–å¾—åœ°å€å°æ‡‰ä¸­æ–‡åç¨±
         private string GetAddressTypeTitle()
         {
             if (_address_type == AddressType.Permanent)
-                return "¤áÄy¦a§}";
+                return "æˆ¶ç±åœ°å€";
             else if (_address_type == AddressType.Mailing)
-                return "Ápµ¸¦a§}";
+                return "è¯çµ¡åœ°å€";
             else if (_address_type == AddressType.Other)
-                return "¨ä¥¦¦a§}";
+                return "å…¶å®ƒåœ°å€";
             else
                 return string.Empty;
         }
 
-        // ¶ñ¤J¦a§}¸ê°T¨ìµe­±
+        // å¡«å…¥åœ°å€è³‡è¨Šåˆ°ç•«é¢
         public void BindDataToForm()
         {
             DataListenerPause();
 
-            prlp.SetBeforeSaveText("¤áÄy¶l»¼°Ï¸¹", _StudAddressRec.Permanent.ZipCode);
-            prlp.SetBeforeSaveText("¤áÄy¿¤¥«", _StudAddressRec.Permanent.County);
-            prlp.SetBeforeSaveText("¤áÄy¶mÂí¥«°Ï", _StudAddressRec.Permanent.Town);
-            prlp.SetBeforeSaveText("¤áÄy§ø¨½", _StudAddressRec.Permanent.District);
-            prlp.SetBeforeSaveText("¤áÄy¾F", _StudAddressRec.Permanent.Area);
-            prlp.SetBeforeSaveText("¤áÄy¨ä¥¦¦a§}", _StudAddressRec.Permanent.Detail);
-            prlp.SetBeforeSaveText("¤áÄy¸g«×", _StudAddressRec.Permanent.Longitude);
-            prlp.SetBeforeSaveText("¤áÄy½n«×", _StudAddressRec.Permanent.Latitude);
-            prlp.SetBeforeSaveText("Ápµ¸¶l»¼°Ï¸¹", _StudAddressRec.Mailing.ZipCode);
-            prlp.SetBeforeSaveText("Ápµ¸¿¤¥«", _StudAddressRec.Mailing.County);
-            prlp.SetBeforeSaveText("Ápµ¸¶mÂí¥«°Ï", _StudAddressRec.Mailing.Town);
-            prlp.SetBeforeSaveText("Ápµ¸§ø¨½", _StudAddressRec.Mailing.District);
-            prlp.SetBeforeSaveText("Ápµ¸¾F", _StudAddressRec.Mailing.Area);
-            prlp.SetBeforeSaveText("Ápµ¸¨ä¥¦¦a§}", _StudAddressRec.Mailing.Detail);
-            prlp.SetBeforeSaveText("Ápµ¸¸g«×", _StudAddressRec.Mailing.Longitude);
-            prlp.SetBeforeSaveText("Ápµ¸½n«×", _StudAddressRec.Mailing.Latitude);
-            prlp.SetBeforeSaveText("¨ä¥¦¶l»¼°Ï¸¹", _StudAddressRec.Address1.ZipCode);
-            prlp.SetBeforeSaveText("¨ä¥¦¿¤¥«", _StudAddressRec.Address1.County);
-            prlp.SetBeforeSaveText("¨ä¥¦¶mÂí¥«°Ï", _StudAddressRec.Address1.Town);
-            prlp.SetBeforeSaveText("¨ä¥¦§ø¨½", _StudAddressRec.Address1.District);
-            prlp.SetBeforeSaveText("¨ä¥¦¾F", _StudAddressRec.Address1.Area);
-            prlp.SetBeforeSaveText("¨ä¥¦¨ä¥¦¦a§}", _StudAddressRec.Address1.Detail);
-            prlp.SetBeforeSaveText("¨ä¥¦¸g«×", _StudAddressRec.Address1.Longitude);
-            prlp.SetBeforeSaveText("¨ä¥¦½n«×", _StudAddressRec.Address1.Latitude);
+            prlp.SetBeforeSaveText("æˆ¶ç±éƒµéå€è™Ÿ", _StudAddressRec.Permanent.ZipCode);
+            prlp.SetBeforeSaveText("æˆ¶ç±ç¸£å¸‚", _StudAddressRec.Permanent.County);
+            prlp.SetBeforeSaveText("æˆ¶ç±é„‰é®å¸‚å€", _StudAddressRec.Permanent.Town);
+            prlp.SetBeforeSaveText("æˆ¶ç±æ‘é‡Œ", _StudAddressRec.Permanent.District);
+            prlp.SetBeforeSaveText("æˆ¶ç±é„°", _StudAddressRec.Permanent.Area);
+            prlp.SetBeforeSaveText("æˆ¶ç±å…¶å®ƒåœ°å€", _StudAddressRec.Permanent.Detail);
+            prlp.SetBeforeSaveText("æˆ¶ç±ç¶“åº¦", _StudAddressRec.Permanent.Longitude);
+            prlp.SetBeforeSaveText("æˆ¶ç±ç·¯åº¦", _StudAddressRec.Permanent.Latitude);
+            prlp.SetBeforeSaveText("è¯çµ¡éƒµéå€è™Ÿ", _StudAddressRec.Mailing.ZipCode);
+            prlp.SetBeforeSaveText("è¯çµ¡ç¸£å¸‚", _StudAddressRec.Mailing.County);
+            prlp.SetBeforeSaveText("è¯çµ¡é„‰é®å¸‚å€", _StudAddressRec.Mailing.Town);
+            prlp.SetBeforeSaveText("è¯çµ¡æ‘é‡Œ", _StudAddressRec.Mailing.District);
+            prlp.SetBeforeSaveText("è¯çµ¡é„°", _StudAddressRec.Mailing.Area);
+            prlp.SetBeforeSaveText("è¯çµ¡å…¶å®ƒåœ°å€", _StudAddressRec.Mailing.Detail);
+            prlp.SetBeforeSaveText("è¯çµ¡ç¶“åº¦", _StudAddressRec.Mailing.Longitude);
+            prlp.SetBeforeSaveText("è¯çµ¡ç·¯åº¦", _StudAddressRec.Mailing.Latitude);
+            prlp.SetBeforeSaveText("å…¶å®ƒéƒµéå€è™Ÿ", _StudAddressRec.Address1.ZipCode);
+            prlp.SetBeforeSaveText("å…¶å®ƒç¸£å¸‚", _StudAddressRec.Address1.County);
+            prlp.SetBeforeSaveText("å…¶å®ƒé„‰é®å¸‚å€", _StudAddressRec.Address1.Town);
+            prlp.SetBeforeSaveText("å…¶å®ƒæ‘é‡Œ", _StudAddressRec.Address1.District);
+            prlp.SetBeforeSaveText("å…¶å®ƒé„°", _StudAddressRec.Address1.Area);
+            prlp.SetBeforeSaveText("å…¶å®ƒå…¶å®ƒåœ°å€", _StudAddressRec.Address1.Detail);
+            prlp.SetBeforeSaveText("å…¶å®ƒç¶“åº¦", _StudAddressRec.Address1.Longitude);
+            prlp.SetBeforeSaveText("å…¶å®ƒç·¯åº¦", _StudAddressRec.Address1.Latitude);
 
             this.Loading = false;
             SaveButtonVisible = false;
             CancelButtonVisible = false;
 
-            // §PÂ_¤£¦P Bind ¨ì¬Û¹ïÀ³
-            if (_address_type == AddressType.Permanent)
+            _date_updating = true;
+            try
             {
-                txtZipcode.Text = _StudAddressRec.Permanent.ZipCode;
-                cboCounty.Text = _StudAddressRec.Permanent.County;
-                cboTown.Text = _StudAddressRec.Permanent.Town;
-                txtDistrict.Text = _StudAddressRec.Permanent.District;
-                txtArea.Text = _StudAddressRec.Permanent.Area;
-                txtDetail.Text = _StudAddressRec.Permanent.Detail;
-                txtLongtitude.Text = _StudAddressRec.Permanent.Longitude;
-                txtLatitude.Text = _StudAddressRec.Permanent.Latitude;
-                _DataListener_Permanent.Reset();
-                _DataListener_Permanent.ResumeListen();
-            }
+                // åˆ¤æ–·ä¸åŒ Bind åˆ°ç›¸å°æ‡‰
+                if (_address_type == AddressType.Permanent)
+                {
+                    txtZipcode.Text = _StudAddressRec.Permanent.ZipCode;
+                    cboCounty.Text = _StudAddressRec.Permanent.County;
+                    cboTown.Text = _StudAddressRec.Permanent.Town;
+                    txtDistrict.Text = _StudAddressRec.Permanent.District;
+                    txtArea.Text = _StudAddressRec.Permanent.Area;
+                    txtDetail.Text = _StudAddressRec.Permanent.Detail;
+                    txtLongtitude.Text = _StudAddressRec.Permanent.Longitude;
+                    txtLatitude.Text = _StudAddressRec.Permanent.Latitude;
+                    _DataListener_Permanent.Reset();
+                    _DataListener_Permanent.ResumeListen();
+                }
 
-            if (_address_type == AddressType.Mailing)
+                if (_address_type == AddressType.Mailing)
+                {
+                    txtZipcode.Text = _StudAddressRec.Mailing.ZipCode;
+                    cboCounty.Text = _StudAddressRec.Mailing.County;
+                    cboTown.Text = _StudAddressRec.Mailing.Town;
+                    txtDistrict.Text = _StudAddressRec.Mailing.District;
+                    txtArea.Text = _StudAddressRec.Mailing.Area;
+                    txtDetail.Text = _StudAddressRec.Mailing.Detail;
+                    txtLongtitude.Text = _StudAddressRec.Mailing.Longitude;
+                    txtLatitude.Text = _StudAddressRec.Mailing.Latitude;
+                    _DataListener_Mailing.Reset();
+                    _DataListener_Mailing.ResumeListen();
+                }
+
+                if (_address_type == AddressType.Other)
+                {
+                    txtZipcode.Text = _StudAddressRec.Address1.ZipCode;
+                    cboCounty.Text = _StudAddressRec.Address1.County;
+                    cboTown.Text = _StudAddressRec.Address1.Town;
+                    txtDistrict.Text = _StudAddressRec.Address1.District;
+                    txtArea.Text = _StudAddressRec.Address1.Area;
+                    txtDetail.Text = _StudAddressRec.Address1.Detail;
+                    txtLongtitude.Text = _StudAddressRec.Address1.Longitude;
+                    txtLatitude.Text = _StudAddressRec.Address1.Latitude;
+                    _DataListener_Other.Reset();
+                    _DataListener_Other.ResumeListen();
+                }
+            }
+            finally
             {
-                txtZipcode.Text = _StudAddressRec.Mailing.ZipCode;
-                cboCounty.Text = _StudAddressRec.Mailing.County;
-                cboTown.Text = _StudAddressRec.Mailing.Town;
-                txtDistrict.Text = _StudAddressRec.Mailing.District;
-                txtArea.Text = _StudAddressRec.Mailing.Area;
-                txtDetail.Text = _StudAddressRec.Mailing.Detail;
-                txtLongtitude.Text = _StudAddressRec.Mailing.Longitude;
-                txtLatitude.Text = _StudAddressRec.Mailing.Latitude;
-                _DataListener_Mailing.Reset();
-                _DataListener_Mailing.ResumeListen();
+                _date_updating = false;
             }
-
-            if (_address_type == AddressType.Other)
-            {
-                txtZipcode.Text = _StudAddressRec.Address1.ZipCode;
-                cboCounty.Text = _StudAddressRec.Address1.County;
-                cboTown.Text = _StudAddressRec.Address1.Town;
-                txtDistrict.Text = _StudAddressRec.Address1.District;
-                txtArea.Text = _StudAddressRec.Address1.Area;
-                txtDetail.Text = _StudAddressRec.Address1.Detail;
-                txtLongtitude.Text = _StudAddressRec.Address1.Longitude;
-                txtLatitude.Text = _StudAddressRec.Address1.Latitude;
-                _DataListener_Other.Reset();
-                _DataListener_Other.ResumeListen();
-            }
-
-
         }
 
         protected override void OnPrimaryKeyChanged(EventArgs e)
@@ -484,7 +491,7 @@ namespace JHSchool.Permrec.StudentExtendControls
             decimal d;
             if (!string.IsNullOrEmpty(txtLongtitude.Text) && !decimal.TryParse(txtLongtitude.Text, out d))
             {
-                _errors.SetError(txtLongtitude, "¸g«×¥²¶·¬°¼Æ¦r§ÎºA¡C");
+                _errors.SetError(txtLongtitude, "ç¶“åº¦å¿…é ˆç‚ºæ•¸å­—å½¢æ…‹ã€‚");
                 return;
             }
             else
@@ -496,7 +503,7 @@ namespace JHSchool.Permrec.StudentExtendControls
             decimal d;
             if (!string.IsNullOrEmpty(txtLatitude.Text) && !decimal.TryParse(txtLatitude.Text, out d))
             {
-                _errors.SetError(txtLatitude, "½n«×¥²¶·¬°¼Æ¦r§ÎºA¡C");
+                _errors.SetError(txtLatitude, "ç·¯åº¦å¿…é ˆç‚ºæ•¸å­—å½¢æ…‹ã€‚");
                 return;
             }
             else
@@ -507,7 +514,7 @@ namespace JHSchool.Permrec.StudentExtendControls
         {
             if (_errors.HasError)
             {
-                MsgBox.Show("¸ê®Æ¿ù»~¡A½Ğ­×¥¿¸ê®Æ");
+                MsgBox.Show("è³‡æ–™éŒ¯èª¤ï¼Œè«‹ä¿®æ­£è³‡æ–™");
                 return;
             }
 
@@ -529,7 +536,7 @@ namespace JHSchool.Permrec.StudentExtendControls
         {
             if (_errors.HasError)
             {
-                MsgBox.Show("¸ê®Æ¿ù»~¡A½Ğ­×¥¿¸ê®Æ");
+                MsgBox.Show("è³‡æ–™éŒ¯èª¤ï¼Œè«‹ä¿®æ­£è³‡æ–™");
                 return;
             }
 
@@ -544,7 +551,7 @@ namespace JHSchool.Permrec.StudentExtendControls
         {
             if (_errors.HasError)
             {
-                MsgBox.Show("¸ê®Æ¿ù»~¡A½Ğ­×¥¿¸ê®Æ");
+                MsgBox.Show("è³‡æ–™éŒ¯èª¤ï¼Œè«‹ä¿®æ­£è³‡æ–™");
                 return;
             }
 
@@ -591,7 +598,7 @@ namespace JHSchool.Permrec.StudentExtendControls
 
             KeyValuePair<string, string> ctPair = Framework.Feature.Config.FindTownByZipCode(zipcode);
             if (ctPair.Key == null)
-                _warnings.SetError(txtZipcode, "¬dµL¦¹¶l»¼°Ï¸¹¹ïÀ³¿¤¥«¶mÂí¸ê®Æ¡C");
+                _warnings.SetError(txtZipcode, "æŸ¥ç„¡æ­¤éƒµéå€è™Ÿå°æ‡‰ç¸£å¸‚é„‰é®è³‡æ–™ã€‚");
             else
             {
                 _warnings.SetError(txtZipcode, string.Empty);
@@ -620,7 +627,7 @@ namespace JHSchool.Permrec.StudentExtendControls
             else if (_address_type == AddressType.Other)
                 return _StudAddressRec.Address1;
             else
-                throw new ArgumentException("¨S¦³¦¹ºØ Address Type¡C");
+                throw new ArgumentException("æ²’æœ‰æ­¤ç¨® Address Typeã€‚");
         }
 
         private bool _date_updating = false;
@@ -628,22 +635,22 @@ namespace JHSchool.Permrec.StudentExtendControls
         {
             _date_updating = true;
             btnAddressType.Text = GetAddressTypeTitle();
-            if (btnAddressType.Text == "¤áÄy¦a§}")
+            if (btnAddressType.Text == "æˆ¶ç±åœ°å€")
             {
-                lnklblAddress1.Text = "½Æ»sÁpµ¸¦a§}";
-                lnklblAddress2.Text = "½Æ»s¨ä¥¦¦a§}";
+                lnklblAddress1.Text = "è¤‡è£½è¯çµ¡åœ°å€";
+                lnklblAddress2.Text = "è¤‡è£½å…¶å®ƒåœ°å€";
             }
 
-            if (btnAddressType.Text == "Ápµ¸¦a§}")
+            if (btnAddressType.Text == "è¯çµ¡åœ°å€")
             {
-                lnklblAddress1.Text = "½Æ»s¤áÄy¦a§}";
-                lnklblAddress2.Text = "½Æ»s¨ä¥¦¦a§}";
+                lnklblAddress1.Text = "è¤‡è£½æˆ¶ç±åœ°å€";
+                lnklblAddress2.Text = "è¤‡è£½å…¶å®ƒåœ°å€";
             }
 
-            if (btnAddressType.Text == "¨ä¥¦¦a§}")
+            if (btnAddressType.Text == "å…¶å®ƒåœ°å€")
             {
-                lnklblAddress1.Text = "½Æ»sÁpµ¸¦a§}";
-                lnklblAddress2.Text = "½Æ»s¤áÄy¦a§}";
+                lnklblAddress1.Text = "è¤‡è£½è¯çµ¡åœ°å€";
+                lnklblAddress2.Text = "è¤‡è£½æˆ¶ç±åœ°å€";
             }
             cboCounty.SetComboBoxText(addr.County);
             cboTown.SetComboBoxText(addr.Town);
@@ -670,7 +677,7 @@ namespace JHSchool.Permrec.StudentExtendControls
                 DSResponse rsp = FISCA.Authentication.DSAServices.CallService("SmartSchool.Common.QueryCoordinates", new DSRequest(h));
                 h = rsp.GetContent();
                 if (h.GetElement("Error") != null)
-                    MsgBox.Show("µLªk¬d¸ß¦¹¦a§}®y¼Ğ¬ÛÃö¸ê°T");
+                    MsgBox.Show("ç„¡æ³•æŸ¥è©¢æ­¤åœ°å€åº§æ¨™ç›¸é—œè³‡è¨Š");
                 else
                 {
                     string latitude = h.GetText("Latitude");
@@ -678,7 +685,7 @@ namespace JHSchool.Permrec.StudentExtendControls
 
                     if (!string.IsNullOrEmpty(txtLatitude.Text) || !string.IsNullOrEmpty(txtLongtitude.Text))
                     {
-                        string msg = "¤w¬d¸ß¥X¦¹¦a§}®y¼Ğ¬°¡G\n\n(" + longitude + "," + latitude + ")\n\n­n¨ú¥N¥Ø«e®y¼Ğ³]©w¶Ü¡H";
+                        string msg = "å·²æŸ¥è©¢å‡ºæ­¤åœ°å€åº§æ¨™ç‚ºï¼š\n\n(" + longitude + "," + latitude + ")\n\nè¦å–ä»£ç›®å‰åº§æ¨™è¨­å®šå—ï¼Ÿ";
                         if (MsgBox.Show(msg, Application.ProductName, MessageBoxButtons.YesNo) == DialogResult.Yes)
                         {
                             txtLatitude.Text = latitude;
@@ -694,8 +701,8 @@ namespace JHSchool.Permrec.StudentExtendControls
             }
             catch (Exception ex)
             {
-                MsgBox.Show("¬d¸ß®y¼Ğ¸ê°T¿ù»~¡C");
-                Diagnostic.FeedbackError(ex, "¦a§}¸ê®Æ¶µ¥Øªº¬d¸ß®y¼Ğ¸ê°T¡C");
+                MsgBox.Show("æŸ¥è©¢åº§æ¨™è³‡è¨ŠéŒ¯èª¤ã€‚");
+                Diagnostic.FeedbackError(ex, "åœ°å€è³‡æ–™é …ç›®çš„æŸ¥è©¢åº§æ¨™è³‡è¨Šã€‚");
             }
         }
 
@@ -712,9 +719,9 @@ namespace JHSchool.Permrec.StudentExtendControls
         private void lnklblAddress1_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
         {
 
-            if (btnAddressType.Text == "¤áÄy¦a§}")
+            if (btnAddressType.Text == "æˆ¶ç±åœ°å€")
             {
-                //½Æ»sÁpµ¸¦a§}
+                //è¤‡è£½è¯çµ¡åœ°å€
                 txtZipcode.Text = _StudAddressRec.Mailing.ZipCode;
                 cboCounty.Text = _StudAddressRec.Mailing.County;
                 cboTown.Text = _StudAddressRec.Mailing.Town;
@@ -725,10 +732,10 @@ namespace JHSchool.Permrec.StudentExtendControls
                 txtLatitude.Text = _StudAddressRec.Mailing.Latitude;
             }
 
-            if (btnAddressType.Text == "Ápµ¸¦a§}")
+            if (btnAddressType.Text == "è¯çµ¡åœ°å€")
             {
 
-                // ½Æ»s¤áÄy¦a§}
+                // è¤‡è£½æˆ¶ç±åœ°å€
                 txtZipcode.Text = _StudAddressRec.Permanent.ZipCode;
                 cboCounty.Text = _StudAddressRec.Permanent.County;
                 cboTown.Text = _StudAddressRec.Permanent.Town;
@@ -740,9 +747,9 @@ namespace JHSchool.Permrec.StudentExtendControls
 
             }
 
-            if (btnAddressType.Text == "¨ä¥¦¦a§}")
+            if (btnAddressType.Text == "å…¶å®ƒåœ°å€")
             {
-                // ½Æ»sÁpµ¸¦a§}
+                // è¤‡è£½è¯çµ¡åœ°å€
                 txtZipcode.Text = _StudAddressRec.Mailing.ZipCode;
                 cboCounty.Text = _StudAddressRec.Mailing.County;
                 cboTown.Text = _StudAddressRec.Mailing.Town;
@@ -758,9 +765,9 @@ namespace JHSchool.Permrec.StudentExtendControls
         private void lnklblAddress2_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
         {
 
-            if (btnAddressType.Text == "¤áÄy¦a§}")
+            if (btnAddressType.Text == "æˆ¶ç±åœ°å€")
             {
-                // ½Æ»s¨ä¥¦¦a§}
+                // è¤‡è£½å…¶å®ƒåœ°å€
                 txtZipcode.Text = _StudAddressRec.Address1.ZipCode;
                 cboCounty.Text = _StudAddressRec.Address1.County;
                 cboTown.Text = _StudAddressRec.Address1.Town;
@@ -772,9 +779,9 @@ namespace JHSchool.Permrec.StudentExtendControls
 
             }
 
-            if (btnAddressType.Text == "Ápµ¸¦a§}")
+            if (btnAddressType.Text == "è¯çµ¡åœ°å€")
             {
-                // ½Æ»s¨ä¥¦¦a§}
+                // è¤‡è£½å…¶å®ƒåœ°å€
                 txtZipcode.Text = _StudAddressRec.Address1.ZipCode;
                 cboCounty.Text = _StudAddressRec.Address1.County;
                 cboTown.Text = _StudAddressRec.Address1.Town;
@@ -786,9 +793,9 @@ namespace JHSchool.Permrec.StudentExtendControls
 
             }
 
-            if (btnAddressType.Text == "¨ä¥¦¦a§}")
+            if (btnAddressType.Text == "å…¶å®ƒåœ°å€")
             {
-                // ½Æ»s¤áÄy¦a§}
+                // è¤‡è£½æˆ¶ç±åœ°å€
                 txtZipcode.Text = _StudAddressRec.Permanent.ZipCode;
                 cboCounty.Text = _StudAddressRec.Permanent.County;
                 cboTown.Text = _StudAddressRec.Permanent.Town;
