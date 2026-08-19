@@ -21,7 +21,7 @@ namespace JHSchool.Permrec.StudentExtendControls
         private AddressType _address_type;
         private PermRecLogProcess prlp;
 
-        private CountyTown _CountyTown = new CountyTown();
+        private static readonly CountyTown _CountyTown = new CountyTown();
         private enum AddressType
         {
             Permanent,

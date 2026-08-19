@@ -311,7 +311,7 @@ namespace JHSchool.Permrec.StudentExtendControls
                 else
                 {
                     // 取得目前學生狀態
-                    JHSchool.Data.JHStudentRecord.StudentStatus studtStatus = JHSchool.Data.JHStudent.SelectByID(PrimaryKey).Status;
+                    JHSchool.Data.JHStudentRecord.StudentStatus studtStatus = objStudent.Status;
 
                     List<string> checkData = new List<string>();
                     // 同狀態下學號不能重複，使用已快取的學生清單避免額外查詢
@@ -410,7 +410,6 @@ namespace JHSchool.Permrec.StudentExtendControls
             JHSchool.Data.JHStudent.AfterChange += new EventHandler<K12.Data.DataChangedEventArgs>(JHStudent_AfterChange);
             JHSchool.Data.JHClass.AfterChange += new EventHandler<K12.Data.DataChangedEventArgs>(JHClass_AfterChange);
 
-            objStudent = JHSchool.Data.JHStudent.SelectByID(PrimaryKey);
             BGWork = new BackgroundWorker();
             BGWork.DoWork += new DoWorkEventHandler(BGWork_DoWork);
             BGWork.RunWorkerCompleted += new RunWorkerCompletedEventHandler(BGWork_RunWorkerCompleted);
