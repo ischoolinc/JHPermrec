@@ -29,6 +29,7 @@ namespace JHSchool.Permrec.StudentExtendControls.Reports
         private void btnExit_Click(object sender, EventArgs e)
         {
             this.Close();
+
         }
         // [ischoolkingdom] Vicky新增，[11-04][02]在學證明書(英文)，新增預設中文樣板、中英文預設樣板選擇
         private void lnkDefault_Chi_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
@@ -49,6 +50,11 @@ namespace JHSchool.Permrec.StudentExtendControls.Reports
         private void lnkUpload_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
         {
             sascm.SetUserDefineTemplateToSystem();
+        }
+
+        private void linkLabel1_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
+        {
+            sascm.SaveVariableSummaryTable();
         }
 
         private void cmdPrint_Click(object sender, EventArgs e)

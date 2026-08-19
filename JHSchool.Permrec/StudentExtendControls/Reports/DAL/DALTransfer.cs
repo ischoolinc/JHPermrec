@@ -28,6 +28,7 @@ namespace JHSchool.Permrec.StudentExtendControls.Reports.DAL
 
             // 照片 Idx
             Dictionary<string, string> freshmanPhotoDic = K12.Data.Photo.SelectFreshmanPhoto(StudentIDList);
+            Dictionary<string, string> graduatePhotoDic = K12.Data.Photo.SelectGraduatePhoto(StudentIDList);
 
             // 取得畢業資訊
             Dictionary<string, JHLeaveInfoRecord> StudLIR = GetStudentLeaveInfoDic(StudentIDList);
@@ -99,8 +100,14 @@ namespace JHSchool.Permrec.StudentExtendControls.Reports.DAL
 
                 // 當有使用照片
                 if (UseStudPhotp)
+                {
+                    //入學照片
                     if (freshmanPhotoDic.ContainsKey(studRec.ID))
                         se.PhotoStr = freshmanPhotoDic[studRec.ID];
+                    //畢業照片
+                    if (graduatePhotoDic.ContainsKey(studRec.ID))
+                        se.PhotoStr2 = graduatePhotoDic[studRec.ID];
+                }
                 se.Gender = studRec.Gender;
                 // 取得監護人
                 if (Parent1Dic.ContainsKey(studRec.ID))
