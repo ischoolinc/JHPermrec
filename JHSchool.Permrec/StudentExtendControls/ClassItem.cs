@@ -29,6 +29,14 @@ namespace JHSchool.Permrec.StudentExtendControls
         // Populated once per session; invalidated when student or class data changes.
         private static volatile bool _AllDataDirty = true;
         private static readonly object _CacheLock = new object();
+
+        static ClassItem()
+        {
+            // 快取可能在任何 ClassItem 載入前就由預載建立，失效通知須與快取同生命週期，
+            // 不能等到實例 Load 時才訂閱，否則期間的班級或學生異動會被漏接
+            JHSchool.Data.JHStudent.AfterChange += delegate { _AllDataDirty = true; };
+            JHSchool.Data.JHClass.AfterChange += delegate { _AllDataDirty = true; };
+        }
         private static List<JHSchool.Data.JHClassRecord> _AllClassRecs;
         private static List<JHSchool.Data.JHStudentRecord> _AllStudRecList;
         private static List<JHSchool.Data.JHStudentRecord> _studRecList;

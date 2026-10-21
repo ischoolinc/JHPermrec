@@ -72,6 +72,8 @@ namespace JHSchool.Permrec
             
             // 學生>班級資訊覆寫
             IStudentClassDetailItemAPI item = FISCA.InteractionService.DiscoverAPI<IStudentClassDetailItemAPI>();
+            // 本模組的 ClassItem 有實際顯示時才需要預載它的快取
+            bool useClassItem = (item == null) && User.Acl[typeof(JHSchool.Permrec.StudentExtendControls.ClassItem)].Viewable;
             if (item != null)
             {
                 AddStudentDetail(item.CreateBasicInfo());
@@ -893,17 +895,21 @@ namespace JHSchool.Permrec
 
             // 背景預載班級資訊快取，讓首次開啟班級資訊時不需等待冷載入。
             // 延到使用者第一次選取學生時才觸發，避免在模組啟動期間與其他模組搶用連線。
-            EventHandler prefetchClassItemCache = null;
-            prefetchClassItemCache = delegate
+            // 班級資訊由其他模組提供（或無權限檢視）時，不需預載。
+            if (useClassItem)
             {
-                Student.Instance.SelectedListChanged -= prefetchClassItemCache;
-                System.Threading.ThreadPool.QueueUserWorkItem(x =>
+                EventHandler prefetchClassItemCache = null;
+                prefetchClassItemCache = delegate
                 {
-                    try { StudentExtendControls.ClassItem.EnsureCacheLoaded(); }
-                    catch { } // 預載失敗不影響功能，ClassItem 開啟時會再載入
-                });
-            };
-            Student.Instance.SelectedListChanged += prefetchClassItemCache;
+                    Student.Instance.SelectedListChanged -= prefetchClassItemCache;
+                    System.Threading.ThreadPool.QueueUserWorkItem(x =>
+                    {
+                        try { StudentExtendControls.ClassItem.EnsureCacheLoaded(); }
+                        catch { } // 預載失敗不影響功能，ClassItem 開啟時會再載入
+                    });
+                };
+                Student.Instance.SelectedListChanged += prefetchClassItemCache;
+            }
         }
 
         // 直接註冊至 NLDPanel，避免 JHSchool 包裝層為檢查權限而額外建構兩次 DetailContent。
