@@ -28,6 +28,7 @@ namespace JHSchool.Permrec.StudentExtendControls
         // Static cache shared across all ClassItem instances.
         // Populated once per session; invalidated when student or class data changes.
         private static volatile bool _AllDataDirty = true;
+        private static readonly object _CacheLock = new object();
         private static List<JHSchool.Data.JHClassRecord> _AllClassRecs;
         private static List<JHSchool.Data.JHStudentRecord> _AllStudRecList;
         private static List<JHSchool.Data.JHStudentRecord> _studRecList;
@@ -92,23 +93,46 @@ namespace JHSchool.Permrec.StudentExtendControls
 
         void BGWork_DoWork(object sender, DoWorkEventArgs e)
         {
-            if (_AllDataDirty)
-            {
-                _AllClassRecs = JHSchool.Data.JHClass.SelectAll();
-                _AllStudRecList = JHSchool.Data.JHStudent.SelectAll();
-
-                List<JHSchool.Data.JHStudentRecord> newStudRecList = new List<JHSchool.Data.JHStudentRecord>();
-                // 有條件加入一般狀態學生與有班級座號學生
-                foreach (JHSchool.Data.JHStudentRecord studRec in _AllStudRecList)
-                    if (studRec.Class != null)
-                        if (studRec.Status == K12.Data.StudentRecord.StudentStatus.一般 && studRec.SeatNo.HasValue)
-                            newStudRecList.Add(studRec);
-                _studRecList = newStudRecList;
-
-                _AllDataDirty = false;
-            }
+            EnsureCacheLoaded();
 
             objStudent = JHSchool.Data.JHStudent.SelectByID(PrimaryKey);
+        }
+
+        /// <summary>
+        /// 載入共用的班級與學生清單快取。預載與各 ClassItem 實例共用，
+        /// 以 lock 確保同一時間只有一個執行緒呼叫 SelectAll（K12.Data 的快取不具執行緒安全）。
+        /// </summary>
+        internal static void EnsureCacheLoaded()
+        {
+            lock (_CacheLock)
+            {
+                if (!_AllDataDirty)
+                    return;
+
+                // 先清除旗標，若載入期間資料又變更，AfterChange 會重新設為 dirty
+                _AllDataDirty = false;
+                try
+                {
+                    List<JHSchool.Data.JHClassRecord> allClassRecs = JHSchool.Data.JHClass.SelectAll();
+                    List<JHSchool.Data.JHStudentRecord> allStudRecList = JHSchool.Data.JHStudent.SelectAll();
+
+                    List<JHSchool.Data.JHStudentRecord> newStudRecList = new List<JHSchool.Data.JHStudentRecord>();
+                    // 有條件加入一般狀態學生與有班級座號學生
+                    foreach (JHSchool.Data.JHStudentRecord studRec in allStudRecList)
+                        if (studRec.Class != null)
+                            if (studRec.Status == K12.Data.StudentRecord.StudentStatus.一般 && studRec.SeatNo.HasValue)
+                                newStudRecList.Add(studRec);
+
+                    _AllClassRecs = allClassRecs;
+                    _AllStudRecList = allStudRecList;
+                    _studRecList = newStudRecList;
+                }
+                catch
+                {
+                    _AllDataDirty = true;
+                    throw;
+                }
+            }
         }
 
         private void ValueManager_StatusChanged(object sender, ChangeEventArgs e)

@@ -21,7 +21,9 @@ namespace JHSchool.Permrec.StudentExtendControls
         private AddressType _address_type;
         private PermRecLogProcess prlp;
 
-        private static readonly CountyTown _CountyTown = new CountyTown();
+        // 延遲建立：第一次在背景 worker 取用時才解析 XML，避免模組啟動時在 UI 執行緒上解析
+        private static readonly Lazy<CountyTown> _LazyCountyTown = new Lazy<CountyTown>(() => new CountyTown());
+        private static CountyTown _CountyTown { get { return _LazyCountyTown.Value; } }
         private enum AddressType
         {
             Permanent,

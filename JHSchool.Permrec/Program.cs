@@ -59,14 +59,14 @@ namespace JHSchool.Permrec
             //Class.Instance.AddDetailBulider(new DetailBulider<JHSchool.Permrec.ClassExtendControls.ClassStudentItem>());
 
           // 班級學生資訊
-            Class.Instance.AddDetailBulider(new FISCA.Presentation.DetailBulider<JHSchool.Permrec.ClassExtendControls.ClassStudentItem>());
-            Student.Instance.AddDetailBulider(new DetailBulider<StudentExtendControls.AddressPalmerwormItem>());
-            Student.Instance.AddDetailBulider(new FISCA.Presentation.DetailBulider<JHSchool.Permrec.StudentExtendControls.PhonePalmerwormItem>());
+            AddClassDetail<JHSchool.Permrec.ClassExtendControls.ClassStudentItem>();
+            AddStudentDetail<StudentExtendControls.AddressPalmerwormItem>();
+            AddStudentDetail<JHSchool.Permrec.StudentExtendControls.PhonePalmerwormItem>();
             // 高中自訂欄位註解
 //            Student.Instance.AddDetailBulider(new ContentItemBulider<StudentExtendControls.ExtensionValuesPalmerwormItem>());
-            Student.Instance.AddDetailBulider(new DetailBulider<StudentExtendControls.DiplomaInfoPalmerworm>());
+            AddStudentDetail<StudentExtendControls.DiplomaInfoPalmerworm>();
 
-            Student.Instance.AddDetailBulider(new FISCA.Presentation.DetailBulider<JHSchool.Permrec.StudentExtendControls.ParentInfoPalmerwormItem>());
+            AddStudentDetail<JHSchool.Permrec.StudentExtendControls.ParentInfoPalmerwormItem>();
             //Student.Instance.AddDetailBulider(new FISCA.Presentation.DetailBulider <JHSchool.Permrec.StudentExtendControls.ParentInfoPalmerwormItem>());
             // Test new Class Item
             
@@ -74,16 +74,16 @@ namespace JHSchool.Permrec
             IStudentClassDetailItemAPI item = FISCA.InteractionService.DiscoverAPI<IStudentClassDetailItemAPI>();
             if (item != null)
             {
-                Student.Instance.AddDetailBulider(item.CreateBasicInfo());
+                AddStudentDetail(item.CreateBasicInfo());
             }
             else
             {
-                Student.Instance.AddDetailBulider(new DetailBulider<JHSchool.Permrec.StudentExtendControls.ClassItem>());
+                AddStudentDetail<JHSchool.Permrec.StudentExtendControls.ClassItem>();
             }
-            
 
-            Student.Instance.AddDetailBulider(new FISCA.Presentation.DetailBulider<JHSchool.Permrec.StudentExtendControls.SemesterHistoryDetail>());
-            Student.Instance.AddDetailBulider(new DetailBulider<StudentExtendControls.BeforeEnrollmentItem>());
+
+            AddStudentDetail<JHSchool.Permrec.StudentExtendControls.SemesterHistoryDetail>();
+            AddStudentDetail<StudentExtendControls.BeforeEnrollmentItem>();
 
             RibbonBarButton Class_rbDelItem = Class.Instance.RibbonBarItems["編輯"]["刪除"];
             RibbonBarButton Student_rbDelItem = Student.Instance.RibbonBarItems["編輯"]["刪除"];
@@ -483,11 +483,13 @@ namespace JHSchool.Permrec
             /*在學生中新增報表*/
 
 
-            Student.Instance.RibbonBarItems["資料統計"]["報表"].Image = Properties.Resources.paste_64;
+            // Resources 屬性每次讀取都會重新解碼 Bitmap，只讀一次共用
+            System.Drawing.Bitmap reportImage = Properties.Resources.paste_64;
+            Student.Instance.RibbonBarItems["資料統計"]["報表"].Image = reportImage;
             Student.Instance.RibbonBarItems["資料統計"]["報表"].Size = RibbonBarButton.MenuButtonSize.Large;
-            Class.Instance.RibbonBarItems["資料統計"]["報表"].Image = Properties.Resources.paste_64;
+            Class.Instance.RibbonBarItems["資料統計"]["報表"].Image = reportImage;
             Class.Instance.RibbonBarItems["資料統計"]["報表"].Size = RibbonBarButton.MenuButtonSize.Large;
-            Course.Instance.RibbonBarItems["資料統計"]["報表"].Image = Properties.Resources.paste_64;
+            Course.Instance.RibbonBarItems["資料統計"]["報表"].Image = reportImage;
             Course.Instance.RibbonBarItems["資料統計"]["報表"].Size = RibbonBarButton.MenuButtonSize.Large;
 
             MenuButton studentIdDocument = Student.Instance.RibbonBarItems["資料統計"]["報表"]["學籍相關報表"];
@@ -889,11 +891,50 @@ namespace JHSchool.Permrec
             //    }
             //};
 
-            // 背景預載學生資料，讓首次開啟班級資訊時不需等待冷載入
-            System.Threading.ThreadPool.QueueUserWorkItem(x =>
+            // 背景預載班級資訊快取，讓首次開啟班級資訊時不需等待冷載入。
+            // 延到使用者第一次選取學生時才觸發，避免在模組啟動期間與其他模組搶用連線。
+            EventHandler prefetchClassItemCache = null;
+            prefetchClassItemCache = delegate
             {
-                JHSchool.Data.JHStudent.SelectAll();
-            });
+                Student.Instance.SelectedListChanged -= prefetchClassItemCache;
+                System.Threading.ThreadPool.QueueUserWorkItem(x =>
+                {
+                    try { StudentExtendControls.ClassItem.EnsureCacheLoaded(); }
+                    catch { } // 預載失敗不影響功能，ClassItem 開啟時會再載入
+                });
+            };
+            Student.Instance.SelectedListChanged += prefetchClassItemCache;
+        }
+
+        // 直接註冊至 NLDPanel，避免 JHSchool 包裝層為檢查權限而額外建構兩次 DetailContent。
+        // 權限判斷與包裝層相同（User.Acl 即 GlobalOld.Acl）。
+        private static void AddStudentDetail<T>() where T : FISCA.Presentation.DetailContent, new()
+        {
+            if (User.Acl[typeof(T)].Viewable)
+                K12.Presentation.NLDPanels.Student.AddDetailBulider(new FISCA.Presentation.DetailBulider<T>());
+        }
+
+        // 外部模組提供的 builder：若為 DetailBulider<T> 則由泛型參數取得內容型別，不需建構即可檢查權限；
+        // 判斷條件與 JHSchool 包裝層相同（有 Framework.Security.FeatureCode 才檢查 Viewable，否則直接加入）。
+        // 無法得知內容型別時，維持由包裝層處理。
+        private static void AddStudentDetail(IDetailBulider bulider)
+        {
+            Type buliderType = bulider.GetType();
+            if (!buliderType.IsGenericType || buliderType.GetGenericTypeDefinition() != typeof(FISCA.Presentation.DetailBulider<>))
+            {
+                Student.Instance.AddDetailBulider(bulider);
+                return;
+            }
+
+            Type contentType = buliderType.GetGenericArguments()[0];
+            if (!Attribute.IsDefined(contentType, typeof(Framework.Security.FeatureCodeAttribute)) || User.Acl[contentType].Viewable)
+                K12.Presentation.NLDPanels.Student.AddDetailBulider(bulider);
+        }
+
+        private static void AddClassDetail<T>() where T : FISCA.Presentation.DetailContent, new()
+        {
+            if (User.Acl[typeof(T)].Viewable)
+                K12.Presentation.NLDPanels.Class.AddDetailBulider(new FISCA.Presentation.DetailBulider<T>());
         }
 
         public static FISCA.Presentation.ListPaneField CustodianField;
